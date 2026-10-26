@@ -1,0 +1,42 @@
+[
+  {
+    "input":"rain_mm",
+    "distribution":"observed Delhi state daily rainfall",
+    "unit":"mm"
+  },
+  {
+    "input":"duration_h",
+    "distribution":"Uniform(1,12)",
+    "unit":"hours"
+  },
+  {
+    "input":"area_m2",
+    "distribution":"Uniform(10000,100000)",
+    "unit":"m\u00b2"
+  },
+  {
+    "input":"runoff_coefficient",
+    "distribution":"Uniform(.3,.95)",
+    "unit":"fraction"
+  },
+  {
+    "input":"drain_mm_h",
+    "distribution":"Uniform(.2,8)",
+    "unit":"mm\/hour over catchment"
+  },
+  {
+    "input":"blockage",
+    "distribution":"Uniform(0,.9)",
+    "unit":"fraction"
+  },
+  {
+    "input":"ponding_fraction",
+    "distribution":"Uniform(.03,.2)",
+    "unit":"fraction"
+  },
+  {
+    "input":"initial_storage_mm",
+    "distribution":"Uniform(0,2)",
+    "unit":"mm over catchment"
+  }
+]

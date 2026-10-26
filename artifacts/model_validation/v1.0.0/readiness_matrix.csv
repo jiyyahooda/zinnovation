@@ -1,0 +1,10 @@
+component,artifact_present,schema_present,fresh_process_passed,observed_validation_claim,operational_authority,simulation_only
+rainfall,True,True,True,False,False,False
+aqi,True,True,True,False,False,False
+traffic,True,True,True,False,False,False
+flood,True,True,True,False,False,True
+infrastructure_anomaly,True,True,True,False,False,False
+water_network,True,True,True,False,False,True
+cascade_risk,True,True,True,False,False,True
+resource_optimization,True,True,True,False,False,True
+intervention_outcomes,True,True,True,False,False,True

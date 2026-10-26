@@ -1,0 +1,83 @@
+{
+  "component": "intervention_outcomes",
+  "version": "1.1.0",
+  "source_type": "synthetic",
+  "selected_success_model": "Random Forest",
+  "selected_duration_model": "Ridge",
+  "features": [
+    "intervention_type",
+    "initial_severity",
+    "planned_crew_type",
+    "planned_crew_count",
+    "planned_pump_count",
+    "planned_cost",
+    "risk_score_at_assignment"
+  ],
+  "success_metrics": {
+    "average_precision": 0.6189174272836088,
+    "ROC_AUC": 0.5707869624061447,
+    "Brier": 0.2574041833672511,
+    "precision": 0.6,
+    "recall": 0.5308310991957105,
+    "F1": 0.5633001422475107,
+    "threshold": 0.507379373313727,
+    "test_n": 684,
+    "test_prevalence": 0.5453216374269005,
+    "synthetic": true
+  },
+  "duration_metric": "Ridge",
+  "synthetic_data_manifest": {
+    "component": "intervention_outcome_research",
+    "version": "1.0.0",
+    "synthetic": true,
+    "seed": 42,
+    "n": 6000,
+    "period": [
+      "2019-01-01 00:00:00",
+      "2024-12-31 17:00:00"
+    ],
+    "completion_rate": 0.938,
+    "verification_rate": 0.5896666666666667,
+    "success_mechanism": "simulated logistic response to severity/intervention/resource choices; assignment is confounded",
+    "causal_claim": null,
+    "limitations": [
+      "No observed interventions",
+      "No real outcome verification",
+      "No counterfactual outcomes",
+      "Selection bias is built into simulation"
+    ]
+  },
+  "causal_effect_estimate": null,
+  "auto_approve": false,
+  "dispatch_allowed": false,
+  "duration_log1p": true,
+  "success_supported": false,
+  "operational_supported": false,
+  "success_threshold": 0.507379373313727,
+  "duration_selection": "validation MAE; completed synthetic cohort only",
+  "contract_version": "civicflux.research.v1",
+  "artifact_version": "v1.1.0",
+  "component_kind": "synthetic success classifier + duration regressor",
+  "geographic_scope": "synthetic intervention records only",
+  "units": {
+    "resolution": "hours",
+    "success_score": "unvalidated unitless simulation score"
+  },
+  "horizon": "post-completion synthetic outcome",
+  "provenance": "seeded, confounded outcome generator; no real verification records",
+  "supported_inputs": {
+    "features": [
+      "intervention_type",
+      "initial_severity",
+      "planned_crew_type",
+      "planned_crew_count",
+      "planned_pump_count",
+      "planned_cost",
+      "risk_score_at_assignment"
+    ],
+    "out_of_scope": "real success estimates, causal effects and allocation"
+  },
+  "validation_status": "chronological synthetic holdout; unsupported success prediction, duration research only",
+  "research_only": true,
+  "automatic_dispatch": false
+}

@@ -218,3 +218,30 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# CivicFlux project-specific exclusions
+.venv/
+.venv-windows/
+node_modules/
+frontend/dist/
+*.tsbuildinfo
+var/
+.env
+.cache/
+.jupyter/
+__pycache__/
+.ipynb_checkpoints/
+data/raw/
+data/flood_scenarios.csv
+
+# Local machine files, secrets and archive inventory
+.DS_Store
+.pytest_cache/
+.pnpm-store/
+.env.*
+!.env.example
+*.log
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+PACKAGE-MANIFEST.json

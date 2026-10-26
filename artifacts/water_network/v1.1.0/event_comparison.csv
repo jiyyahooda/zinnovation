@@ -1,0 +1,5 @@
+model,events,recovered_events,event_recall,median_delay_hours_detected_only,alert_hours,false_alert_hours,false_alert_hours_per_negative_day,alert_episodes,false_alarm_episodes,false_alarm_episodes_per_30_days
+Selected ML,19,17,0.8947368421052632,0.5,4876,4572,13.21387283236994,202,180,14.794520547945204
+Train prior,19,19,1.0,0.3333333333333333,8760,8304,24.0,1,0,0.0
+Hydraulic changes,19,19,1.0,0.5833333333333334,6912,6545,18.916184971098264,1183,1111,91.31506849315068
+Seasonal directional residual,19,15,0.7894736842105263,0.75,4880,4640,13.410404624277456,372,345,28.356164383561644

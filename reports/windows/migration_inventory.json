@@ -1,0 +1,459 @@
+{
+  "root": "C:\\Users\\kusha\\OneDrive\\Documents\\ChatGPT\\zinnovatio4.0\\CivicFlux",
+  "registry": "C:\\Users\\kusha\\OneDrive\\Documents\\ChatGPT\\zinnovatio4.0\\CivicFlux\\artifacts\\model_validation\\v1.0.0\\model_registry.json",
+  "source": "C:\\Users\\kusha\\OneDrive\\Documents\\ChatGPT\\zinnovatio4.0\\CivicFlux\\src\\civicflux\\serving.py",
+  "import": "from src.civicflux.serving import serve",
+  "python": "3.12.14",
+  "executable": "C:\\Users\\kusha\\OneDrive\\Documents\\ChatGPT\\zinnovatio4.0\\CivicFlux\\.venv-windows\\Scripts\\python.exe",
+  "training_python": "3.13.5 (recorded in transferred pyvenv.cfg)",
+  "dependencies": {
+    "numpy": {
+      "version": "2.3.5",
+      "import": "passed"
+    },
+    "pandas": {
+      "version": "2.2.3",
+      "import": "passed"
+    },
+    "scikit-learn": {
+      "version": "1.6.1",
+      "import": "passed"
+    },
+    "xgboost": {
+      "version": "3.4.1",
+      "import": "passed"
+    },
+    "networkx": {
+      "version": "3.7",
+      "import": "passed"
+    },
+    "ortools": {
+      "version": "9.14.6206",
+      "import": "passed"
+    },
+    "joblib": {
+      "version": "1.4.2",
+      "import": "passed"
+    },
+    "fastapi": {
+      "version": "0.162.0",
+      "import": "passed"
+    },
+    "uvicorn": {
+      "version": "0.54.0",
+      "import": "passed"
+    }
+  },
+  "components": [
+    {
+      "component": "rainfall",
+      "component_kind": "supervised time-series regression",
+      "artifact_directory": "artifacts\\rainfall",
+      "artifact": "artifacts\\rainfall\\pipeline.joblib",
+      "metadata": "artifacts\\rainfall\\metadata.json",
+      "feature_schema": "artifacts\\rainfall\\feature_schema.json",
+      "version": "legacy-unversioned",
+      "geographic_scope": "Delhi state aggregate",
+      "units": "mm/day",
+      "horizon": "next day",
+      "supported_modes": [
+        "historical"
+      ],
+      "provenance": "reported real state aggregate; upstream lineage not independently audited",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "readiness": "Not ready",
+      "readiness_reason": "Fresh-process loading/inference not yet checked",
+      "operational_supported": false,
+      "simulation_only": false,
+      "missing": [],
+      "selected_model": "Random Forest tuned",
+      "timestamp_policy": "Asia/Kolkata",
+      "supported_inputs": {
+        "required_request_fields": [
+          "scope",
+          "units",
+          "horizon",
+          "mode",
+          "as_of"
+        ],
+        "input_schema": "artifacts\\rainfall\\feature_schema.json"
+      },
+      "exit_code": 0,
+      "passed": true,
+      "positive_status": "supported_research",
+      "warnings": [
+        "Research inference only; independent validation and human review are required."
+      ],
+      "negative_cases": 8,
+      "stderr": ""
+    },
+    {
+      "component": "aqi",
+      "component_kind": "supervised time-series regression",
+      "artifact_directory": "artifacts\\aqi",
+      "artifact": "artifacts\\aqi\\pipeline.joblib",
+      "metadata": "artifacts\\aqi\\metadata.json",
+      "feature_schema": "artifacts\\aqi\\feature_schema.json",
+      "version": "legacy-unversioned",
+      "geographic_scope": "Delhi aggregate (station lineage unverified)",
+      "units": "ug/m3 (working assumption; source unit metadata incomplete)",
+      "horizon": "next hour PM2.5",
+      "supported_modes": [
+        "historical"
+      ],
+      "provenance": "publisher-described measurements; station lineage and real/synthetic status unverified",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "readiness": "Not ready",
+      "readiness_reason": "Fresh-process loading/inference not yet checked",
+      "operational_supported": false,
+      "simulation_only": false,
+      "missing": [],
+      "selected_model": "Ridge tuned",
+      "timestamp_policy": "Asia/Kolkata",
+      "supported_inputs": {
+        "required_request_fields": [
+          "scope",
+          "units",
+          "horizon",
+          "mode",
+          "as_of"
+        ],
+        "input_schema": "artifacts\\aqi\\feature_schema.json"
+      },
+      "exit_code": 0,
+      "passed": true,
+      "positive_status": "supported_research",
+      "warnings": [
+        "Research inference only; independent validation and human review are required."
+      ],
+      "negative_cases": 8,
+      "stderr": ""
+    },
+    {
+      "component": "traffic",
+      "component_kind": "supervised time-series regression",
+      "artifact_directory": "artifacts\\traffic",
+      "artifact": "artifacts\\traffic\\pipeline.joblib",
+      "metadata": "artifacts\\traffic\\metadata.json",
+      "feature_schema": "artifacts\\traffic\\feature_schema.json",
+      "version": "legacy-unversioned",
+      "geographic_scope": "unlocated benchmark junctions",
+      "units": "vehicles/hour",
+      "horizon": "next hour vehicle count",
+      "supported_modes": [
+        "historical"
+      ],
+      "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "readiness": "Not ready",
+      "readiness_reason": "Fresh-process loading/inference not yet checked",
+      "operational_supported": false,
+      "simulation_only": false,
+      "missing": [],
+      "selected_model": "XGBoost tuned",
+      "timestamp_policy": null,
+      "supported_inputs": {
+        "required_request_fields": [
+          "scope",
+          "units",
+          "horizon",
+          "mode",
+          "as_of"
+        ],
+        "input_schema": "artifacts\\traffic\\feature_schema.json"
+      },
+      "exit_code": 1,
+      "passed": false,
+      "positive_status": "abstained",
+      "warnings": [
+        "input stream corrupted"
+      ],
+      "negative_cases": 8,
+      "stderr": ""
+    },
+    {
+      "component": "flood",
+      "component_kind": "supervised simulator",
+      "artifact_directory": "artifacts\\flood",
+      "artifact": "artifacts\\flood\\pipeline.joblib",
+      "metadata": "artifacts\\flood\\metadata.json",
+      "feature_schema": "artifacts\\flood\\feature_schema.json",
+      "version": "legacy-unversioned",
+      "geographic_scope": "hypothetical catchments with state-rainfall reference",
+      "units": {
+        "rain_mm": "mm",
+        "duration_h": "hours",
+        "area_m2": "m2",
+        "drain_mm_h": "mm/hour",
+        "initial_storage_mm": "mm",
+        "fractions": "unitless"
+      },
+      "horizon": "24-hour simulated scenario",
+      "supported_modes": [
+        "historical",
+        "simulation"
+      ],
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research scenario surrogate; not validated real flood or infrastructure failure forecast",
+      "readiness": "Not ready",
+      "readiness_reason": "Fresh-process loading/inference not yet checked",
+      "operational_supported": false,
+      "simulation_only": true,
+      "missing": [],
+      "selected_model": "XGBoost tuned",
+      "timestamp_policy": "component-specific; see schema",
+      "supported_inputs": {
+        "required_request_fields": [
+          "scope",
+          "units",
+          "horizon",
+          "mode",
+          "as_of"
+        ],
+        "input_schema": "artifacts\\flood\\feature_schema.json"
+      },
+      "exit_code": 1,
+      "passed": false,
+      "positive_status": "abstained",
+      "warnings": [
+        "input stream corrupted"
+      ],
+      "negative_cases": 7,
+      "stderr": ""
+    },
+    {
+      "component": "infrastructure_anomaly",
+      "component_kind": "unsupervised detectors + data-quality rules",
+      "artifact_directory": "artifacts\\infrastructure_anomaly\\v1.0.0",
+      "artifact": "artifacts\\infrastructure_anomaly\\v1.0.0\\detectors.joblib",
+      "metadata": "artifacts\\infrastructure_anomaly\\v1.0.0\\model_card.json",
+      "feature_schema": "artifacts\\infrastructure_anomaly\\v1.0.0\\feature_schema.json",
+      "version": "1.0.0",
+      "geographic_scope": "source-specific unmapped benchmark sensors",
+      "units": "per registered sensor",
+      "horizon": "contemporaneous unusual measurement",
+      "supported_modes": [
+        "historical"
+      ],
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research evidence only",
+      "readiness": "Not ready",
+      "readiness_reason": "Fresh-process loading/inference not yet checked",
+      "operational_supported": false,
+      "simulation_only": false,
+      "missing": [],
+      "selected_model": "not a supervised selected model",
+      "timestamp_policy": "component-specific; see schema",
+      "supported_inputs": {
+        "required_request_fields": [
+          "scope",
+          "units",
+          "horizon",
+          "mode",
+          "as_of"
+        ],
+        "input_schema": "artifacts\\infrastructure_anomaly\\v1.0.0\\feature_schema.json"
+      },
+      "exit_code": 0,
+      "passed": true,
+      "positive_status": "supported_research",
+      "warnings": [
+        "Unusual measurements are not confirmed equipment failures.",
+        "Source timezone/reporting delay is a documented research assumption, not device-verified metadata.",
+        "Research inference only; independent validation and human review are required."
+      ],
+      "negative_cases": 8,
+      "stderr": ""
+    },
+    {
+      "component": "water_network",
+      "component_kind": "supervised time-series regression",
+      "artifact_directory": "artifacts\\water_network\\v1.1.0",
+      "artifact": "artifacts\\water_network\\v1.1.0\\pipeline.joblib",
+      "metadata": "artifacts\\water_network\\v1.1.0\\metadata.json",
+      "feature_schema": "artifacts\\water_network\\v1.1.0\\feature_schema.json",
+      "version": "1.1.0",
+      "geographic_scope": "L-TOWN simulated network only",
+      "units": {
+        "pressure": "m",
+        "flow": "m3/h",
+        "level": "m"
+      },
+      "horizon": "onset during preceding 24 hours",
+      "supported_modes": [
+        "historical",
+        "simulation"
+      ],
+      "provenance": "BattLeDIM CC BY 4.0 simulated SCADA",
+      "validation_status": "weak temporal benchmark; operational abstention",
+      "readiness": "Not ready",
+      "readiness_reason": "Fresh-process loading/inference not yet checked",
+      "operational_supported": false,
+      "simulation_only": true,
+      "missing": [],
+      "selected_model": "Logistic tuned",
+      "timestamp_policy": "component-specific; see schema",
+      "supported_inputs": {
+        "required_request_fields": [
+          "scope",
+          "units",
+          "horizon",
+          "mode",
+          "as_of"
+        ],
+        "input_schema": "artifacts\\water_network\\v1.1.0\\feature_schema.json"
+      },
+      "exit_code": 0,
+      "passed": true,
+      "positive_status": "supported_simulation",
+      "warnings": [
+        "Benchmark distribution only; recent-onset detection is not leak localization or proof of a fault.",
+        "Source clock/receipt latency is unspecified; no operational freshness claim.",
+        "Research inference only; independent validation and human review are required.",
+        "Weak onset detection: explicitly abstain from operational fault predictions."
+      ],
+      "negative_cases": 9,
+      "stderr": ""
+    },
+    {
+      "component": "cascade_risk",
+      "component_kind": "supervised simulator + graph rules",
+      "artifact_directory": "artifacts\\cascade_risk\\v1.1.0",
+      "artifact": "artifacts\\cascade_risk\\v1.1.0\\pipeline.joblib",
+      "metadata": "artifacts\\cascade_risk\\v1.1.0\\metadata.json",
+      "feature_schema": "artifacts\\cascade_risk\\v1.1.0\\feature_schema.json",
+      "version": "1.1.0",
+      "geographic_scope": "synthetic civic dependency graphs",
+      "units": "unitless simulated risk",
+      "horizon": "next 60 minutes",
+      "supported_modes": [
+        "historical",
+        "simulation"
+      ],
+      "provenance": "seeded independent-cascade simulator",
+      "validation_status": "unseen synthetic graph holdout; no municipal validity",
+      "readiness": "Not ready",
+      "readiness_reason": "Fresh-process loading/inference not yet checked",
+      "operational_supported": false,
+      "simulation_only": true,
+      "missing": [],
+      "selected_model": "Logistic tuned",
+      "timestamp_policy": "component-specific; see schema",
+      "supported_inputs": {
+        "required_request_fields": [
+          "scope",
+          "units",
+          "horizon",
+          "mode",
+          "as_of"
+        ],
+        "input_schema": "artifacts\\cascade_risk\\v1.1.0\\feature_schema.json"
+      },
+      "exit_code": 0,
+      "passed": true,
+      "positive_status": "supported_simulation",
+      "warnings": [
+        "Simulation-trained risks are not real-world failure probabilities.",
+        "No verified municipal topology or incident labels.",
+        "Research inference only; independent validation and human review are required."
+      ],
+      "negative_cases": 9,
+      "stderr": ""
+    },
+    {
+      "component": "resource_optimization",
+      "component_kind": "CP-SAT optimization + greedy rules",
+      "artifact_directory": "artifacts\\resource_optimization\\v1.1.0",
+      "artifact": null,
+      "metadata": "artifacts\\resource_optimization\\v1.1.0\\metadata.json",
+      "feature_schema": "artifacts\\resource_optimization\\v1.1.0\\feature_schema.json",
+      "version": "1.1.0",
+      "geographic_scope": "synthetic intervention scenarios",
+      "units": {
+        "budget": "hypothetical INR",
+        "crew_hours": "hours",
+        "pumps": "count"
+      },
+      "horizon": "simultaneous planning window",
+      "supported_modes": [
+        "historical",
+        "simulation"
+      ],
+      "provenance": "documented fictional costs, resources and policy factors",
+      "validation_status": "scenario feasibility verified; no real resource inventory",
+      "readiness": "Not ready",
+      "readiness_reason": "Fresh-process loading/inference not yet checked",
+      "operational_supported": false,
+      "simulation_only": true,
+      "missing": [],
+      "selected_model": "not a supervised selected model",
+      "timestamp_policy": "component-specific; see schema",
+      "supported_inputs": {
+        "required_request_fields": [
+          "scope",
+          "units",
+          "horizon",
+          "mode",
+          "as_of"
+        ],
+        "input_schema": "artifacts\\resource_optimization\\v1.1.0\\feature_schema.json"
+      },
+      "exit_code": 0,
+      "passed": true,
+      "positive_status": "supported_simulation",
+      "warnings": [
+        "Research inference only; independent validation and human review are required."
+      ],
+      "negative_cases": 9,
+      "stderr": ""
+    },
+    {
+      "component": "intervention_outcomes",
+      "component_kind": "synthetic classification + duration regression",
+      "artifact_directory": "artifacts\\intervention_outcomes\\v1.1.0",
+      "artifact": "artifacts\\intervention_outcomes\\v1.1.0\\pipeline.joblib",
+      "metadata": "artifacts\\intervention_outcomes\\v1.1.0\\metadata.json",
+      "feature_schema": "artifacts\\intervention_outcomes\\v1.1.0\\feature_schema.json",
+      "version": "1.1.0",
+      "geographic_scope": "synthetic intervention records only",
+      "units": {
+        "cost": "hypothetical INR",
+        "duration": "hours"
+      },
+      "horizon": "completed synthetic outcome",
+      "supported_modes": [
+        "historical",
+        "simulation"
+      ],
+      "provenance": "seeded, confounded outcome generator; no real verification records",
+      "validation_status": "chronological synthetic holdout; unsupported success prediction, duration research only",
+      "readiness": "Not ready",
+      "readiness_reason": "Fresh-process loading/inference not yet checked",
+      "operational_supported": false,
+      "simulation_only": true,
+      "missing": [],
+      "selected_model": "Random Forest",
+      "timestamp_policy": "component-specific; see schema",
+      "supported_inputs": {
+        "required_request_fields": [
+          "scope",
+          "units",
+          "horizon",
+          "mode",
+          "as_of"
+        ],
+        "input_schema": "artifacts\\intervention_outcomes\\v1.1.0\\feature_schema.json"
+      },
+      "exit_code": 0,
+      "passed": true,
+      "positive_status": "supported_simulation",
+      "warnings": [
+        "Synthetic records only; model does not estimate the causal benefit of an intervention.",
+        "Do not use as a real success probability or approval decision.",
+        "Research inference only; independent validation and human review are required."
+      ],
+      "negative_cases": 9,
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "variable": "rainfall_mm_day",
+    "geography": "Delhi",
+    "origin": "2024-07-31 00:00:00+05:30",
+    "valid_at": "2024-08-01 00:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "prediction": 0.8326453125239109,
+    "interval_90": [
+      0.0,
+      6.309412390716053
+    ],
+    "unit": "mm/day",
+    "source_quality": "reported real state aggregate; upstream lineage not independently audited",
+    "current_observation_missing": true,
+    "action": "human_review_required",
+    "research_only": true
+  }
+]

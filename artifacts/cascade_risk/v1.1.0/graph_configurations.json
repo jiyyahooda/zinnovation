@@ -1,0 +1,5540 @@
+{
+  "synthetic-civic-100": {
+    "attributes": {
+      "graph_id": "synthetic-civic-100",
+      "synthetic": true,
+      "version": "1.0.0"
+    },
+    "nodes": [
+      {
+        "id": "drainage_0",
+        "node_type": "drainage",
+        "criticality": 0.8844871413514062,
+        "resilience": 0.47810471483233796
+      },
+      {
+        "id": "drainage_1",
+        "node_type": "drainage",
+        "criticality": 0.5022042691838425,
+        "resilience": 0.17362336388181626
+      },
+      {
+        "id": "drainage_2",
+        "node_type": "drainage",
+        "criticality": 0.9815580765743499,
+        "resilience": 0.4780594372355786
+      },
+      {
+        "id": "drainage_3",
+        "node_type": "drainage",
+        "criticality": 0.8531842150931048,
+        "resilience": 0.650686659712499
+      },
+      {
+        "id": "drainage_4",
+        "node_type": "drainage",
+        "criticality": 0.7817081133142215,
+        "resilience": 0.25449531036324774
+      },
+      {
+        "id": "drainage_5",
+        "node_type": "drainage",
+        "criticality": 0.9870352864390864,
+        "resilience": 0.3066070275097067
+      },
+      {
+        "id": "drainage_6",
+        "node_type": "drainage",
+        "criticality": 0.7404912188243351,
+        "resilience": 0.46957006332919604
+      },
+      {
+        "id": "drainage_7",
+        "node_type": "drainage",
+        "criticality": 0.719938591192591,
+        "resilience": 0.44438645794890785
+      },
+      {
+        "id": "road_0",
+        "node_type": "road",
+        "criticality": 0.997043972952986,
+        "resilience": 0.4260703465833093
+      },
+      {
+        "id": "road_1",
+        "node_type": "road",
+        "criticality": 0.8397158034817552,
+        "resilience": 0.4217889782455702
+      },
+      {
+        "id": "road_2",
+        "node_type": "road",
+        "criticality": 0.9983721452205326,
+        "resilience": 0.6882420567532576
+      },
+      {
+        "id": "road_3",
+        "node_type": "road",
+        "criticality": 0.5754976314766898,
+        "resilience": 0.32705889453571274
+      },
+      {
+        "id": "road_4",
+        "node_type": "road",
+        "criticality": 0.9035264557834747,
+        "resilience": 0.589628692452922
+      },
+      {
+        "id": "road_5",
+        "node_type": "road",
+        "criticality": 0.7840014429004991,
+        "resilience": 0.3746848184120443
+      },
+      {
+        "id": "road_6",
+        "node_type": "road",
+        "criticality": 0.572835592873326,
+        "resilience": 0.2224066175762911
+      },
+      {
+        "id": "road_7",
+        "node_type": "road",
+        "criticality": 0.7378482414274948,
+        "resilience": 0.19532075374125726
+      },
+      {
+        "id": "water_0",
+        "node_type": "water",
+        "criticality": 0.49220109208967344,
+        "resilience": 0.5108643649174446
+      },
+      {
+        "id": "water_1",
+        "node_type": "water",
+        "criticality": 0.31027322119977296,
+        "resilience": 0.608992694590575
+      },
+      {
+        "id": "water_2",
+        "node_type": "water",
+        "criticality": 0.35067935463392114,
+        "resilience": 0.4382664528154662
+      },
+      {
+        "id": "water_3",
+        "node_type": "water",
+        "criticality": 0.6825853608712967,
+        "resilience": 0.27498582944841343
+      },
+      {
+        "id": "water_4",
+        "node_type": "water",
+        "criticality": 0.9691847514302495,
+        "resilience": 0.3375301179537686
+      },
+      {
+        "id": "water_5",
+        "node_type": "water",
+        "criticality": 0.6532952084950953,
+        "resilience": 0.6270609863528264
+      },
+      {
+        "id": "water_6",
+        "node_type": "water",
+        "criticality": 0.7598670648603235,
+        "resilience": 0.3615973242938968
+      },
+      {
+        "id": "water_7",
+        "node_type": "water",
+        "criticality": 0.3673906855044575,
+        "resilience": 0.6756930930373448
+      },
+      {
+        "id": "pump_0",
+        "node_type": "pump",
+        "criticality": 0.7126969937414479,
+        "resilience": 0.47018959084956596
+      },
+      {
+        "id": "pump_1",
+        "node_type": "pump",
+        "criticality": 0.7180016904227312,
+        "resilience": 0.23188066329104837
+      },
+      {
+        "id": "pump_2",
+        "node_type": "pump",
+        "criticality": 0.6920340399738291,
+        "resilience": 0.4597421361804821
+      },
+      {
+        "id": "pump_3",
+        "node_type": "pump",
+        "criticality": 0.7066917294494669,
+        "resilience": 0.2517219472972353
+      },
+      {
+        "id": "pump_4",
+        "node_type": "pump",
+        "criticality": 0.7967332383644432,
+        "resilience": 0.18851136061722712
+      },
+      {
+        "id": "pump_5",
+        "node_type": "pump",
+        "criticality": 0.5274054575096834,
+        "resilience": 0.20877050845823314
+      },
+      {
+        "id": "pump_6",
+        "node_type": "pump",
+        "criticality": 0.8236200856081687,
+        "resilience": 0.4258657040496947
+      },
+      {
+        "id": "pump_7",
+        "node_type": "pump",
+        "criticality": 0.6264156725380176,
+        "resilience": 0.19053135475903454
+      },
+      {
+        "id": "facility_0",
+        "node_type": "facility",
+        "criticality": 0.6094674689916474,
+        "resilience": 0.2729310925301384
+      },
+      {
+        "id": "facility_1",
+        "node_type": "facility",
+        "criticality": 0.5120830086279992,
+        "resilience": 0.36689140454438507
+      },
+      {
+        "id": "facility_2",
+        "node_type": "facility",
+        "criticality": 0.7946414541211055,
+        "resilience": 0.5824997263800727
+      },
+      {
+        "id": "facility_3",
+        "node_type": "facility",
+        "criticality": 0.5497852666880211,
+        "resilience": 0.5185714183070604
+      },
+      {
+        "id": "facility_4",
+        "node_type": "facility",
+        "criticality": 0.6571561839733838,
+        "resilience": 0.519129893401263
+      },
+      {
+        "id": "facility_5",
+        "node_type": "facility",
+        "criticality": 0.5312324499490356,
+        "resilience": 0.644130758519098
+      },
+      {
+        "id": "facility_6",
+        "node_type": "facility",
+        "criticality": 0.7639544072562956,
+        "resilience": 0.2554885406015307
+      },
+      {
+        "id": "facility_7",
+        "node_type": "facility",
+        "criticality": 0.7026109676157504,
+        "resilience": 0.5621715844857215
+      }
+    ],
+    "edges": [
+      {
+        "source": "drainage_0",
+        "target": "road_4",
+        "weight": 0.3809032451106729,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_0",
+        "target": "road_6",
+        "weight": 0.6004156540770793,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_1",
+        "target": "road_5",
+        "weight": 0.31999509794903264,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_1",
+        "target": "road_4",
+        "weight": 0.6942288442199466,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_2",
+        "target": "road_2",
+        "weight": 0.43938151221908234,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_2",
+        "target": "road_7",
+        "weight": 0.7236368216264037,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_3",
+        "target": "road_4",
+        "weight": 0.5306991179031537,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_3",
+        "target": "road_5",
+        "weight": 0.527630113929688,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_4",
+        "target": "road_2",
+        "weight": 0.38464816676223196,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_4",
+        "target": "road_7",
+        "weight": 0.40192785166282136,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_5",
+        "target": "road_4",
+        "weight": 0.4220134683461901,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_5",
+        "target": "road_0",
+        "weight": 0.672247060060138,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_6",
+        "target": "road_0",
+        "weight": 0.7307366414474907,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_6",
+        "target": "road_3",
+        "weight": 0.7912719163789943,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_7",
+        "target": "road_5",
+        "weight": 0.6964663386339495,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_7",
+        "target": "road_2",
+        "weight": 0.7549924229826512,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "facility_0",
+        "weight": 0.6193531394974338,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "facility_2",
+        "weight": 0.46013669233151494,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "pump_1",
+        "weight": 0.701340222153482,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "pump_3",
+        "weight": 0.803001552216286,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "facility_1",
+        "weight": 0.4647748415072356,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "facility_5",
+        "weight": 0.4851616856095395,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "pump_3",
+        "weight": 0.8308549008117597,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "pump_4",
+        "weight": 0.2804558920411097,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "facility_5",
+        "weight": 0.2579709645083948,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "facility_0",
+        "weight": 0.21110951282900425,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "pump_4",
+        "weight": 0.5644913875953415,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "pump_5",
+        "weight": 0.50172827119855,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "facility_6",
+        "weight": 0.6752649486674328,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "facility_1",
+        "weight": 0.7139878624374082,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "pump_1",
+        "weight": 0.7791310439364694,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "pump_6",
+        "weight": 0.2916833344352465,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "facility_0",
+        "weight": 0.49240393005837535,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "facility_6",
+        "weight": 0.7648156975345821,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "pump_7",
+        "weight": 0.5982706333549511,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "pump_3",
+        "weight": 0.41006981144691607,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "facility_4",
+        "weight": 0.3098638261937535,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "facility_7",
+        "weight": 0.6747597036123673,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "pump_4",
+        "weight": 0.7655664650469652,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "pump_1",
+        "weight": 0.43315030854707576,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "facility_3",
+        "weight": 0.36748439868790816,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "facility_4",
+        "weight": 0.6470830064527879,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "pump_6",
+        "weight": 0.5161827138821027,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "pump_7",
+        "weight": 0.7069300816874923,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "facility_5",
+        "weight": 0.21147762427857364,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "facility_3",
+        "weight": 0.5365787859975105,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "pump_2",
+        "weight": 0.21350287975520474,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "pump_5",
+        "weight": 0.37592807023817004,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_0",
+        "target": "facility_5",
+        "weight": 0.43207853298614424,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_0",
+        "target": "facility_4",
+        "weight": 0.671975848462032,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_1",
+        "target": "facility_7",
+        "weight": 0.5982832880502552,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_1",
+        "target": "facility_3",
+        "weight": 0.3415684722438167,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_2",
+        "target": "facility_5",
+        "weight": 0.7171167012748291,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_2",
+        "target": "facility_2",
+        "weight": 0.386409467111707,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_3",
+        "target": "facility_3",
+        "weight": 0.49115613106673944,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_3",
+        "target": "facility_0",
+        "weight": 0.2568187058036332,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_4",
+        "target": "facility_5",
+        "weight": 0.5588985313909981,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_4",
+        "target": "facility_6",
+        "weight": 0.331116503095992,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_5",
+        "target": "facility_1",
+        "weight": 0.3161139124271617,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_5",
+        "target": "facility_4",
+        "weight": 0.6555743080659812,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_6",
+        "target": "facility_6",
+        "weight": 0.8261206403297746,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_6",
+        "target": "facility_4",
+        "weight": 0.2539103166798827,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_7",
+        "target": "facility_1",
+        "weight": 0.7041119844880115,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_7",
+        "target": "facility_5",
+        "weight": 0.5402335279291071,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "drainage_6",
+        "weight": 0.84521998022736,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "drainage_2",
+        "weight": 0.6508836481913931,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "water_3",
+        "weight": 0.8318136483099723,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "water_6",
+        "weight": 0.4470146684796066,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "drainage_4",
+        "weight": 0.6458103784806081,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "drainage_5",
+        "weight": 0.4010529776873391,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "water_3",
+        "weight": 0.7537397366050167,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "water_0",
+        "weight": 0.7977933820848474,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "drainage_1",
+        "weight": 0.6692532380222055,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "drainage_3",
+        "weight": 0.22213956092393794,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "water_5",
+        "weight": 0.32261288974969216,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "water_4",
+        "weight": 0.6847814434238886,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "drainage_7",
+        "weight": 0.45572668608310035,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "drainage_2",
+        "weight": 0.3595294991915996,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "water_5",
+        "weight": 0.7624001140068724,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "water_4",
+        "weight": 0.7490836264983095,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "drainage_3",
+        "weight": 0.8225036242315791,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "drainage_7",
+        "weight": 0.8047624863586493,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "water_6",
+        "weight": 0.3793043914682778,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "water_3",
+        "weight": 0.21716066459327568,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "drainage_1",
+        "weight": 0.6027768374286792,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "drainage_2",
+        "weight": 0.2700634161253313,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "water_3",
+        "weight": 0.8154039965382258,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "water_4",
+        "weight": 0.45462368943320997,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "drainage_5",
+        "weight": 0.47374069721271916,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "drainage_2",
+        "weight": 0.7786955184588706,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "water_6",
+        "weight": 0.8101449424017798,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "water_7",
+        "weight": 0.7255702385574515,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "drainage_4",
+        "weight": 0.69904884698591,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "drainage_3",
+        "weight": 0.77421105139122,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "water_7",
+        "weight": 0.5398836136307295,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "water_3",
+        "weight": 0.709140025570056,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      }
+    ]
+  },
+  "synthetic-civic-101": {
+    "attributes": {
+      "graph_id": "synthetic-civic-101",
+      "synthetic": true,
+      "version": "1.0.0"
+    },
+    "nodes": [
+      {
+        "id": "drainage_0",
+        "node_type": "drainage",
+        "criticality": 0.9604727539273877,
+        "resilience": 0.34768156833786523
+      },
+      {
+        "id": "drainage_1",
+        "node_type": "drainage",
+        "criticality": 0.849363788378984,
+        "resilience": 0.4752030018761764
+      },
+      {
+        "id": "drainage_2",
+        "node_type": "drainage",
+        "criticality": 0.5060299928378497,
+        "resilience": 0.6574991275326028
+      },
+      {
+        "id": "drainage_3",
+        "node_type": "drainage",
+        "criticality": 0.9085320812749985,
+        "resilience": 0.35027613445978756
+      },
+      {
+        "id": "drainage_4",
+        "node_type": "drainage",
+        "criticality": 0.9812237702430258,
+        "resilience": 0.2734883819043222
+      },
+      {
+        "id": "drainage_5",
+        "node_type": "drainage",
+        "criticality": 0.8638471075496854,
+        "resilience": 0.5244929272044642
+      },
+      {
+        "id": "drainage_6",
+        "node_type": "drainage",
+        "criticality": 0.62974236485799,
+        "resilience": 0.16694300880305532
+      },
+      {
+        "id": "drainage_7",
+        "node_type": "drainage",
+        "criticality": 0.9263587421579578,
+        "resilience": 0.4654978880980711
+      },
+      {
+        "id": "road_0",
+        "node_type": "road",
+        "criticality": 0.5732157803572241,
+        "resilience": 0.34507347046819664
+      },
+      {
+        "id": "road_1",
+        "node_type": "road",
+        "criticality": 0.7563811136222836,
+        "resilience": 0.34086563353697175
+      },
+      {
+        "id": "road_2",
+        "node_type": "road",
+        "criticality": 0.655305935704419,
+        "resilience": 0.35401463649067105
+      },
+      {
+        "id": "road_3",
+        "node_type": "road",
+        "criticality": 0.3386419977630471,
+        "resilience": 0.2877250601813352
+      },
+      {
+        "id": "road_4",
+        "node_type": "road",
+        "criticality": 0.8886741267454974,
+        "resilience": 0.5999849280439383
+      },
+      {
+        "id": "road_5",
+        "node_type": "road",
+        "criticality": 0.7671277983651082,
+        "resilience": 0.4088231751039461
+      },
+      {
+        "id": "road_6",
+        "node_type": "road",
+        "criticality": 0.9788911449009513,
+        "resilience": 0.6121434146887803
+      },
+      {
+        "id": "road_7",
+        "node_type": "road",
+        "criticality": 0.47154722287748896,
+        "resilience": 0.46215089916296187
+      },
+      {
+        "id": "water_0",
+        "node_type": "water",
+        "criticality": 0.9691658730869328,
+        "resilience": 0.5820896605265179
+      },
+      {
+        "id": "water_1",
+        "node_type": "water",
+        "criticality": 0.5585451958123231,
+        "resilience": 0.4084580162677382
+      },
+      {
+        "id": "water_2",
+        "node_type": "water",
+        "criticality": 0.6624787790993941,
+        "resilience": 0.6460413709324695
+      },
+      {
+        "id": "water_3",
+        "node_type": "water",
+        "criticality": 0.8000068819298298,
+        "resilience": 0.3689758579323771
+      },
+      {
+        "id": "water_4",
+        "node_type": "water",
+        "criticality": 0.6234289447681349,
+        "resilience": 0.20077039333908378
+      },
+      {
+        "id": "water_5",
+        "node_type": "water",
+        "criticality": 0.6444244704622716,
+        "resilience": 0.2759623000991293
+      },
+      {
+        "id": "water_6",
+        "node_type": "water",
+        "criticality": 0.3651924195687046,
+        "resilience": 0.20020225109060236
+      },
+      {
+        "id": "water_7",
+        "node_type": "water",
+        "criticality": 0.4510778216690081,
+        "resilience": 0.5345195150355955
+      },
+      {
+        "id": "pump_0",
+        "node_type": "pump",
+        "criticality": 0.4254282574445978,
+        "resilience": 0.4626129370673038
+      },
+      {
+        "id": "pump_1",
+        "node_type": "pump",
+        "criticality": 0.7218333410769321,
+        "resilience": 0.6814459847348647
+      },
+      {
+        "id": "pump_2",
+        "node_type": "pump",
+        "criticality": 0.6207398936880986,
+        "resilience": 0.5759900211524146
+      },
+      {
+        "id": "pump_3",
+        "node_type": "pump",
+        "criticality": 0.3244260244601282,
+        "resilience": 0.5045336402749244
+      },
+      {
+        "id": "pump_4",
+        "node_type": "pump",
+        "criticality": 0.9862123304971208,
+        "resilience": 0.17606053721256643
+      },
+      {
+        "id": "pump_5",
+        "node_type": "pump",
+        "criticality": 0.9353548749459584,
+        "resilience": 0.23567810064124153
+      },
+      {
+        "id": "pump_6",
+        "node_type": "pump",
+        "criticality": 0.7726740955339667,
+        "resilience": 0.16390285668718574
+      },
+      {
+        "id": "pump_7",
+        "node_type": "pump",
+        "criticality": 0.3430259140510436,
+        "resilience": 0.22408316090387279
+      },
+      {
+        "id": "facility_0",
+        "node_type": "facility",
+        "criticality": 0.9309260707861686,
+        "resilience": 0.5805889162921151
+      },
+      {
+        "id": "facility_1",
+        "node_type": "facility",
+        "criticality": 0.7632518405936075,
+        "resilience": 0.5072012631475136
+      },
+      {
+        "id": "facility_2",
+        "node_type": "facility",
+        "criticality": 0.5056326624146731,
+        "resilience": 0.44045790790041506
+      },
+      {
+        "id": "facility_3",
+        "node_type": "facility",
+        "criticality": 0.6373079743804132,
+        "resilience": 0.673113164942299
+      },
+      {
+        "id": "facility_4",
+        "node_type": "facility",
+        "criticality": 0.6179428683165223,
+        "resilience": 0.5608079105507042
+      },
+      {
+        "id": "facility_5",
+        "node_type": "facility",
+        "criticality": 0.5510571660545137,
+        "resilience": 0.6589837230104816
+      },
+      {
+        "id": "facility_6",
+        "node_type": "facility",
+        "criticality": 0.8966606246201826,
+        "resilience": 0.6955371479435234
+      },
+      {
+        "id": "facility_7",
+        "node_type": "facility",
+        "criticality": 0.4589298400428435,
+        "resilience": 0.6287118211218305
+      }
+    ],
+    "edges": [
+      {
+        "source": "drainage_0",
+        "target": "road_2",
+        "weight": 0.5521687630802389,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_0",
+        "target": "road_3",
+        "weight": 0.25969627076942825,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_1",
+        "target": "road_6",
+        "weight": 0.2684492361592104,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_1",
+        "target": "road_3",
+        "weight": 0.27373280343809453,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_2",
+        "target": "road_3",
+        "weight": 0.5024205229305331,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_2",
+        "target": "road_1",
+        "weight": 0.24223021541155407,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_3",
+        "target": "road_7",
+        "weight": 0.4478703128855987,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_3",
+        "target": "road_4",
+        "weight": 0.31954299210751796,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_4",
+        "target": "road_7",
+        "weight": 0.5818261430012613,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_4",
+        "target": "road_6",
+        "weight": 0.7076343079326606,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_5",
+        "target": "road_0",
+        "weight": 0.5946578691714013,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_5",
+        "target": "road_2",
+        "weight": 0.4622463062361023,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_6",
+        "target": "road_0",
+        "weight": 0.23375847547820158,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_6",
+        "target": "road_7",
+        "weight": 0.7862719991220282,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_7",
+        "target": "road_2",
+        "weight": 0.5824144087632881,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_7",
+        "target": "road_7",
+        "weight": 0.4199933442058366,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "facility_6",
+        "weight": 0.6792963461752717,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "facility_3",
+        "weight": 0.24454625205360725,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "pump_1",
+        "weight": 0.37945942380418646,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "pump_3",
+        "weight": 0.36180875279965546,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "facility_5",
+        "weight": 0.3612823225404952,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "facility_2",
+        "weight": 0.4245792561686603,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "pump_0",
+        "weight": 0.5305969814529616,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "pump_2",
+        "weight": 0.7723112550009553,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "facility_5",
+        "weight": 0.7943025179167528,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "facility_7",
+        "weight": 0.26018980677550074,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "pump_0",
+        "weight": 0.2122061753448268,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "pump_1",
+        "weight": 0.21988313952963884,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "facility_0",
+        "weight": 0.24248058808200712,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "facility_7",
+        "weight": 0.5365976410715438,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "pump_0",
+        "weight": 0.6664166465250332,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "pump_5",
+        "weight": 0.8032009365949522,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "facility_0",
+        "weight": 0.8383660567128457,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "facility_7",
+        "weight": 0.642996691183035,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "pump_7",
+        "weight": 0.6993871265105022,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "pump_6",
+        "weight": 0.5395876277740701,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "facility_2",
+        "weight": 0.2514041941135612,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "facility_3",
+        "weight": 0.27034908524969253,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "pump_3",
+        "weight": 0.4124163849953207,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "pump_0",
+        "weight": 0.6143408330983263,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "facility_0",
+        "weight": 0.5247920104593502,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "facility_1",
+        "weight": 0.23482861616801312,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "pump_0",
+        "weight": 0.4361097439131278,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "pump_5",
+        "weight": 0.44953133137976303,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "facility_2",
+        "weight": 0.38130149667400676,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "facility_5",
+        "weight": 0.7066928860674597,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "pump_0",
+        "weight": 0.6966138021289503,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "pump_2",
+        "weight": 0.4446373669576457,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_0",
+        "target": "facility_3",
+        "weight": 0.5061755658379582,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_0",
+        "target": "facility_1",
+        "weight": 0.5724882603283777,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_1",
+        "target": "facility_1",
+        "weight": 0.2663809620534286,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_1",
+        "target": "facility_4",
+        "weight": 0.5454861929819266,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_2",
+        "target": "facility_3",
+        "weight": 0.511756232254153,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_2",
+        "target": "facility_7",
+        "weight": 0.49120496774215333,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_3",
+        "target": "facility_0",
+        "weight": 0.6431980317171936,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_3",
+        "target": "facility_2",
+        "weight": 0.5095285718701293,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_4",
+        "target": "facility_1",
+        "weight": 0.37360298413200055,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_4",
+        "target": "facility_7",
+        "weight": 0.8208404377892005,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_5",
+        "target": "facility_6",
+        "weight": 0.5580093550853611,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_5",
+        "target": "facility_1",
+        "weight": 0.2185357313681352,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_6",
+        "target": "facility_2",
+        "weight": 0.530310379056956,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_6",
+        "target": "facility_1",
+        "weight": 0.724664201151121,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_7",
+        "target": "facility_1",
+        "weight": 0.5836908215021444,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_7",
+        "target": "facility_3",
+        "weight": 0.40270513815266773,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "drainage_0",
+        "weight": 0.26464547625430246,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "drainage_4",
+        "weight": 0.3526213592554488,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "water_4",
+        "weight": 0.6772383410330929,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "water_1",
+        "weight": 0.810327291337599,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "drainage_1",
+        "weight": 0.4356225180241978,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "drainage_6",
+        "weight": 0.3753357850823263,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "water_6",
+        "weight": 0.41225673873798585,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "water_2",
+        "weight": 0.7354382373387155,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "drainage_5",
+        "weight": 0.6519606346524761,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "drainage_2",
+        "weight": 0.25023406121210756,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "water_1",
+        "weight": 0.5220663046241798,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "water_4",
+        "weight": 0.4083469950297901,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "drainage_2",
+        "weight": 0.6166186752316662,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "drainage_7",
+        "weight": 0.38797716855655573,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "water_1",
+        "weight": 0.34739917294509165,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "water_5",
+        "weight": 0.34469859311181045,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "drainage_4",
+        "weight": 0.7985218157645668,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "drainage_0",
+        "weight": 0.8360351568686181,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "water_0",
+        "weight": 0.5954879935581444,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "water_5",
+        "weight": 0.3544188235423098,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "drainage_3",
+        "weight": 0.3878481816006414,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "drainage_0",
+        "weight": 0.5787255042638402,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "water_7",
+        "weight": 0.25729961054250805,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "water_5",
+        "weight": 0.4410729402476265,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "drainage_2",
+        "weight": 0.431549194657659,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "drainage_3",
+        "weight": 0.6359520269367035,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "water_1",
+        "weight": 0.708612770849933,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "water_6",
+        "weight": 0.25353586316297644,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "drainage_6",
+        "weight": 0.803775715525337,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "drainage_5",
+        "weight": 0.7231694544565104,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "water_5",
+        "weight": 0.2573751402590239,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "water_7",
+        "weight": 0.3634536356890745,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      }
+    ]
+  },
+  "synthetic-civic-102": {
+    "attributes": {
+      "graph_id": "synthetic-civic-102",
+      "synthetic": true,
+      "version": "1.0.0"
+    },
+    "nodes": [
+      {
+        "id": "drainage_0",
+        "node_type": "drainage",
+        "criticality": 0.41199380150301257,
+        "resilience": 0.472268933162125
+      },
+      {
+        "id": "drainage_1",
+        "node_type": "drainage",
+        "criticality": 0.8766857440279924,
+        "resilience": 0.3134931302181629
+      },
+      {
+        "id": "drainage_2",
+        "node_type": "drainage",
+        "criticality": 0.7794296650824114,
+        "resilience": 0.4051362881682906
+      },
+      {
+        "id": "drainage_3",
+        "node_type": "drainage",
+        "criticality": 0.923950200910671,
+        "resilience": 0.4606802941163669
+      },
+      {
+        "id": "drainage_4",
+        "node_type": "drainage",
+        "criticality": 0.9952343941262247,
+        "resilience": 0.28338685803569846
+      },
+      {
+        "id": "drainage_5",
+        "node_type": "drainage",
+        "criticality": 0.3765073823075352,
+        "resilience": 0.34005245662640565
+      },
+      {
+        "id": "drainage_6",
+        "node_type": "drainage",
+        "criticality": 0.8454501494733028,
+        "resilience": 0.44680888092600063
+      },
+      {
+        "id": "drainage_7",
+        "node_type": "drainage",
+        "criticality": 0.9469788154165794,
+        "resilience": 0.6969010754453306
+      },
+      {
+        "id": "road_0",
+        "node_type": "road",
+        "criticality": 0.9455712044592229,
+        "resilience": 0.23927026467317553
+      },
+      {
+        "id": "road_1",
+        "node_type": "road",
+        "criticality": 0.71304977941021,
+        "resilience": 0.5491036912851935
+      },
+      {
+        "id": "road_2",
+        "node_type": "road",
+        "criticality": 0.9432764197214121,
+        "resilience": 0.23052573112492217
+      },
+      {
+        "id": "road_3",
+        "node_type": "road",
+        "criticality": 0.7288306723185181,
+        "resilience": 0.17975785913972228
+      },
+      {
+        "id": "road_4",
+        "node_type": "road",
+        "criticality": 0.8201789204056431,
+        "resilience": 0.4651277137574984
+      },
+      {
+        "id": "road_5",
+        "node_type": "road",
+        "criticality": 0.38863258018180846,
+        "resilience": 0.21252279045078895
+      },
+      {
+        "id": "road_6",
+        "node_type": "road",
+        "criticality": 0.6671288481989226,
+        "resilience": 0.421705899459963
+      },
+      {
+        "id": "road_7",
+        "node_type": "road",
+        "criticality": 0.6768440125915642,
+        "resilience": 0.6873964985681977
+      },
+      {
+        "id": "water_0",
+        "node_type": "water",
+        "criticality": 0.9850464514702214,
+        "resilience": 0.3126083050502829
+      },
+      {
+        "id": "water_1",
+        "node_type": "water",
+        "criticality": 0.35238382449524325,
+        "resilience": 0.3105456737791815
+      },
+      {
+        "id": "water_2",
+        "node_type": "water",
+        "criticality": 0.8694537481171308,
+        "resilience": 0.29511254375773965
+      },
+      {
+        "id": "water_3",
+        "node_type": "water",
+        "criticality": 0.3995887207784822,
+        "resilience": 0.48214712955911243
+      },
+      {
+        "id": "water_4",
+        "node_type": "water",
+        "criticality": 0.7835702666128135,
+        "resilience": 0.24562551950441536
+      },
+      {
+        "id": "water_5",
+        "node_type": "water",
+        "criticality": 0.34064351143838206,
+        "resilience": 0.24008560005629992
+      },
+      {
+        "id": "water_6",
+        "node_type": "water",
+        "criticality": 0.46544004549935475,
+        "resilience": 0.34872387686544953
+      },
+      {
+        "id": "water_7",
+        "node_type": "water",
+        "criticality": 0.6937264331783168,
+        "resilience": 0.6522991144855939
+      },
+      {
+        "id": "pump_0",
+        "node_type": "pump",
+        "criticality": 0.5444734347968936,
+        "resilience": 0.4987970745870578
+      },
+      {
+        "id": "pump_1",
+        "node_type": "pump",
+        "criticality": 0.7640257758723911,
+        "resilience": 0.3054892811070733
+      },
+      {
+        "id": "pump_2",
+        "node_type": "pump",
+        "criticality": 0.6878824105607431,
+        "resilience": 0.690512279941022
+      },
+      {
+        "id": "pump_3",
+        "node_type": "pump",
+        "criticality": 0.997757191212207,
+        "resilience": 0.3835604085845685
+      },
+      {
+        "id": "pump_4",
+        "node_type": "pump",
+        "criticality": 0.8769765985055007,
+        "resilience": 0.33377631370239547
+      },
+      {
+        "id": "pump_5",
+        "node_type": "pump",
+        "criticality": 0.8622516198349602,
+        "resilience": 0.3577982794470204
+      },
+      {
+        "id": "pump_6",
+        "node_type": "pump",
+        "criticality": 0.8452221844319628,
+        "resilience": 0.19301158749747654
+      },
+      {
+        "id": "pump_7",
+        "node_type": "pump",
+        "criticality": 0.44012800956873,
+        "resilience": 0.49566921046358037
+      },
+      {
+        "id": "facility_0",
+        "node_type": "facility",
+        "criticality": 0.4524615266516522,
+        "resilience": 0.31415729808918824
+      },
+      {
+        "id": "facility_1",
+        "node_type": "facility",
+        "criticality": 0.7729450756436763,
+        "resilience": 0.31231011932859715
+      },
+      {
+        "id": "facility_2",
+        "node_type": "facility",
+        "criticality": 0.5230985920552239,
+        "resilience": 0.6010498880895234
+      },
+      {
+        "id": "facility_3",
+        "node_type": "facility",
+        "criticality": 0.38241154479897915,
+        "resilience": 0.17145623680452243
+      },
+      {
+        "id": "facility_4",
+        "node_type": "facility",
+        "criticality": 0.8813214397408075,
+        "resilience": 0.6457817482401469
+      },
+      {
+        "id": "facility_5",
+        "node_type": "facility",
+        "criticality": 0.7737553723866343,
+        "resilience": 0.49473176773374483
+      },
+      {
+        "id": "facility_6",
+        "node_type": "facility",
+        "criticality": 0.923821240674281,
+        "resilience": 0.44190439299901996
+      },
+      {
+        "id": "facility_7",
+        "node_type": "facility",
+        "criticality": 0.380282219345268,
+        "resilience": 0.35659380319741857
+      }
+    ],
+    "edges": [
+      {
+        "source": "drainage_0",
+        "target": "road_3",
+        "weight": 0.5971454983688611,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_0",
+        "target": "road_4",
+        "weight": 0.2423250293108593,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_1",
+        "target": "road_4",
+        "weight": 0.25404388117695853,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_1",
+        "target": "road_7",
+        "weight": 0.24158595663012636,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_2",
+        "target": "road_7",
+        "weight": 0.5272221548262545,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_2",
+        "target": "road_5",
+        "weight": 0.31407040680136816,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_3",
+        "target": "road_3",
+        "weight": 0.7186470254966428,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_3",
+        "target": "road_1",
+        "weight": 0.714338547020101,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_4",
+        "target": "road_2",
+        "weight": 0.4900390986964943,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_4",
+        "target": "road_1",
+        "weight": 0.30162934996724944,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_5",
+        "target": "road_2",
+        "weight": 0.3908373873987413,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_5",
+        "target": "road_7",
+        "weight": 0.25724027957077517,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_6",
+        "target": "road_3",
+        "weight": 0.39908250008293644,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_6",
+        "target": "road_0",
+        "weight": 0.20546401414395962,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_7",
+        "target": "road_3",
+        "weight": 0.5765168618599134,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_7",
+        "target": "road_2",
+        "weight": 0.49510512722429445,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "facility_2",
+        "weight": 0.42696016654094354,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "facility_1",
+        "weight": 0.30450605578907547,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "pump_3",
+        "weight": 0.3727821388798046,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "pump_6",
+        "weight": 0.2905118762011128,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "facility_5",
+        "weight": 0.8453643225382577,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "facility_3",
+        "weight": 0.528224340645204,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "pump_3",
+        "weight": 0.47262617765597065,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "pump_4",
+        "weight": 0.5217085536543797,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "facility_6",
+        "weight": 0.2233616057389674,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "facility_3",
+        "weight": 0.8303913658129352,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "pump_2",
+        "weight": 0.7546700304225954,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "pump_6",
+        "weight": 0.5631907960743545,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "facility_1",
+        "weight": 0.6928301419364656,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "facility_0",
+        "weight": 0.6113848706307212,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "pump_1",
+        "weight": 0.5626731749303003,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "pump_3",
+        "weight": 0.7922642399320506,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "facility_4",
+        "weight": 0.24621924354959684,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "facility_5",
+        "weight": 0.5481051541583614,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "pump_1",
+        "weight": 0.4995797460360055,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "pump_0",
+        "weight": 0.8166337463308572,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "facility_6",
+        "weight": 0.7658889954814124,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "facility_1",
+        "weight": 0.6516539419270043,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "pump_2",
+        "weight": 0.7616019369329613,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "pump_6",
+        "weight": 0.27685944022151215,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "facility_1",
+        "weight": 0.7270427411521809,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "facility_3",
+        "weight": 0.7150783896577425,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "pump_0",
+        "weight": 0.8004388785608213,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "pump_4",
+        "weight": 0.6917951378584232,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "facility_0",
+        "weight": 0.6108428841652692,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "facility_3",
+        "weight": 0.26238146869436835,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "pump_6",
+        "weight": 0.6843726055082548,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "pump_7",
+        "weight": 0.3713977227598049,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_0",
+        "target": "facility_2",
+        "weight": 0.6732357314131711,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_0",
+        "target": "facility_3",
+        "weight": 0.5401707079144515,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_1",
+        "target": "facility_5",
+        "weight": 0.25405622153007434,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_1",
+        "target": "facility_4",
+        "weight": 0.5481740864850985,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_2",
+        "target": "facility_2",
+        "weight": 0.631669435460773,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_2",
+        "target": "facility_5",
+        "weight": 0.39885995114434697,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_3",
+        "target": "facility_0",
+        "weight": 0.6408674672032196,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_3",
+        "target": "facility_4",
+        "weight": 0.8295441100608243,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_4",
+        "target": "facility_4",
+        "weight": 0.4849235485129777,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_4",
+        "target": "facility_3",
+        "weight": 0.30751222610100803,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_5",
+        "target": "facility_0",
+        "weight": 0.5221820720806325,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_5",
+        "target": "facility_6",
+        "weight": 0.5246647668671404,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_6",
+        "target": "facility_3",
+        "weight": 0.6567969506783925,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_6",
+        "target": "facility_2",
+        "weight": 0.666749279813934,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_7",
+        "target": "facility_5",
+        "weight": 0.7734048992290394,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_7",
+        "target": "facility_1",
+        "weight": 0.3721256142466081,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "drainage_2",
+        "weight": 0.32471077708734036,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "drainage_0",
+        "weight": 0.7801042376252795,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "water_1",
+        "weight": 0.7562134682987063,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "water_0",
+        "weight": 0.39226640024352666,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "drainage_3",
+        "weight": 0.24131577517120958,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "drainage_6",
+        "weight": 0.298153459607789,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "water_5",
+        "weight": 0.3464547485749695,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "water_2",
+        "weight": 0.5038625429804547,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "drainage_1",
+        "weight": 0.6280973106940757,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "drainage_5",
+        "weight": 0.6114500947634556,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "water_4",
+        "weight": 0.5179004898749985,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "water_1",
+        "weight": 0.6161601953894328,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "drainage_2",
+        "weight": 0.7064952125208259,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "drainage_7",
+        "weight": 0.44387664839948243,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "water_4",
+        "weight": 0.7485584072612896,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "water_1",
+        "weight": 0.23255158490300165,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "drainage_0",
+        "weight": 0.35229438908757804,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "drainage_5",
+        "weight": 0.2190549507658277,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "water_6",
+        "weight": 0.36490052720479416,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "water_4",
+        "weight": 0.657294228650926,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "drainage_3",
+        "weight": 0.41609013692163277,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "drainage_5",
+        "weight": 0.509822621685631,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "water_6",
+        "weight": 0.7693228780458077,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "water_5",
+        "weight": 0.25875426331517803,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "drainage_6",
+        "weight": 0.6052100618534091,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "drainage_2",
+        "weight": 0.539325039085262,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "water_2",
+        "weight": 0.8458202136059828,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "water_4",
+        "weight": 0.30980479422839474,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "drainage_6",
+        "weight": 0.45509224168878226,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "drainage_1",
+        "weight": 0.23262276668522325,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "water_7",
+        "weight": 0.2276806121147882,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "water_3",
+        "weight": 0.6334792155892626,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      }
+    ]
+  },
+  "synthetic-civic-103": {
+    "attributes": {
+      "graph_id": "synthetic-civic-103",
+      "synthetic": true,
+      "version": "1.0.0"
+    },
+    "nodes": [
+      {
+        "id": "drainage_0",
+        "node_type": "drainage",
+        "criticality": 0.5188782629060632,
+        "resilience": 0.27337502244432615
+      },
+      {
+        "id": "drainage_1",
+        "node_type": "drainage",
+        "criticality": 0.4274068096660136,
+        "resilience": 0.6230982550763877
+      },
+      {
+        "id": "drainage_2",
+        "node_type": "drainage",
+        "criticality": 0.9002797418662586,
+        "resilience": 0.2069593384692605
+      },
+      {
+        "id": "drainage_3",
+        "node_type": "drainage",
+        "criticality": 0.5023628859939677,
+        "resilience": 0.5138644565304593
+      },
+      {
+        "id": "drainage_4",
+        "node_type": "drainage",
+        "criticality": 0.7909070345404688,
+        "resilience": 0.39127400171575416
+      },
+      {
+        "id": "drainage_5",
+        "node_type": "drainage",
+        "criticality": 0.636984622619501,
+        "resilience": 0.5569907293877862
+      },
+      {
+        "id": "drainage_6",
+        "node_type": "drainage",
+        "criticality": 0.6072748671287326,
+        "resilience": 0.6779300612186261
+      },
+      {
+        "id": "drainage_7",
+        "node_type": "drainage",
+        "criticality": 0.5166213298941489,
+        "resilience": 0.2114941907388137
+      },
+      {
+        "id": "road_0",
+        "node_type": "road",
+        "criticality": 0.4772675718052685,
+        "resilience": 0.18072906249133838
+      },
+      {
+        "id": "road_1",
+        "node_type": "road",
+        "criticality": 0.945481280947608,
+        "resilience": 0.5068617877672239
+      },
+      {
+        "id": "road_2",
+        "node_type": "road",
+        "criticality": 0.43741823697324755,
+        "resilience": 0.17021499837180704
+      },
+      {
+        "id": "road_3",
+        "node_type": "road",
+        "criticality": 0.8927862361402225,
+        "resilience": 0.3540860136343725
+      },
+      {
+        "id": "road_4",
+        "node_type": "road",
+        "criticality": 0.4465179224135677,
+        "resilience": 0.37361779197259537
+      },
+      {
+        "id": "road_5",
+        "node_type": "road",
+        "criticality": 0.41401342829422105,
+        "resilience": 0.1893354843979745
+      },
+      {
+        "id": "road_6",
+        "node_type": "road",
+        "criticality": 0.31525978309338665,
+        "resilience": 0.15470043066772235
+      },
+      {
+        "id": "road_7",
+        "node_type": "road",
+        "criticality": 0.7326923090531442,
+        "resilience": 0.33144384754969447
+      },
+      {
+        "id": "water_0",
+        "node_type": "water",
+        "criticality": 0.4796665401942068,
+        "resilience": 0.40263628558401454
+      },
+      {
+        "id": "water_1",
+        "node_type": "water",
+        "criticality": 0.7413274233552466,
+        "resilience": 0.2829289207455244
+      },
+      {
+        "id": "water_2",
+        "node_type": "water",
+        "criticality": 0.38989779048292317,
+        "resilience": 0.5188132252322546
+      },
+      {
+        "id": "water_3",
+        "node_type": "water",
+        "criticality": 0.49605440696037395,
+        "resilience": 0.6156212953122632
+      },
+      {
+        "id": "water_4",
+        "node_type": "water",
+        "criticality": 0.6578365514266362,
+        "resilience": 0.6904811535760165
+      },
+      {
+        "id": "water_5",
+        "node_type": "water",
+        "criticality": 0.4269088536388428,
+        "resilience": 0.2192826162354373
+      },
+      {
+        "id": "water_6",
+        "node_type": "water",
+        "criticality": 0.410949534735243,
+        "resilience": 0.6871693575850708
+      },
+      {
+        "id": "water_7",
+        "node_type": "water",
+        "criticality": 0.777356836529862,
+        "resilience": 0.47874874763738384
+      },
+      {
+        "id": "pump_0",
+        "node_type": "pump",
+        "criticality": 0.539450880372424,
+        "resilience": 0.23306305682476336
+      },
+      {
+        "id": "pump_1",
+        "node_type": "pump",
+        "criticality": 0.31367128075735257,
+        "resilience": 0.5909169339543271
+      },
+      {
+        "id": "pump_2",
+        "node_type": "pump",
+        "criticality": 0.6266977073986525,
+        "resilience": 0.6940035991910142
+      },
+      {
+        "id": "pump_3",
+        "node_type": "pump",
+        "criticality": 0.3107092525022259,
+        "resilience": 0.6197914156440248
+      },
+      {
+        "id": "pump_4",
+        "node_type": "pump",
+        "criticality": 0.41509340307267883,
+        "resilience": 0.6929583920317148
+      },
+      {
+        "id": "pump_5",
+        "node_type": "pump",
+        "criticality": 0.4058606987874747,
+        "resilience": 0.27458286062258835
+      },
+      {
+        "id": "pump_6",
+        "node_type": "pump",
+        "criticality": 0.625232392923395,
+        "resilience": 0.4357700342186981
+      },
+      {
+        "id": "pump_7",
+        "node_type": "pump",
+        "criticality": 0.41472026052553945,
+        "resilience": 0.5482898013011854
+      },
+      {
+        "id": "facility_0",
+        "node_type": "facility",
+        "criticality": 0.9351553200891629,
+        "resilience": 0.1932576047450396
+      },
+      {
+        "id": "facility_1",
+        "node_type": "facility",
+        "criticality": 0.4210698465091585,
+        "resilience": 0.5720529940780351
+      },
+      {
+        "id": "facility_2",
+        "node_type": "facility",
+        "criticality": 0.34206313019395657,
+        "resilience": 0.5234487180195307
+      },
+      {
+        "id": "facility_3",
+        "node_type": "facility",
+        "criticality": 0.8173900985339314,
+        "resilience": 0.6434652697079518
+      },
+      {
+        "id": "facility_4",
+        "node_type": "facility",
+        "criticality": 0.6784575214146041,
+        "resilience": 0.35357223753841216
+      },
+      {
+        "id": "facility_5",
+        "node_type": "facility",
+        "criticality": 0.3651401149972437,
+        "resilience": 0.29756612125912846
+      },
+      {
+        "id": "facility_6",
+        "node_type": "facility",
+        "criticality": 0.4069829500975916,
+        "resilience": 0.4332209620233529
+      },
+      {
+        "id": "facility_7",
+        "node_type": "facility",
+        "criticality": 0.3183038907143314,
+        "resilience": 0.5664289425124379
+      }
+    ],
+    "edges": [
+      {
+        "source": "drainage_0",
+        "target": "road_3",
+        "weight": 0.6238902298809722,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_0",
+        "target": "road_7",
+        "weight": 0.7814223584101767,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_1",
+        "target": "road_1",
+        "weight": 0.6715674922062419,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_1",
+        "target": "road_7",
+        "weight": 0.36576102157785884,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_2",
+        "target": "road_5",
+        "weight": 0.7829179277322814,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_2",
+        "target": "road_1",
+        "weight": 0.5672158750576661,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_3",
+        "target": "road_0",
+        "weight": 0.4603007736787756,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_3",
+        "target": "road_7",
+        "weight": 0.42620811483632237,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_4",
+        "target": "road_4",
+        "weight": 0.2830534402210433,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_4",
+        "target": "road_3",
+        "weight": 0.6754476049100634,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_5",
+        "target": "road_3",
+        "weight": 0.4792481924402291,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_5",
+        "target": "road_4",
+        "weight": 0.2752339713491356,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_6",
+        "target": "road_3",
+        "weight": 0.47133229412278455,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_6",
+        "target": "road_4",
+        "weight": 0.34112669060746337,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_7",
+        "target": "road_5",
+        "weight": 0.5313858426041921,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_7",
+        "target": "road_4",
+        "weight": 0.8352454787924265,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "facility_4",
+        "weight": 0.20793293406791055,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "facility_1",
+        "weight": 0.7670760360767267,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "pump_0",
+        "weight": 0.3864918845594835,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "pump_4",
+        "weight": 0.5862513376057885,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "facility_1",
+        "weight": 0.531039813495564,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "facility_2",
+        "weight": 0.612400608911175,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "pump_5",
+        "weight": 0.4644559138309822,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "pump_2",
+        "weight": 0.30500670627386944,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "facility_0",
+        "weight": 0.43085184309572566,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "facility_4",
+        "weight": 0.8352333069411131,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "pump_6",
+        "weight": 0.37481444814820786,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "pump_7",
+        "weight": 0.34991093469425144,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "facility_0",
+        "weight": 0.8151291511688442,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "facility_2",
+        "weight": 0.8042410495110994,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "pump_5",
+        "weight": 0.3347123946241636,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "pump_6",
+        "weight": 0.5728284095537656,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "facility_2",
+        "weight": 0.3834243415151564,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "facility_0",
+        "weight": 0.8069136875461941,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "pump_1",
+        "weight": 0.4510634337427915,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "pump_2",
+        "weight": 0.34883593970712784,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "facility_6",
+        "weight": 0.2087440754471904,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "facility_1",
+        "weight": 0.6923601272806182,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "pump_5",
+        "weight": 0.7324071806681628,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "pump_4",
+        "weight": 0.8393372946742423,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "facility_4",
+        "weight": 0.786180798510011,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "facility_3",
+        "weight": 0.812125371571282,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "pump_7",
+        "weight": 0.2935639874763122,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "pump_5",
+        "weight": 0.44091803034994176,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "facility_4",
+        "weight": 0.6174015992640676,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "facility_0",
+        "weight": 0.2612110406514714,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "pump_7",
+        "weight": 0.5403041133357046,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "pump_3",
+        "weight": 0.6411562757314245,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_0",
+        "target": "facility_6",
+        "weight": 0.4647996888325896,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_0",
+        "target": "facility_3",
+        "weight": 0.27370471120803647,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_1",
+        "target": "facility_5",
+        "weight": 0.6464649399168905,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_1",
+        "target": "facility_4",
+        "weight": 0.5205639717114198,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_2",
+        "target": "facility_2",
+        "weight": 0.6233545395215251,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_2",
+        "target": "facility_7",
+        "weight": 0.6449439421972929,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_3",
+        "target": "facility_2",
+        "weight": 0.3362968668541789,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_3",
+        "target": "facility_0",
+        "weight": 0.5293909809151225,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_4",
+        "target": "facility_7",
+        "weight": 0.5156156304167515,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_4",
+        "target": "facility_0",
+        "weight": 0.40711246201869467,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_5",
+        "target": "facility_4",
+        "weight": 0.49745932528497555,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_5",
+        "target": "facility_7",
+        "weight": 0.35085270112918915,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_6",
+        "target": "facility_4",
+        "weight": 0.4681897554202516,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_6",
+        "target": "facility_1",
+        "weight": 0.7995658863411897,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_7",
+        "target": "facility_6",
+        "weight": 0.23051064170829413,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_7",
+        "target": "facility_7",
+        "weight": 0.7208086822265122,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "drainage_5",
+        "weight": 0.6544173086082621,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "drainage_2",
+        "weight": 0.3742173015450897,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "water_2",
+        "weight": 0.6132900180717886,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "water_3",
+        "weight": 0.7890115342955347,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "drainage_7",
+        "weight": 0.6347602616059512,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "drainage_5",
+        "weight": 0.7222775119740491,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "water_4",
+        "weight": 0.47679199306145503,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "water_2",
+        "weight": 0.5147241539382688,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "drainage_1",
+        "weight": 0.7187278983721346,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "drainage_2",
+        "weight": 0.8112100063747767,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "water_3",
+        "weight": 0.41401615232469324,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "water_0",
+        "weight": 0.5350369000604938,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "drainage_1",
+        "weight": 0.3233141165622731,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "drainage_5",
+        "weight": 0.23366752831751714,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "water_4",
+        "weight": 0.5004371869102906,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "water_1",
+        "weight": 0.6872085760703471,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "drainage_7",
+        "weight": 0.5853540765567032,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "drainage_5",
+        "weight": 0.5342358671357017,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "water_1",
+        "weight": 0.7230507986802169,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "water_2",
+        "weight": 0.7634010592710471,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "drainage_7",
+        "weight": 0.44526210694653656,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "drainage_4",
+        "weight": 0.7189485657870638,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "water_4",
+        "weight": 0.4071086229844563,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "water_5",
+        "weight": 0.6193612176846514,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "drainage_7",
+        "weight": 0.36975021901666516,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "drainage_4",
+        "weight": 0.46997343069794234,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "water_6",
+        "weight": 0.5549900148969602,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "water_2",
+        "weight": 0.2304015013865275,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "drainage_7",
+        "weight": 0.716751644067976,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "drainage_4",
+        "weight": 0.208860714439136,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "water_6",
+        "weight": 0.32738053331807526,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "water_3",
+        "weight": 0.8136844645521477,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      }
+    ]
+  },
+  "synthetic-civic-104": {
+    "attributes": {
+      "graph_id": "synthetic-civic-104",
+      "synthetic": true,
+      "version": "1.0.0"
+    },
+    "nodes": [
+      {
+        "id": "drainage_0",
+        "node_type": "drainage",
+        "criticality": 0.8869953686586749,
+        "resilience": 0.5306814817450408
+      },
+      {
+        "id": "drainage_1",
+        "node_type": "drainage",
+        "criticality": 0.4512621797587772,
+        "resilience": 0.21897654386751803
+      },
+      {
+        "id": "drainage_2",
+        "node_type": "drainage",
+        "criticality": 0.562548502408827,
+        "resilience": 0.5646386849690739
+      },
+      {
+        "id": "drainage_3",
+        "node_type": "drainage",
+        "criticality": 0.8146315730909113,
+        "resilience": 0.3770892153972844
+      },
+      {
+        "id": "drainage_4",
+        "node_type": "drainage",
+        "criticality": 0.7514519586184841,
+        "resilience": 0.6033129148104927
+      },
+      {
+        "id": "drainage_5",
+        "node_type": "drainage",
+        "criticality": 0.3463978620617642,
+        "resilience": 0.44606348034112925
+      },
+      {
+        "id": "drainage_6",
+        "node_type": "drainage",
+        "criticality": 0.8291108286087687,
+        "resilience": 0.6039288007475717
+      },
+      {
+        "id": "drainage_7",
+        "node_type": "drainage",
+        "criticality": 0.4533790096497322,
+        "resilience": 0.41616185835398106
+      },
+      {
+        "id": "road_0",
+        "node_type": "road",
+        "criticality": 0.556282471848544,
+        "resilience": 0.29594200805143894
+      },
+      {
+        "id": "road_1",
+        "node_type": "road",
+        "criticality": 0.8588311245689423,
+        "resilience": 0.4580865203105979
+      },
+      {
+        "id": "road_2",
+        "node_type": "road",
+        "criticality": 0.6935252435336265,
+        "resilience": 0.296242975289673
+      },
+      {
+        "id": "road_3",
+        "node_type": "road",
+        "criticality": 0.7885685316815214,
+        "resilience": 0.1832524709464597
+      },
+      {
+        "id": "road_4",
+        "node_type": "road",
+        "criticality": 0.9801407640142468,
+        "resilience": 0.4253409978639269
+      },
+      {
+        "id": "road_5",
+        "node_type": "road",
+        "criticality": 0.4331844807215335,
+        "resilience": 0.4041151737051853
+      },
+      {
+        "id": "road_6",
+        "node_type": "road",
+        "criticality": 0.7998141271932157,
+        "resilience": 0.6035581879302081
+      },
+      {
+        "id": "road_7",
+        "node_type": "road",
+        "criticality": 0.9086562993188643,
+        "resilience": 0.5708014278984759
+      },
+      {
+        "id": "water_0",
+        "node_type": "water",
+        "criticality": 0.5649049596584937,
+        "resilience": 0.3132961036069253
+      },
+      {
+        "id": "water_1",
+        "node_type": "water",
+        "criticality": 0.7884606517602264,
+        "resilience": 0.40260946731495634
+      },
+      {
+        "id": "water_2",
+        "node_type": "water",
+        "criticality": 0.6767127320046531,
+        "resilience": 0.6247763773344981
+      },
+      {
+        "id": "water_3",
+        "node_type": "water",
+        "criticality": 0.37794509602561355,
+        "resilience": 0.17558202806349077
+      },
+      {
+        "id": "water_4",
+        "node_type": "water",
+        "criticality": 0.4764768982186175,
+        "resilience": 0.36934923277883097
+      },
+      {
+        "id": "water_5",
+        "node_type": "water",
+        "criticality": 0.5073587337559182,
+        "resilience": 0.6417610218889246
+      },
+      {
+        "id": "water_6",
+        "node_type": "water",
+        "criticality": 0.6191242790902355,
+        "resilience": 0.3437654645658317
+      },
+      {
+        "id": "water_7",
+        "node_type": "water",
+        "criticality": 0.5631209542297478,
+        "resilience": 0.4855222211053126
+      },
+      {
+        "id": "pump_0",
+        "node_type": "pump",
+        "criticality": 0.632085998740072,
+        "resilience": 0.21666096440187543
+      },
+      {
+        "id": "pump_1",
+        "node_type": "pump",
+        "criticality": 0.6479686484540297,
+        "resilience": 0.5593495717377815
+      },
+      {
+        "id": "pump_2",
+        "node_type": "pump",
+        "criticality": 0.8335797681972796,
+        "resilience": 0.6901110338285856
+      },
+      {
+        "id": "pump_3",
+        "node_type": "pump",
+        "criticality": 0.5827219745268492,
+        "resilience": 0.6127609995851471
+      },
+      {
+        "id": "pump_4",
+        "node_type": "pump",
+        "criticality": 0.7542099800743682,
+        "resilience": 0.19047069406325934
+      },
+      {
+        "id": "pump_5",
+        "node_type": "pump",
+        "criticality": 0.7838713802269419,
+        "resilience": 0.692533536326097
+      },
+      {
+        "id": "pump_6",
+        "node_type": "pump",
+        "criticality": 0.49580695594540847,
+        "resilience": 0.370151893842715
+      },
+      {
+        "id": "pump_7",
+        "node_type": "pump",
+        "criticality": 0.5057503335504137,
+        "resilience": 0.5491304695099717
+      },
+      {
+        "id": "facility_0",
+        "node_type": "facility",
+        "criticality": 0.9321266910013682,
+        "resilience": 0.2936230883830256
+      },
+      {
+        "id": "facility_1",
+        "node_type": "facility",
+        "criticality": 0.5751662200701441,
+        "resilience": 0.5859176284917739
+      },
+      {
+        "id": "facility_2",
+        "node_type": "facility",
+        "criticality": 0.9212842152083778,
+        "resilience": 0.6863770582341261
+      },
+      {
+        "id": "facility_3",
+        "node_type": "facility",
+        "criticality": 0.8469485026555084,
+        "resilience": 0.5463026419245306
+      },
+      {
+        "id": "facility_4",
+        "node_type": "facility",
+        "criticality": 0.503871808251712,
+        "resilience": 0.29777962626724586
+      },
+      {
+        "id": "facility_5",
+        "node_type": "facility",
+        "criticality": 0.5549603786193884,
+        "resilience": 0.5551712723764765
+      },
+      {
+        "id": "facility_6",
+        "node_type": "facility",
+        "criticality": 0.6846621176207659,
+        "resilience": 0.39083375507672763
+      },
+      {
+        "id": "facility_7",
+        "node_type": "facility",
+        "criticality": 0.5898605043448948,
+        "resilience": 0.4925125480577076
+      }
+    ],
+    "edges": [
+      {
+        "source": "drainage_0",
+        "target": "road_5",
+        "weight": 0.8396394005675036,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_0",
+        "target": "road_6",
+        "weight": 0.7944787799712367,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_1",
+        "target": "road_5",
+        "weight": 0.4911329681753304,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_1",
+        "target": "road_3",
+        "weight": 0.5261485005812313,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_2",
+        "target": "road_1",
+        "weight": 0.46355257325884874,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_2",
+        "target": "road_5",
+        "weight": 0.3610755626075402,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_3",
+        "target": "road_5",
+        "weight": 0.2734776132441288,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_3",
+        "target": "road_3",
+        "weight": 0.4919944729528665,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_4",
+        "target": "road_1",
+        "weight": 0.4068657422186879,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_4",
+        "target": "road_2",
+        "weight": 0.7700365712609152,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_5",
+        "target": "road_4",
+        "weight": 0.36581052821760973,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_5",
+        "target": "road_2",
+        "weight": 0.6159724010055215,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_6",
+        "target": "road_6",
+        "weight": 0.31220262135155613,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_6",
+        "target": "road_3",
+        "weight": 0.34552402723074693,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_7",
+        "target": "road_1",
+        "weight": 0.8414628993925598,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_7",
+        "target": "road_5",
+        "weight": 0.6256656826030557,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "facility_1",
+        "weight": 0.7037582486846805,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "facility_7",
+        "weight": 0.24273297108396483,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "pump_0",
+        "weight": 0.7160420932476335,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "pump_7",
+        "weight": 0.7403045876733073,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "facility_6",
+        "weight": 0.27385013244732564,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "facility_3",
+        "weight": 0.46225880429648813,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "pump_5",
+        "weight": 0.6074492816634266,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "pump_3",
+        "weight": 0.4976803737667476,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "facility_2",
+        "weight": 0.698736540685829,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "facility_3",
+        "weight": 0.7318690763472534,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "pump_5",
+        "weight": 0.3893148861405276,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "pump_0",
+        "weight": 0.5168325515339869,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "facility_4",
+        "weight": 0.2596879344715981,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "facility_2",
+        "weight": 0.5733532946050686,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "pump_4",
+        "weight": 0.5110148003309661,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "pump_5",
+        "weight": 0.8268646191813578,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "facility_7",
+        "weight": 0.40491394950953313,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "facility_3",
+        "weight": 0.4013135679467095,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "pump_3",
+        "weight": 0.28243068680459554,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "pump_1",
+        "weight": 0.2912501315831584,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "facility_0",
+        "weight": 0.7543179958057851,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "facility_6",
+        "weight": 0.547470482065557,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "pump_2",
+        "weight": 0.45302439569187436,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "pump_6",
+        "weight": 0.268915919258383,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "facility_2",
+        "weight": 0.7116904363606278,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "facility_6",
+        "weight": 0.6695285232994473,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "pump_6",
+        "weight": 0.408105413373493,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "pump_5",
+        "weight": 0.5101584207341044,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "facility_3",
+        "weight": 0.40610508529853134,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "facility_5",
+        "weight": 0.211719921959374,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "pump_7",
+        "weight": 0.2605788643159811,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "pump_5",
+        "weight": 0.6443482836479945,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_0",
+        "target": "facility_4",
+        "weight": 0.7159553112869628,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_0",
+        "target": "facility_3",
+        "weight": 0.2648630659819747,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_1",
+        "target": "facility_0",
+        "weight": 0.3237436860154319,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_1",
+        "target": "facility_2",
+        "weight": 0.6905038792020534,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_2",
+        "target": "facility_6",
+        "weight": 0.6912431659885396,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_2",
+        "target": "facility_0",
+        "weight": 0.48128454500738305,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_3",
+        "target": "facility_6",
+        "weight": 0.6371212115336062,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_3",
+        "target": "facility_4",
+        "weight": 0.22676460444357985,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_4",
+        "target": "facility_2",
+        "weight": 0.8397425460445054,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_4",
+        "target": "facility_7",
+        "weight": 0.46303060885466385,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_5",
+        "target": "facility_6",
+        "weight": 0.8289700391335804,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_5",
+        "target": "facility_0",
+        "weight": 0.6375559299403473,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_6",
+        "target": "facility_3",
+        "weight": 0.28544224694546755,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_6",
+        "target": "facility_5",
+        "weight": 0.7615724084398218,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_7",
+        "target": "facility_0",
+        "weight": 0.29668467761431994,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_7",
+        "target": "facility_5",
+        "weight": 0.5760552143121981,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "drainage_7",
+        "weight": 0.5142933537781254,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "drainage_6",
+        "weight": 0.26127339587666076,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "water_5",
+        "weight": 0.3791102265124287,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "water_1",
+        "weight": 0.4988330828236192,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "drainage_3",
+        "weight": 0.6524520687679186,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "drainage_4",
+        "weight": 0.46631129487880574,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "water_6",
+        "weight": 0.7618532737974337,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "water_2",
+        "weight": 0.4248535226991716,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "drainage_2",
+        "weight": 0.49104849739417133,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "drainage_1",
+        "weight": 0.21951202211044563,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "water_2",
+        "weight": 0.641869640163499,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "water_6",
+        "weight": 0.45415973775517154,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "drainage_0",
+        "weight": 0.38676199496033237,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "drainage_3",
+        "weight": 0.521443539060979,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "water_5",
+        "weight": 0.211440609275124,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "water_2",
+        "weight": 0.44401385699738327,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "drainage_4",
+        "weight": 0.7208144257617582,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "drainage_7",
+        "weight": 0.5357855827011258,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "water_6",
+        "weight": 0.7337721255809039,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "water_0",
+        "weight": 0.243031566134466,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "drainage_0",
+        "weight": 0.7350659311436034,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "drainage_7",
+        "weight": 0.6067038225865605,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "water_3",
+        "weight": 0.29622617511514177,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "water_1",
+        "weight": 0.6295104349357377,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "drainage_7",
+        "weight": 0.43176513516292564,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "drainage_1",
+        "weight": 0.745986676289232,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "water_4",
+        "weight": 0.778842784021336,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "water_6",
+        "weight": 0.8309484719239904,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "drainage_2",
+        "weight": 0.8309727239766423,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "drainage_3",
+        "weight": 0.6388529498871434,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "water_4",
+        "weight": 0.49137092203728283,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "water_7",
+        "weight": 0.34359231319826866,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      }
+    ]
+  },
+  "synthetic-civic-105": {
+    "attributes": {
+      "graph_id": "synthetic-civic-105",
+      "synthetic": true,
+      "version": "1.0.0"
+    },
+    "nodes": [
+      {
+        "id": "drainage_0",
+        "node_type": "drainage",
+        "criticality": 0.7467367335210812,
+        "resilience": 0.6953028765146919
+      },
+      {
+        "id": "drainage_1",
+        "node_type": "drainage",
+        "criticality": 0.36771061881263656,
+        "resilience": 0.4286873879733649
+      },
+      {
+        "id": "drainage_2",
+        "node_type": "drainage",
+        "criticality": 0.5775072660380688,
+        "resilience": 0.26330892982565474
+      },
+      {
+        "id": "drainage_3",
+        "node_type": "drainage",
+        "criticality": 0.9183581763595476,
+        "resilience": 0.44726558393580984
+      },
+      {
+        "id": "drainage_4",
+        "node_type": "drainage",
+        "criticality": 0.7285431223908622,
+        "resilience": 0.30694887317562064
+      },
+      {
+        "id": "drainage_5",
+        "node_type": "drainage",
+        "criticality": 0.689241316255073,
+        "resilience": 0.5535216747601898
+      },
+      {
+        "id": "drainage_6",
+        "node_type": "drainage",
+        "criticality": 0.43921257191103646,
+        "resilience": 0.29562020064905
+      },
+      {
+        "id": "drainage_7",
+        "node_type": "drainage",
+        "criticality": 0.5278223483949267,
+        "resilience": 0.43287992258278385
+      },
+      {
+        "id": "road_0",
+        "node_type": "road",
+        "criticality": 0.6191101730677125,
+        "resilience": 0.42193377352140216
+      },
+      {
+        "id": "road_1",
+        "node_type": "road",
+        "criticality": 0.7210506349503901,
+        "resilience": 0.5826349936883872
+      },
+      {
+        "id": "road_2",
+        "node_type": "road",
+        "criticality": 0.8145690860659258,
+        "resilience": 0.4831567771169881
+      },
+      {
+        "id": "road_3",
+        "node_type": "road",
+        "criticality": 0.86141144124547,
+        "resilience": 0.35905609739666894
+      },
+      {
+        "id": "road_4",
+        "node_type": "road",
+        "criticality": 0.5461469851994238,
+        "resilience": 0.2707044244605636
+      },
+      {
+        "id": "road_5",
+        "node_type": "road",
+        "criticality": 0.8067300790880481,
+        "resilience": 0.35734689443453005
+      },
+      {
+        "id": "road_6",
+        "node_type": "road",
+        "criticality": 0.5638375083572263,
+        "resilience": 0.5014167951603933
+      },
+      {
+        "id": "road_7",
+        "node_type": "road",
+        "criticality": 0.5438888040590463,
+        "resilience": 0.5227460590556219
+      },
+      {
+        "id": "water_0",
+        "node_type": "water",
+        "criticality": 0.728633018042797,
+        "resilience": 0.42880235398112915
+      },
+      {
+        "id": "water_1",
+        "node_type": "water",
+        "criticality": 0.7489111142547464,
+        "resilience": 0.49824140025120883
+      },
+      {
+        "id": "water_2",
+        "node_type": "water",
+        "criticality": 0.5365992111781431,
+        "resilience": 0.5122805174005228
+      },
+      {
+        "id": "water_3",
+        "node_type": "water",
+        "criticality": 0.45560490852688307,
+        "resilience": 0.2932330818830357
+      },
+      {
+        "id": "water_4",
+        "node_type": "water",
+        "criticality": 0.6896194283355185,
+        "resilience": 0.24163205818725286
+      },
+      {
+        "id": "water_5",
+        "node_type": "water",
+        "criticality": 0.7155888710285561,
+        "resilience": 0.6226815706256565
+      },
+      {
+        "id": "water_6",
+        "node_type": "water",
+        "criticality": 0.8979438317460317,
+        "resilience": 0.3257000302564083
+      },
+      {
+        "id": "water_7",
+        "node_type": "water",
+        "criticality": 0.4091842214058696,
+        "resilience": 0.2983501624871677
+      },
+      {
+        "id": "pump_0",
+        "node_type": "pump",
+        "criticality": 0.7779891195864189,
+        "resilience": 0.4597161311235533
+      },
+      {
+        "id": "pump_1",
+        "node_type": "pump",
+        "criticality": 0.6812503088033974,
+        "resilience": 0.5904537198145868
+      },
+      {
+        "id": "pump_2",
+        "node_type": "pump",
+        "criticality": 0.32221684050408206,
+        "resilience": 0.6378663990005324
+      },
+      {
+        "id": "pump_3",
+        "node_type": "pump",
+        "criticality": 0.6416628294814412,
+        "resilience": 0.3837233148321807
+      },
+      {
+        "id": "pump_4",
+        "node_type": "pump",
+        "criticality": 0.8072497350632433,
+        "resilience": 0.29042456493415614
+      },
+      {
+        "id": "pump_5",
+        "node_type": "pump",
+        "criticality": 0.9437510642390629,
+        "resilience": 0.4860159292142482
+      },
+      {
+        "id": "pump_6",
+        "node_type": "pump",
+        "criticality": 0.8784832045641295,
+        "resilience": 0.19826333295696041
+      },
+      {
+        "id": "pump_7",
+        "node_type": "pump",
+        "criticality": 0.4000956363452581,
+        "resilience": 0.6477483803291393
+      },
+      {
+        "id": "facility_0",
+        "node_type": "facility",
+        "criticality": 0.3666740851183378,
+        "resilience": 0.5552290944275028
+      },
+      {
+        "id": "facility_1",
+        "node_type": "facility",
+        "criticality": 0.30845334590821094,
+        "resilience": 0.29213723209864784
+      },
+      {
+        "id": "facility_2",
+        "node_type": "facility",
+        "criticality": 0.4921660029528555,
+        "resilience": 0.6134080319556948
+      },
+      {
+        "id": "facility_3",
+        "node_type": "facility",
+        "criticality": 0.5185021516784585,
+        "resilience": 0.2685859226904254
+      },
+      {
+        "id": "facility_4",
+        "node_type": "facility",
+        "criticality": 0.31482543406358615,
+        "resilience": 0.310188534403187
+      },
+      {
+        "id": "facility_5",
+        "node_type": "facility",
+        "criticality": 0.9079843149263517,
+        "resilience": 0.446875468352115
+      },
+      {
+        "id": "facility_6",
+        "node_type": "facility",
+        "criticality": 0.32280679976769483,
+        "resilience": 0.19787585825035
+      },
+      {
+        "id": "facility_7",
+        "node_type": "facility",
+        "criticality": 0.48456237124948426,
+        "resilience": 0.5741271949678438
+      }
+    ],
+    "edges": [
+      {
+        "source": "drainage_0",
+        "target": "road_3",
+        "weight": 0.8444159672598599,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_0",
+        "target": "road_1",
+        "weight": 0.8200277439917071,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_1",
+        "target": "road_2",
+        "weight": 0.5809066235279489,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_1",
+        "target": "road_4",
+        "weight": 0.6270756276526394,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_2",
+        "target": "road_0",
+        "weight": 0.7803888170508524,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_2",
+        "target": "road_4",
+        "weight": 0.7227411794660686,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_3",
+        "target": "road_4",
+        "weight": 0.8292636409768133,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_3",
+        "target": "road_1",
+        "weight": 0.6841781849837739,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_4",
+        "target": "road_0",
+        "weight": 0.846297565593952,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_4",
+        "target": "road_7",
+        "weight": 0.42389005189714807,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_5",
+        "target": "road_4",
+        "weight": 0.5557266196138216,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_5",
+        "target": "road_0",
+        "weight": 0.7845926800380176,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_6",
+        "target": "road_5",
+        "weight": 0.2138851375209723,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_6",
+        "target": "road_7",
+        "weight": 0.4915214145655776,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_7",
+        "target": "road_3",
+        "weight": 0.6861166822365171,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "drainage_7",
+        "target": "road_6",
+        "weight": 0.680897045739791,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "facility_7",
+        "weight": 0.7127620534436674,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "facility_3",
+        "weight": 0.7294076061563622,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "pump_4",
+        "weight": 0.660477486921114,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_0",
+        "target": "pump_6",
+        "weight": 0.8034563256597929,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "facility_2",
+        "weight": 0.20071805657961816,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "facility_3",
+        "weight": 0.36229655307958936,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "pump_5",
+        "weight": 0.34849930600934137,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_1",
+        "target": "pump_4",
+        "weight": 0.715786897369306,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "facility_7",
+        "weight": 0.22571473001450354,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "facility_1",
+        "weight": 0.717869551461434,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "pump_2",
+        "weight": 0.7067519591650522,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_2",
+        "target": "pump_5",
+        "weight": 0.7420461343055282,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "facility_5",
+        "weight": 0.3723590690503948,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "facility_2",
+        "weight": 0.7431921402907846,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "pump_7",
+        "weight": 0.7639250161466006,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_3",
+        "target": "pump_5",
+        "weight": 0.7636468527685893,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "facility_2",
+        "weight": 0.7920823842985866,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "facility_6",
+        "weight": 0.32329955464235777,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "pump_1",
+        "weight": 0.6627395347093896,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_4",
+        "target": "pump_5",
+        "weight": 0.3943086475901284,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "facility_6",
+        "weight": 0.28033731822668595,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "facility_7",
+        "weight": 0.5122851268560712,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "pump_7",
+        "weight": 0.2430508495349928,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_5",
+        "target": "pump_5",
+        "weight": 0.2065736876462799,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "facility_4",
+        "weight": 0.6206461717441557,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "facility_5",
+        "weight": 0.22066008613347457,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "pump_2",
+        "weight": 0.7489508602643065,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_6",
+        "target": "pump_7",
+        "weight": 0.3821277130111277,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "facility_4",
+        "weight": 0.43230840204939525,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "facility_2",
+        "weight": 0.6828434798838118,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "pump_5",
+        "weight": 0.6984821868591816,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "road_7",
+        "target": "pump_2",
+        "weight": 0.2034874389736207,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_0",
+        "target": "facility_3",
+        "weight": 0.6267644699337169,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_0",
+        "target": "facility_4",
+        "weight": 0.4482438185500367,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_1",
+        "target": "facility_4",
+        "weight": 0.813234922012977,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_1",
+        "target": "facility_7",
+        "weight": 0.7416916872294893,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_2",
+        "target": "facility_3",
+        "weight": 0.7614328236930131,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_2",
+        "target": "facility_6",
+        "weight": 0.79779204913785,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_3",
+        "target": "facility_7",
+        "weight": 0.8321012134179946,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_3",
+        "target": "facility_0",
+        "weight": 0.7019494451652222,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_4",
+        "target": "facility_4",
+        "weight": 0.591090828938441,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_4",
+        "target": "facility_3",
+        "weight": 0.6431169242053524,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_5",
+        "target": "facility_3",
+        "weight": 0.5359123034708614,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_5",
+        "target": "facility_4",
+        "weight": 0.32081478334718516,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_6",
+        "target": "facility_1",
+        "weight": 0.5797953898196029,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_6",
+        "target": "facility_7",
+        "weight": 0.8321640924786778,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_7",
+        "target": "facility_0",
+        "weight": 0.25428405234610285,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "water_7",
+        "target": "facility_6",
+        "weight": 0.37748113461130245,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "drainage_4",
+        "weight": 0.6244383073786075,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "drainage_3",
+        "weight": 0.2873886106345756,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "water_5",
+        "weight": 0.7093879966487133,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_0",
+        "target": "water_1",
+        "weight": 0.3862966130051632,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "drainage_1",
+        "weight": 0.7082307405775785,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "drainage_3",
+        "weight": 0.6220956964653693,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "water_2",
+        "weight": 0.36790659946276305,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_1",
+        "target": "water_3",
+        "weight": 0.6806185436062738,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "drainage_0",
+        "weight": 0.8230417502461516,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "drainage_3",
+        "weight": 0.34182324068649306,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "water_3",
+        "weight": 0.7677168990486821,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_2",
+        "target": "water_2",
+        "weight": 0.5707478453533604,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "drainage_2",
+        "weight": 0.21908113843527074,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "drainage_3",
+        "weight": 0.4721018563813788,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "water_4",
+        "weight": 0.21786121302212128,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_3",
+        "target": "water_0",
+        "weight": 0.33520533686549225,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "drainage_7",
+        "weight": 0.8456795809236874,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "drainage_4",
+        "weight": 0.2709649152956478,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "water_0",
+        "weight": 0.6660919114877802,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_4",
+        "target": "water_3",
+        "weight": 0.5051515419877733,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "drainage_7",
+        "weight": 0.7910773962004995,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "drainage_6",
+        "weight": 0.43988619361549863,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "water_1",
+        "weight": 0.8036988886538892,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_5",
+        "target": "water_4",
+        "weight": 0.6771443000640888,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "drainage_3",
+        "weight": 0.4615279246558336,
+        "delay_minutes": 30,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "drainage_4",
+        "weight": 0.3559447313305453,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "water_3",
+        "weight": 0.3591186934424544,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_6",
+        "target": "water_6",
+        "weight": 0.5261336950062039,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "drainage_2",
+        "weight": 0.20677334144362233,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "drainage_1",
+        "weight": 0.8416321471505958,
+        "delay_minutes": 20,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "water_0",
+        "weight": 0.3761266891132874,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      },
+      {
+        "source": "pump_7",
+        "target": "water_7",
+        "weight": 0.46461028284321626,
+        "delay_minutes": 10,
+        "relationship": "service_dependency"
+      }
+    ]
+  }
+}

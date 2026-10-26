@@ -1,0 +1,9 @@
+input,distribution,unit
+rain_mm,observed Delhi state daily rainfall,mm
+duration_h,"Uniform(1,12)",hours
+area_m2,"Uniform(10000,100000)",m²
+runoff_coefficient,"Uniform(.3,.95)",fraction
+drain_mm_h,"Uniform(.2,8)",mm/hour over catchment
+blockage,"Uniform(0,.9)",fraction
+ponding_fraction,"Uniform(.03,.2)",fraction
+initial_storage_mm,"Uniform(0,2)",mm over catchment

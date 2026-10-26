@@ -1,0 +1,19 @@
+[
+  {
+    "variable": "pm25_concentration",
+    "geography": "Delhi",
+    "origin": "2024-01-01 00:00:00+05:30",
+    "valid_at": "2024-01-01 01:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "prediction": 59.02418754546159,
+    "interval_90": [
+      32.24054363078167,
+      85.8078314601415
+    ],
+    "unit": "ug/m3 (working assumption; source unit metadata incomplete)",
+    "source_quality": "publisher-described measurements; station lineage and real/synthetic status unverified",
+    "current_observation_missing": false,
+    "action": "human_review_required",
+    "research_only": true
+  }
+]

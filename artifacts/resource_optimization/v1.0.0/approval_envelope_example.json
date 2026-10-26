@@ -1,0 +1,303 @@
+{
+  "component": "resource_optimizer",
+  "version": "1.0.0",
+  "scenario": "normal",
+  "recommendations": [
+    {
+      "case_id": "S42-C00",
+      "node_id": "drainage_0",
+      "utility": 0.49874037694692164,
+      "estimated_cost_assumption": 12327,
+      "resources": {
+        "crew_type": "drain",
+        "hours": 4.0,
+        "pumps": 0
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C02",
+      "node_id": "drainage_2",
+      "utility": 0.4660210157801381,
+      "estimated_cost_assumption": 3882,
+      "resources": {
+        "crew_type": "drain",
+        "hours": 1.0,
+        "pumps": 0
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C03",
+      "node_id": "drainage_3",
+      "utility": 0.7137712930085531,
+      "estimated_cost_assumption": 5005,
+      "resources": {
+        "crew_type": "drain",
+        "hours": 3.0,
+        "pumps": 0
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C04",
+      "node_id": "drainage_4",
+      "utility": 0.66540256336311,
+      "estimated_cost_assumption": 11924,
+      "resources": {
+        "crew_type": "drain",
+        "hours": 3.0,
+        "pumps": 1
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C05",
+      "node_id": "drainage_5",
+      "utility": 0.6509658630621288,
+      "estimated_cost_assumption": 7060,
+      "resources": {
+        "crew_type": "drain",
+        "hours": 1.0,
+        "pumps": 0
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C07",
+      "node_id": "drainage_7",
+      "utility": 0.7132844679803518,
+      "estimated_cost_assumption": 4817,
+      "resources": {
+        "crew_type": "drain",
+        "hours": 1.0,
+        "pumps": 1
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C09",
+      "node_id": "road_1",
+      "utility": 0.4663044522030709,
+      "estimated_cost_assumption": 6041,
+      "resources": {
+        "crew_type": "road",
+        "hours": 1.0,
+        "pumps": 1
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C10",
+      "node_id": "road_2",
+      "utility": 0.7672113544098187,
+      "estimated_cost_assumption": 8433,
+      "resources": {
+        "crew_type": "road",
+        "hours": 2.0,
+        "pumps": 0
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C11",
+      "node_id": "road_3",
+      "utility": 0.4388713231540939,
+      "estimated_cost_assumption": 5096,
+      "resources": {
+        "crew_type": "road",
+        "hours": 3.0,
+        "pumps": 0
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C14",
+      "node_id": "road_6",
+      "utility": 0.5178964235896945,
+      "estimated_cost_assumption": 12381,
+      "resources": {
+        "crew_type": "road",
+        "hours": 3.0,
+        "pumps": 1
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C15",
+      "node_id": "road_7",
+      "utility": 0.5828128417324758,
+      "estimated_cost_assumption": 8617,
+      "resources": {
+        "crew_type": "road",
+        "hours": 3.0,
+        "pumps": 0
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C17",
+      "node_id": "water_1",
+      "utility": 0.5234505918786896,
+      "estimated_cost_assumption": 7509,
+      "resources": {
+        "crew_type": "water",
+        "hours": 2.0,
+        "pumps": 0
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C18",
+      "node_id": "water_2",
+      "utility": 0.5278323830754357,
+      "estimated_cost_assumption": 8735,
+      "resources": {
+        "crew_type": "water",
+        "hours": 1.0,
+        "pumps": 0
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C19",
+      "node_id": "water_3",
+      "utility": 0.5951651670322975,
+      "estimated_cost_assumption": 8705,
+      "resources": {
+        "crew_type": "water",
+        "hours": 4.0,
+        "pumps": 1
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C20",
+      "node_id": "water_4",
+      "utility": 0.436817141398975,
+      "estimated_cost_assumption": 6170,
+      "resources": {
+        "crew_type": "water",
+        "hours": 4.0,
+        "pumps": 1
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C21",
+      "node_id": "water_5",
+      "utility": 0.6135440809887899,
+      "estimated_cost_assumption": 3486,
+      "resources": {
+        "crew_type": "water",
+        "hours": 1.0,
+        "pumps": 0
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C26",
+      "node_id": "pump_2",
+      "utility": 0.6183278150057611,
+      "estimated_cost_assumption": 9490,
+      "resources": {
+        "crew_type": "water",
+        "hours": 1.0,
+        "pumps": 0
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C27",
+      "node_id": "pump_3",
+      "utility": 0.4224292466433938,
+      "estimated_cost_assumption": 4583,
+      "resources": {
+        "crew_type": "water",
+        "hours": 4.0,
+        "pumps": 0
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C28",
+      "node_id": "pump_4",
+      "utility": 0.7209468959229413,
+      "estimated_cost_assumption": 8639,
+      "resources": {
+        "crew_type": "water",
+        "hours": 3.0,
+        "pumps": 1
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C30",
+      "node_id": "pump_6",
+      "utility": 0.6872436038106039,
+      "estimated_cost_assumption": 3084,
+      "resources": {
+        "crew_type": "water",
+        "hours": 4.0,
+        "pumps": 0
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    },
+    {
+      "case_id": "S42-C31",
+      "node_id": "pump_7",
+      "utility": 0.7914766883526616,
+      "estimated_cost_assumption": 3231,
+      "resources": {
+        "crew_type": "water",
+        "hours": 4.0,
+        "pumps": 1
+      },
+      "provenance": "synthetic scenario",
+      "requires_human_approval": true,
+      "dispatch_allowed": false
+    }
+  ],
+  "approval_status": "not_requested",
+  "automatic_dispatch": false
+}

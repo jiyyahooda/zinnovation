@@ -1,0 +1,192 @@
+{
+  "interface_sha256": "3050dd8dcc8f3eba5bf6ca35d0eaa2dd0407609536778ae817143dfee39bc7fe",
+  "artifact_sha256": "afdc256b9143b8f79959feaa6807e56ee8051abc349412d223f932eaafddc3a9",
+  "component": "traffic",
+  "fresh_process": true,
+  "jupyter_imported": false,
+  "python": "C:\\Users\\kusha\\OneDrive\\Documents\\ChatGPT\\zinnovatio4.0\\CivicFlux\\.venv-windows\\Scripts\\python.exe",
+  "positive": {
+    "contract_version": "civicflux.research.v1",
+    "component": "traffic",
+    "model_version": "legacy-unversioned",
+    "status": "abstained",
+    "prediction": null,
+    "uncertainty": null,
+    "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+    "validation_status": "research; measurement lineage and reporting delays need validation",
+    "geographic_scope": "unlocated benchmark junctions",
+    "units": "vehicles/hour",
+    "horizon": "next hour vehicle count",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "input stream corrupted"
+    ]
+  },
+  "negative_cases": {
+    "wrong_units": {
+      "contract_version": "civicflux.research.v1",
+      "component": "traffic",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "unlocated benchmark junctions",
+      "units": "vehicles/hour",
+      "horizon": "next hour vehicle count",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unit contract mismatch"
+      ]
+    },
+    "wrong_scope": {
+      "contract_version": "civicflux.research.v1",
+      "component": "traffic",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "unlocated benchmark junctions",
+      "units": "vehicles/hour",
+      "horizon": "next hour vehicle count",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unsupported geographic/entity scope"
+      ]
+    },
+    "wrong_horizon": {
+      "contract_version": "civicflux.research.v1",
+      "component": "traffic",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "unlocated benchmark junctions",
+      "units": "vehicles/hour",
+      "horizon": "next hour vehicle count",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Horizon contract mismatch"
+      ]
+    },
+    "operational": {
+      "contract_version": "civicflux.research.v1",
+      "component": "traffic",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "unlocated benchmark junctions",
+      "units": "vehicles/hour",
+      "horizon": "next hour vehicle count",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Operational prediction/dispatch is unsupported"
+      ]
+    },
+    "stale": {
+      "contract_version": "civicflux.research.v1",
+      "component": "traffic",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "unlocated benchmark junctions",
+      "units": "vehicles/hour",
+      "horizon": "next hour vehicle count",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "input stream corrupted"
+      ]
+    },
+    "missing_payload": {
+      "contract_version": "civicflux.research.v1",
+      "component": "traffic",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "unlocated benchmark junctions",
+      "units": "vehicles/hour",
+      "horizon": "next hour vehicle count",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "input stream corrupted"
+      ]
+    },
+    "missing_current_reading": {
+      "contract_version": "civicflux.research.v1",
+      "component": "traffic",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "unlocated benchmark junctions",
+      "units": "vehicles/hour",
+      "horizon": "next hour vehicle count",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "input stream corrupted"
+      ]
+    },
+    "unknown_entity": {
+      "contract_version": "civicflux.research.v1",
+      "component": "traffic",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "unlocated benchmark junctions",
+      "units": "vehicles/hour",
+      "horizon": "next hour vehicle count",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "input stream corrupted"
+      ]
+    }
+  },
+  "sensor_results": {},
+  "passed": false
+}

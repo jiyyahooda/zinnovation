@@ -1,0 +1,97 @@
+{
+  "protected_files": 147,
+  "protected_files_changed": [],
+  "notebooks": [
+    {
+      "notebook": "06_Water_Network_Fault_Research.ipynb",
+      "cells": 78,
+      "executed_code_cells": 32,
+      "code_cells": 32,
+      "errors": []
+    },
+    {
+      "notebook": "07_Cascade_Risk_Analysis.ipynb",
+      "cells": 74,
+      "executed_code_cells": 30,
+      "code_cells": 30,
+      "errors": []
+    },
+    {
+      "notebook": "08_Sustainability_and_Resource_Optimization.ipynb",
+      "cells": 52,
+      "executed_code_cells": 22,
+      "code_cells": 22,
+      "errors": []
+    },
+    {
+      "notebook": "09_Intervention_Outcomes.ipynb",
+      "cells": 71,
+      "executed_code_cells": 30,
+      "code_cells": 30,
+      "errors": []
+    },
+    {
+      "notebook": "10_Model_Comparison_and_Validation.ipynb",
+      "cells": 46,
+      "executed_code_cells": 16,
+      "code_cells": 16,
+      "errors": []
+    },
+    {
+      "notebook": "11_End_to_End_CivicFlux.ipynb",
+      "cells": 46,
+      "executed_code_cells": 16,
+      "code_cells": 16,
+      "errors": []
+    }
+  ],
+  "registry": [
+    {
+      "component": "rainfall",
+      "readiness": "Backend-ready for research inference"
+    },
+    {
+      "component": "aqi",
+      "readiness": "Backend-ready for research inference"
+    },
+    {
+      "component": "traffic",
+      "readiness": "Backend-ready for research inference"
+    },
+    {
+      "component": "flood",
+      "readiness": "Simulation/demo only"
+    },
+    {
+      "component": "infrastructure_anomaly",
+      "readiness": "Backend-ready for research inference"
+    },
+    {
+      "component": "water_network",
+      "readiness": "Simulation/demo only"
+    },
+    {
+      "component": "cascade_risk",
+      "readiness": "Simulation/demo only"
+    },
+    {
+      "component": "resource_optimization",
+      "readiness": "Simulation/demo only"
+    },
+    {
+      "component": "intervention_outcomes",
+      "readiness": "Simulation/demo only"
+    }
+  ],
+  "negative_requests": 75,
+  "inventory_hash_mismatches": [],
+  "metric_consistent": 54,
+  "not_recomputable": [
+    {
+      "component": "flood",
+      "metric": "Brier_raw",
+      "status": "not recomputable from saved predictions"
+    }
+  ],
+  "test_report": ".....................................................                    [100%]\n53 passed in 2.16s"
+}

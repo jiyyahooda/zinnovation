@@ -1,0 +1,9 @@
+id: delhi
+name: Delhi
+timezone: Asia/Kolkata
+verified_asset_mapping: false
+station_mapping: null
+research_components: [rainfall, aqi]
+limitations: Delhi aggregate research data only; no verified street or station mapping.
+
+center: [28.6139, 77.209]

@@ -1,0 +1,27 @@
+{
+  "component": "water_recent_leak_onset",
+  "version": "1.0.0",
+  "network_id": "L-TOWN",
+  "research_only": true,
+  "synthetic_benchmark": true,
+  "confirmed_failure": false,
+  "dispatch_allowed": false,
+  "provenance": "BattLeDIM simulated benchmark; not Delhi incidents",
+  "target": "a benchmark leak began within the preceding 24 hours",
+  "probability": 0.005342764673435297,
+  "alert": false,
+  "warnings": [
+    "Benchmark distribution only; recent-onset detection is not leak localization or proof of a fault.",
+    "Source clock/receipt latency is unspecified; no operational freshness claim."
+  ],
+  "threshold": 0.95,
+  "observation_time": "2019-12-31 23:00:00",
+  "detection_time": "2026-10-25T00:00:00+00:00",
+  "units": {
+    "pressure": "m",
+    "flow": "m3/h",
+    "level": "m"
+  },
+  "input_freshness": "unknown: source timezone unspecified",
+  "missing_fraction": 0.0
+}

@@ -1,0 +1,4 @@
+source,rows,columns,file,start,end,sha256,units,provenance
+rainfall,204876,8,rainfall/daily-rainfall-at-state-level.csv,2009-01-01,2024-07-31,4891c75a9a0ccd2e7f75c9aafa3de110cf9a38602e0798f2a88e1895f4031611,mm/day,reported real state aggregate; upstream lineage not independently audited
+aqi,219125,18,aqi/processed_aqi_data.csv,2019-01-01 00:00:00,2024-01-01 00:00:00,52592826574621dc5a247c4c518b379ac08d8a35543e1c22c92a5d41fbf1f339,ug/m3 (working assumption; source unit metadata incomplete),publisher-described measurements; station lineage and real/synthetic status unverified
+traffic,48120,4,traffic/traffic.csv,2015-11-01 00:00:00,2017-06-30 23:00:00,5d48fc91c8ca63a2d430140efb18750fe77828d058ec000e8644e819b20b1536,vehicles/hour,"observational benchmark; city, coordinates and timezone not supplied"

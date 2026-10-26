@@ -1,0 +1,27 @@
+{
+  "node_id": "drainage_0",
+  "horizon_minutes": 60,
+  "paths": [
+    {
+      "initial_node": "pump_0",
+      "path": [
+        "pump_0",
+        "drainage_0"
+      ],
+      "arrival_minutes_if_transmitted": 10,
+      "within_horizon": true,
+      "single_path_transmission_product": 0.4068760848222874,
+      "steps": [
+        {
+          "provider": "pump_0",
+          "dependent": "drainage_0",
+          "edge_weight": 0.607750746456588,
+          "delay_minutes": 10,
+          "target_resilience": 0.3913831418636287,
+          "conditional_transmission": 0.4068760848222874
+        }
+      ]
+    }
+  ],
+  "semantics": "Candidate dependency routes; not realized failures or total cascade probability"
+}

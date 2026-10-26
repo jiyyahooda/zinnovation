@@ -1,0 +1,99 @@
+{
+  "contract_version": "civicflux.research.v1",
+  "component": "intervention_outcomes",
+  "artifact_version": "v1.1.0",
+  "component_kind": "synthetic success classifier + duration regressor",
+  "geographic_scope": "synthetic intervention records only",
+  "units": {
+    "resolution": "hours",
+    "success_score": "unvalidated unitless simulation score"
+  },
+  "horizon": "post-completion synthetic outcome",
+  "provenance": "seeded, confounded outcome generator; no real verification records",
+  "supported_inputs": {
+    "features": [
+      "intervention_type",
+      "initial_severity",
+      "planned_crew_type",
+      "planned_crew_count",
+      "planned_pump_count",
+      "planned_cost",
+      "risk_score_at_assignment"
+    ],
+    "out_of_scope": "real success estimates, causal effects and allocation"
+  },
+  "validation_status": "chronological synthetic holdout; unsupported success prediction, duration research only",
+  "operational_supported": false,
+  "research_only": true,
+  "automatic_dispatch": false,
+  "artifacts": {
+    "Logistic_success_search.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/Logistic_success_search.csv",
+      "sha256": "988d24ca24f9453797e6eb9269b757e44cede920007f0e5b6f4da10469669f0e"
+    },
+    "XGBoost_success_search.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/XGBoost_success_search.csv",
+      "sha256": "8db2490df80592f06e0dc8d6283e46da9451e6fb7b4469ff1f7f23e8c09c33ab"
+    },
+    "duration_comparison.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/duration_comparison.csv",
+      "sha256": "c6d3008473be0e0ecc457f596b99ba95b124561e5639be3a2409eee935746cb0"
+    },
+    "duration_test_predictions.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/duration_test_predictions.csv",
+      "sha256": "dd54a1226754ce387e1571041b6abc5b40fb0ff52f921d0c98335a4b2815580f"
+    },
+    "duration_validation.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/duration_validation.json",
+      "sha256": "4f6114b66a6aabf9e050906168099a6f6acfcb15e2f6af082dc9d37cb1f23444"
+    },
+    "example_prediction.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/example_prediction.json",
+      "sha256": "56c9f4a9ecab8e5b51493d972a26fb50d4615e66950a1350802866a2e358224c"
+    },
+    "feature_schema.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/feature_schema.json",
+      "sha256": "2434f592046faf8541e41dfbe7bae1df2452b87dac7c6fc2d7ec402c3cfe44eb"
+    },
+    "pipeline.joblib": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/pipeline.joblib",
+      "sha256": "195a19a6135d469f7818b5dfea735c0877f998daec0aed13b2cdd09f126427a2"
+    },
+    "success_baseline_comparison.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/success_baseline_comparison.csv",
+      "sha256": "b57294a5a3b3003b7c18281999e7b102cc1d0c7cf9a721181deaf14bb44e2f8d"
+    },
+    "success_cv.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/success_cv.csv",
+      "sha256": "123cffc09c359e6f7b469abcfc92b58d397cdcf37bc864fb7555c395463715d2"
+    },
+    "success_metrics.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/success_metrics.json",
+      "sha256": "66eac39f4f4eaa6960df2ba6db5aa89d84e09ebdd2d2da209ca4f7676071090c"
+    },
+    "success_permutation_importance.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/success_permutation_importance.csv",
+      "sha256": "1a3426321a2efb07b096f4ceec236eecfcd19574dd244fc6115594dfe3541f75"
+    },
+    "success_type_slices.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/success_type_slices.csv",
+      "sha256": "79cbfbd2a0d765ad1b6fb278767ecf8ce7e1e8a85ca582b6fe05ee5314930209"
+    },
+    "success_validation_operating_points.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/success_validation_operating_points.csv",
+      "sha256": "98796e94304ec82dadb79397a5927161cae447ceb7f6d92674ec13bf73e1c46a"
+    },
+    "synthetic_data_manifest.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/synthetic_data_manifest.json",
+      "sha256": "0016fd6a518cb9b5dac65be1194b61012ace6438c6d51ca4586b4f188fe47b74"
+    },
+    "synthetic_intervention_records.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/synthetic_intervention_records.csv",
+      "sha256": "e36be8024ecb4247a41b4f3b60c0b05022d6294ca3b5e4fde7843803c453bebb"
+    },
+    "test_predictions.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/intervention_outcomes/v1.1.0/test_predictions.csv",
+      "sha256": "72aac3b418f32a9fa0fa6f425a5f6a85e6bc8614fd9da39d7e4b82b32c5038f7"
+    }
+  }
+}

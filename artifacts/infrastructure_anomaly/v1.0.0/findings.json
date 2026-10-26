@@ -1,0 +1,96 @@
+{
+  "fitted_suites": 5,
+  "scored_test_rows": 18661,
+  "unsupported_test_rows": 2919,
+  "test_alert_rates": {
+    "aqi:Delhi": {
+      "rule_alert": 0.009811751283513977,
+      "robust_alert": 0.0,
+      "isolation_alert": 0.01779806046776954,
+      "quality_alert": 0.0,
+      "review_alert": 0.01779806046776954
+    },
+    "rainfall:Delhi": {
+      "rule_alert": 0.14837576821773485,
+      "robust_alert": 0.1360842844600527,
+      "isolation_alert": 0.04038630377524144,
+      "quality_alert": 0.1299385425812116,
+      "review_alert": 0.17032484635645304
+    },
+    "traffic:1": {
+      "rule_alert": 0.3487495717711545,
+      "robust_alert": 0.0006851661527920521,
+      "isolation_alert": 0.6663240835902706,
+      "quality_alert": 0.0,
+      "review_alert": 0.6663240835902706
+    },
+    "traffic:2": {
+      "rule_alert": 0.5018842069201781,
+      "robust_alert": 0.0017129153819801302,
+      "isolation_alert": 0.8300787941075711,
+      "quality_alert": 0.0,
+      "review_alert": 0.8300787941075711
+    },
+    "traffic:3": {
+      "rule_alert": 0.010962658444672833,
+      "robust_alert": 0.0027406646111682084,
+      "isolation_alert": 0.028091812264474134,
+      "quality_alert": 0.0,
+      "review_alert": 0.028091812264474134
+    }
+  },
+  "fixture_recovery": {
+    "data_gap": {
+      "isolation": 0.0,
+      "review": 1.0,
+      "robust": 0.0,
+      "rule": 1.0
+    },
+    "drift": {
+      "isolation": 0.6726190476190476,
+      "review": 0.6726190476190476,
+      "robust": 0.36111111111111116,
+      "rule": 0.49404761904761907
+    },
+    "flatline": {
+      "isolation": 0.4513888888888889,
+      "review": 0.6527777777777778,
+      "robust": 0.0,
+      "rule": 0.5555555555555556
+    },
+    "invalid": {
+      "isolation": 0.0,
+      "review": 1.0,
+      "robust": 0.0,
+      "rule": 1.0
+    },
+    "missing": {
+      "isolation": 0.0,
+      "review": 1.0,
+      "robust": 0.0,
+      "rule": 1.0
+    },
+    "persistent_shift": {
+      "isolation": 1.0,
+      "review": 1.0,
+      "robust": 0.4375,
+      "rule": 0.8680555555555557
+    },
+    "seasonal_shift": {
+      "isolation": 0.6375112111687891,
+      "review": 0.6375112111687891,
+      "robust": 0.06660131746293875,
+      "rule": 0.23506352866687844
+    },
+    "spike": {
+      "isolation": 1.0,
+      "review": 1.0,
+      "robust": 1.0,
+      "rule": 1.0
+    }
+  },
+  "fixture_copies": 48,
+  "real_fault_precision": null,
+  "real_fault_accuracy": null,
+  "dispatch_allowed": false
+}

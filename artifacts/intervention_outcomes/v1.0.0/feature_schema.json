@@ -1,0 +1,19 @@
+{
+  "features": [
+    "intervention_type",
+    "initial_severity",
+    "planned_crew_type",
+    "planned_crew_count",
+    "planned_pump_count",
+    "planned_cost",
+    "risk_score_at_assignment"
+  ],
+  "excluded_post_intervention_fields": [
+    "completion_time",
+    "verification_time",
+    "verified_by",
+    "verified_success",
+    "outcome_status",
+    "resolution_hours"
+  ]
+}

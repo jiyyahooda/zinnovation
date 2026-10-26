@@ -1,0 +1,25 @@
+{
+  "variable": "simulated_flood_scenario_probability",
+  "synthetic": true,
+  "geography": "hypothetical catchment; Delhi state rainfall reference only",
+  "horizon_hours": 24,
+  "rain_scenarios_mm": [
+    10,
+    30,
+    70
+  ],
+  "probabilities": [
+    0.0,
+    0.025974025949835777,
+    1.0
+  ],
+  "decision_threshold": 0.03,
+  "action": "engineering_review",
+  "automatic_dispatch": false,
+  "limitations": [
+    "uncalibrated drainage",
+    "no real incident labels",
+    "daily state rainfall is not local storm intensity",
+    "no infrastructure-failure labels"
+  ]
+}

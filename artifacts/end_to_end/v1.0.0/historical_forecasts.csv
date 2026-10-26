@@ -1,0 +1,4 @@
+component,entity,observation,target_time,prediction,lower_90,upper_90,units,scope
+rainfall,Delhi,2021-02-27 00:00:00+05:30,2021-02-28 00:00:00+05:30,0.3234360962391534,0.0,5.800203174431296,mm/day,Delhi state aggregate
+aqi,Delhi,2023-01-02 04:00:00+05:30,2023-01-02 05:00:00+05:30,66.47396087185585,39.69031695717594,93.25760478653577,ug/m3 (working assumption; source unit metadata incomplete),Delhi aggregate (station lineage unverified)
+traffic,1,2017-03-02 18:00:00,2017-03-02 19:00:00,75.59744262695312,70.0286636352539,81.16622161865234,vehicles/hour,unlocated benchmark junctions

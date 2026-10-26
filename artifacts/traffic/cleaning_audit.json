@@ -1,0 +1,9 @@
+{
+  "raw_rows": 48120,
+  "exact_duplicates_removed": 0,
+  "invalid_timestamp_rows": 0,
+  "negative_values_to_missing": 0,
+  "selected_rows_before_grid": 48120,
+  "regular_grid_rows": 48120,
+  "unavailable_values": 0
+}

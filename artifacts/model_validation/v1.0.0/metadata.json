@@ -1,0 +1,13 @@
+{
+  "component": "model_validation_report",
+  "version": "1.0.0",
+  "retrained_models": 0,
+  "components": 9,
+  "metric_mismatches": 0,
+  "unavailable_recomputations": 1,
+  "limitations": [
+    "raw flood probabilities were not exported",
+    "no verified municipal topology or outcomes",
+    "research readiness is not operational validation"
+  ]
+}

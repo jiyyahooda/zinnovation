@@ -1,0 +1,228 @@
+{
+  "interface_sha256": "3050dd8dcc8f3eba5bf6ca35d0eaa2dd0407609536778ae817143dfee39bc7fe",
+  "artifact_sha256": "69934c5a43013093da4b50bd488d5e914ca166e4db2c4fdc9c55f6da726ab500",
+  "component": "flood",
+  "fresh_process": true,
+  "jupyter_imported": false,
+  "python": "C:\\Users\\kusha\\OneDrive\\Documents\\ChatGPT\\zinnovatio4.0\\CivicFlux\\.venv-windows\\Scripts\\python.exe",
+  "positive": {
+    "contract_version": "civicflux.research.v1",
+    "component": "flood",
+    "model_version": "legacy-unversioned",
+    "status": "abstained",
+    "prediction": null,
+    "uncertainty": null,
+    "provenance": "see source-specific metadata/model card",
+    "validation_status": "research scenario surrogate; not validated real flood or infrastructure failure forecast",
+    "geographic_scope": "hypothetical catchments with state-rainfall reference",
+    "units": {
+      "rain_mm": "mm",
+      "duration_h": "hours",
+      "area_m2": "m2",
+      "drain_mm_h": "mm/hour",
+      "initial_storage_mm": "mm",
+      "fractions": "unitless"
+    },
+    "horizon": "24-hour simulated scenario",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "input stream corrupted"
+    ]
+  },
+  "negative_cases": {
+    "wrong_units": {
+      "contract_version": "civicflux.research.v1",
+      "component": "flood",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research scenario surrogate; not validated real flood or infrastructure failure forecast",
+      "geographic_scope": "hypothetical catchments with state-rainfall reference",
+      "units": {
+        "rain_mm": "mm",
+        "duration_h": "hours",
+        "area_m2": "m2",
+        "drain_mm_h": "mm/hour",
+        "initial_storage_mm": "mm",
+        "fractions": "unitless"
+      },
+      "horizon": "24-hour simulated scenario",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unit contract mismatch"
+      ]
+    },
+    "wrong_scope": {
+      "contract_version": "civicflux.research.v1",
+      "component": "flood",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research scenario surrogate; not validated real flood or infrastructure failure forecast",
+      "geographic_scope": "hypothetical catchments with state-rainfall reference",
+      "units": {
+        "rain_mm": "mm",
+        "duration_h": "hours",
+        "area_m2": "m2",
+        "drain_mm_h": "mm/hour",
+        "initial_storage_mm": "mm",
+        "fractions": "unitless"
+      },
+      "horizon": "24-hour simulated scenario",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unsupported geographic/entity scope"
+      ]
+    },
+    "wrong_horizon": {
+      "contract_version": "civicflux.research.v1",
+      "component": "flood",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research scenario surrogate; not validated real flood or infrastructure failure forecast",
+      "geographic_scope": "hypothetical catchments with state-rainfall reference",
+      "units": {
+        "rain_mm": "mm",
+        "duration_h": "hours",
+        "area_m2": "m2",
+        "drain_mm_h": "mm/hour",
+        "initial_storage_mm": "mm",
+        "fractions": "unitless"
+      },
+      "horizon": "24-hour simulated scenario",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Horizon contract mismatch"
+      ]
+    },
+    "operational": {
+      "contract_version": "civicflux.research.v1",
+      "component": "flood",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research scenario surrogate; not validated real flood or infrastructure failure forecast",
+      "geographic_scope": "hypothetical catchments with state-rainfall reference",
+      "units": {
+        "rain_mm": "mm",
+        "duration_h": "hours",
+        "area_m2": "m2",
+        "drain_mm_h": "mm/hour",
+        "initial_storage_mm": "mm",
+        "fractions": "unitless"
+      },
+      "horizon": "24-hour simulated scenario",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Operational prediction/dispatch is unsupported"
+      ]
+    },
+    "stale": {
+      "contract_version": "civicflux.research.v1",
+      "component": "flood",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research scenario surrogate; not validated real flood or infrastructure failure forecast",
+      "geographic_scope": "hypothetical catchments with state-rainfall reference",
+      "units": {
+        "rain_mm": "mm",
+        "duration_h": "hours",
+        "area_m2": "m2",
+        "drain_mm_h": "mm/hour",
+        "initial_storage_mm": "mm",
+        "fractions": "unitless"
+      },
+      "horizon": "24-hour simulated scenario",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "input stream corrupted"
+      ]
+    },
+    "missing_payload": {
+      "contract_version": "civicflux.research.v1",
+      "component": "flood",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research scenario surrogate; not validated real flood or infrastructure failure forecast",
+      "geographic_scope": "hypothetical catchments with state-rainfall reference",
+      "units": {
+        "rain_mm": "mm",
+        "duration_h": "hours",
+        "area_m2": "m2",
+        "drain_mm_h": "mm/hour",
+        "initial_storage_mm": "mm",
+        "fractions": "unitless"
+      },
+      "horizon": "24-hour simulated scenario",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "input stream corrupted"
+      ]
+    },
+    "false_provenance": {
+      "contract_version": "civicflux.research.v1",
+      "component": "flood",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research scenario surrogate; not validated real flood or infrastructure failure forecast",
+      "geographic_scope": "hypothetical catchments with state-rainfall reference",
+      "units": {
+        "rain_mm": "mm",
+        "duration_h": "hours",
+        "area_m2": "m2",
+        "drain_mm_h": "mm/hour",
+        "initial_storage_mm": "mm",
+        "fractions": "unitless"
+      },
+      "horizon": "24-hour simulated scenario",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Explicit synthetic provenance is required"
+      ]
+    }
+  },
+  "sensor_results": {},
+  "passed": false
+}

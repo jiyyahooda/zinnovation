@@ -1,0 +1,38 @@
+[
+  {
+    "proposal_id": "SYNTHETIC-normal",
+    "decision": "pending",
+    "reviewer": null,
+    "synthetic_demonstration": true,
+    "approval_status": "not_approved",
+    "dispatch_allowed": false,
+    "outcome_verified": false
+  },
+  {
+    "proposal_id": "SYNTHETIC-normal",
+    "decision": "defer",
+    "reviewer": "fictional reviewer in explicitly synthetic walkthrough",
+    "synthetic_demonstration": true,
+    "approval_status": "not_approved",
+    "dispatch_allowed": false,
+    "outcome_verified": false
+  },
+  {
+    "proposal_id": "SYNTHETIC-scarce_budget",
+    "decision": "pending",
+    "reviewer": null,
+    "synthetic_demonstration": true,
+    "approval_status": "not_approved",
+    "dispatch_allowed": false,
+    "outcome_verified": false
+  },
+  {
+    "proposal_id": "SYNTHETIC-scarce_budget",
+    "decision": "defer",
+    "reviewer": "fictional reviewer in explicitly synthetic walkthrough",
+    "synthetic_demonstration": true,
+    "approval_status": "not_approved",
+    "dispatch_allowed": false,
+    "outcome_verified": false
+  }
+]

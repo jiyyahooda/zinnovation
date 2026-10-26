@@ -1,0 +1,31 @@
+{
+  "task": "rainfall",
+  "winner": "Random Forest tuned",
+  "source_url": "https://www.kaggle.com/datasets/wydoinn/daily-rainfall-data-india-2009-2024",
+  "sha256": "4891c75a9a0ccd2e7f75c9aafa3de110cf9a38602e0798f2a88e1895f4031611",
+  "units": "mm/day",
+  "horizon": "D",
+  "timezone": "Asia/Kolkata",
+  "provenance": "reported real state aggregate; upstream lineage not independently audited",
+  "seed": 42,
+  "cv_folds": 3,
+  "search_iterations": 6,
+  "test_metrics": {
+    "MAE": 2.6911457306516144,
+    "RMSE": 7.779361458220108,
+    "R2": 0.1099826631125479,
+    "bias": -0.3066935403485121,
+    "MAE_skill_vs_persistence": 0.08366744641616808
+  },
+  "interval_radius_90": 5.476767078192142,
+  "operating_mode": "rolling one-step; current observation assumed available",
+  "deployment_status": "research; measurement lineage and reporting delays need validation",
+  "versions": {
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scikit-learn": "1.6.1",
+    "xgboost": "3.4.1",
+    "shap": "0.54.1",
+    "joblib": "1.4.2"
+  }
+}

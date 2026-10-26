@@ -1,0 +1,18 @@
+{
+  "numeric": [
+    "criticality",
+    "resilience",
+    "load",
+    "in_degree",
+    "out_degree",
+    "betweenness",
+    "failed_predecessors",
+    "direct_exposure",
+    "seed_distance",
+    "upstream_failed_fraction"
+  ],
+  "categorical": [
+    "node_type"
+  ],
+  "available_at": "origin graph/status only"
+}

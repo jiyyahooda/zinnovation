@@ -1,0 +1,70 @@
+[
+  {
+    "variable": "vehicle_count_hour",
+    "geography": "2",
+    "origin": "2017-06-30 23:00:00",
+    "valid_at": "2017-07-01 00:00:00",
+    "timezone": "unknown",
+    "prediction": 23.944772720336914,
+    "interval_90": [
+      18.375991821289062,
+      29.513553619384766
+    ],
+    "unit": "vehicles/hour",
+    "source_quality": "observational benchmark; city, coordinates and timezone not supplied",
+    "current_observation_missing": false,
+    "action": "human_review_required",
+    "research_only": true
+  },
+  {
+    "variable": "vehicle_count_hour",
+    "geography": "3",
+    "origin": "2017-06-30 23:00:00",
+    "valid_at": "2017-07-01 00:00:00",
+    "timezone": "unknown",
+    "prediction": 32.81591796875,
+    "interval_90": [
+      27.24713706970215,
+      38.38469696044922
+    ],
+    "unit": "vehicles/hour",
+    "source_quality": "observational benchmark; city, coordinates and timezone not supplied",
+    "current_observation_missing": false,
+    "action": "human_review_required",
+    "research_only": true
+  },
+  {
+    "variable": "vehicle_count_hour",
+    "geography": "1",
+    "origin": "2017-06-30 23:00:00",
+    "valid_at": "2017-07-01 00:00:00",
+    "timezone": "unknown",
+    "prediction": 70.22809600830078,
+    "interval_90": [
+      64.65931701660156,
+      75.796875
+    ],
+    "unit": "vehicles/hour",
+    "source_quality": "observational benchmark; city, coordinates and timezone not supplied",
+    "current_observation_missing": false,
+    "action": "human_review_required",
+    "research_only": true
+  },
+  {
+    "variable": "vehicle_count_hour",
+    "geography": "4",
+    "origin": "2017-06-30 23:00:00",
+    "valid_at": "2017-07-01 00:00:00",
+    "timezone": "unknown",
+    "prediction": 13.145441055297852,
+    "interval_90": [
+      7.57666015625,
+      18.714221954345703
+    ],
+    "unit": "vehicles/hour",
+    "source_quality": "observational benchmark; city, coordinates and timezone not supplied",
+    "current_observation_missing": false,
+    "action": "human_review_required",
+    "research_only": true
+  }
+]

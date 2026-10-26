@@ -1,0 +1,1139 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "CivicFlux research and civic resilience API",
+    "version": "2.0.0"
+  },
+  "paths": {
+    "/api/auth/login": {
+      "post": {
+        "tags": [
+          "authentication"
+        ],
+        "summary": "Login",
+        "operationId": "login_api_auth_login_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/me": {
+      "get": {
+        "tags": [
+          "authentication"
+        ],
+        "summary": "Me",
+        "operationId": "me_api_auth_me_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/logout": {
+      "post": {
+        "tags": [
+          "authentication"
+        ],
+        "summary": "Logout",
+        "operationId": "logout_api_auth_logout_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/models": {
+      "get": {
+        "tags": [
+          "model inventory"
+        ],
+        "summary": "Index",
+        "operationId": "index_api_models_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/predictions/{component}/series": {
+      "get": {
+        "tags": [
+          "research inference"
+        ],
+        "summary": "Series",
+        "operationId": "series_api_predictions__component__series_get",
+        "parameters": [
+          {
+            "name": "component",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Component"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/predictions/{component}/example": {
+      "get": {
+        "tags": [
+          "research inference"
+        ],
+        "summary": "Example",
+        "operationId": "example_api_predictions__component__example_get",
+        "parameters": [
+          {
+            "name": "component",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Component"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/predictions/{component}/fixture": {
+      "get": {
+        "tags": [
+          "research inference"
+        ],
+        "summary": "Input Fixture",
+        "operationId": "input_fixture_api_predictions__component__fixture_get",
+        "parameters": [
+          {
+            "name": "component",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Component"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/predictions/{component}": {
+      "post": {
+        "tags": [
+          "research inference"
+        ],
+        "summary": "Inference",
+        "operationId": "inference_api_predictions__component__post",
+        "parameters": [
+          {
+            "name": "component",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Component"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": true,
+                "title": "Body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/observations": {
+      "get": {
+        "tags": [
+          "source observations"
+        ],
+        "summary": "Index",
+        "operationId": "index_api_observations_get",
+        "parameters": [
+          {
+            "name": "city_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "delhi",
+              "title": "City Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/cities": {
+      "get": {
+        "tags": [
+          "cities"
+        ],
+        "summary": "Index",
+        "operationId": "index_api_cities_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/cities/{identifier}": {
+      "get": {
+        "tags": [
+          "cities"
+        ],
+        "summary": "Detail",
+        "operationId": "detail_api_cities__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/scenarios": {
+      "get": {
+        "tags": [
+          "synthetic scenarios"
+        ],
+        "summary": "Index",
+        "operationId": "index_api_scenarios_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "synthetic scenarios"
+        ],
+        "summary": "Run",
+        "operationId": "run_api_scenarios_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Scenario"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/scenarios/graph": {
+      "get": {
+        "tags": [
+          "synthetic scenarios"
+        ],
+        "summary": "Graph",
+        "operationId": "graph_api_scenarios_graph_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/scenarios/defaults": {
+      "get": {
+        "tags": [
+          "synthetic scenarios"
+        ],
+        "summary": "Defaults",
+        "operationId": "defaults_api_scenarios_defaults_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/scenarios/{identifier}": {
+      "get": {
+        "tags": [
+          "synthetic scenarios"
+        ],
+        "summary": "Detail",
+        "operationId": "detail_api_scenarios__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/feedback": {
+      "get": {
+        "tags": [
+          "human review and community"
+        ],
+        "summary": "Feedback",
+        "operationId": "feedback_api_feedback_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/feedback/{identifier}/review": {
+      "post": {
+        "tags": [
+          "human review and community"
+        ],
+        "summary": "Review Scenario",
+        "operationId": "review_scenario_api_feedback__identifier__review_post",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Review"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/feedback/{identifier}/verification": {
+      "post": {
+        "tags": [
+          "human review and community"
+        ],
+        "summary": "Verify",
+        "operationId": "verify_api_feedback__identifier__verification_post",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Verification"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/complaints": {
+      "get": {
+        "tags": [
+          "human review and community"
+        ],
+        "summary": "Complaints",
+        "operationId": "complaints_api_complaints_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "human review and community"
+        ],
+        "summary": "Complain",
+        "operationId": "complain_api_complaints_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Complaint"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/complaints/{identifier}": {
+      "post": {
+        "tags": [
+          "human review and community"
+        ],
+        "summary": "Update",
+        "operationId": "update_api_complaints__identifier__post",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComplaintReview"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/audit": {
+      "get": {
+        "tags": [
+          "human review and community"
+        ],
+        "summary": "Audit",
+        "operationId": "audit_api_audit_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_api_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Complaint": {
+        "properties": {
+          "city_id": {
+            "type": "string",
+            "title": "City Id"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "waterlogging",
+              "road",
+              "drainage",
+              "water",
+              "air_quality",
+              "traffic",
+              "infrastructure",
+              "other"
+            ],
+            "title": "Category"
+          },
+          "location": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 3,
+            "title": "Location"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 8,
+            "title": "Description"
+          }
+        },
+        "type": "object",
+        "required": [
+          "city_id",
+          "category",
+          "location",
+          "description"
+        ],
+        "title": "Complaint"
+      },
+      "ComplaintReview": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "under_review",
+              "in_progress",
+              "closed"
+            ],
+            "title": "Status"
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 3,
+            "title": "Note"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "note"
+        ],
+        "title": "ComplaintReview"
+      },
+      "Flood": {
+        "properties": {
+          "rain_mm": {
+            "type": "number",
+            "maximum": 200.0,
+            "minimum": 0.0,
+            "title": "Rain Mm",
+            "default": 60
+          },
+          "duration_h": {
+            "type": "number",
+            "maximum": 12.0,
+            "minimum": 1.0,
+            "title": "Duration H",
+            "default": 6
+          },
+          "area_m2": {
+            "type": "number",
+            "maximum": 100000.0,
+            "minimum": 10000.0,
+            "title": "Area M2",
+            "default": 50000
+          },
+          "runoff_coefficient": {
+            "type": "number",
+            "maximum": 0.95,
+            "minimum": 0.3,
+            "title": "Runoff Coefficient",
+            "default": 0.7
+          },
+          "drain_mm_h": {
+            "type": "number",
+            "maximum": 8.0,
+            "minimum": 0.2,
+            "title": "Drain Mm H",
+            "default": 3
+          },
+          "blockage": {
+            "type": "number",
+            "maximum": 0.9,
+            "minimum": 0.0,
+            "title": "Blockage",
+            "default": 0.5
+          },
+          "ponding_fraction": {
+            "type": "number",
+            "maximum": 0.2,
+            "minimum": 0.03,
+            "title": "Ponding Fraction",
+            "default": 0.1
+          },
+          "initial_storage_mm": {
+            "type": "number",
+            "maximum": 2.0,
+            "minimum": 0.0,
+            "title": "Initial Storage Mm",
+            "default": 0
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "Flood"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Login": {
+        "properties": {
+          "username": {
+            "type": "string",
+            "title": "Username"
+          },
+          "password": {
+            "type": "string",
+            "title": "Password"
+          }
+        },
+        "type": "object",
+        "required": [
+          "username",
+          "password"
+        ],
+        "title": "Login"
+      },
+      "Resources": {
+        "properties": {
+          "budget": {
+            "type": "integer",
+            "maximum": 10000000.0,
+            "minimum": 0.0,
+            "title": "Budget",
+            "default": 50000
+          },
+          "pumps": {
+            "type": "integer",
+            "maximum": 1000.0,
+            "minimum": 0.0,
+            "title": "Pumps",
+            "default": 4
+          },
+          "crew_hours": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Crew Hours"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "Resources"
+      },
+      "Review": {
+        "properties": {
+          "decision": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "defer",
+              "reject",
+              "approve"
+            ],
+            "title": "Decision"
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 3,
+            "title": "Note"
+          }
+        },
+        "type": "object",
+        "required": [
+          "decision",
+          "note"
+        ],
+        "title": "Review"
+      },
+      "Scenario": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 3,
+            "title": "Name",
+            "default": "Monsoon stress test"
+          },
+          "city_id": {
+            "type": "string",
+            "title": "City Id",
+            "default": "delhi"
+          },
+          "flood_engine": {
+            "type": "string",
+            "enum": [
+              "mass_balance",
+              "trained_surrogate"
+            ],
+            "title": "Flood Engine",
+            "default": "mass_balance"
+          },
+          "flood": {
+            "$ref": "#/components/schemas/Flood"
+          },
+          "initial": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 40,
+            "title": "Initial"
+          },
+          "load": {
+            "type": "number",
+            "maximum": 1.5,
+            "minimum": 0.5,
+            "title": "Load",
+            "default": 1.1
+          },
+          "resources": {
+            "$ref": "#/components/schemas/Resources"
+          },
+          "weights": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "type": "number"
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Weights"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "Scenario"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "Verification": {
+        "properties": {
+          "verifier": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 3,
+            "title": "Verifier"
+          },
+          "evidence_ref": {
+            "type": "string",
+            "maxLength": 500,
+            "minLength": 3,
+            "title": "Evidence Ref"
+          },
+          "success": {
+            "type": "boolean",
+            "title": "Success"
+          },
+          "completion_time": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Completion Time"
+          },
+          "verification_time": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Verification Time"
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 3,
+            "title": "Note"
+          }
+        },
+        "type": "object",
+        "required": [
+          "verifier",
+          "evidence_ref",
+          "success",
+          "completion_time",
+          "verification_time",
+          "note"
+        ],
+        "title": "Verification"
+      }
+    }
+  }
+}

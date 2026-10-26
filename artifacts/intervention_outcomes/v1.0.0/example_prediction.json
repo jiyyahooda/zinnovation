@@ -1,0 +1,15 @@
+{
+  "component": "intervention_outcome_research",
+  "version": "1.0.0",
+  "source_type": "synthetic_research_surrogate",
+  "prediction_success_probability": 0.7552607453404181,
+  "predicted_resolution_hours": 9.256714546409432,
+  "causal_effect": null,
+  "requires_human_review": true,
+  "auto_approve": false,
+  "dispatch_allowed": false,
+  "warnings": [
+    "Synthetic records only; model does not estimate the causal benefit of an intervention.",
+    "Do not use as a real success probability or approval decision."
+  ]
+}

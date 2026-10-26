@@ -1,0 +1,188 @@
+{
+  "rainfall": {
+    "file": "data/raw/rainfall/daily-rainfall-at-state-level.csv",
+    "sha256": "4891c75a9a0ccd2e7f75c9aafa3de110cf9a38602e0798f2a88e1895f4031611",
+    "shape": [
+      204876,
+      8
+    ],
+    "columns": {
+      "id": "int64",
+      "date": "object",
+      "state_code": "int64",
+      "state_name": "object",
+      "actual": "float64",
+      "rfs": "float64",
+      "normal": "float64",
+      "deviation": "float64"
+    },
+    "missing": {
+      "id": 0,
+      "date": 0,
+      "state_code": 0,
+      "state_name": 0,
+      "actual": 17162,
+      "rfs": 5865,
+      "normal": 11518,
+      "deviation": 31021
+    },
+    "duplicates": 0,
+    "start": "2009-01-01",
+    "end": "2024-07-31",
+    "geographies": [
+      "Uttarakhand",
+      "Assam",
+      "Tripura",
+      "Telangana",
+      "Himachal Pradesh",
+      "Jammu And Kashmir",
+      "Meghalaya",
+      "Lakshadweep",
+      "Maharashtra",
+      "Punjab",
+      "Jharkhand",
+      "Andhra Pradesh",
+      "Arunachal Pradesh",
+      "Ladakh",
+      "Andaman And Nicobar Islands",
+      "Goa",
+      "Uttar Pradesh",
+      "Haryana",
+      "Madhya Pradesh",
+      "Manipur",
+      "Karnataka",
+      "Chandigarh",
+      "West Bengal",
+      "Rajasthan",
+      "Chhattisgarh",
+      "Nagaland",
+      "Bihar",
+      "Puducherry",
+      "Gujarat",
+      "Odisha",
+      "Tamil Nadu",
+      "Kerala",
+      "Sikkim",
+      "Delhi",
+      "Mizoram",
+      "The Dadra And Nagar Haveli And Daman And Diu"
+    ],
+    "default_scope": "Delhi",
+    "cleaning_audit": {
+      "raw_rows": 204876,
+      "exact_duplicates_removed": 0,
+      "invalid_timestamp_rows": 0,
+      "negative_values_to_missing": 0,
+      "selected_rows_before_grid": 5691,
+      "regular_grid_rows": 5691,
+      "unavailable_values": 170
+    }
+  },
+  "aqi": {
+    "file": "data/raw/aqi/processed_aqi_data.csv",
+    "sha256": "52592826574621dc5a247c4c518b379ac08d8a35543e1c22c92a5d41fbf1f339",
+    "shape": [
+      219125,
+      18
+    ],
+    "columns": {
+      "timestamp": "object",
+      "location_name": "object",
+      "location_lat": "float64",
+      "location_lon": "float64",
+      "co": "float64",
+      "no2": "float64",
+      "o3": "float64",
+      "pm10": "float64",
+      "pm25": "float64",
+      "so2": "float64",
+      "aqi": "float64",
+      "aqi_category": "object",
+      "hour": "int64",
+      "day": "int64",
+      "month": "int64",
+      "year": "int64",
+      "day_of_week": "int64",
+      "is_weekend": "int64"
+    },
+    "missing": {
+      "timestamp": 0,
+      "location_name": 0,
+      "location_lat": 0,
+      "location_lon": 0,
+      "co": 0,
+      "no2": 0,
+      "o3": 0,
+      "pm10": 0,
+      "pm25": 0,
+      "so2": 0,
+      "aqi": 0,
+      "aqi_category": 0,
+      "hour": 0,
+      "day": 0,
+      "month": 0,
+      "year": 0,
+      "day_of_week": 0,
+      "is_weekend": 0
+    },
+    "duplicates": 0,
+    "start": "2019-01-01 00:00:00",
+    "end": "2024-01-01 00:00:00",
+    "geographies": [
+      "Delhi",
+      "Faridabad",
+      "Ghaziabad",
+      "Gurgaon",
+      "Noida"
+    ],
+    "default_scope": "Delhi",
+    "cleaning_audit": {
+      "raw_rows": 219125,
+      "exact_duplicates_removed": 0,
+      "invalid_timestamp_rows": 0,
+      "negative_values_to_missing": 0,
+      "selected_rows_before_grid": 43825,
+      "regular_grid_rows": 43825,
+      "unavailable_values": 0
+    }
+  },
+  "traffic": {
+    "file": "data/raw/traffic/traffic.csv",
+    "sha256": "5d48fc91c8ca63a2d430140efb18750fe77828d058ec000e8644e819b20b1536",
+    "shape": [
+      48120,
+      4
+    ],
+    "columns": {
+      "DateTime": "object",
+      "Junction": "int64",
+      "Vehicles": "int64",
+      "ID": "int64"
+    },
+    "missing": {
+      "DateTime": 0,
+      "Junction": 0,
+      "Vehicles": 0,
+      "ID": 0
+    },
+    "duplicates": 0,
+    "start": "2015-11-01 00:00:00",
+    "end": "2017-06-30 23:00:00",
+    "geographies": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "default_scope": null,
+    "cleaning_audit": {
+      "raw_rows": 48120,
+      "exact_duplicates_removed": 0,
+      "invalid_timestamp_rows": 0,
+      "negative_values_to_missing": 0,
+      "selected_rows_before_grid": 48120,
+      "regular_grid_rows": 48120,
+      "unavailable_values": 0
+    }
+  }
+}

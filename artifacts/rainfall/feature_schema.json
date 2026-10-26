@@ -1,0 +1,126 @@
+{
+  "entity": {
+    "dtype": "object",
+    "role": "feature"
+  },
+  "source_missing": {
+    "dtype": "int64",
+    "role": "feature"
+  },
+  "current": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "lag_1": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "lag_2": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "lag_3": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "lag_7": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "lag_14": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "lag_30": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "mean_3": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "std_3": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "coverage_3": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "mean_7": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "std_7": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "coverage_7": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "mean_14": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "std_14": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "coverage_14": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "mean_30": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "std_30": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "coverage_30": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "change_1": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "hour": {
+    "dtype": "int32",
+    "role": "feature"
+  },
+  "weekday": {
+    "dtype": "int32",
+    "role": "feature"
+  },
+  "month": {
+    "dtype": "int32",
+    "role": "feature"
+  },
+  "weekend": {
+    "dtype": "int64",
+    "role": "feature"
+  },
+  "hour_sin": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "hour_cos": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "year_sin": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "year_cos": {
+    "dtype": "float64",
+    "role": "feature"
+  },
+  "positive_fraction": {
+    "dtype": "float64",
+    "role": "feature"
+  }
+}

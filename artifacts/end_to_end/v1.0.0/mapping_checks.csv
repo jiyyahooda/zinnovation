@@ -1,0 +1,4 @@
+connection,compatible
+same declared synthetic graph/node,True
+"same node name, wrong graph fingerprint",False
+Delhi forecast to synthetic pump,False

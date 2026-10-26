@@ -1,0 +1,9 @@
+id: chennai
+name: Chennai
+timezone: Asia/Kolkata
+verified_asset_mapping: false
+station_mapping: null
+research_components: []
+limitations: No research model or verified station/asset configuration supplied.
+
+center: [13.0827, 80.2707]

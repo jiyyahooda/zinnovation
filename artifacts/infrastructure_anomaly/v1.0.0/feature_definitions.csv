@@ -1,0 +1,13 @@
+feature_family,definition,unit
+value,Current cleaned reading,source units
+rolling_mean / std / median / MAD / min / max,Strictly preceding reference window,source units
+robust_z,(current − prior median) / floored scaled MAD,dimensionless
+rate_change,Current minus preceding cadence reading,source units per cadence
+seasonal_residual,Current minus past-only same-slot baseline,source units
+baseline_deviation,Deviation from past-only expanding mean/std,dimensionless
+missing / invalid,Current reporting quality,binary
+missing_fraction,Missing share in preceding reference window,fraction
+flat_run,"Consecutive identical observed values, including current",readings
+previous_unusual_count,Prior abs(robust_z)>6 crossings in window,"count, not incidents"
+hours_since_valid,Time since most recent finite nonnegative reading,hours
+hour_sin / cos,Known time-of-day phase,dimensionless

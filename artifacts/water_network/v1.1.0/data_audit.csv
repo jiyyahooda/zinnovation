@@ -1,0 +1,4 @@
+family,rows,sensors,missing,duplicate_times,cadence_minutes
+Pressures,210240,33,0,0,5.0
+Flows,210240,3,0,0,5.0
+Levels,210240,1,0,0,5.0

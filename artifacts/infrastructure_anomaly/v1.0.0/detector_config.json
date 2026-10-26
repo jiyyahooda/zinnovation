@@ -1,0 +1,20 @@
+{
+  "component_version": "1.0.0",
+  "n_estimators": 100,
+  "max_samples": 256,
+  "contamination": 0.02,
+  "seed": 42,
+  "robust_threshold": 6,
+  "strict_threshold_comparison": ">",
+  "rule_quantile": 0.995,
+  "selection": "predeclared research reference, no supervised winner",
+  "supported_sensors": [
+    "aqi:Delhi",
+    "rainfall:Delhi",
+    "traffic:1",
+    "traffic:2",
+    "traffic:3"
+  ],
+  "unknown_sensor_policy": "abstain",
+  "training_excludes_injected_fixtures": true
+}

@@ -1,0 +1,11 @@
+sensor,time,value,ready,missing,invalid,hours_since_valid,rule_score,rule_alert,robust_score,robust_alert,isolation_score,isolation_alert,quality_alert,review_alert,violated_rules
+rainfall:Delhi,2022-10-09 00:00:00,67.46,True,0,0,0.0,1.858425242186197,True,674.5999999999999,True,0.7696349988928389,True,False,True,"above_train_p995,abrupt_change"
+rainfall:Delhi,2023-07-10 00:00:00,50.66,True,0,0,0.0,1.3956095874466758,True,9.648682012452198,True,0.7571322830895538,True,False,True,above_train_p995
+traffic:2,2017-06-12 16:00:00,40.0,True,0,0,0.0,1.8181818181818181,True,4.143300379641942,False,0.7499944273071317,True,False,True,above_train_p995
+traffic:2,2017-06-12 17:00:00,38.0,True,0,0,0.0,1.7272727272727273,True,2.7729064556260026,False,0.7322690395565855,True,False,True,above_train_p995
+traffic:3,2017-06-22 15:00:00,83.0,True,0,0,0.0,3.0384615384615383,True,4.761111243364201,False,0.7067065291749501,True,False,True,"above_train_p995,abrupt_change"
+traffic:1,2017-05-25 11:00:00,128.0,True,0,0,0.0,1.85,True,1.4239249366728122,False,0.704563851417436,True,False,True,"above_train_p995,abrupt_change"
+traffic:1,2017-05-23 14:00:00,113.0,True,0,0,0.0,1.4303797468354431,True,0.5096152404934274,False,0.7025191414326565,True,False,True,above_train_p995
+traffic:3,2017-04-02 19:00:00,67.0,True,0,0,0.0,1.1964285714285714,True,2.575328354365182,False,0.7003657124063591,True,False,True,"above_train_p995,abrupt_change"
+aqi:Delhi,2023-04-16 10:00:00,138.00659575600997,True,0,0,0.0,1.1290362039589172,True,3.712013533840437,False,0.6277103651546458,True,False,True,above_train_p995
+aqi:Delhi,2023-04-16 02:00:00,128.29672254953448,True,0,0,0.0,1.0495994326516729,True,3.9126108124278294,False,0.6174440397948096,True,False,True,above_train_p995
