@@ -1,0 +1,31 @@
+{
+  "task": "aqi",
+  "winner": "Ridge tuned",
+  "source_url": "https://www.kaggle.com/datasets/aniket0712/delhi-ncr-hourly-air-quality-dataset-20192024",
+  "sha256": "52592826574621dc5a247c4c518b379ac08d8a35543e1c22c92a5d41fbf1f339",
+  "units": "ug/m3 (working assumption; source unit metadata incomplete)",
+  "horizon": "h",
+  "timezone": "Asia/Kolkata",
+  "provenance": "publisher-described measurements; station lineage and real/synthetic status unverified",
+  "seed": 42,
+  "cv_folds": 3,
+  "search_iterations": 6,
+  "test_metrics": {
+    "MAE": 12.79395877651594,
+    "RMSE": 15.967040088340168,
+    "R2": 0.7001452190341106,
+    "bias": 0.23799131770369233,
+    "MAE_skill_vs_persistence": 0.292352269553221
+  },
+  "interval_radius_90": 26.783643914679914,
+  "operating_mode": "rolling one-step; current observation assumed available",
+  "deployment_status": "research; measurement lineage and reporting delays need validation",
+  "versions": {
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scikit-learn": "1.6.1",
+    "xgboost": "3.4.1",
+    "shap": "0.54.1",
+    "joblib": "1.4.2"
+  }
+}

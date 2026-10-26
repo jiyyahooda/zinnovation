@@ -1,0 +1,755 @@
+{
+  "interface_sha256": "a7da766fa92c8387012519fc80847c935663ddbbcf474661690940741ba79d6c",
+  "artifact_sha256": "4029dce34bb3d72a60f5fca8965e68359cbe6d02aa2acd0980ec054f3fb231ad",
+  "component": "infrastructure_anomaly",
+  "fresh_process": true,
+  "jupyter_imported": false,
+  "python": "/Users/jiyahooda/Documents/New project/civicflux_ml/.venv/bin/python",
+  "positive": {
+    "contract_version": "civicflux.research.v1",
+    "component": "infrastructure_anomaly",
+    "model_version": "1.0.0",
+    "status": "supported_research",
+    "prediction": {
+      "component": "infrastructure_measurement_anomaly",
+      "version": "1.0.0",
+      "sensor": "rainfall:Delhi",
+      "supported_sensor": true,
+      "observation_time": "2024-03-20 00:00:00",
+      "detection_time": "2024-03-19T18:30:00+00:00",
+      "horizon": "contemporaneous detection",
+      "anomaly_score": 0.34284555967242564,
+      "threshold": 0.6452436729854529,
+      "alert": false,
+      "detector_type": "IsolationForest + independent quality rules",
+      "contributing_indicators": [
+        {
+          "feature": "baseline_deviation",
+          "value": -0.18830570345718312,
+          "training_median": -0.28576924746028504,
+          "score_drop_on_median_replacement": 0.005877392106874935
+        },
+        {
+          "feature": "rolling_max",
+          "value": 4.01,
+          "training_median": 6.2,
+          "score_drop_on_median_replacement": -0.004158182823297885
+        },
+        {
+          "feature": "previous_unusual_count",
+          "value": 4.0,
+          "training_median": 2.0,
+          "score_drop_on_median_replacement": 0.003704216051284903
+        },
+        {
+          "feature": "rolling_mean",
+          "value": 0.37899999999999995,
+          "training_median": 0.39183333333333387,
+          "score_drop_on_median_replacement": -0.0017263146741213209
+        },
+        {
+          "feature": "seasonal_residual",
+          "value": -0.46157894736842103,
+          "training_median": -0.26120224567099565,
+          "score_drop_on_median_replacement": -0.0008140538279552412
+        }
+      ],
+      "input_freshness": {
+        "status": "fresh",
+        "age_hours": 0.0,
+        "hours_since_valid_on_source_clock": 0.0
+      },
+      "provenance": "reported real state aggregate; upstream lineage not independently audited",
+      "input_sources": [
+        "https://www.kaggle.com/datasets/wydoinn/daily-rainfall-data-india-2009-2024"
+      ],
+      "entity": "Delhi",
+      "geographic_scope": "unmapped benchmark entity",
+      "units": "mm/day",
+      "observation_timezone": "Asia/Kolkata",
+      "research_only": true,
+      "synthetic": false,
+      "validation_status": "historical benchmark + injected-fixture testing only",
+      "confirmed_failure": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unusual measurements are not confirmed equipment failures.",
+        "Source timezone/reporting delay is a documented research assumption, not device-verified metadata."
+      ],
+      "isolation_alert": false,
+      "quality_alert": false,
+      "violated_rules": [],
+      "score_semantics": "negative IsolationForest score_samples; larger is more unusual, not a probability"
+    },
+    "uncertainty": null,
+    "provenance": "see source-specific metadata/model card",
+    "validation_status": "research evidence only",
+    "geographic_scope": "source-specific unmapped benchmark sensors",
+    "units": "per registered sensor",
+    "horizon": "contemporaneous unusual measurement",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Unusual measurements are not confirmed equipment failures.",
+      "Source timezone/reporting delay is a documented research assumption, not device-verified metadata.",
+      "Research inference only; independent validation and human review are required."
+    ],
+    "freshness": {
+      "age_hours": 0.0,
+      "clock": "verified timezone"
+    }
+  },
+  "negative_cases": {
+    "wrong_units": {
+      "contract_version": "civicflux.research.v1",
+      "component": "infrastructure_anomaly",
+      "model_version": "1.0.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research evidence only",
+      "geographic_scope": "source-specific unmapped benchmark sensors",
+      "units": "per registered sensor",
+      "horizon": "contemporaneous unusual measurement",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unit contract mismatch"
+      ]
+    },
+    "wrong_scope": {
+      "contract_version": "civicflux.research.v1",
+      "component": "infrastructure_anomaly",
+      "model_version": "1.0.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research evidence only",
+      "geographic_scope": "source-specific unmapped benchmark sensors",
+      "units": "per registered sensor",
+      "horizon": "contemporaneous unusual measurement",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unsupported geographic/entity scope"
+      ]
+    },
+    "wrong_horizon": {
+      "contract_version": "civicflux.research.v1",
+      "component": "infrastructure_anomaly",
+      "model_version": "1.0.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research evidence only",
+      "geographic_scope": "source-specific unmapped benchmark sensors",
+      "units": "per registered sensor",
+      "horizon": "contemporaneous unusual measurement",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Horizon contract mismatch"
+      ]
+    },
+    "operational": {
+      "contract_version": "civicflux.research.v1",
+      "component": "infrastructure_anomaly",
+      "model_version": "1.0.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research evidence only",
+      "geographic_scope": "source-specific unmapped benchmark sensors",
+      "units": "per registered sensor",
+      "horizon": "contemporaneous unusual measurement",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Operational prediction/dispatch is unsupported"
+      ]
+    },
+    "stale": {
+      "contract_version": "civicflux.research.v1",
+      "component": "infrastructure_anomaly",
+      "model_version": "1.0.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research evidence only",
+      "geographic_scope": "source-specific unmapped benchmark sensors",
+      "units": "per registered sensor",
+      "horizon": "contemporaneous unusual measurement",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Stale inputs relative to explicit historical/simulation clock"
+      ]
+    },
+    "missing_payload": {
+      "contract_version": "civicflux.research.v1",
+      "component": "infrastructure_anomaly",
+      "model_version": "1.0.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research evidence only",
+      "geographic_scope": "source-specific unmapped benchmark sensors",
+      "units": "per registered sensor",
+      "horizon": "contemporaneous unusual measurement",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "'history'"
+      ],
+      "freshness": {
+        "age_hours": 0.0,
+        "clock": "verified timezone"
+      }
+    },
+    "unknown_sensor": {
+      "contract_version": "civicflux.research.v1",
+      "component": "infrastructure_anomaly",
+      "model_version": "1.0.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research evidence only",
+      "geographic_scope": "source-specific unmapped benchmark sensors",
+      "units": "per registered sensor",
+      "horizon": "contemporaneous unusual measurement",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unknown sensor identity"
+      ]
+    },
+    "sensor_unit_mismatch": {
+      "contract_version": "civicflux.research.v1",
+      "component": "infrastructure_anomaly",
+      "model_version": "1.0.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research evidence only",
+      "geographic_scope": "source-specific unmapped benchmark sensors",
+      "units": "per registered sensor",
+      "horizon": "contemporaneous unusual measurement",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Sensor-specific unit mismatch"
+      ]
+    }
+  },
+  "sensor_results": {
+    "rainfall:Delhi": {
+      "contract_version": "civicflux.research.v1",
+      "component": "infrastructure_anomaly",
+      "model_version": "1.0.0",
+      "status": "supported_research",
+      "prediction": {
+        "component": "infrastructure_measurement_anomaly",
+        "version": "1.0.0",
+        "sensor": "rainfall:Delhi",
+        "supported_sensor": true,
+        "observation_time": "2024-03-20 00:00:00",
+        "detection_time": "2024-03-19T18:30:00+00:00",
+        "horizon": "contemporaneous detection",
+        "anomaly_score": 0.34284555967242564,
+        "threshold": 0.6452436729854529,
+        "alert": false,
+        "detector_type": "IsolationForest + independent quality rules",
+        "contributing_indicators": [
+          {
+            "feature": "baseline_deviation",
+            "value": -0.19347146839510423,
+            "training_median": -0.28576924746028504,
+            "score_drop_on_median_replacement": 0.005877392106874935
+          },
+          {
+            "feature": "rolling_max",
+            "value": 4.01,
+            "training_median": 6.2,
+            "score_drop_on_median_replacement": -0.004158182823297885
+          },
+          {
+            "feature": "previous_unusual_count",
+            "value": 4.0,
+            "training_median": 2.0,
+            "score_drop_on_median_replacement": 0.003704216051284903
+          },
+          {
+            "feature": "rolling_mean",
+            "value": 0.37899999999999995,
+            "training_median": 0.39183333333333387,
+            "score_drop_on_median_replacement": -0.0017263146741213209
+          },
+          {
+            "feature": "seasonal_residual",
+            "value": -0.46157894736842103,
+            "training_median": -0.26120224567099565,
+            "score_drop_on_median_replacement": -0.0008140538279552412
+          }
+        ],
+        "input_freshness": {
+          "status": "fresh",
+          "age_hours": 0.0,
+          "hours_since_valid_on_source_clock": 0.0
+        },
+        "provenance": "reported real state aggregate; upstream lineage not independently audited",
+        "input_sources": [
+          "https://www.kaggle.com/datasets/wydoinn/daily-rainfall-data-india-2009-2024"
+        ],
+        "entity": "Delhi",
+        "geographic_scope": "unmapped benchmark entity",
+        "units": "mm/day",
+        "observation_timezone": "Asia/Kolkata",
+        "research_only": true,
+        "synthetic": false,
+        "validation_status": "historical benchmark + injected-fixture testing only",
+        "confirmed_failure": false,
+        "dispatch_allowed": false,
+        "warnings": [
+          "Unusual measurements are not confirmed equipment failures.",
+          "Source timezone/reporting delay is a documented research assumption, not device-verified metadata."
+        ],
+        "isolation_alert": false,
+        "quality_alert": false,
+        "violated_rules": [],
+        "score_semantics": "negative IsolationForest score_samples; larger is more unusual, not a probability"
+      },
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research evidence only",
+      "geographic_scope": "source-specific unmapped benchmark sensors",
+      "units": "per registered sensor",
+      "horizon": "contemporaneous unusual measurement",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unusual measurements are not confirmed equipment failures.",
+        "Source timezone/reporting delay is a documented research assumption, not device-verified metadata.",
+        "Research inference only; independent validation and human review are required."
+      ],
+      "freshness": {
+        "age_hours": 0.0,
+        "clock": "verified timezone"
+      }
+    },
+    "aqi:Delhi": {
+      "contract_version": "civicflux.research.v1",
+      "component": "infrastructure_anomaly",
+      "model_version": "1.0.0",
+      "status": "supported_research",
+      "prediction": {
+        "component": "infrastructure_measurement_anomaly",
+        "version": "1.0.0",
+        "sensor": "aqi:Delhi",
+        "supported_sensor": true,
+        "observation_time": "2024-01-01 00:00:00",
+        "detection_time": "2023-12-31T18:30:00+00:00",
+        "horizon": "contemporaneous detection",
+        "anomaly_score": 0.5317463982418077,
+        "threshold": 0.551175517952252,
+        "alert": false,
+        "detector_type": "IsolationForest + independent quality rules",
+        "contributing_indicators": [
+          {
+            "feature": "robust_z",
+            "value": 2.6440771740810067,
+            "training_median": -0.004630757078853778,
+            "score_drop_on_median_replacement": 0.024078378143697066
+          },
+          {
+            "feature": "baseline_deviation",
+            "value": 1.905540274683786,
+            "training_median": -0.24218956068899364,
+            "score_drop_on_median_replacement": 0.019386426497566278
+          },
+          {
+            "feature": "seasonal_residual",
+            "value": 35.76506781587102,
+            "training_median": -6.675494140903567,
+            "score_drop_on_median_replacement": 0.016673874889827522
+          },
+          {
+            "feature": "value",
+            "value": 88.27790670984197,
+            "training_median": 55.18994035722141,
+            "score_drop_on_median_replacement": 0.012857120663884225
+          },
+          {
+            "feature": "rate_change",
+            "value": 49.43353709688155,
+            "training_median": 0.0,
+            "score_drop_on_median_replacement": 0.009522238103535696
+          }
+        ],
+        "input_freshness": {
+          "status": "fresh",
+          "age_hours": 0.0,
+          "hours_since_valid_on_source_clock": 0.0
+        },
+        "provenance": "publisher-described measurements; station lineage and real/synthetic status unverified",
+        "input_sources": [
+          "https://www.kaggle.com/datasets/aniket0712/delhi-ncr-hourly-air-quality-dataset-20192024"
+        ],
+        "entity": "Delhi",
+        "geographic_scope": "unmapped benchmark entity",
+        "units": "ug/m3 (working assumption; source unit metadata incomplete)",
+        "observation_timezone": "Asia/Kolkata",
+        "research_only": true,
+        "synthetic": null,
+        "validation_status": "historical benchmark + injected-fixture testing only",
+        "confirmed_failure": false,
+        "dispatch_allowed": false,
+        "warnings": [
+          "Unusual measurements are not confirmed equipment failures.",
+          "Source timezone/reporting delay is a documented research assumption, not device-verified metadata."
+        ],
+        "isolation_alert": false,
+        "quality_alert": false,
+        "violated_rules": [],
+        "score_semantics": "negative IsolationForest score_samples; larger is more unusual, not a probability"
+      },
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research evidence only",
+      "geographic_scope": "source-specific unmapped benchmark sensors",
+      "units": "per registered sensor",
+      "horizon": "contemporaneous unusual measurement",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unusual measurements are not confirmed equipment failures.",
+        "Source timezone/reporting delay is a documented research assumption, not device-verified metadata.",
+        "Research inference only; independent validation and human review are required."
+      ],
+      "freshness": {
+        "age_hours": 0.0,
+        "clock": "verified timezone"
+      }
+    },
+    "traffic:1": {
+      "contract_version": "civicflux.research.v1",
+      "component": "infrastructure_anomaly",
+      "model_version": "1.0.0",
+      "status": "supported_research",
+      "prediction": {
+        "component": "infrastructure_measurement_anomaly",
+        "version": "1.0.0",
+        "sensor": "traffic:1",
+        "supported_sensor": true,
+        "observation_time": "2017-06-30 23:00:00",
+        "detection_time": "2017-06-30T23:00:00+00:00",
+        "horizon": "contemporaneous detection",
+        "anomaly_score": 0.6054659205668149,
+        "threshold": 0.573869376874617,
+        "alert": true,
+        "detector_type": "IsolationForest + independent quality rules",
+        "contributing_indicators": [
+          {
+            "feature": "rolling_max",
+            "value": 105.0,
+            "training_median": 47.0,
+            "score_drop_on_median_replacement": 0.03001688220324128
+          },
+          {
+            "feature": "rolling_min",
+            "value": 41.0,
+            "training_median": 16.0,
+            "score_drop_on_median_replacement": 0.02506411621458915
+          },
+          {
+            "feature": "rolling_mean",
+            "value": 79.16666666666667,
+            "training_median": 32.583333333333336,
+            "score_drop_on_median_replacement": 0.020439667487936686
+          },
+          {
+            "feature": "value",
+            "value": 78.0,
+            "training_median": 31.0,
+            "score_drop_on_median_replacement": 0.01869864366862284
+          },
+          {
+            "feature": "rolling_median",
+            "value": 88.5,
+            "training_median": 35.0,
+            "score_drop_on_median_replacement": 0.010834348285121087
+          }
+        ],
+        "input_freshness": {
+          "status": "unknown",
+          "age_hours": null,
+          "hours_since_valid_on_source_clock": 0.0
+        },
+        "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+        "input_sources": [
+          "https://www.kaggle.com/datasets/fedesoriano/traffic-prediction-dataset"
+        ],
+        "entity": "1",
+        "geographic_scope": "unmapped benchmark entity",
+        "units": "vehicles/hour",
+        "observation_timezone": null,
+        "research_only": true,
+        "synthetic": false,
+        "validation_status": "historical benchmark + injected-fixture testing only",
+        "confirmed_failure": false,
+        "dispatch_allowed": false,
+        "warnings": [
+          "Unusual measurements are not confirmed equipment failures.",
+          "Unknown source timezone: wall-clock freshness cannot be verified."
+        ],
+        "isolation_alert": true,
+        "quality_alert": false,
+        "violated_rules": [],
+        "score_semantics": "negative IsolationForest score_samples; larger is more unusual, not a probability"
+      },
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research evidence only",
+      "geographic_scope": "source-specific unmapped benchmark sensors",
+      "units": "per registered sensor",
+      "horizon": "contemporaneous unusual measurement",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unusual measurements are not confirmed equipment failures.",
+        "Unknown source timezone: wall-clock freshness cannot be verified.",
+        "Research inference only; independent validation and human review are required."
+      ],
+      "freshness": {
+        "age_hours": 0.0,
+        "clock": "source clock only; timezone unknown"
+      }
+    },
+    "traffic:2": {
+      "contract_version": "civicflux.research.v1",
+      "component": "infrastructure_anomaly",
+      "model_version": "1.0.0",
+      "status": "supported_research",
+      "prediction": {
+        "component": "infrastructure_measurement_anomaly",
+        "version": "1.0.0",
+        "sensor": "traffic:2",
+        "supported_sensor": true,
+        "observation_time": "2017-06-30 23:00:00",
+        "detection_time": "2017-06-30T23:00:00+00:00",
+        "horizon": "contemporaneous detection",
+        "anomaly_score": 0.6376832345739335,
+        "threshold": 0.557178118728976,
+        "alert": true,
+        "detector_type": "IsolationForest + independent quality rules",
+        "contributing_indicators": [
+          {
+            "feature": "rolling_max",
+            "value": 38.0,
+            "training_median": 16.0,
+            "score_drop_on_median_replacement": 0.04578263979855923
+          },
+          {
+            "feature": "rolling_mean",
+            "value": 27.666666666666668,
+            "training_median": 10.791666666666666,
+            "score_drop_on_median_replacement": 0.039216585250045566
+          },
+          {
+            "feature": "rolling_min",
+            "value": 15.0,
+            "training_median": 5.0,
+            "score_drop_on_median_replacement": 0.03558269037001516
+          },
+          {
+            "feature": "rolling_std",
+            "value": 6.951175481867112,
+            "training_median": 2.9142329390748003,
+            "score_drop_on_median_replacement": 0.034635066224922406
+          },
+          {
+            "feature": "value",
+            "value": 27.0,
+            "training_median": 10.0,
+            "score_drop_on_median_replacement": 0.025512803397449768
+          }
+        ],
+        "input_freshness": {
+          "status": "unknown",
+          "age_hours": null,
+          "hours_since_valid_on_source_clock": 0.0
+        },
+        "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+        "input_sources": [
+          "https://www.kaggle.com/datasets/fedesoriano/traffic-prediction-dataset"
+        ],
+        "entity": "2",
+        "geographic_scope": "unmapped benchmark entity",
+        "units": "vehicles/hour",
+        "observation_timezone": null,
+        "research_only": true,
+        "synthetic": false,
+        "validation_status": "historical benchmark + injected-fixture testing only",
+        "confirmed_failure": false,
+        "dispatch_allowed": false,
+        "warnings": [
+          "Unusual measurements are not confirmed equipment failures.",
+          "Unknown source timezone: wall-clock freshness cannot be verified."
+        ],
+        "isolation_alert": true,
+        "quality_alert": false,
+        "violated_rules": [
+          "above_train_p995"
+        ],
+        "score_semantics": "negative IsolationForest score_samples; larger is more unusual, not a probability"
+      },
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research evidence only",
+      "geographic_scope": "source-specific unmapped benchmark sensors",
+      "units": "per registered sensor",
+      "horizon": "contemporaneous unusual measurement",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unusual measurements are not confirmed equipment failures.",
+        "Unknown source timezone: wall-clock freshness cannot be verified.",
+        "Research inference only; independent validation and human review are required."
+      ],
+      "freshness": {
+        "age_hours": 0.0,
+        "clock": "source clock only; timezone unknown"
+      }
+    },
+    "traffic:3": {
+      "contract_version": "civicflux.research.v1",
+      "component": "infrastructure_anomaly",
+      "model_version": "1.0.0",
+      "status": "supported_research",
+      "prediction": {
+        "component": "infrastructure_measurement_anomaly",
+        "version": "1.0.0",
+        "sensor": "traffic:3",
+        "supported_sensor": true,
+        "observation_time": "2017-06-30 23:00:00",
+        "detection_time": "2017-06-30T23:00:00+00:00",
+        "horizon": "contemporaneous detection",
+        "anomaly_score": 0.5106429035174702,
+        "threshold": 0.6137300019556795,
+        "alert": false,
+        "detector_type": "IsolationForest + independent quality rules",
+        "contributing_indicators": [
+          {
+            "feature": "value",
+            "value": 39.0,
+            "training_median": 9.0,
+            "score_drop_on_median_replacement": 0.020200943403181848
+          },
+          {
+            "feature": "rolling_median",
+            "value": 25.5,
+            "training_median": 11.0,
+            "score_drop_on_median_replacement": 0.01437181775543872
+          },
+          {
+            "feature": "seasonal_residual",
+            "value": 18.683417085427134,
+            "training_median": 1.0,
+            "score_drop_on_median_replacement": 0.010278453139491828
+          },
+          {
+            "feature": "rate_change",
+            "value": 13.0,
+            "training_median": 0.0,
+            "score_drop_on_median_replacement": 0.009594109098257864
+          },
+          {
+            "feature": "hour_cos",
+            "value": 0.9659258262890681,
+            "training_median": -1.8369701987210297e-16,
+            "score_drop_on_median_replacement": 0.008074669917581878
+          }
+        ],
+        "input_freshness": {
+          "status": "unknown",
+          "age_hours": null,
+          "hours_since_valid_on_source_clock": 0.0
+        },
+        "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+        "input_sources": [
+          "https://www.kaggle.com/datasets/fedesoriano/traffic-prediction-dataset"
+        ],
+        "entity": "3",
+        "geographic_scope": "unmapped benchmark entity",
+        "units": "vehicles/hour",
+        "observation_timezone": null,
+        "research_only": true,
+        "synthetic": false,
+        "validation_status": "historical benchmark + injected-fixture testing only",
+        "confirmed_failure": false,
+        "dispatch_allowed": false,
+        "warnings": [
+          "Unusual measurements are not confirmed equipment failures.",
+          "Unknown source timezone: wall-clock freshness cannot be verified."
+        ],
+        "isolation_alert": false,
+        "quality_alert": false,
+        "violated_rules": [],
+        "score_semantics": "negative IsolationForest score_samples; larger is more unusual, not a probability"
+      },
+      "uncertainty": null,
+      "provenance": "see source-specific metadata/model card",
+      "validation_status": "research evidence only",
+      "geographic_scope": "source-specific unmapped benchmark sensors",
+      "units": "per registered sensor",
+      "horizon": "contemporaneous unusual measurement",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unusual measurements are not confirmed equipment failures.",
+        "Unknown source timezone: wall-clock freshness cannot be verified.",
+        "Research inference only; independent validation and human review are required."
+      ],
+      "freshness": {
+        "age_hours": 0.0,
+        "clock": "source clock only; timezone unknown"
+      }
+    }
+  },
+  "passed": true
+}

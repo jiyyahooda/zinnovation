@@ -1,0 +1,13 @@
+{
+  "component": "end_to_end_research_validation",
+  "version": "1.0.0",
+  "retrained_models": 0,
+  "fresh_process_components": 9,
+  "operational_dispatch": false,
+  "limitations": [
+    "no verified common municipal mapping",
+    "synthetic decisions and outcomes",
+    "weak fault/success policies abstain operationally",
+    "runtime OpenMP launch requirement"
+  ]
+}

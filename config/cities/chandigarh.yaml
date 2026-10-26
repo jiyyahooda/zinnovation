@@ -1,0 +1,9 @@
+id: chandigarh
+name: Chandigarh
+timezone: Asia/Kolkata
+verified_asset_mapping: false
+station_mapping: null
+research_components: []
+limitations: No research model or verified station/asset configuration supplied.
+
+center: [30.7333, 76.7794]

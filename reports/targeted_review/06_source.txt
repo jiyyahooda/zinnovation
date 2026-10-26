@@ -1,0 +1,507 @@
+CELL 0
+# CivicFlux — Water-Network Fault Detection
+
+CELL 1
+## 01. Problem definition
+
+Use the public BattLeDIM/L-TOWN benchmark to detect whether **a new leakage episode began within the preceding 24 hours**, at hourly observation instants. This is early-stage network-level detection, not localization or a classifier of every ongoing leak. A negative label may include an older persistent leak. The endpoint is chosen to avoid interpreting the near-continuous existence of background leakage as a meaningful easy classification task.
+
+L-TOWN is a hypothetical benchmark generated from a Cyprus network. Its readings and leakage labels are simulated benchmark evidence, never real Delhi incidents. This retrospective study uses released ground-truth leak-flow tables; it is not a competition submission or a claim of reproducing official BattLeDIM scoring.
+
+CELL 2
+### Environment and versioned outputs
+
+Reuse the existing project, source checksum utility and shared graph representation. No legacy notebook is regenerated.
+
+CELL 3
+from pathlib import Path
+import sys,json,platform,importlib.metadata,time
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from IPython.display import display
+import joblib
+ROOT=Path.cwd() if (Path.cwd()/'civicflux_core.py').exists() else Path.cwd().parent
+sys.path.insert(0,str(ROOT))
+from civicflux_core import sha256
+from src.civicflux.research import pipeline,binary_metrics,choose_threshold,write_json
+from sklearn.model_selection import cross_validate,RandomizedSearchCV,TimeSeriesSplit,GroupKFold
+from sklearn.linear_model import LogisticRegression,Ridge
+from sklearn.ensemble import RandomForestClassifier,RandomForestRegressor
+from sklearn.dummy import DummyClassifier,DummyRegressor
+from sklearn.metrics import ConfusionMatrixDisplay,PrecisionRecallDisplay,classification_report,mean_absolute_error,mean_squared_error
+from sklearn.calibration import calibration_curve
+from sklearn.inspection import permutation_importance
+from xgboost import XGBClassifier
+from sklearn.base import clone
+import networkx as nx
+sns.set_theme(style='whitegrid',palette='colorblind')
+plt.rcParams.update({'figure.figsize':(11,4),'figure.dpi':110})
+SEED=42
+
+from src.civicflux.water import *
+from src.civicflux.graph import read_epanet
+OUT=ROOT/'artifacts/water_network/v1.0.0'
+OUT.mkdir(parents=True,exist_ok=True)
+DATA=ROOT/'data/raw/battledim'
+
+CELL 4
+## 02. Source verification and measurement contract
+
+Official [Zenodo record 4017659](https://zenodo.org/records/4017659) and [BattLeDIM organizers](https://battledim.ucy.ac.cy/) provide the public benchmark. License: CC BY 4.0; credit Vrachimis and coauthors, DOI 10.5281/zenodo.4017659. Download with `python download_battledim.py`; no account/API key was required. The script checks every selected file against official MD5 metadata.
+
+CSV format uses semicolon separators and decimal commas, timestamps `YYYY-MM-DD HH:MM:SS`, at five-minute cadence. Timezone/receipt latency are unspecified and remain source-local. Pressures and tank level are meters; flows/leak outflows are m³/hour; optional AMR demands are L/hour. The nominal EPANET graph contains sensor node/link identities, relative coordinates and nominal demands. Those coordinates are not Delhi GIS locations. Demand EDA uses nominal network demand and patterns, not invented measured AMR data.
+
+CELL 5
+### Verify files, checksums and licensing
+
+The source metadata snapshot and file contents establish the version used. Missing required files stop the study.
+
+CELL 6
+import hashlib
+record=json.loads((DATA/'record.json').read_text())
+print('License',record['metadata']['license'])
+required=['L-TOWN.inp','README.txt','dataset_configuration.yaml']+[f'{y}_{kind}.csv' for y in [2018,2019] for kind in ['SCADA_Pressures','SCADA_Flows','SCADA_Levels','Leakages']]
+verified=[]
+for name in required:
+    path=DATA/name;entry=next(e for e in record['files'] if e['key']==name)
+    assert path.exists(),f'Run download_battledim.py: missing {name}'
+    assert hashlib.md5(path.read_bytes()).hexdigest()==entry['checksum'].split(':')[1]
+    verified.append({'file':name,'bytes':path.stat().st_size,'sha256':sha256(path)})
+display(pd.DataFrame(verified));write_json(OUT/'source_manifest.json',verified)
+
+CELL 7
+### Load SCADA and independent label tables
+
+Pressure/flow/level observations are joined only on exact timestamps inside this one documented network.
+
+CELL 8
+measurements,leakages=load_benchmark(DATA)
+graph=read_epanet(DATA/'L-TOWN.inp')
+for name,d in measurements.items():
+    print(name,d.shape,d.index.min(),d.index.max());display(d.head(3))
+print('Leakage label matrix',leakages.shape,'Topology',graph.number_of_nodes(),'nodes',graph.number_of_edges(),'links')
+
+CELL 9
+## 03. Data inspection and sensor mapping
+
+Inspect every measurement family for missingness, duplicates, cadence, units and supported IDs. Flow sensors identify links; pressure sensors identify nodes. Link orientation is not inferred from count values. Topology is nominal and may differ from the hydraulic simulator used to generate readings.
+
+CELL 10
+### Coverage and missingness
+
+Missing readings are not imputed labels. Current predictor gaps are handled in the train-fitted preprocessing and explicitly guarded at serving.
+
+CELL 11
+audit=[]
+for name,d in measurements.items():
+    audit.append({'family':name,'rows':len(d),'sensors':len(d.columns),'missing':int(d.isna().sum().sum()),'duplicate_times':int(d.index.duplicated().sum()),'cadence_minutes':d.index.to_series().diff().dt.total_seconds().median()/60})
+    display(d.describe().T.head(8))
+audit=pd.DataFrame(audit);display(audit);audit.to_csv(OUT/'data_audit.csv',index=False)
+audit.plot.bar(x='family',y='missing',title='Missing values in source SCADA',legend=False);plt.show()
+
+CELL 12
+### Verify sensor placement
+
+Every pressure/level sensor must exist as a node; every flow sensor must exist as a link.
+
+CELL 13
+link_ids={k for u,v,k in graph.edges(keys=True)}
+assert set(measurements['Pressures']).issubset(graph.nodes)
+assert set(measurements['Levels']).issubset(graph.nodes)
+assert set(measurements['Flows']).issubset(link_ids)
+print('All source sensor identities mapped to nominal EPANET topology.')
+print('Connected components',nx.number_connected_components(graph))
+
+CELL 14
+## 04. EDA: hydraulic patterns and topology
+
+Analytical time-series EDA uses 2018 before September. Source-level coverage inspection is retained for both years; model selection never consults final 2019 targets.
+
+CELL 15
+### Pressure sensor distributions
+
+Different elevations and positions generate different baseline pressures, so location IDs must be retained.
+
+CELL 16
+pressure=measurements['Pressures'].loc[:'2018-08-31'].iloc[::12]
+pressure.plot.box(figsize=(15,5),rot=90,title='Development pressure by sensor (m)');plt.tight_layout();plt.show()
+
+CELL 17
+### Pressure and flow temporal traces
+
+Five-minute readings are downsampled at exact hourly instants. No future interval average is assigned to an earlier observation.
+
+CELL 18
+fig,ax=plt.subplots(3,1,figsize=(12,10),sharex=True)
+for (family,d),a in zip(measurements.items(),ax):
+    d.loc['2018-02-01':'2018-02-07'].iloc[::12,:min(4,len(d.columns))].plot(ax=a,title=family+' example week')
+plt.tight_layout();plt.show()
+
+CELL 19
+### Diurnal demand-related patterns
+
+Daily hydraulic cycles are consistent with demand variation. Nominal demand is a network input, not a measured customer-use label.
+
+CELL 20
+fig,ax=plt.subplots(1,2,figsize=(13,4))
+for col in measurements['Flows']:
+    d=measurements['Flows'].loc[:'2018-08-31'];d.groupby(d.index.hour)[col].mean().plot(ax=ax[0],label=col)
+ax[0].legend();ax[0].set(title='Development mean flow by hour',ylabel='m³/hour')
+nominal=pd.Series(nx.get_node_attributes(graph,'base_demand'))
+sns.histplot(nominal[nominal>0],bins=40,ax=ax[1]);ax[1].set_title('Positive nominal node demands (EPANET input units)')
+plt.tight_layout();plt.show()
+print('Nominal EPANET demand units are determined by its OPTIONS/UNITS; inspect below.')
+lines=(DATA/'L-TOWN.inp').read_text().splitlines()
+print('\n'.join(line for line in lines if 'Units' in line or 'UNITS' in line)[:500])
+
+CELL 21
+### Network map and sensor locations
+
+Coordinates are benchmark plotting coordinates; edges are physical pipe adjacency, not civic dependency probabilities.
+
+CELL 22
+pos=nx.get_node_attributes(graph,'pos')
+plt.figure(figsize=(12,9))
+nx.draw_networkx_edges(graph,pos,alpha=.25,width=.5)
+nx.draw_networkx_nodes(graph,pos,node_size=3,node_color='grey')
+nx.draw_networkx_nodes(graph,pos,nodelist=list(measurements['Pressures'].columns),node_size=35,node_color='tab:red',label='Pressure sensors')
+plt.legend();plt.title('L-TOWN nominal topology and pressure sensor placement');plt.axis('equal');plt.show()
+
+CELL 23
+### Sensor correlation and redundancy
+
+Highly correlated pressures may reflect shared hydraulics. They are not independent fault confirmations.
+
+CELL 24
+sns.heatmap(pressure.corr(),cmap='coolwarm',vmin=-1,vmax=1);plt.title('Development pressure correlations');plt.tight_layout();plt.show()
+
+CELL 25
+## 05. Leakage episodes and honest labels
+
+Ground-truth leakage-flow columns are used only to identify the start of each positive contiguous episode. They are never features. The target is a preceding-24-hour onset window, not a generic active-leak flag. The public labels enable supervised benchmark experiments but do not validate real-world fault incidence.
+
+CELL 26
+### Create documented onset labels
+
+The first positive leak-flow sample marks onset; the original five-minute resolution imposes detection-time granularity.
+
+CELL 27
+f=water_features(measurements)
+y,events=onset_labels(leakages,f.index)
+display(events);print('Recent-onset prevalence',y.mean())
+events.to_csv(OUT/'label_events.csv',index=False)
+fig,ax=plt.subplots(2,1,figsize=(12,6),sharex=True)
+leakages.sum(axis=1).iloc[::12].plot(ax=ax[0],title='Total benchmark leakage flow (label-only)',ylabel='m³/hour')
+y.plot(ax=ax[1],title='Target: onset within preceding 24 hours',ylabel='Binary label')
+plt.tight_layout();plt.show()
+
+CELL 28
+### Inspect overlapping episodes
+
+Simultaneous events reduce the interpretability of network-wide onset alerts. No individual pipe localization is claimed.
+
+CELL 29
+active=(leakages>1e-6).sum(axis=1)
+print('Maximum simultaneous active pipes',int(active.max()))
+print('Hourly labels',y.value_counts().to_dict())
+events.groupby(events.onset.dt.year).size().plot.bar(title='Released episode onsets by year',ylabel='Events');plt.show()
+
+CELL 30
+## 06. Causal features and preprocessing
+
+Features include each pressure/flow/level value at t, its one-hour difference, a trailing 24-hour mean, missingness and known clock phase. Label files and future observations are excluded. Numeric medians are fitted only on training folds. Logistic Regression is scaled; tree models are not. Hourly scoring reduces compute and bounds minimum resolution to roughly an hour; it is not five-minute competition performance.
+
+CELL 31
+### Feature schema and target exclusion
+
+Serving uses exactly the same feature builder and ordered sensor contract.
+
+CELL 32
+feature_names=list(f.columns);numeric=feature_names;categorical=[]
+assert not any('leak' in col.lower() for col in feature_names)
+display(f.head(28).tail(6))
+write_json(OUT/'feature_schema.json',{'features':feature_names,'units':UNITS,'sensor_ids':{k:list(v.columns) for k,v in measurements.items()}})
+
+CELL 33
+### Future perturbation test
+
+Changing future pressure observations must leave earlier feature rows identical.
+
+CELL 34
+copy={k:v.copy() for k,v in measurements.items()}
+cut=pd.Timestamp('2018-06-01');copy['Pressures'].loc[copy['Pressures'].index>cut]=9999
+pd.testing.assert_frame_equal(f.loc[:cut],water_features(copy).loc[:cut])
+print('PASS: causal water features')
+
+CELL 35
+## 07. Time- and event-aware validation
+
+Development: January–August 2018. Validation: September–December 2018. Final: 2019. Any 24-hour onset target episode crossing a boundary is excluded with a 24-hour context buffer. Expanding CV uses a 24-hour gap, preventing one onset window from appearing on both sides of a fold. Older persistent leakage remains possible in negative examples by target definition. These choices are frozen before final evaluation.
+
+CELL 36
+### Construct and audit splits
+
+Both classes must exist in each fold; otherwise the study stops rather than reporting meaningless PR-AUC.
+
+CELL 37
+data=split_water(f,y,events)
+train=data[data.period.eq('train')];val=data[data.period.eq('validation')];test=data[data.period.eq('test')]
+Xtrain,ytrain=train[feature_names],train.target
+Xval,yval=val[feature_names],val.target
+Xtest,ytest=test[feature_names],test.target
+folds=list(TimeSeriesSplit(n_splits=3,gap=24).split(Xtrain))
+for tr,va in folds:
+    assert Xtrain.index[tr].max()<Xtrain.index[va].min()-pd.Timedelta(hours=23)
+    assert ytrain.iloc[tr].nunique()==2 and ytrain.iloc[va].nunique()==2
+split_report=pd.DataFrame([{'split':s,'n':len(d),'positive':d.target.sum(),'start':str(d.index.min()),'end':str(d.index.max())} for s,d in [('train',train),('validation',val),('test',test)]])
+display(split_report);split_report.to_csv(OUT/'splits.csv',index=False)
+
+CELL 38
+### Rule-based baseline
+
+Pressure-change/flow-change robust deviations are learned from training data only. This rule is an interpretable comparison, not an official operating threshold.
+
+CELL 39
+rule=WaterRule().fit(Xtrain)
+rule_val=rule.predict_proba(Xval)[:,1]
+rule_threshold,rule_thresholds=choose_threshold(yval,rule_val)
+print('Validation rule threshold',rule_threshold)
+
+CELL 40
+## 08. Model comparisons and tuning
+
+Compare Logistic Regression, Random Forest and XGBoost against the prior and hydraulic-change rule. Train/validation/test roles are distinct. Tuning CV scores may be optimistic; final evaluation is independent.
+
+CELL 41
+### Declare model candidates
+
+All learned transforms are refitted within CV. The prior baseline is eligible to win; class balance is not altered on evaluation data.
+
+CELL 42
+models={'Prior':pipeline(DummyClassifier(strategy='prior'),numeric,categorical),
+        'Logistic':pipeline(LogisticRegression(max_iter=2000,class_weight='balanced',random_state=SEED),numeric,categorical,True),
+        'XGBoost':pipeline(XGBClassifier(n_estimators=140,max_depth=3,learning_rate=.06,subsample=.85,colsample_bytree=.85,eval_metric='logloss',tree_method='hist',n_jobs=2,random_state=SEED),numeric,categorical)}
+models['Random Forest']=pipeline(RandomForestClassifier(n_estimators=100,max_depth=12,min_samples_leaf=5,class_weight='balanced',random_state=SEED,n_jobs=2),numeric,categorical)
+print('Candidates',list(models))
+
+CELL 43
+### Cross-validated comparisons
+
+Average precision (PR-AUC summary) is primary; fold dispersion is reported. Development scores are selection estimates, not independent final performance.
+
+CELL 44
+rows=[]
+for name,model in models.items():
+    scores=cross_validate(model,Xtrain,ytrain,cv=folds,scoring={'ap':'average_precision','brier':'neg_brier_score'},error_score='raise',n_jobs=1)
+    for i in range(len(folds)):rows.append({'model':name,'fold':i,'AP':scores['test_ap'][i],'Brier':-scores['test_brier'][i]})
+cv_results=pd.DataFrame(rows)
+summary=cv_results.groupby('model').agg(AP=('AP','mean'),AP_std=('AP','std'),Brier=('Brier','mean')).sort_values('AP',ascending=False)
+display(summary);cv_results.to_csv(OUT/'candidate_cv.csv',index=False)
+summary.AP.plot.barh(xerr=summary.AP_std,title='Development CV average precision');plt.tight_layout();plt.show()
+
+CELL 45
+### Declared hyperparameter searches
+
+Tune Logistic and XGBoost with four sampled settings each. The modest budget is explicit and repeatable; test labels never enter selection.
+
+CELL 46
+spaces={'Logistic':{'model__C':[.01,.1,1,10,100],'model__class_weight':[None,'balanced']},
+        'XGBoost':{'model__n_estimators':[80,140,220],'model__max_depth':[2,3,5],'model__learning_rate':[.03,.08,.15],'model__min_child_weight':[1,5,10]}}
+searches={};ranking=summary.AP.to_dict()
+for name,space in spaces.items():
+    search=RandomizedSearchCV(models[name],space,n_iter=4,scoring='average_precision',cv=folds,refit=True,n_jobs=1,random_state=SEED,error_score='raise')
+    search.fit(Xtrain,ytrain);searches[name]=search;ranking[name+' tuned']=search.best_score_
+    trials=pd.DataFrame(search.cv_results_);trials.to_csv(OUT/(name+'_tuning.csv'),index=False)
+    display(trials.sort_values('rank_test_score')[['rank_test_score','mean_test_score','std_test_score','params']])
+selected=max(ranking,key=ranking.get)
+model=searches[selected.removesuffix(' tuned')].best_estimator_ if selected.endswith(' tuned') else clone(models[selected]).fit(Xtrain,ytrain)
+print('Locked CV choice:',selected)
+
+CELL 47
+### Choose a validation-only threshold
+
+Choose the highest threshold among tied validation F1 scores. This is a predictive tradeoff, not an authorized intervention policy. Calibration is assessed on final data without retuning.
+
+CELL 48
+pval=model.predict_proba(Xval)[:,1]
+threshold,threshold_table=choose_threshold(yval,pval)
+threshold_table.to_csv(OUT/'threshold_validation.csv',index=False)
+threshold_table.plot(x='threshold',y='F1',title='Validation-only decision threshold');plt.axvline(threshold,color='red');plt.show()
+print('Locked threshold',threshold)
+
+CELL 49
+## 09. Final evaluation and detection delay
+
+Metrics apply only to released benchmark onset-window labels. False-positive rate means outside the recent-onset target window; it does not mean absence of all active leakage. Delays are measured from each held-out episode onset to the first hourly alert in its 24-hour target window. Misses are retained separately rather than assigned zero delay.
+
+CELL 50
+### Locked final evaluation
+
+No final-period outcome is used to pick the model or change its threshold.
+
+CELL 51
+ptest=model.predict_proba(Xtest)[:,1]
+metrics=binary_metrics(ytest,ptest,threshold)
+display(pd.Series(metrics));print(classification_report(ytest,ptest>=threshold,zero_division=0))
+write_json(OUT/'metrics.json',metrics)
+fig,ax=plt.subplots(1,2,figsize=(12,4))
+ConfusionMatrixDisplay.from_predictions(ytest,ptest>=threshold,ax=ax[0],display_labels=['Other','Target'])
+PrecisionRecallDisplay.from_predictions(ytest,ptest,ax=ax[1]);ax[1].axhline(np.mean(ytest),ls='--',color='grey')
+plt.tight_layout();plt.show()
+
+CELL 52
+### Probability reliability and error distribution
+
+Uncalibrated scores may be poorly calibrated under domain shift; a probability-looking number is not proof of real-world validity.
+
+CELL 53
+fraction,mean=calibration_curve(ytest,ptest,n_bins=10,strategy='quantile')
+fig,ax=plt.subplots(1,2,figsize=(12,4))
+ax[0].plot(mean,fraction,marker='o');ax[0].plot([0,1],[0,1],'k--');ax[0].set(title='Final reliability',xlabel='Mean probability',ylabel='Target fraction')
+sns.histplot(x=ptest,hue=np.asarray(ytest),bins=30,element='step',ax=ax[1]);ax[1].set_title('Scores by final label')
+plt.tight_layout();plt.show()
+
+CELL 54
+### Rule comparison and hourly trace
+
+The learned winner remains the CV choice regardless of final comparison results.
+
+CELL 55
+rule_test=rule.predict_proba(Xtest)[:,1]
+comparison=pd.DataFrame([{'model':selected,**metrics},{'model':'Hydraulic change rule',**binary_metrics(ytest,rule_test,rule_threshold)}])
+display(comparison);comparison.to_csv(OUT/'final_comparison.csv',index=False)
+results=pd.DataFrame({'time':Xtest.index,'target':ytest.to_numpy(),'probability':ptest,'alert':ptest>=threshold})
+results.to_csv(OUT/'test_predictions.csv',index=False)
+results.set_index('time')[['target','probability']].iloc[:1500].plot(title='Beginning of final year: target and frozen prediction');plt.show()
+
+CELL 56
+### Event recovery and onset-to-alert delay
+
+Report detected fraction plus delay among detected episodes; a small conditional delay can coexist with many misses.
+
+CELL 57
+delays=[]
+for r in events.itertuples():
+    if r.onset.year!=2019:continue
+    window=results[(results.time>=r.onset)&(results.time<r.window_end)]
+    if len(window)<20:continue
+    alerts=window[window.alert]
+    delays.append({'event_id':r.event_id,'pipe':r.pipe,'onset':str(r.onset),'detected':len(alerts)>0,
+                   'delay_hours':(alerts.time.iloc[0]-r.onset).total_seconds()/3600 if len(alerts) else np.nan})
+delays=pd.DataFrame(delays);display(delays);delays.to_csv(OUT/'event_detection_delay.csv',index=False)
+print('Event detection fraction',delays.detected.mean(),'Median detected delay hours',delays.delay_hours.median())
+false=results[results.target.eq(0)].copy()
+print('False alert hours outside onset target windows:',int(false.alert.sum()))
+
+CELL 58
+## 10. Error analysis and robustness
+
+Inspect time/season dependence and failures. Do not tune on these final outcomes. The absence of field labels, receipt times and verified municipal mapping prevents operational use.
+
+CELL 59
+### Monthly error slices
+
+Seasonality and changing leak scenarios may differ between 2018 and 2019.
+
+CELL 60
+slices=[]
+for month,indices in results.groupby(results.time.dt.month).groups.items():
+    g=results.loc[indices];slices.append({'month':month,**binary_metrics(g.target,g.probability,threshold)})
+slices=pd.DataFrame(slices);display(slices)
+slices.plot(x='month',y=['precision','recall','F1'],marker='o',title='Final monthly target-window metrics');plt.show()
+
+CELL 61
+### Missing-sensor sensitivity
+
+A controlled 20% current-sensor outage is explicitly artificial and must cause serving abstention later.
+
+CELL 62
+probe={k:v.tail(24*12+1).copy() for k,v in measurements.items()}
+last_hour=probe['Pressures'].index[probe['Pressures'].index.minute==0][-1]
+probe['Pressures'].loc[last_hour,probe['Pressures'].columns[:10]]=np.nan
+print('Injected missing pressure sensor count',probe['Pressures'].loc[last_hour].isna().sum())
+
+CELL 63
+## 11. Interpretability
+
+Feature importance and SHAP describe statistical associations in the benchmark. Pressure patterns are correlated; explanations do not identify the true leaking pipe or establish causation.
+
+CELL 64
+### Permutation importance of the chosen model
+
+Feature associations are not causal effects. Correlated variables can divide importance; no feature reselection occurs after final evaluation.
+
+CELL 65
+sample=Xval.sample(min(160,len(Xval)),random_state=SEED)
+y_sample=yval.loc[sample.index]
+pi=permutation_importance(model,sample,y_sample,scoring='average_precision',n_repeats=3,random_state=SEED,n_jobs=1)
+importance=pd.Series(pi.importances_mean,index=feature_names).sort_values()
+importance.tail(15).plot.barh(title='Chosen model: permutation decrease in average precision');plt.tight_layout();plt.show()
+importance.to_csv(OUT/'permutation_importance.csv')
+
+CELL 66
+### SHAP global and individual explanation
+
+SHAP explains the fitted raw classifier output. If a prior baseline wins, an auxiliary XGBoost explanation is explicitly identified.
+
+CELL 67
+import shap
+explained=model
+if isinstance(model.named_steps['model'],DummyClassifier):
+    explained=searches['XGBoost'].best_estimator_;print('Auxiliary XGBoost, not selected prior baseline')
+transformed=explained.named_steps['preprocess'].transform(sample.iloc[:60])
+classifier=explained.named_steps['model']
+if isinstance(classifier,LogisticRegression):
+    background=explained.named_steps['preprocess'].transform(Xtrain.sample(min(100,len(Xtrain)),random_state=SEED))
+    ex=shap.LinearExplainer(classifier,background)(transformed)
+else:
+    ex=shap.TreeExplainer(classifier)(transformed)
+    if ex.values.ndim==3:ex=ex[:,:,1]
+ex.feature_names=list(explained.named_steps['preprocess'].get_feature_names_out())
+shap.plots.beeswarm(ex,max_display=15,show=False);plt.tight_layout();plt.show()
+shap.plots.waterfall(ex[0],max_display=12,show=False);plt.tight_layout();plt.show()
+
+CELL 68
+## 12. Export and validated inference
+
+Export the fitted model, preprocessing, threshold, units, ordered sensor IDs, feature recipe and source manifest. Unsupported network/unit contracts abstain; wrong sensor identity or timestamp alignment is rejected. Missing-current coverage above 10% abstains. No prediction can dispatch resources.
+
+CELL 69
+### Save model, metadata and examples
+
+All serialized objects are actually fitted and importable outside Jupyter.
+
+CELL 70
+metadata={'component':'water_recent_leak_onset','version':'1.0.0','selected_model':selected,'threshold':threshold,'train_end':str(Xtrain.index.max()),
+          'target':'new benchmark leak began in preceding 24h','synthetic_benchmark':True,'source_doi':'10.5281/zenodo.4017659','license':'CC BY 4.0',
+          'units':UNITS,'metrics':metrics,'dispatch_allowed':False,'validation':'retrospective hourly benchmark; not official challenge evaluation',
+          'versions':{p:importlib.metadata.version(p) for p in ['numpy','pandas','scikit-learn','xgboost','networkx']}}
+bundle=WaterBundle(model,feature_names,{k:list(d.columns) for k,d in measurements.items()},threshold,metadata)
+joblib.dump(bundle,OUT/'pipeline.joblib');write_json(OUT/'metadata.json',metadata)
+loaded=joblib.load(OUT/'pipeline.joblib')
+example={k:d.tail(24*12+1) for k,d in measurements.items()}
+output=loaded.predict(example,UNITS,detected_at='2026-10-25T00:00:00Z')
+assert output==bundle.predict(example,UNITS,detected_at='2026-10-25T00:00:00Z')
+assert loaded.predict(probe,UNITS)['probability'] is None
+assert loaded.predict(example,{'pressure':'psi'})['probability'] is None
+print(json.dumps(output,indent=2));write_json(OUT/'example_prediction.json',output)
+
+CELL 71
+## 13. CivicFlux integration, findings and limitations
+
+The shared `src/civicflux/` architecture is reused. No CivicFlux FastAPI risk/approval schema was found in the workspace; the output is a versioned pure inference contract, not a claim of live API integration. The nominal water topology remains separate from synthetic cross-sector dependencies. Anomaly/fault evidence requires corroboration and verified sensor-to-asset mapping.
+
+Important limitations: retrospective simulated benchmark, hourly rather than five-minute scoring, recent-onset target rather than universal active-fault detection, no localization, limited independent events, unknown operational latency and timezone, and no calibrated field effectiveness. Source receipt-time and actual municipal sensor/fault data are the next dependencies.
+
+CELL 72
+### Actual final findings
+
+All findings below are computed by this run; failures remain visible.
+
+CELL 73
+print('CV-selected model',selected)
+print('Final benchmark metrics',json.dumps(metrics,indent=2))
+print('Detected onset episodes',int(delays.detected.sum()),'of',len(delays))
+print('Network/sensor map',graph.number_of_nodes(),graph.number_of_edges(),{k:len(v.columns) for k,v in measurements.items()})

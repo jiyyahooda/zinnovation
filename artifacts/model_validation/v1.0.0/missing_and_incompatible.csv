@@ -1,0 +1,10 @@
+component,missing_files,geographic_mapping,operational_validation
+rainfall,[],unverified for municipal graph,False
+aqi,[],unverified for municipal graph,False
+traffic,[],unverified for municipal graph,False
+flood,[],unverified for municipal graph,False
+infrastructure_anomaly,[],unverified for municipal graph,False
+water_network,[],unverified for municipal graph,False
+cascade_risk,[],unverified for municipal graph,False
+resource_optimization,[],unverified for municipal graph,False
+intervention_outcomes,[],unverified for municipal graph,False

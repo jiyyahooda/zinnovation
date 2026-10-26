@@ -1,0 +1,108 @@
+{
+  "contract_version": "civicflux.research.v1",
+  "component": "cascade_risk",
+  "artifact_version": "v1.1.0",
+  "component_kind": "supervised simulator + graph rules",
+  "geographic_scope": "synthetic civic dependency graphs",
+  "units": "unitless simulated risk",
+  "horizon": "60 minutes",
+  "provenance": "seeded independent-cascade simulator",
+  "supported_inputs": {
+    "graph": "directed typed synthetic dependencies",
+    "load_range": [
+      0.5,
+      1.5
+    ],
+    "timestamp": "timezone-aware"
+  },
+  "validation_status": "unseen synthetic graph holdout; no municipal validity",
+  "operational_supported": false,
+  "research_only": true,
+  "automatic_dispatch": false,
+  "artifacts": {
+    "Logistic_tuning.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/Logistic_tuning.csv",
+      "sha256": "212909504f0ef9e4ae4bc7f0a04a0113efe3a1673518ac41a50619fc52019fe1"
+    },
+    "XGBoost_tuning.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/XGBoost_tuning.csv",
+      "sha256": "ea98953264909953ac635bc2da9bd12afd6a50e5d3386b0f5f2394163d435992"
+    },
+    "candidate_cv.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/candidate_cv.csv",
+      "sha256": "9c83c18b627c5ec1c561120c3826ca48c8a1676e71461b97bc5ac4323ee1708c"
+    },
+    "dependency_condition_pooled.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/dependency_condition_pooled.csv",
+      "sha256": "7f4bed6248239cd9970d0d79350ef6c28c46b7dd653b5e379ec0be959a70ec45"
+    },
+    "dependency_condition_predictions.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/dependency_condition_predictions.csv",
+      "sha256": "bec34b2d7f5bee760834211acb35c8fa14c5a3d91a902799c54812c7f890c159"
+    },
+    "dependency_condition_stress.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/dependency_condition_stress.csv",
+      "sha256": "f9b62e9b65630233f33112b3bd052cecdff825977f4cdfb3e6bdc85122dd8f2d"
+    },
+    "example_prediction.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/example_prediction.json",
+      "sha256": "728057ffe7d48796c33b231b16be7f8bb7aa994bfdef248f8f340409dd01f4ab"
+    },
+    "false_positive_slices.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/false_positive_slices.csv",
+      "sha256": "422f7792413c836f55979c4d2b6552ae9c1dea8665be6ece32e2b84bfab4ad5f"
+    },
+    "false_positive_trace.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/false_positive_trace.json",
+      "sha256": "77beff5b99e16cced4cfaf62970e3ec0c797524622da4cd8ec90f7cc61781ce3"
+    },
+    "feature_schema.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/feature_schema.json",
+      "sha256": "fe489badb4e499ceaec427f110b5fa8e37c47c7004e51deffe0369a80920f6b9"
+    },
+    "final_comparison.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/final_comparison.csv",
+      "sha256": "faec99fecf2910d91c22cb27deea3898cbb49c1c2833ea9fc8218c494abe885a"
+    },
+    "generalization_slices.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/generalization_slices.csv",
+      "sha256": "d33dba70244b3094308903687447806e2f70e6419522609820d75e8686e3a0ae"
+    },
+    "graph_configurations.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/graph_configurations.json",
+      "sha256": "7742dc318b741bf2425584f79dd7373edc12b27892798fcb54b167769423b52f"
+    },
+    "metrics.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/metrics.json",
+      "sha256": "3a7831b972129df79cbcdb82d29b0b45769415753026f0a3825a14783f3f5b87"
+    },
+    "node_type_metrics.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/node_type_metrics.csv",
+      "sha256": "ead19510ed669b56c46b594815a5b753682a59717bb2a4317b7c129dc66c6c0c"
+    },
+    "permutation_importance.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/permutation_importance.csv",
+      "sha256": "d285d259fde40880ffe5cc05b843cee368012346fccd702e78d3466eaed0f50d"
+    },
+    "pipeline.joblib": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/pipeline.joblib",
+      "sha256": "a38f9795845e6e51d671bf4cf18753dc0bc21fb78fe5b8662792ffbcd5a36111"
+    },
+    "scenario_data.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/scenario_data.csv",
+      "sha256": "7c2ff2dfbebd03ddb26475f59677936b545a26b8903bdbcd689e60ec9f277cc9"
+    },
+    "scenario_manifest.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/scenario_manifest.json",
+      "sha256": "880692976deb997753d66fd18f1aff0bce6399a7766b40f555edade8b0a28475"
+    },
+    "test_predictions.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/test_predictions.csv",
+      "sha256": "4babc9a0d642d11ac13e966f7f1946526d402d133f79f51e01216e37b4136373"
+    },
+    "threshold_validation.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/cascade_risk/v1.1.0/threshold_validation.csv",
+      "sha256": "66683aa896bc799fd456194160d3aec2b20b5f63aafeccce2b26431de173be02"
+    }
+  }
+}

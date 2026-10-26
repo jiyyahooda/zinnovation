@@ -1,0 +1,423 @@
+{
+  "interface_sha256": "a7da766fa92c8387012519fc80847c935663ddbbcf474661690940741ba79d6c",
+  "artifact_sha256": "a38f9795845e6e51d671bf4cf18753dc0bc21fb78fe5b8662792ffbcd5a36111",
+  "component": "cascade_risk",
+  "fresh_process": true,
+  "jupyter_imported": false,
+  "python": "/Users/jiyahooda/Documents/New project/civicflux_ml/.venv/bin/python",
+  "positive": {
+    "contract_version": "civicflux.research.v1",
+    "component": "cascade_risk",
+    "model_version": "1.1.0",
+    "status": "supported_simulation",
+    "prediction": [
+      {
+        "node_id": "drainage_0",
+        "risk": 0.4942066045031467,
+        "review": true
+      },
+      {
+        "node_id": "drainage_1",
+        "risk": 0.009938991720073906,
+        "review": false
+      },
+      {
+        "node_id": "drainage_2",
+        "risk": 3.910424777871967e-55,
+        "review": false
+      },
+      {
+        "node_id": "drainage_3",
+        "risk": 0.009832658538223096,
+        "review": false
+      },
+      {
+        "node_id": "drainage_4",
+        "risk": 0.013107666250781143,
+        "review": false
+      },
+      {
+        "node_id": "drainage_5",
+        "risk": 5.456172848011433e-55,
+        "review": false
+      },
+      {
+        "node_id": "drainage_6",
+        "risk": 0.257625630119425,
+        "review": true
+      },
+      {
+        "node_id": "drainage_7",
+        "risk": 0.0002775373158523905,
+        "review": false
+      },
+      {
+        "node_id": "road_0",
+        "risk": 0.005643919618220845,
+        "review": false
+      },
+      {
+        "node_id": "road_1",
+        "risk": 0.003931192000124338,
+        "review": false
+      },
+      {
+        "node_id": "road_2",
+        "risk": 0.17950933284195,
+        "review": true
+      },
+      {
+        "node_id": "road_3",
+        "risk": 6.1317861236513975e-55,
+        "review": false
+      },
+      {
+        "node_id": "road_4",
+        "risk": 1.5058599425193065e-54,
+        "review": false
+      },
+      {
+        "node_id": "road_5",
+        "risk": 0.22530577919444617,
+        "review": true
+      },
+      {
+        "node_id": "road_6",
+        "risk": 0.09689194512698,
+        "review": false
+      },
+      {
+        "node_id": "road_7",
+        "risk": 0.0016037420590339665,
+        "review": false
+      },
+      {
+        "node_id": "water_0",
+        "risk": 0.0167822974902385,
+        "review": false
+      },
+      {
+        "node_id": "water_1",
+        "risk": 0.31758046402103873,
+        "review": true
+      },
+      {
+        "node_id": "water_2",
+        "risk": 0.015280712838450556,
+        "review": false
+      },
+      {
+        "node_id": "water_3",
+        "risk": 0.4176179034989912,
+        "review": true
+      },
+      {
+        "node_id": "water_4",
+        "risk": 0.011344356557186562,
+        "review": false
+      },
+      {
+        "node_id": "water_5",
+        "risk": 0.00043496384187380994,
+        "review": false
+      },
+      {
+        "node_id": "water_6",
+        "risk": 1.075085032408364e-54,
+        "review": false
+      },
+      {
+        "node_id": "water_7",
+        "risk": 0.021122116708132466,
+        "review": false
+      },
+      {
+        "node_id": "pump_1",
+        "risk": 0.05719905027210138,
+        "review": false
+      },
+      {
+        "node_id": "pump_2",
+        "risk": 0.03860643462747332,
+        "review": false
+      },
+      {
+        "node_id": "pump_3",
+        "risk": 0.02798511961703978,
+        "review": false
+      },
+      {
+        "node_id": "pump_4",
+        "risk": 0.0007859696873024096,
+        "review": false
+      },
+      {
+        "node_id": "pump_5",
+        "risk": 1.2694559216351916e-54,
+        "review": false
+      },
+      {
+        "node_id": "pump_6",
+        "risk": 0.0008670013242227679,
+        "review": false
+      },
+      {
+        "node_id": "pump_7",
+        "risk": 0.03314689485172569,
+        "review": false
+      },
+      {
+        "node_id": "facility_0",
+        "risk": 0.12677514338774576,
+        "review": false
+      },
+      {
+        "node_id": "facility_1",
+        "risk": 0.05628822965561194,
+        "review": false
+      },
+      {
+        "node_id": "facility_2",
+        "risk": 0.03886717105936475,
+        "review": false
+      },
+      {
+        "node_id": "facility_3",
+        "risk": 0.13763101970027164,
+        "review": false
+      },
+      {
+        "node_id": "facility_4",
+        "risk": 0.07540805920729764,
+        "review": false
+      },
+      {
+        "node_id": "facility_5",
+        "risk": 0.004832905688611819,
+        "review": false
+      },
+      {
+        "node_id": "facility_6",
+        "risk": 0.1541075985121775,
+        "review": true
+      },
+      {
+        "node_id": "facility_7",
+        "risk": 0.12579743390582604,
+        "review": false
+      }
+    ],
+    "uncertainty": null,
+    "provenance": "seeded independent-cascade simulator",
+    "validation_status": "unseen synthetic graph holdout; no municipal validity",
+    "geographic_scope": "synthetic civic dependency graphs",
+    "units": "unitless simulated risk",
+    "horizon": "next 60 minutes",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Simulation-trained risks are not real-world failure probabilities.",
+      "No verified municipal topology or incident labels.",
+      "Research inference only; independent validation and human review are required."
+    ],
+    "freshness": {
+      "age_hours": 0.0,
+      "clock": "verified timezone"
+    },
+    "graph_fingerprint": "0b508b5f61376876d041af90abec8b17845b884ce800aa1318843f3dc1c9e392"
+  },
+  "negative_cases": {
+    "wrong_units": {
+      "contract_version": "civicflux.research.v1",
+      "component": "cascade_risk",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded independent-cascade simulator",
+      "validation_status": "unseen synthetic graph holdout; no municipal validity",
+      "geographic_scope": "synthetic civic dependency graphs",
+      "units": "unitless simulated risk",
+      "horizon": "next 60 minutes",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unit contract mismatch"
+      ]
+    },
+    "wrong_scope": {
+      "contract_version": "civicflux.research.v1",
+      "component": "cascade_risk",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded independent-cascade simulator",
+      "validation_status": "unseen synthetic graph holdout; no municipal validity",
+      "geographic_scope": "synthetic civic dependency graphs",
+      "units": "unitless simulated risk",
+      "horizon": "next 60 minutes",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unsupported geographic/entity scope"
+      ]
+    },
+    "wrong_horizon": {
+      "contract_version": "civicflux.research.v1",
+      "component": "cascade_risk",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded independent-cascade simulator",
+      "validation_status": "unseen synthetic graph holdout; no municipal validity",
+      "geographic_scope": "synthetic civic dependency graphs",
+      "units": "unitless simulated risk",
+      "horizon": "next 60 minutes",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Horizon contract mismatch"
+      ]
+    },
+    "operational": {
+      "contract_version": "civicflux.research.v1",
+      "component": "cascade_risk",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded independent-cascade simulator",
+      "validation_status": "unseen synthetic graph holdout; no municipal validity",
+      "geographic_scope": "synthetic civic dependency graphs",
+      "units": "unitless simulated risk",
+      "horizon": "next 60 minutes",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Operational prediction/dispatch is unsupported"
+      ]
+    },
+    "stale": {
+      "contract_version": "civicflux.research.v1",
+      "component": "cascade_risk",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded independent-cascade simulator",
+      "validation_status": "unseen synthetic graph holdout; no municipal validity",
+      "geographic_scope": "synthetic civic dependency graphs",
+      "units": "unitless simulated risk",
+      "horizon": "next 60 minutes",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Stale inputs relative to explicit historical/simulation clock"
+      ]
+    },
+    "missing_payload": {
+      "contract_version": "civicflux.research.v1",
+      "component": "cascade_risk",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded independent-cascade simulator",
+      "validation_status": "unseen synthetic graph holdout; no municipal validity",
+      "geographic_scope": "synthetic civic dependency graphs",
+      "units": "unitless simulated risk",
+      "horizon": "next 60 minutes",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "'graph'"
+      ],
+      "freshness": {
+        "age_hours": 0.0,
+        "clock": "verified timezone"
+      }
+    },
+    "false_provenance": {
+      "contract_version": "civicflux.research.v1",
+      "component": "cascade_risk",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded independent-cascade simulator",
+      "validation_status": "unseen synthetic graph holdout; no municipal validity",
+      "geographic_scope": "synthetic civic dependency graphs",
+      "units": "unitless simulated risk",
+      "horizon": "next 60 minutes",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Explicit synthetic provenance is required"
+      ]
+    },
+    "outside_load_support": {
+      "contract_version": "civicflux.research.v1",
+      "component": "cascade_risk",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded independent-cascade simulator",
+      "validation_status": "unseen synthetic graph holdout; no municipal validity",
+      "geographic_scope": "synthetic civic dependency graphs",
+      "units": "unitless simulated risk",
+      "horizon": "next 60 minutes",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Load outside supported scenario range [.5,1.5]"
+      ],
+      "freshness": {
+        "age_hours": 0.0,
+        "clock": "verified timezone"
+      }
+    },
+    "naive_snapshot_clock": {
+      "contract_version": "civicflux.research.v1",
+      "component": "cascade_risk",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded independent-cascade simulator",
+      "validation_status": "unseen synthetic graph holdout; no municipal validity",
+      "geographic_scope": "synthetic civic dependency graphs",
+      "units": "unitless simulated risk",
+      "horizon": "next 60 minutes",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Clock timezone mismatch"
+      ]
+    }
+  },
+  "sensor_results": {},
+  "passed": true
+}

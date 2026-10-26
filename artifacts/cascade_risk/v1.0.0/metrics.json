@@ -1,0 +1,13 @@
+{
+  "precision": 0.31644403500690926,
+  "recall": 0.7887485648679678,
+  "F1": 0.4516765285996055,
+  "PR_AUC_average_precision": 0.4612357247934787,
+  "ROC_AUC": 0.8939231962013555,
+  "Brier": 0.06649985432463724,
+  "false_positive_rate": 0.17990059401139533,
+  "false_positives": 1484,
+  "false_negatives": 184,
+  "n": 9120,
+  "prevalence": 0.09550438596491229
+}

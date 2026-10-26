@@ -1,0 +1,9 @@
+id: civicflux-research-workflow-1
+graph_id: synthetic-civic-100
+graph_file: artifacts/cascade_risk/v1.1.0/graph_configurations.json
+graph_fingerprint: 89aff1766c496c0fba9e3514050502e40f875b8a51201ce911a013aee430d7e8
+candidate_template: artifacts/resource_optimization/v1.1.0/scenario_candidates.csv
+synthetic: true
+candidate_assignment: Explicit scenario assumption assigning the template's fictional costs, crew requirements and policy factors to the matching synthetic node IDs of saved graph 100. Original graph-42 risk scores are discarded and recomputed. This is a new application scenario, not validation of the original graph-42 experiment.
+dependencies: Directed upstream service to dependent asset; saved weights and delay_minutes are preserved. Flood catchment has no verified dependency edges to assets.
+approval_policy: Existing research review permits pending, defer and reject only. Dispatch is disabled.

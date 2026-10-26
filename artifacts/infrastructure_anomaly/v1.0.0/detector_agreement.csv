@@ -1,0 +1,16 @@
+sensor,pair,jaccard,disagreement
+aqi:Delhi,rule_alert / robust_alert,0.0,0.009811751283513977
+aqi:Delhi,rule_alert / isolation_alert,0.20398009950248755,0.01825442099258414
+aqi:Delhi,robust_alert / isolation_alert,0.0,0.01779806046776954
+rainfall:Delhi,rule_alert / robust_alert,0.06578947368421052,0.24934152765583845
+rainfall:Delhi,rule_alert / isolation_alert,0.09137055837563451,0.15715539947322213
+rainfall:Delhi,robust_alert / isolation_alert,0.1893491124260355,0.1202809482001756
+traffic:1,rule_alert / robust_alert,0.0019646365422396855,0.34806440561836244
+traffic:1,rule_alert / isolation_alert,0.5025354969574036,0.33607399794450155
+traffic:1,robust_alert / isolation_alert,0.0010282776349614395,0.6656389174374786
+traffic:2,rule_alert / robust_alert,0.0034129692832764505,0.5001712915381981
+traffic:2,rule_alert / isolation_alert,0.6026380873866447,0.3302500856457691
+traffic:2,robust_alert / isolation_alert,0.0020635575732562937,0.828365878725591
+traffic:3,rule_alert / robust_alert,0.25,0.008221993833504625
+traffic:3,rule_alert / isolation_alert,0.1875,0.02672147995889003
+traffic:3,robust_alert / isolation_alert,0.058823529411764705,0.027406646111682084

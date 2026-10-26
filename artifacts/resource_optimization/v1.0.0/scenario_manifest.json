@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "seed": 42,
+  "graph_id": "synthetic-civic-42",
+  "graph_fingerprint": "0b508b5f61376876d041af90abec8b17845b884ce800aa1318843f3dc1c9e392",
+  "weights": {
+    "urgency": 0.25,
+    "cascade": 0.2,
+    "service": 0.2,
+    "equity_proxy": 0.15,
+    "environmental_benefit": 0.15,
+    "carbon_penalty": 0.05
+  },
+  "synthetic": true,
+  "unit_cost": "hypothetical INR",
+  "inventory": "scenario-specific fictional availability",
+  "human_approval_required": true,
+  "dispatch_allowed": false
+}

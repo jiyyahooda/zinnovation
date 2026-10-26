@@ -1,0 +1,2 @@
+entity,time,target_time,prediction,lower_90,upper_90,source_missing
+Delhi,2024-07-31 00:00:00+05:30,2024-08-01 00:00:00+05:30,0.8326453125239109,0.0,6.309412390716053,1

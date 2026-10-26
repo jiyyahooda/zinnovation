@@ -1,0 +1,214 @@
+{
+  "interface_sha256": "a7da766fa92c8387012519fc80847c935663ddbbcf474661690940741ba79d6c",
+  "artifact_sha256": "a13dd63f8bb2916eff80f74405206e8c2443235993eb2a3eb238c4639eb63887",
+  "component": "rainfall",
+  "fresh_process": true,
+  "jupyter_imported": false,
+  "python": "/Users/jiyahooda/Documents/New project/civicflux_ml/.venv/bin/python",
+  "positive": {
+    "contract_version": "civicflux.research.v1",
+    "component": "rainfall",
+    "model_version": "legacy-unversioned",
+    "status": "supported_research",
+    "prediction": [
+      {
+        "entity": "Delhi",
+        "time": "2021-02-27 00:00:00+05:30",
+        "target_time": "2021-02-28 00:00:00+05:30",
+        "prediction": 0.3234360962391534,
+        "source_missing": 0
+      }
+    ],
+    "uncertainty": {
+      "method": "calibration-period pooled absolute residual radius; no conditional coverage guarantee",
+      "level": 0.9,
+      "intervals": [
+        {
+          "entity": "Delhi",
+          "lower_90": 0.0,
+          "upper_90": 5.800203174431296
+        }
+      ]
+    },
+    "provenance": "reported real state aggregate; upstream lineage not independently audited",
+    "validation_status": "research; measurement lineage and reporting delays need validation",
+    "geographic_scope": "Delhi state aggregate",
+    "units": "mm/day",
+    "horizon": "next day",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Research inference only; independent validation and human review are required."
+    ],
+    "freshness": {
+      "age_hours": 0.0,
+      "clock": "verified timezone"
+    }
+  },
+  "negative_cases": {
+    "wrong_units": {
+      "contract_version": "civicflux.research.v1",
+      "component": "rainfall",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "reported real state aggregate; upstream lineage not independently audited",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "Delhi state aggregate",
+      "units": "mm/day",
+      "horizon": "next day",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unit contract mismatch"
+      ]
+    },
+    "wrong_scope": {
+      "contract_version": "civicflux.research.v1",
+      "component": "rainfall",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "reported real state aggregate; upstream lineage not independently audited",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "Delhi state aggregate",
+      "units": "mm/day",
+      "horizon": "next day",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unsupported geographic/entity scope"
+      ]
+    },
+    "wrong_horizon": {
+      "contract_version": "civicflux.research.v1",
+      "component": "rainfall",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "reported real state aggregate; upstream lineage not independently audited",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "Delhi state aggregate",
+      "units": "mm/day",
+      "horizon": "next day",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Horizon contract mismatch"
+      ]
+    },
+    "operational": {
+      "contract_version": "civicflux.research.v1",
+      "component": "rainfall",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "reported real state aggregate; upstream lineage not independently audited",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "Delhi state aggregate",
+      "units": "mm/day",
+      "horizon": "next day",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Operational prediction/dispatch is unsupported"
+      ]
+    },
+    "stale": {
+      "contract_version": "civicflux.research.v1",
+      "component": "rainfall",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "reported real state aggregate; upstream lineage not independently audited",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "Delhi state aggregate",
+      "units": "mm/day",
+      "horizon": "next day",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Stale inputs relative to explicit historical/simulation clock"
+      ]
+    },
+    "missing_payload": {
+      "contract_version": "civicflux.research.v1",
+      "component": "rainfall",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "reported real state aggregate; upstream lineage not independently audited",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "Delhi state aggregate",
+      "units": "mm/day",
+      "horizon": "next day",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "'history'"
+      ]
+    },
+    "missing_current_reading": {
+      "contract_version": "civicflux.research.v1",
+      "component": "rainfall",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "reported real state aggregate; upstream lineage not independently audited",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "Delhi state aggregate",
+      "units": "mm/day",
+      "horizon": "next day",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Missing current reading or excessive gaps"
+      ]
+    },
+    "unknown_entity": {
+      "contract_version": "civicflux.research.v1",
+      "component": "rainfall",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "reported real state aggregate; upstream lineage not independently audited",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "Delhi state aggregate",
+      "units": "mm/day",
+      "horizon": "next day",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unsupported entity identity"
+      ]
+    }
+  },
+  "sensor_results": {},
+  "passed": true
+}

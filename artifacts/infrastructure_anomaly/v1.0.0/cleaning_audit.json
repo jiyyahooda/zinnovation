@@ -1,0 +1,29 @@
+{
+  "rainfall": {
+    "raw_rows": 204876,
+    "exact_duplicates_removed": 0,
+    "invalid_timestamp_rows": 0,
+    "negative_values_to_missing": 0,
+    "selected_rows_before_grid": 5691,
+    "regular_grid_rows": 5691,
+    "unavailable_values": 170
+  },
+  "aqi": {
+    "raw_rows": 219125,
+    "exact_duplicates_removed": 0,
+    "invalid_timestamp_rows": 0,
+    "negative_values_to_missing": 0,
+    "selected_rows_before_grid": 43825,
+    "regular_grid_rows": 43825,
+    "unavailable_values": 0
+  },
+  "traffic": {
+    "raw_rows": 48120,
+    "exact_duplicates_removed": 0,
+    "invalid_timestamp_rows": 0,
+    "negative_values_to_missing": 0,
+    "selected_rows_before_grid": 48120,
+    "regular_grid_rows": 48120,
+    "unavailable_values": 0
+  }
+}

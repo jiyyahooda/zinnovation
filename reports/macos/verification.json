@@ -1,0 +1,104 @@
+{
+  "python": "/Users/jiyahooda/Documents/New project/CivicFlux_Complete_Mac/CivicFlux/.venv/bin/python",
+  "components": [
+    {
+      "component": "rainfall",
+      "passed": true,
+      "status": "supported_research",
+      "warnings": [
+        "Research inference only; independent validation and human review are required."
+      ],
+      "return_code": 0,
+      "stderr": ""
+    },
+    {
+      "component": "aqi",
+      "passed": true,
+      "status": "supported_research",
+      "warnings": [
+        "Research inference only; independent validation and human review are required."
+      ],
+      "return_code": 0,
+      "stderr": ""
+    },
+    {
+      "component": "traffic",
+      "passed": true,
+      "status": "supported_research",
+      "warnings": [
+        "Research inference only; independent validation and human review are required."
+      ],
+      "return_code": 0,
+      "stderr": ""
+    },
+    {
+      "component": "flood",
+      "passed": true,
+      "status": "supported_simulation",
+      "warnings": [
+        "Research inference only; independent validation and human review are required."
+      ],
+      "return_code": 0,
+      "stderr": ""
+    },
+    {
+      "component": "infrastructure_anomaly",
+      "passed": true,
+      "status": "supported_research",
+      "warnings": [
+        "Unusual measurements are not confirmed equipment failures.",
+        "Source timezone/reporting delay is a documented research assumption, not device-verified metadata.",
+        "Research inference only; independent validation and human review are required."
+      ],
+      "return_code": 0,
+      "stderr": ""
+    },
+    {
+      "component": "water_network",
+      "passed": true,
+      "status": "supported_simulation",
+      "warnings": [
+        "Benchmark distribution only; recent-onset detection is not leak localization or proof of a fault.",
+        "Source clock/receipt latency is unspecified; no operational freshness claim.",
+        "Research inference only; independent validation and human review are required.",
+        "Weak onset detection: explicitly abstain from operational fault predictions."
+      ],
+      "return_code": 0,
+      "stderr": ""
+    },
+    {
+      "component": "cascade_risk",
+      "passed": true,
+      "status": "supported_simulation",
+      "warnings": [
+        "Simulation-trained risks are not real-world failure probabilities.",
+        "No verified municipal topology or incident labels.",
+        "Research inference only; independent validation and human review are required."
+      ],
+      "return_code": 0,
+      "stderr": ""
+    },
+    {
+      "component": "resource_optimization",
+      "passed": true,
+      "status": "supported_simulation",
+      "warnings": [
+        "Research inference only; independent validation and human review are required."
+      ],
+      "return_code": 0,
+      "stderr": ""
+    },
+    {
+      "component": "intervention_outcomes",
+      "passed": true,
+      "status": "supported_simulation",
+      "warnings": [
+        "Synthetic records only; model does not estimate the causal benefit of an intervention.",
+        "Do not use as a real success probability or approval decision.",
+        "Research inference only; independent validation and human review are required."
+      ],
+      "return_code": 0,
+      "stderr": ""
+    }
+  ]
+}

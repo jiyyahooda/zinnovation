@@ -1,0 +1,31 @@
+{
+  "task": "traffic",
+  "winner": "XGBoost tuned",
+  "source_url": "https://www.kaggle.com/datasets/fedesoriano/traffic-prediction-dataset",
+  "sha256": "5d48fc91c8ca63a2d430140efb18750fe77828d058ec000e8644e819b20b1536",
+  "units": "vehicles/hour",
+  "horizon": "h",
+  "timezone": null,
+  "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+  "seed": 42,
+  "cv_folds": 3,
+  "search_iterations": 6,
+  "test_metrics": {
+    "MAE": 3.249163478747191,
+    "RMSE": 5.498182598513252,
+    "R2": 0.9576006265037001,
+    "bias": -0.9582750853054238,
+    "MAE_skill_vs_persistence": 0.14622249824116895
+  },
+  "interval_radius_90": 5.568780899047852,
+  "operating_mode": "rolling one-step; current observation assumed available",
+  "deployment_status": "research; measurement lineage and reporting delays need validation",
+  "versions": {
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scikit-learn": "1.6.1",
+    "xgboost": "3.4.1",
+    "shap": "0.54.1",
+    "joblib": "1.4.2"
+  }
+}

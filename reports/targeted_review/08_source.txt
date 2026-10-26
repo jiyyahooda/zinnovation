@@ -1,0 +1,344 @@
+CELL 0
+# CivicFlux — Sustainability and Resource Optimization
+
+**Notebook 08 · NetworkX topology review + OR-Tools resource allocation**
+
+A reproducible decision-support experiment. BattLeDIM supplies one documented L-TOWN water graph, but the workspace has no municipal incident inventory, crew roster, intervention cost database, or resource optimizer. We reuse the existing graph parsers and represent resource decisions with a small pure CP-SAT component. The optimization inputs are explicitly synthetic; no recommendation is dispatched or approved automatically.
+
+CELL 1
+## 01. Research question and decision boundary
+
+Given a finite set of hypothetical intervention proposals and a finite resource inventory, select a feasible set maximizing transparent weighted utility. This is a constrained selection model, not an ML model. It does not estimate the causal impact of interventions and does not define operational safety policy.
+
+Compare OR-Tools CP-SAT with severity-first and utility-greedy baselines subject to the same budget, crew-hour and pump constraints. Test resource scarcity, conflicting priorities and weight sensitivity. Recommendations require human review.
+
+CELL 2
+### 1.1 Reproducible setup
+
+Use shared CivicFlux graph readers and the reusable versioned CP-SAT component. Every seed and score weight is saved.
+
+CELL 3
+from pathlib import Path
+import sys,json,time,platform,importlib.metadata
+import numpy as np,pandas as pd,matplotlib.pyplot as plt,seaborn as sns
+from IPython.display import display
+ROOT=Path.cwd() if (Path.cwd()/'civicflux_core.py').exists() else Path.cwd().parent
+sys.path.insert(0,str(ROOT))
+from src.civicflux.graph import read_epanet,synthetic_graph,graph_fingerprint,NODE_TYPES
+from src.civicflux.optimization import (DEFAULT_WEIGHTS,VERSION,validate_weights,score_intervention,
+ solve_cpsat,greedy_allocate,assert_feasible)
+from civicflux_core import sha256
+sns.set_theme(style='whitegrid');SEED=42
+OUT=ROOT/'artifacts'/'resource_optimization'/'v1.0.0';OUT.mkdir(parents=True,exist_ok=True)
+print('Python',platform.python_version(),'NetworkX',importlib.metadata.version('networkx'),'OR-Tools',importlib.metadata.version('ortools'))
+
+CELL 4
+### 1.2 Existing optimizer and approval-path audit
+
+Repository inspection found no existing CivicFlux infrastructure optimizer, intervention database, or approval API. Nearby demo apps belong to unrelated domains. The new helper returns a plan and flags approval required; it has no dispatch or network capability.
+
+CELL 5
+print('Optimization interface: src/civicflux/optimization.py')
+print('Graph interface: src/civicflux/graph.py')
+print('No verified civic crew/resource inventory or approval schema was found.')
+
+CELL 6
+## 02. Infrastructure graph and evidence
+
+The L-TOWN EPANET file provides nominal hydraulic node/link topology for a benchmark network. It is not municipal Delhi data or a verified cross-sector drainage/road/pump/facility map. First visualize its real benchmark topology and derive centrality, keeping all dependency interpretation cautious. Then use the existing versioned `synthetic_graph` generator for the hypothetical multi-sector dependency example; its edge weights mean simulated service-dependency strength.
+
+CELL 7
+### 2.1 Read and fingerprint supplied L-TOWN network
+
+Node IDs and pipe lengths come from the checked source file. Their geographic coordinates are benchmark plotting coordinates, not a CivicFlux geographic join.
+
+CELL 8
+water_path=ROOT/'data/raw/battledim/L-TOWN.inp'
+water_graph=read_epanet(water_path)
+water_fp=graph_fingerprint(water_graph)
+print('L-TOWN nominal graph',water_graph.number_of_nodes(),'nodes',water_graph.number_of_edges(),'links')
+print('Synthetic flag because the benchmark scenario/network is simulated:',water_graph.graph['synthetic'])
+print('SHA256',sha256(water_path),'fingerprint',water_fp)
+
+CELL 9
+### 2.2 Topology EDA
+
+Connectivity and degree can help identify high-connectivity benchmark elements, but are not measured civic criticality.
+
+CELL 10
+components=list(__import__('networkx').connected_components(water_graph))
+print('Connected components',len(components),'largest',max(map(len,components)))
+degree=pd.Series(dict(water_graph.degree()),name='degree')
+display(degree.describe())
+degree.value_counts().sort_index().plot.bar(title='L-TOWN node degree distribution',xlabel='Degree',ylabel='Nodes');plt.show()
+
+CELL 11
+### 2.3 Visualize BattLeDIM L-TOWN reference topology
+
+Use the supplied layout coordinates, pressure sensor placements and typed pipe/pump/reservoir nodes.
+
+CELL 12
+import networkx as nx
+pos=nx.get_node_attributes(water_graph,'pos')
+fig,ax=plt.subplots(figsize=(11,8))
+nx.draw_networkx_edges(water_graph,pos,ax=ax,alpha=.22,width=.45)
+colors={'junction':'#4c78a8','reservoir':'#f58518','tank':'#e45756'}
+for kind,color in colors.items():
+    nodes=[n for n,d in water_graph.nodes(data=True) if d.get('node_type')==kind]
+    nx.draw_networkx_nodes(water_graph,pos,nodelist=nodes,node_color=color,node_size=10 if kind=='junction' else 50,ax=ax,label=kind)
+ax.legend();ax.set_title('BattLeDIM L-TOWN nominal simulated water network');ax.axis('equal');plt.show()
+
+CELL 13
+### 2.4 NetworkX centrality
+
+Betweenness centrality is computed on the actual undirected hydraulic adjacency. It does not prove outage probability or system importance.
+
+CELL 14
+bet=nx.betweenness_centrality(water_graph,weight='length',normalized=True)
+centrality=pd.DataFrame({'node':list(bet),'betweenness':list(bet.values()),'degree':[water_graph.degree(n) for n in bet]})
+display(centrality.nlargest(12,'betweenness'))
+centrality.nlargest(20,'betweenness').sort_values('betweenness').plot.barh(x='node',y='betweenness',legend=False,title='High-betweenness benchmark nodes');plt.show()
+
+CELL 15
+### 2.5 Explicitly hypothetical multi-sector service graph
+
+Reuses the shared graph builder. Directed links mean service-provider node → dependent node. The topology is generated for illustration, not inferred from local geography.
+
+CELL 16
+graph=synthetic_graph(seed=SEED,n_per_type=8)
+assert graph.graph['synthetic'] is True
+print(graph.number_of_nodes(),'hypothetical nodes;',graph.number_of_edges(),'directed dependency edges')
+print(pd.Series(nx.get_node_attributes(graph,'node_type')).value_counts())
+
+CELL 17
+### 2.6 Dependency weight and direction
+
+Direction controls cascade interpretation. Weight is a declared synthetic probability-like service-dependency strength, not empirical failure transmission.
+
+CELL 18
+edge_data=pd.DataFrame([{'provider_type':graph.nodes[u]['node_type'],'dependent_type':graph.nodes[v]['node_type'],'weight':d['weight'],'delay_minutes':d['delay_minutes']} for u,v,d in graph.edges(data=True)])
+display(edge_data.groupby(['provider_type','dependent_type']).agg(edges=('weight','size'),mean_weight=('weight','mean')))
+sns.histplot(edge_data.weight,bins=20);plt.title('Hypothetical dependency-edge weights');plt.xlabel('Assumed weight');plt.show()
+
+CELL 19
+## 03. Scenario inventory and provenance
+
+Create proposals from hypothetical nodes in the synthetic graph. Severity, expected service improvement, cascade reach, equity proxy, environmental benefit, carbon burden, crew skill, job duration, pump use and monetary cost are generated under fixed distributions below. **The equity value is a randomized placeholder, not demographic or service-access data.** Carbon and cost coefficients are scenario assumptions, not life-cycle accounting or procurement quotations.
+
+CELL 20
+### 3.1 Generate synthetic intervention candidates
+
+Four conflict/scarcity scenarios share the same candidate cases so resource feasibility and objective comparisons are interpretable.
+
+CELL 21
+rng=np.random.default_rng(SEED)
+node_list=list(graph.nodes(data=True))
+node_importance=nx.betweenness_centrality(graph)
+crew_map={'water':'water','pump':'water','drainage':'drain','road':'road','facility':'water'}
+def make_cases(seed,n=30):
+    r=np.random.default_rng(seed);rows=[]
+    for i in range(n):
+        node,d=node_list[i%len(node_list)]
+        # A candidate is a plan under a synthetic scenario, not a real recommendation.
+        rows.append({'case_id':f'S{seed}-C{i:02d}','node_id':node,'node_type':d['node_type'],
+          'urgency':float(r.integers(1,6)/5),'cascade':float(min(1,node_importance[node]*50+r.uniform(.1,.6))),
+          'service':float(r.uniform(.25,1)),'equity_proxy':float(r.uniform(0,1)),
+          'environmental_benefit':float(r.uniform(0,1)),'carbon_penalty':float(r.uniform(0,1)),
+          'crew_type':crew_map[d['node_type']],'duration_hours':float(r.integers(1,5)),
+          'pumps_required':int(r.random()<.35),'cost':int(r.integers(3000,16000)),
+          'budget_assumption_currency':'INR (hypothetical)','scenario_seed':seed,
+          'resource_note':'Synthetic planning assumption; no measured crew or inventory data.'})
+    return rows
+cases=make_cases(SEED,32)
+candidate_frame=pd.DataFrame(cases)
+display(candidate_frame.head());display(candidate_frame.describe(include='all').T)
+candidate_frame.to_csv(OUT/'scenario_candidates.csv',index=False)
+
+CELL 22
+### 3.2 Score construction and normalization
+
+Factors are supplied on [0,1]; weighted sum preserves a transparent unitless utility. Carbon is a penalty (negative contribution); affordability is also enforced as a hard budget constraint.
+
+CELL 23
+weights=validate_weights(DEFAULT_WEIGHTS)
+print('Normalized score weights',weights,'sum',sum(weights.values()))
+candidate_frame['utility']=[score_intervention(c,weights) for c in cases]
+display(candidate_frame[['case_id',*weights,'utility','cost']].sort_values('utility',ascending=False).head(12))
+
+CELL 24
+### 3.3 Score-factor distributions and rank
+
+No outcome data exists to validate these scores. Weight sensitivity asks how the hypothetical ranking changes under alternative declared priorities.
+
+CELL 25
+fig,ax=plt.subplots(1,2,figsize=(13,4))
+candidate_frame[list(weights)].plot.box(ax=ax[0],rot=40,title='Synthetic normalized factors')
+candidate_frame.utility.plot.hist(bins=20,ax=ax[1],title='Default weighted utility');plt.tight_layout();plt.show()
+
+CELL 26
+## 04. Decision model
+
+For candidate interventions i, choose binary xᵢ. Maximize Σᵢ uᵢxᵢ subject to: (a) each incident/case appears at most once; (b) total assumed cost ≤ scenario budget; (c) total pump units ≤ inventory; (d) assigned team hours ≤ available hours per skill. CP-SAT uses integer-scaled utilities and deterministic single-worker settings. An infeasible result is surfaced; there is no relax-and-dispatch fallback.
+
+Severity-first and utility-greedy baselines apply the **same constraints** while walking a fixed ranking. The exact optimum can outperform these heuristics, but its selected set reflects only the synthetic scoring assumptions supplied here.
+
+CELL 27
+### 4.1 Resource scenarios
+
+Normal, scarce budget, pump shortage and crew shortage are explicit hypothetical inventories.
+
+CELL 28
+scenarios={
+ 'normal':{'budget':150000,'pumps':8,'crew_hours':{'water':36,'drain':30,'road':24}},
+ 'budget_scarce':{'budget':55000,'pumps':8,'crew_hours':{'water':36,'drain':30,'road':24}},
+ 'pump_shortage':{'budget':100000,'pumps':2,'crew_hours':{'water':24,'drain':24,'road':24}},
+ 'crew_shortage':{'budget':100000,'pumps':5,'crew_hours':{'water':8,'drain':7,'road':6}}}
+display(pd.DataFrame([{'scenario':k,'budget_INR_assumption':v['budget'],'pumps':v['pumps'],**{f'{c}_hours':h for c,h in v['crew_hours'].items()}} for k,v in scenarios.items()]))
+
+CELL 29
+### 4.2 Solve and enforce feasibility
+
+OR-Tools returns a recommended set and metrics. The output requires a human to review each choice.
+
+CELL 30
+methods={};timings=[]
+for scenario_name,resource in scenarios.items():
+    for method in ['severity_greedy','utility_greedy','CP-SAT']:
+        start=time.perf_counter()
+        result=(solve_cpsat(cases,resource,time_limit=3) if method=='CP-SAT' else greedy_allocate(cases,resource,method='severity' if method.startswith('severity') else 'utility'))
+        elapsed=time.perf_counter()-start;assert_feasible(result['selected'],resource)
+        methods[(scenario_name,method)]=result
+        timings.append({'scenario':scenario_name,'method':method,'status':result['status'],'utility':result['objective'],
+          'selected_count':len(result['selected']),'budget_used':result['used']['budget'],'pump_use':result['used']['pumps'],
+          'solver_seconds':elapsed,'approval_required':result['approval_required'],'dispatch_allowed':result['dispatch_allowed']})
+comparison=pd.DataFrame(timings);display(comparison)
+
+CELL 31
+### 4.3 Constraint satisfaction and utilization
+
+Every method satisfies the same hard budget, pump and crew-hour constraints. Verify solver status and feasibility rather than assuming it.
+
+CELL 32
+assert all(assert_feasible(r['selected'],r['available']) for r in methods.values())
+assert not any(r['dispatch_allowed'] for r in methods.values())
+comparison['budget_utilization']=comparison.budget_used/comparison.scenario.map({k:v['budget'] for k,v in scenarios.items()})
+comparison['incident_coverage']=comparison.selected_count/len(cases)
+display(comparison.groupby('method').agg(mean_utility=('utility','mean'),mean_selected=('selected_count','mean'),mean_budget_use=('budget_utilization','mean'),mean_solver_seconds=('solver_seconds','mean')))
+comparison.to_csv(OUT/'method_comparison.csv',index=False)
+
+CELL 33
+### 4.4 Utility, coverage and resource-use plots
+
+Solver runtime is machine-dependent. Utility, feasibility and use are measured on synthetic examples only.
+
+CELL 34
+fig,ax=plt.subplots(1,3,figsize=(15,4))
+sns.barplot(data=comparison,x='scenario',y='utility',hue='method',ax=ax[0]);ax[0].tick_params(axis='x',rotation=25)
+sns.barplot(data=comparison,x='scenario',y='selected_count',hue='method',ax=ax[1]);ax[1].tick_params(axis='x',rotation=25)
+sns.barplot(data=comparison,x='scenario',y='budget_utilization',hue='method',ax=ax[2]);ax[2].tick_params(axis='x',rotation=25)
+plt.tight_layout();plt.show()
+
+CELL 35
+## 05. Weight sensitivity and robustness
+
+Weights can change rankings. Do not tune them on synthetic solver output to imply a preferred real public policy. Run transparent perturbations and report selected-set stability, objective and affordability. Equity inputs are fictional until linked to a valid, privacy-reviewed service-access indicator; no demographic inference is made.
+
+CELL 36
+### 5.1 Sustainability and equity weighting
+
+Raise each configured weight while renormalizing the remaining weight mass proportionally. Inventory constraints do not change.
+
+CELL 37
+weight_rows=[]
+for focus in ['cascade','environmental_benefit','equity_proxy','carbon_penalty']:
+    for target in [.05,.15,.30,.45]:
+        w=dict(weights);rest=sum(v for k,v in w.items() if k!=focus)
+        for k in w:
+            w[k]=target if k==focus else (1-target)*w[k]/rest
+        w=validate_weights(w);weighted=[{**c,'utility':score_intervention(c,w)} for c in cases]
+        r=solve_cpsat(weighted,scenarios['normal'],weights=w,time_limit=3)
+        weight_rows.append({'focus':focus,'weight':w[focus],'utility':r['objective'],'selected_count':len(r['selected']),
+                            'selected_ids':tuple(sorted(c['case_id'] for c in r['selected'])),'weights':json.dumps(w,sort_keys=True)})
+weight_sensitivity=pd.DataFrame(weight_rows);display(weight_sensitivity.drop(columns='weights'))
+weight_sensitivity.to_csv(OUT/'weight_sensitivity.csv',index=False)
+
+CELL 38
+### 5.2 Selected-set stability
+
+Jaccard overlap reveals whether the top-level selection depends strongly on one subjective score factor.
+
+CELL 39
+reference=set(methods[('normal','CP-SAT')]['selected'][i]['case_id'] for i in range(len(methods[('normal','CP-SAT')]['selected'])))
+stability=[]
+for row in weight_sensitivity.itertuples():
+    selected=set(row.selected_ids);stability.append({'focus':row.focus,'weight':row.weight,'jaccard_vs_default':len(reference&selected)/max(1,len(reference|selected))})
+stability=pd.DataFrame(stability);display(stability)
+sns.lineplot(data=stability,x='weight',y='jaccard_vs_default',hue='focus',marker='o');plt.ylim(0,1);plt.title('Synthetic allocation sensitivity');plt.show()
+
+CELL 40
+### 5.3 Random scenario stress test
+
+Repeated random cases test implementation stability across different hypothetical inputs. They do not estimate real city-wide solver performance.
+
+CELL 41
+stress=[]
+for seed in range(10,20):
+    sample=make_cases(seed,32)
+    resource=scenarios['budget_scarce']
+    for method in ['severity','utility','CP-SAT']:
+        result=solve_cpsat(sample,resource,time_limit=2) if method=='CP-SAT' else greedy_allocate(sample,resource,method=method)
+        assert_feasible(result['selected'],resource)
+        stress.append({'seed':seed,'method':method,'utility':result['objective'],'selected':len(result['selected']),'cost':result['used']['budget']})
+stress=pd.DataFrame(stress);display(stress.groupby('method').agg(mean_utility=('utility','mean'),std_utility=('utility','std'),mean_selected=('selected','mean')))
+sns.boxplot(data=stress,x='method',y='utility');plt.title('Stress-test objective variability');plt.show()
+stress.to_csv(OUT/'scenario_stress.csv',index=False)
+
+CELL 42
+## 06. Explainability, integration and export
+
+Export the normalized weights, graph fingerprint, assumptions, scenario cases, feasible selections and solver metrics as versioned JSON/CSV. Recommendations carry scenario provenance and human-approval flags. The workspace contains no reusable CivicFlux OR-Tools optimizer or approval API, so this is a pure research interface; it does not change a backend route.
+
+CELL 43
+### 6.1 Explain each recommended intervention
+
+Expose factor contributions, cost and resource consumption. The score is a ranking aid, not an authorization.
+
+CELL 44
+selected=methods[('normal','CP-SAT')]['selected'];contrib=[]
+for case in selected:
+    vals={k:case[k] for k in weights};vals['carbon_penalty']=-vals['carbon_penalty']
+    contrib.append({'case_id':case['case_id'],'node_id':case['node_id'],'node_type':case['node_type'],'utility':case['utility'],
+       'cost_assumption':case['cost'],'crew_type':case['crew_type'],'hours':case['duration_hours'],'pumps':case['pumps_required'],
+       **{f'{k}_contribution':weights[k]*vals[k] for k in weights}})
+explanation=pd.DataFrame(contrib);display(explanation)
+explanation.to_csv(OUT/'selected_explanations.csv',index=False)
+
+CELL 45
+### 6.2 Save selected allocation artifacts
+
+Artifacts include optimality/feasibility status, objective and hard limits.
+
+CELL 46
+comparison.to_csv(OUT/'metrics.csv',index=False)
+all_results={scenario:{method:result for (s,method),result in methods.items() if s==scenario} for scenario in scenarios}
+(OUT/'optimization_results.json').write_text(json.dumps(all_results,indent=2,default=str))
+(OUT/'scenario_manifest.json').write_text(json.dumps({'version':VERSION,'seed':SEED,'graph_id':graph.graph['graph_id'],'graph_fingerprint':graph_fingerprint(graph),
+  'weights':weights,'synthetic':True,'unit_cost':'hypothetical INR','inventory':'scenario-specific fictional availability',
+  'human_approval_required':True,'dispatch_allowed':False},indent=2))
+
+CELL 47
+### 6.3 CivicFlux recommendation envelope
+
+An application can pass this envelope to an existing human review queue after its schema is verified. Predictions alone cannot approve procurement or dispatch.
+
+CELL 48
+recommendations=[{'case_id':c['case_id'],'node_id':c['node_id'],'utility':c['utility'],'estimated_cost_assumption':c['cost'],
+ 'resources':{'crew_type':c['crew_type'],'hours':c['duration_hours'],'pumps':c['pumps_required']},
+ 'provenance':'synthetic scenario','requires_human_approval':True,'dispatch_allowed':False} for c in selected]
+(OUT/'approval_envelope_example.json').write_text(json.dumps({'component':'resource_optimizer','version':VERSION,'scenario':'normal','recommendations':recommendations,'approval_status':'not_requested','automatic_dispatch':False},indent=2))
+print(json.dumps({'selected':len(recommendations),'approval_required':True,'dispatch_allowed':False},indent=2))
+
+CELL 49
+### Findings and limitations
+
+CP-SAT provides an optimal solution relative to the declared integer objective when status is `OPTIMAL`; baselines offer feasible comparison policies. A timeout may produce only `FEASIBLE`, and such status is retained. All numerical costs, crew capacities, carbon burdens, benefits and equity proxies are synthetic. The L-TOWN benchmark topology is water-only and is kept separate from the synthetic cross-sector service graph. No real affordability, environmental justice, procurement, crew safety or intervention-effect claim follows from this exercise. A CivicFlux deployment needs an operator-approved incident schema, live inventory, validated compatibility constraints, transparent policy weights, and an explicit approval workflow.

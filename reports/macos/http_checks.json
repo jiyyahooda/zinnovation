@@ -1,0 +1,10 @@
+{
+  "/api/health": 200,
+  "/": 200,
+  "/api/models": 200,
+  "/api/cities": 200,
+  "/api/scenarios/graph": 200,
+  "/openapi.json": 200,
+  "/assets/index-DeNk-FtY.js": 200,
+  "/assets/index-DAefzS_Y.css": 200
+}

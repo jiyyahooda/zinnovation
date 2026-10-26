@@ -1,0 +1,54 @@
+{
+  "component": "cascade_risk",
+  "version": "1.1.0",
+  "selected_model": "Logistic tuned",
+  "threshold": 0.15,
+  "horizon_minutes": 60,
+  "synthetic": true,
+  "research_only": true,
+  "metrics": {
+    "precision": 0.31644403500690926,
+    "recall": 0.7887485648679678,
+    "F1": 0.4516765285996055,
+    "PR_AUC_average_precision": 0.4612357247934787,
+    "ROC_AUC": 0.8939231962013555,
+    "Brier": 0.06649985432463724,
+    "false_positive_rate": 0.17990059401139533,
+    "false_positives": 1484,
+    "false_negatives": 184,
+    "n": 9120,
+    "prevalence": 0.09550438596491229
+  },
+  "training_graphs": [
+    "synthetic-civic-100",
+    "synthetic-civic-101",
+    "synthetic-civic-102",
+    "synthetic-civic-103"
+  ],
+  "dispatch_allowed": false,
+  "label": "secondary disruption by +60 min",
+  "limitations": [
+    "Synthetic dependency weights",
+    "No verified municipal graph",
+    "No real cascade labels",
+    "Stochastic labels and event dependence"
+  ],
+  "operational_supported": false,
+  "contract_version": "civicflux.research.v1",
+  "artifact_version": "v1.1.0",
+  "component_kind": "supervised simulator + graph rules",
+  "geographic_scope": "synthetic civic dependency graphs",
+  "units": "unitless simulated risk",
+  "horizon": "60 minutes",
+  "provenance": "seeded independent-cascade simulator",
+  "supported_inputs": {
+    "graph": "directed typed synthetic dependencies",
+    "load_range": [
+      0.5,
+      1.5
+    ],
+    "timestamp": "timezone-aware"
+  },
+  "validation_status": "unseen synthetic graph holdout; no municipal validity",
+  "automatic_dispatch": false
+}

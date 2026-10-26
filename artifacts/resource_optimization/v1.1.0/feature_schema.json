@@ -1,0 +1,33 @@
+{
+  "candidate_fields": [
+    "case_id",
+    "node_id",
+    "node_type",
+    "urgency",
+    "cascade",
+    "service",
+    "equity_proxy",
+    "environmental_benefit",
+    "carbon_penalty",
+    "crew_type",
+    "duration_hours",
+    "pumps_required",
+    "cost",
+    "budget_assumption_currency",
+    "scenario_seed",
+    "resource_note",
+    "utility"
+  ],
+  "resources": [
+    "budget",
+    "pumps",
+    "crew_hours"
+  ],
+  "units": {
+    "cost": "hypothetical INR",
+    "duration_hours": "hours",
+    "crew_hours": "hours",
+    "pumps_required": "count"
+  },
+  "untrusted_success_estimate_policy": "rejected by shared serving interface"
+}

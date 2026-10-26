@@ -1,0 +1,271 @@
+{
+  "interface_sha256": "3050dd8dcc8f3eba5bf6ca35d0eaa2dd0407609536778ae817143dfee39bc7fe",
+  "artifact_sha256": "498292c7c245bab84bf8f9c64924c9e0d07bd5701dd8e8d9661fd950abd02a4e",
+  "component": "water_network",
+  "fresh_process": true,
+  "jupyter_imported": false,
+  "python": "C:\\Users\\kusha\\OneDrive\\Documents\\ChatGPT\\zinnovatio4.0\\CivicFlux\\.venv-windows\\Scripts\\python.exe",
+  "positive": {
+    "contract_version": "civicflux.research.v1",
+    "component": "water_network",
+    "model_version": "1.1.0",
+    "status": "supported_simulation",
+    "prediction": {
+      "benchmark_onset_score": 0.005342764673435302,
+      "research_alert": false,
+      "operational_fault_prediction": null
+    },
+    "uncertainty": null,
+    "provenance": "BattLeDIM CC BY 4.0 simulated SCADA",
+    "validation_status": "weak temporal benchmark; operational abstention",
+    "geographic_scope": "L-TOWN simulated network only",
+    "units": {
+      "pressure": "m",
+      "flow": "m3/h",
+      "level": "m"
+    },
+    "horizon": "onset during preceding 24 hours",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Benchmark distribution only; recent-onset detection is not leak localization or proof of a fault.",
+      "Source clock/receipt latency is unspecified; no operational freshness claim.",
+      "Research inference only; independent validation and human review are required.",
+      "Weak onset detection: explicitly abstain from operational fault predictions."
+    ],
+    "freshness": {
+      "age_hours": 0.0,
+      "clock": "source clock only; timezone unknown"
+    }
+  },
+  "negative_cases": {
+    "wrong_units": {
+      "contract_version": "civicflux.research.v1",
+      "component": "water_network",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "BattLeDIM CC BY 4.0 simulated SCADA",
+      "validation_status": "weak temporal benchmark; operational abstention",
+      "geographic_scope": "L-TOWN simulated network only",
+      "units": {
+        "pressure": "m",
+        "flow": "m3/h",
+        "level": "m"
+      },
+      "horizon": "onset during preceding 24 hours",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unit contract mismatch"
+      ]
+    },
+    "wrong_scope": {
+      "contract_version": "civicflux.research.v1",
+      "component": "water_network",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "BattLeDIM CC BY 4.0 simulated SCADA",
+      "validation_status": "weak temporal benchmark; operational abstention",
+      "geographic_scope": "L-TOWN simulated network only",
+      "units": {
+        "pressure": "m",
+        "flow": "m3/h",
+        "level": "m"
+      },
+      "horizon": "onset during preceding 24 hours",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unsupported geographic/entity scope"
+      ]
+    },
+    "wrong_horizon": {
+      "contract_version": "civicflux.research.v1",
+      "component": "water_network",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "BattLeDIM CC BY 4.0 simulated SCADA",
+      "validation_status": "weak temporal benchmark; operational abstention",
+      "geographic_scope": "L-TOWN simulated network only",
+      "units": {
+        "pressure": "m",
+        "flow": "m3/h",
+        "level": "m"
+      },
+      "horizon": "onset during preceding 24 hours",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Horizon contract mismatch"
+      ]
+    },
+    "operational": {
+      "contract_version": "civicflux.research.v1",
+      "component": "water_network",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "BattLeDIM CC BY 4.0 simulated SCADA",
+      "validation_status": "weak temporal benchmark; operational abstention",
+      "geographic_scope": "L-TOWN simulated network only",
+      "units": {
+        "pressure": "m",
+        "flow": "m3/h",
+        "level": "m"
+      },
+      "horizon": "onset during preceding 24 hours",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Operational prediction/dispatch is unsupported"
+      ]
+    },
+    "stale": {
+      "contract_version": "civicflux.research.v1",
+      "component": "water_network",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "BattLeDIM CC BY 4.0 simulated SCADA",
+      "validation_status": "weak temporal benchmark; operational abstention",
+      "geographic_scope": "L-TOWN simulated network only",
+      "units": {
+        "pressure": "m",
+        "flow": "m3/h",
+        "level": "m"
+      },
+      "horizon": "onset during preceding 24 hours",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Stale inputs relative to explicit historical/simulation clock"
+      ]
+    },
+    "missing_payload": {
+      "contract_version": "civicflux.research.v1",
+      "component": "water_network",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "BattLeDIM CC BY 4.0 simulated SCADA",
+      "validation_status": "weak temporal benchmark; operational abstention",
+      "geographic_scope": "L-TOWN simulated network only",
+      "units": {
+        "pressure": "m",
+        "flow": "m3/h",
+        "level": "m"
+      },
+      "horizon": "onset during preceding 24 hours",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "'measurements'"
+      ]
+    },
+    "false_provenance": {
+      "contract_version": "civicflux.research.v1",
+      "component": "water_network",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "BattLeDIM CC BY 4.0 simulated SCADA",
+      "validation_status": "weak temporal benchmark; operational abstention",
+      "geographic_scope": "L-TOWN simulated network only",
+      "units": {
+        "pressure": "m",
+        "flow": "m3/h",
+        "level": "m"
+      },
+      "horizon": "onset during preceding 24 hours",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Explicit synthetic provenance is required"
+      ]
+    },
+    "missing_current_readings": {
+      "contract_version": "civicflux.research.v1",
+      "component": "water_network",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "BattLeDIM CC BY 4.0 simulated SCADA",
+      "validation_status": "weak temporal benchmark; operational abstention",
+      "geographic_scope": "L-TOWN simulated network only",
+      "units": {
+        "pressure": "m",
+        "flow": "m3/h",
+        "level": "m"
+      },
+      "horizon": "onset during preceding 24 hours",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "More than 10% of current readings missing/invalid; abstained."
+      ],
+      "freshness": {
+        "age_hours": 0.0,
+        "clock": "source clock only; timezone unknown"
+      }
+    },
+    "unknown_network": {
+      "contract_version": "civicflux.research.v1",
+      "component": "water_network",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "BattLeDIM CC BY 4.0 simulated SCADA",
+      "validation_status": "weak temporal benchmark; operational abstention",
+      "geographic_scope": "L-TOWN simulated network only",
+      "units": {
+        "pressure": "m",
+        "flow": "m3/h",
+        "level": "m"
+      },
+      "horizon": "onset during preceding 24 hours",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unsupported network or units; abstained."
+      ],
+      "freshness": {
+        "age_hours": 0.0,
+        "clock": "source clock only; timezone unknown"
+      }
+    }
+  },
+  "sensor_results": {},
+  "passed": true
+}

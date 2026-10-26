@@ -1,0 +1,35 @@
+test_adapter_blocks_dispatch_even_if_input_tampered (test_anomaly.AnomalyTests.test_adapter_blocks_dispatch_even_if_input_tampered) ... ok
+test_constant_series (test_anomaly.AnomalyTests.test_constant_series) ... ok
+test_current_excluded_from_reference (test_anomaly.AnomalyTests.test_current_excluded_from_reference) ... ok
+test_dry_rain_not_flatline_fault (test_anomaly.AnomalyTests.test_dry_rain_not_flatline_fault) ... ok
+test_duplicate_conflict (test_anomaly.AnomalyTests.test_duplicate_conflict) ... ok
+test_fixture_does_not_mutate_input (test_anomaly.AnomalyTests.test_fixture_does_not_mutate_input) ... ok
+test_future_feature_invariance (test_anomaly.AnomalyTests.test_future_feature_invariance) ... ok
+test_future_observation_rejected (test_anomaly.AnomalyTests.test_future_observation_rejected) ... ok
+test_gap_is_materialized (test_anomaly.AnomalyTests.test_gap_is_materialized) ... ok
+test_insufficient_context_abstains (test_anomaly.AnomalyTests.test_insufficient_context_abstains) ... ok
+test_invalid_contamination (test_anomaly.AnomalyTests.test_invalid_contamination) ... ok
+test_invalid_negative_and_infinity (test_anomaly.AnomalyTests.test_invalid_negative_and_infinity) ... ok
+test_missing_uses_quality_flag (test_anomaly.AnomalyTests.test_missing_uses_quality_flag) ... ok
+test_mixed_identity_rejected (test_anomaly.AnomalyTests.test_mixed_identity_rejected) ... ok
+test_naive_detection_time_rejected (test_anomaly.AnomalyTests.test_naive_detection_time_rejected) ... ok
+test_no_retrospective_serving (test_anomaly.AnomalyTests.test_no_retrospective_serving) ... ok
+test_reproducibility (test_anomaly.AnomalyTests.test_reproducibility) ... ok
+test_serialization_and_json (test_anomaly.AnomalyTests.test_serialization_and_json) ... ok
+test_stale_input (test_anomaly.AnomalyTests.test_stale_input) ... ok
+test_threshold_strict_comparison (test_anomaly.AnomalyTests.test_threshold_strict_comparison) ... ok
+test_trailing_gap (test_anomaly.AnomalyTests.test_trailing_gap) ... ok
+test_unknown_sensor_abstains (test_anomaly.AnomalyTests.test_unknown_sensor_abstains) ... ok
+test_duplicate_conflict_rejected (test_integrity.IntegrityTests.test_duplicate_conflict_rejected) ... ok
+test_flood_reproducibility (test_integrity.IntegrityTests.test_flood_reproducibility) ... ok
+test_folds_purge_labels (test_integrity.IntegrityTests.test_folds_purge_labels) ... ok
+test_future_does_not_change_history_features (test_integrity.IntegrityTests.test_future_does_not_change_history_features) ... ok
+test_gap_is_not_next_available_target (test_integrity.IntegrityTests.test_gap_is_not_next_available_target) ... ok
+test_report_availability (test_integrity.IntegrityTests.test_report_availability) ... ok
+test_scenario_groups_never_overlap (test_integrity.IntegrityTests.test_scenario_groups_never_overlap) ... ok
+test_simulator_units (test_integrity.IntegrityTests.test_simulator_units) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.607s
+
+OK

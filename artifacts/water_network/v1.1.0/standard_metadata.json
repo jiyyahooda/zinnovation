@@ -1,0 +1,173 @@
+{
+  "contract_version": "civicflux.research.v1",
+  "component": "water_network",
+  "artifact_version": "v1.1.0",
+  "component_kind": "supervised benchmark classifier",
+  "geographic_scope": "L-TOWN simulated network only",
+  "units": {
+    "pressure": "m",
+    "flow": "m3/h",
+    "level": "m"
+  },
+  "horizon": "recent onset in preceding 24 hours",
+  "provenance": "BattLeDIM CC BY 4.0 simulated SCADA",
+  "supported_inputs": {
+    "sensor_ids": {
+      "Pressures": [
+        "n1",
+        "n4",
+        "n31",
+        "n54",
+        "n105",
+        "n114",
+        "n163",
+        "n188",
+        "n215",
+        "n229",
+        "n288",
+        "n296",
+        "n332",
+        "n342",
+        "n410",
+        "n415",
+        "n429",
+        "n458",
+        "n469",
+        "n495",
+        "n506",
+        "n516",
+        "n519",
+        "n549",
+        "n613",
+        "n636",
+        "n644",
+        "n679",
+        "n722",
+        "n726",
+        "n740",
+        "n752",
+        "n769"
+      ],
+      "Flows": [
+        "p227",
+        "p235",
+        "PUMP_1"
+      ],
+      "Levels": [
+        "T1"
+      ]
+    },
+    "source_timezone": "unspecified naive",
+    "context": "24 hours five-minute history"
+  },
+  "validation_status": "weak temporal benchmark; operational abstention",
+  "operational_supported": false,
+  "research_only": true,
+  "automatic_dispatch": false,
+  "artifacts": {
+    "Hydraulic_changes_validation_thresholds.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/Hydraulic_changes_validation_thresholds.csv",
+      "sha256": "d20bff5299e1da6a32c6ed4bd86392ad51848df322fc97d8c8a4d0785ba80d3d"
+    },
+    "Logistic_tuning.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/Logistic_tuning.csv",
+      "sha256": "88b0518d558fad35c87914a941268c4f42fbfc947f6c649cb7ee7997c330e16b"
+    },
+    "Seasonal_directional_residual_validation_thresholds.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/Seasonal_directional_residual_validation_thresholds.csv",
+      "sha256": "20426b80da7b4a73f4e3df68fd87cabc2ef882b0607a6dead8c3e90bd4a18d05"
+    },
+    "Selected_ML_validation_thresholds.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/Selected_ML_validation_thresholds.csv",
+      "sha256": "9c4066b4cb758ca219f4ba720dbb19eed9256cb84da83eb056a84b3ef0b45cb6"
+    },
+    "Train_prior_validation_thresholds.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/Train_prior_validation_thresholds.csv",
+      "sha256": "868f6f0def6a036775651377359dac93fb2dc4dcb0236065e56892f23824216f"
+    },
+    "XGBoost_tuning.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/XGBoost_tuning.csv",
+      "sha256": "be773ea44d838c8f6125964394bd13928f8944f0c04fc6f9e5c690a211863436"
+    },
+    "baseline_comparison.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/baseline_comparison.csv",
+      "sha256": "55cf9e0e5bf8d5eed4d3ebf4f7fac5a0baffeb929f21202be9d8e70c5b9b1b57"
+    },
+    "candidate_cv.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/candidate_cv.csv",
+      "sha256": "6ffb1c73290efb8c56cdcd1634c41264356c50e5da98e197cb20fb972b1a7661"
+    },
+    "data_audit.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/data_audit.csv",
+      "sha256": "b418197d7a9ca3820e54252d21863bb9f7f369ceae641338240e426afebb26a5"
+    },
+    "event_comparison.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/event_comparison.csv",
+      "sha256": "2ebe826915b4958a0bf338c1a5b47475a0a00215df24ea68155874d12eb2fe38"
+    },
+    "event_detection_delay.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/event_detection_delay.csv",
+      "sha256": "89256b82531b4732fc49dfa44f9de4e9f0cf7b4f6622d3cb9f690f07f0a0d88a"
+    },
+    "event_review_details.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/event_review_details.csv",
+      "sha256": "c95ef88f64c6433097a5d62c13d629038dfdbfe0a1a4de93be97a2e961e94d70"
+    },
+    "example_prediction.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/example_prediction.json",
+      "sha256": "ba42e000b9a11a7676ab4c32086bdb9b277151c9c7f2dba2b590f7169cc4d28b"
+    },
+    "feature_schema.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/feature_schema.json",
+      "sha256": "0961f7146eaf9ac6c188f55bc5cd13154a7a4c7c3c674bcb31db04e0181e8b91"
+    },
+    "final_comparison.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/final_comparison.csv",
+      "sha256": "cda0bcb1e00bb459537579178a81862a3078a80f9b1912f00171d3e53fb582d4"
+    },
+    "label_events.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/label_events.csv",
+      "sha256": "782d6efcafe101063d74945d1e6e2b89ad88ac6c6aaeaa6b66e4db7b5aeeb9f6"
+    },
+    "metrics.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/metrics.json",
+      "sha256": "1487a0f5b354a06c569efb0aa6b5f811a90af6dbe0ef825737da014b1dd546ef"
+    },
+    "permutation_importance.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/permutation_importance.csv",
+      "sha256": "c055c8d5e8f92249ce595d28a19856961022faada3ce29a4fb406f8037992d3e"
+    },
+    "pipeline.joblib": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/pipeline.joblib",
+      "sha256": "498292c7c245bab84bf8f9c64924c9e0d07bd5701dd8e8d9661fd950abd02a4e"
+    },
+    "review_predictions.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/review_predictions.csv",
+      "sha256": "0b396c5126cc97dbb13277e1fb0a669326328afc7bf319ae7fb63b08399b5fc2"
+    },
+    "score_distribution_by_period.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/score_distribution_by_period.csv",
+      "sha256": "788507dd4520eb843d7fc5730c3036518209e99265ddaeb1e41d7a693c938e3d"
+    },
+    "source_manifest.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/source_manifest.json",
+      "sha256": "501a878289d02401a56997d7d923892028fe76b0416f5c5a8631c54b4e39a55d"
+    },
+    "splits.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/splits.csv",
+      "sha256": "ff39ef2b0cd6d7fda6ee27cf741ac0db163dd5ef99f33e7e1594ddd569d716d6"
+    },
+    "temporal_distribution_shift.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/temporal_distribution_shift.csv",
+      "sha256": "d7bfd002debe0a495f8c8f870f1c5747aaf8c00136b454f933068197ced90b0d"
+    },
+    "test_predictions.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/test_predictions.csv",
+      "sha256": "c413f70ce2bc4cd65286c6a96fbbdfbc11bcbae8494ad3224a860bef0aac4b79"
+    },
+    "threshold_validation.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/water_network/v1.1.0/threshold_validation.csv",
+      "sha256": "9c4066b4cb758ca219f4ba720dbb19eed9256cb84da83eb056a84b3ef0b45cb6"
+    }
+  }
+}

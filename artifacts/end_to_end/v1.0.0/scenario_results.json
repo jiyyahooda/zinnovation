@@ -1,0 +1,988 @@
+{
+  "status": "supported_simulation",
+  "cascade": {
+    "contract_version": "civicflux.research.v1",
+    "component": "cascade_risk",
+    "model_version": "1.1.0",
+    "status": "supported_simulation",
+    "prediction": [
+      {
+        "node_id": "drainage_0",
+        "risk": 0.4942066045031467,
+        "review": true
+      },
+      {
+        "node_id": "drainage_1",
+        "risk": 0.009938991720073906,
+        "review": false
+      },
+      {
+        "node_id": "drainage_2",
+        "risk": 3.910424777871967e-55,
+        "review": false
+      },
+      {
+        "node_id": "drainage_3",
+        "risk": 0.009832658538223096,
+        "review": false
+      },
+      {
+        "node_id": "drainage_4",
+        "risk": 0.013107666250781143,
+        "review": false
+      },
+      {
+        "node_id": "drainage_5",
+        "risk": 5.456172848011433e-55,
+        "review": false
+      },
+      {
+        "node_id": "drainage_6",
+        "risk": 0.257625630119425,
+        "review": true
+      },
+      {
+        "node_id": "drainage_7",
+        "risk": 0.0002775373158523905,
+        "review": false
+      },
+      {
+        "node_id": "road_0",
+        "risk": 0.005643919618220845,
+        "review": false
+      },
+      {
+        "node_id": "road_1",
+        "risk": 0.003931192000124338,
+        "review": false
+      },
+      {
+        "node_id": "road_2",
+        "risk": 0.17950933284195,
+        "review": true
+      },
+      {
+        "node_id": "road_3",
+        "risk": 6.1317861236513975e-55,
+        "review": false
+      },
+      {
+        "node_id": "road_4",
+        "risk": 1.5058599425193065e-54,
+        "review": false
+      },
+      {
+        "node_id": "road_5",
+        "risk": 0.22530577919444617,
+        "review": true
+      },
+      {
+        "node_id": "road_6",
+        "risk": 0.09689194512698,
+        "review": false
+      },
+      {
+        "node_id": "road_7",
+        "risk": 0.0016037420590339665,
+        "review": false
+      },
+      {
+        "node_id": "water_0",
+        "risk": 0.0167822974902385,
+        "review": false
+      },
+      {
+        "node_id": "water_1",
+        "risk": 0.31758046402103873,
+        "review": true
+      },
+      {
+        "node_id": "water_2",
+        "risk": 0.015280712838450556,
+        "review": false
+      },
+      {
+        "node_id": "water_3",
+        "risk": 0.4176179034989912,
+        "review": true
+      },
+      {
+        "node_id": "water_4",
+        "risk": 0.011344356557186562,
+        "review": false
+      },
+      {
+        "node_id": "water_5",
+        "risk": 0.00043496384187380994,
+        "review": false
+      },
+      {
+        "node_id": "water_6",
+        "risk": 1.075085032408364e-54,
+        "review": false
+      },
+      {
+        "node_id": "water_7",
+        "risk": 0.021122116708132466,
+        "review": false
+      },
+      {
+        "node_id": "pump_1",
+        "risk": 0.05719905027210138,
+        "review": false
+      },
+      {
+        "node_id": "pump_2",
+        "risk": 0.03860643462747332,
+        "review": false
+      },
+      {
+        "node_id": "pump_3",
+        "risk": 0.02798511961703978,
+        "review": false
+      },
+      {
+        "node_id": "pump_4",
+        "risk": 0.0007859696873024096,
+        "review": false
+      },
+      {
+        "node_id": "pump_5",
+        "risk": 1.2694559216351916e-54,
+        "review": false
+      },
+      {
+        "node_id": "pump_6",
+        "risk": 0.0008670013242227679,
+        "review": false
+      },
+      {
+        "node_id": "pump_7",
+        "risk": 0.03314689485172569,
+        "review": false
+      },
+      {
+        "node_id": "facility_0",
+        "risk": 0.12677514338774576,
+        "review": false
+      },
+      {
+        "node_id": "facility_1",
+        "risk": 0.05628822965561194,
+        "review": false
+      },
+      {
+        "node_id": "facility_2",
+        "risk": 0.03886717105936475,
+        "review": false
+      },
+      {
+        "node_id": "facility_3",
+        "risk": 0.13763101970027164,
+        "review": false
+      },
+      {
+        "node_id": "facility_4",
+        "risk": 0.07540805920729764,
+        "review": false
+      },
+      {
+        "node_id": "facility_5",
+        "risk": 0.004832905688611819,
+        "review": false
+      },
+      {
+        "node_id": "facility_6",
+        "risk": 0.1541075985121775,
+        "review": true
+      },
+      {
+        "node_id": "facility_7",
+        "risk": 0.12579743390582604,
+        "review": false
+      }
+    ],
+    "uncertainty": null,
+    "provenance": "seeded independent-cascade simulator",
+    "validation_status": "unseen synthetic graph holdout; no municipal validity",
+    "geographic_scope": "synthetic civic dependency graphs",
+    "units": "unitless simulated risk",
+    "horizon": "next 60 minutes",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Simulation-trained risks are not real-world failure probabilities.",
+      "No verified municipal topology or incident labels.",
+      "Research inference only; independent validation and human review are required."
+    ],
+    "freshness": {
+      "age_hours": 0.0,
+      "clock": "verified timezone"
+    },
+    "graph_fingerprint": "0b508b5f61376876d041af90abec8b17845b884ce800aa1318843f3dc1c9e392"
+  },
+  "allocations": [
+    {
+      "scenario": "normal",
+      "allocation": {
+        "contract_version": "civicflux.research.v1",
+        "component": "resource_optimization",
+        "model_version": "1.1.0",
+        "status": "supported_simulation",
+        "prediction": {
+          "component": "resource_optimizer",
+          "version": "1.0.0",
+          "status": "OPTIMAL",
+          "selected": [
+            {
+              "case_id": "S42-C01",
+              "node_id": "drainage_1",
+              "node_type": "drainage",
+              "urgency": 0.8,
+              "cascade": 0.009938991720073906,
+              "service": 0.5877894534216753,
+              "equity_proxy": 0.3707980242325812,
+              "environmental_benefit": 0.9267649888486018,
+              "carbon_penalty": 0.6438651200806645,
+              "crew_type": "drain",
+              "duration_hours": 2.0,
+              "pumps_required": 0,
+              "cost": 13695,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.4819868849864941
+            },
+            {
+              "case_id": "S42-C02",
+              "node_id": "drainage_2",
+              "node_type": "drainage",
+              "urgency": 0.6,
+              "cascade": 3.910424777871967e-55,
+              "service": 0.2978629420781314,
+              "equity_proxy": 0.8276311719925821,
+              "environmental_benefit": 0.6316643991220648,
+              "carbon_penalty": 0.7580877400853738,
+              "crew_type": "drain",
+              "duration_hours": 1.0,
+              "pumps_required": 0,
+              "cost": 3882,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.3905625370785546
+            },
+            {
+              "case_id": "S42-C03",
+              "node_id": "drainage_3",
+              "node_type": "drainage",
+              "urgency": 1.0,
+              "cascade": 0.009832658538223096,
+              "service": 0.8337876228053214,
+              "equity_proxy": 0.1946387078519675,
+              "environmental_benefit": 0.4667210037270342,
+              "carbon_penalty": 0.0438037657872287,
+              "crew_type": "drain",
+              "duration_hours": 3.0,
+              "pumps_required": 0,
+              "cost": 5005,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.5157378247161978
+            },
+            {
+              "case_id": "S42-C04",
+              "node_id": "drainage_4",
+              "node_type": "drainage",
+              "urgency": 1.0,
+              "cascade": 0.013107666250781143,
+              "service": 0.4943690186036139,
+              "equity_proxy": 0.3704597060348689,
+              "environmental_benefit": 0.4695558112758079,
+              "carbon_penalty": 0.1894713590842857,
+              "crew_type": "drain",
+              "duration_hours": 3.0,
+              "pumps_required": 1,
+              "cost": 11924,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.46802409661326627
+            },
+            {
+              "case_id": "S42-C05",
+              "node_id": "drainage_5",
+              "node_type": "drainage",
+              "urgency": 0.6,
+              "cascade": 5.456172848011433e-55,
+              "service": 0.7523604960118828,
+              "equity_proxy": 0.4371519188723307,
+              "environmental_benefit": 0.8326781960578374,
+              "carbon_penalty": 0.7002651020022491,
+              "crew_type": "drain",
+              "duration_hours": 1.0,
+              "pumps_required": 0,
+              "cost": 7060,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.45593336134178936
+            },
+            {
+              "case_id": "S42-C06",
+              "node_id": "drainage_6",
+              "node_type": "drainage",
+              "urgency": 0.6,
+              "cascade": 0.257625630119425,
+              "service": 0.4662460779476831,
+              "equity_proxy": 0.6824955039749755,
+              "environmental_benefit": 0.1397524836093098,
+              "carbon_penalty": 0.1999082024751083,
+              "crew_type": "drain",
+              "duration_hours": 4.0,
+              "pumps_required": 1,
+              "cost": 13358,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.408116129627309
+            },
+            {
+              "case_id": "S42-C07",
+              "node_id": "drainage_7",
+              "node_type": "drainage",
+              "urgency": 0.8,
+              "cascade": 0.0002775373158523905,
+              "service": 0.7788740339697513,
+              "equity_proxy": 0.7807290310219679,
+              "environmental_benefit": 0.4589157755383399,
+              "carbon_penalty": 0.5687411959528937,
+              "crew_type": "drain",
+              "duration_hours": 1.0,
+              "pumps_required": 1,
+              "cost": 4817,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.5133399754435223
+            },
+            {
+              "case_id": "S42-C08",
+              "node_id": "road_0",
+              "node_type": "road",
+              "urgency": 0.6,
+              "cascade": 0.005643919618220845,
+              "service": 0.6739270798608916,
+              "equity_proxy": 0.7649988574160256,
+              "environmental_benefit": 0.6347183200005908,
+              "carbon_penalty": 0.5535794006579958,
+              "crew_type": "road",
+              "duration_hours": 3.0,
+              "pumps_required": 0,
+              "cost": 13333,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.46819280647541517
+            },
+            {
+              "case_id": "S42-C09",
+              "node_id": "road_1",
+              "node_type": "road",
+              "urgency": 0.4,
+              "cascade": 0.003931192000124338,
+              "service": 0.5775380419242717,
+              "equity_proxy": 0.2145846728195292,
+              "environmental_benefit": 0.4085286437246361,
+              "carbon_penalty": 0.8534030732681661,
+              "crew_type": "road",
+              "duration_hours": 1.0,
+              "pumps_required": 1,
+              "cost": 6041,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.2670906906030957
+            },
+            {
+              "case_id": "S42-C10",
+              "node_id": "road_2",
+              "node_type": "road",
+              "urgency": 1.0,
+              "cascade": 0.17950933284195,
+              "service": 0.7464373860451713,
+              "equity_proxy": 0.5570321523412783,
+              "environmental_benefit": 0.7838982091064135,
+              "carbon_penalty": 0.6643135403273875,
+              "crew_type": "road",
+              "duration_hours": 2.0,
+              "pumps_required": 0,
+              "cost": 8433,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.6031132209782086
+            },
+            {
+              "case_id": "S42-C11",
+              "node_id": "road_3",
+              "node_type": "road",
+              "urgency": 1.0,
+              "cascade": 6.1317861236513975e-55,
+              "service": 0.2670340548503953,
+              "equity_proxy": 0.0900478607756417,
+              "environmental_benefit": 0.7223593505964503,
+              "carbon_penalty": 0.4618772302513874,
+              "crew_type": "road",
+              "duration_hours": 3.0,
+              "pumps_required": 0,
+              "cost": 5096,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.4021740311633235
+            },
+            {
+              "case_id": "S42-C15",
+              "node_id": "road_7",
+              "node_type": "road",
+              "urgency": 0.4,
+              "cascade": 0.0016037420590339665,
+              "service": 0.3825795872044237,
+              "equity_proxy": 0.8566142840923755,
+              "environmental_benefit": 0.7585195298352101,
+              "carbon_penalty": 0.7194629559509368,
+              "crew_type": "road",
+              "duration_hours": 3.0,
+              "pumps_required": 0,
+              "cost": 8617,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.38313359014428255
+            },
+            {
+              "case_id": "S42-C17",
+              "node_id": "water_1",
+              "node_type": "water",
+              "urgency": 0.2,
+              "cascade": 0.31758046402103873,
+              "service": 0.6907334291332841,
+              "equity_proxy": 0.1705929685368861,
+              "environmental_benefit": 0.9251201183767972,
+              "carbon_penalty": 0.581061139700395,
+              "crew_type": "water",
+              "duration_hours": 2.0,
+              "pumps_required": 0,
+              "cost": 7509,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.3869666846828973
+            },
+            {
+              "case_id": "S42-C19",
+              "node_id": "water_3",
+              "node_type": "water",
+              "urgency": 1.0,
+              "cascade": 0.4176179034989912,
+              "service": 0.6051170507927154,
+              "equity_proxy": 0.2669756630918936,
+              "environmental_benefit": 0.3315689973425522,
+              "carbon_penalty": 0.5206724024715378,
+              "crew_type": "water",
+              "duration_hours": 4.0,
+              "pumps_required": 1,
+              "cost": 8705,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.5182950697999313
+            },
+            {
+              "case_id": "S42-C21",
+              "node_id": "water_5",
+              "node_type": "water",
+              "urgency": 0.8,
+              "cascade": 0.00043496384187380994,
+              "service": 0.8264856189382428,
+              "equity_proxy": 0.1077409459558965,
+              "environmental_benefit": 0.916011845137608,
+              "carbon_penalty": 0.2302139908948808,
+              "crew_type": "water",
+              "duration_hours": 1.0,
+              "pumps_required": 0,
+              "cost": 3486,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.507436335675305
+            },
+            {
+              "case_id": "S42-C26",
+              "node_id": "pump_2",
+              "node_type": "pump",
+              "urgency": 0.8,
+              "cascade": 0.03860643462747332,
+              "service": 0.9059215306280984,
+              "equity_proxy": 0.1964346657145732,
+              "environmental_benefit": 0.3103236729000947,
+              "carbon_penalty": 0.7774048382411776,
+              "crew_type": "water",
+              "duration_hours": 1.0,
+              "pumps_required": 0,
+              "cost": 9490,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.42604910193125567
+            },
+            {
+              "case_id": "S42-C27",
+              "node_id": "pump_3",
+              "node_type": "pump",
+              "urgency": 0.6,
+              "cascade": 0.02798511961703978,
+              "service": 0.2604522157811512,
+              "equity_proxy": 0.2296560299988552,
+              "environmental_benefit": 0.131822217786521,
+              "carbon_penalty": 0.6776586736128575,
+              "crew_type": "water",
+              "duration_hours": 4.0,
+              "pumps_required": 0,
+              "cost": 4583,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.22802627056680175
+            },
+            {
+              "case_id": "S42-C28",
+              "node_id": "pump_4",
+              "node_type": "pump",
+              "urgency": 1.0,
+              "cascade": 0.0007859696873024096,
+              "service": 0.3998317387450432,
+              "equity_proxy": 0.8041245261822627,
+              "environmental_benefit": 0.7154071296158017,
+              "carbon_penalty": 0.7389840039155418,
+              "crew_type": "water",
+              "duration_hours": 3.0,
+              "pumps_required": 1,
+              "cost": 8639,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.5211040898604017
+            },
+            {
+              "case_id": "S42-C30",
+              "node_id": "pump_6",
+              "node_type": "pump",
+              "urgency": 1.0,
+              "cascade": 0.0008670013242227679,
+              "service": 0.6663985317451185,
+              "equity_proxy": 0.6339751116810851,
+              "environmental_benefit": 0.1058974037507533,
+              "carbon_penalty": 0.1403395970639126,
+              "crew_type": "water",
+              "duration_hours": 4.0,
+              "pumps_required": 0,
+              "cost": 3084,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.4874170040754484
+            },
+            {
+              "case_id": "S42-C31",
+              "node_id": "pump_7",
+              "node_type": "pump",
+              "urgency": 1.0,
+              "cascade": 0.03314689485172569,
+              "service": 0.9497674162001584,
+              "equity_proxy": 0.8043609156129707,
+              "environmental_benefit": 0.4673816015552915,
+              "carbon_penalty": 0.7847634492521874,
+              "crew_type": "water",
+              "duration_hours": 4.0,
+              "pumps_required": 1,
+              "cost": 3231,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.5981060673230068
+            }
+          ],
+          "objective": 9.030805773086508,
+          "available": {
+            "budget": 150000,
+            "pumps": 8,
+            "crew_hours": {
+              "water": 36,
+              "drain": 30,
+              "road": 24
+            }
+          },
+          "used": {
+            "budget": 149988,
+            "pumps": 7,
+            "crew_hours": {
+              "water": 23.0,
+              "drain": 15.0,
+              "road": 12.0
+            }
+          },
+          "solver_seconds": 0.006044000000000001,
+          "approval_required": true,
+          "dispatch_allowed": false,
+          "provenance": "synthetic scenario; user-provided constraints and assumptions"
+        },
+        "uncertainty": null,
+        "provenance": "documented fictional costs, resources and policy factors",
+        "validation_status": "scenario feasibility verified; no real resource inventory",
+        "geographic_scope": "synthetic intervention scenarios",
+        "units": {
+          "budget": "hypothetical INR",
+          "crew_hours": "hours",
+          "pumps": "count"
+        },
+        "horizon": "simultaneous planning window",
+        "research_only": true,
+        "operational_supported": false,
+        "allocation_eligible": false,
+        "dispatch_allowed": false,
+        "warnings": [
+          "Research inference only; independent validation and human review are required."
+        ],
+        "freshness": {
+          "age_hours": 0.0,
+          "clock": "verified timezone"
+        }
+      },
+      "review": {
+        "proposal_id": "SYNTHETIC-normal",
+        "decision": "pending",
+        "reviewer": null,
+        "synthetic_demonstration": true,
+        "approval_status": "not_approved",
+        "dispatch_allowed": false,
+        "outcome_verified": false
+      },
+      "demonstration_review_record": {
+        "proposal_id": "SYNTHETIC-normal",
+        "decision": "defer",
+        "reviewer": "fictional reviewer in explicitly synthetic walkthrough",
+        "synthetic_demonstration": true,
+        "approval_status": "not_approved",
+        "dispatch_allowed": false,
+        "outcome_verified": false
+      }
+    },
+    {
+      "scenario": "scarce_budget",
+      "allocation": {
+        "contract_version": "civicflux.research.v1",
+        "component": "resource_optimization",
+        "model_version": "1.1.0",
+        "status": "supported_simulation",
+        "prediction": {
+          "component": "resource_optimizer",
+          "version": "1.0.0",
+          "status": "OPTIMAL",
+          "selected": [
+            {
+              "case_id": "S42-C02",
+              "node_id": "drainage_2",
+              "node_type": "drainage",
+              "urgency": 0.6,
+              "cascade": 3.910424777871967e-55,
+              "service": 0.2978629420781314,
+              "equity_proxy": 0.8276311719925821,
+              "environmental_benefit": 0.6316643991220648,
+              "carbon_penalty": 0.7580877400853738,
+              "crew_type": "drain",
+              "duration_hours": 1.0,
+              "pumps_required": 0,
+              "cost": 3882,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.3905625370785546
+            },
+            {
+              "case_id": "S42-C03",
+              "node_id": "drainage_3",
+              "node_type": "drainage",
+              "urgency": 1.0,
+              "cascade": 0.009832658538223096,
+              "service": 0.8337876228053214,
+              "equity_proxy": 0.1946387078519675,
+              "environmental_benefit": 0.4667210037270342,
+              "carbon_penalty": 0.0438037657872287,
+              "crew_type": "drain",
+              "duration_hours": 3.0,
+              "pumps_required": 0,
+              "cost": 5005,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.5157378247161978
+            },
+            {
+              "case_id": "S42-C05",
+              "node_id": "drainage_5",
+              "node_type": "drainage",
+              "urgency": 0.6,
+              "cascade": 5.456172848011433e-55,
+              "service": 0.7523604960118828,
+              "equity_proxy": 0.4371519188723307,
+              "environmental_benefit": 0.8326781960578374,
+              "carbon_penalty": 0.7002651020022491,
+              "crew_type": "drain",
+              "duration_hours": 1.0,
+              "pumps_required": 0,
+              "cost": 7060,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.45593336134178936
+            },
+            {
+              "case_id": "S42-C07",
+              "node_id": "drainage_7",
+              "node_type": "drainage",
+              "urgency": 0.8,
+              "cascade": 0.0002775373158523905,
+              "service": 0.7788740339697513,
+              "equity_proxy": 0.7807290310219679,
+              "environmental_benefit": 0.4589157755383399,
+              "carbon_penalty": 0.5687411959528937,
+              "crew_type": "drain",
+              "duration_hours": 1.0,
+              "pumps_required": 1,
+              "cost": 4817,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.5133399754435223
+            },
+            {
+              "case_id": "S42-C10",
+              "node_id": "road_2",
+              "node_type": "road",
+              "urgency": 1.0,
+              "cascade": 0.17950933284195,
+              "service": 0.7464373860451713,
+              "equity_proxy": 0.5570321523412783,
+              "environmental_benefit": 0.7838982091064135,
+              "carbon_penalty": 0.6643135403273875,
+              "crew_type": "road",
+              "duration_hours": 2.0,
+              "pumps_required": 0,
+              "cost": 8433,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.6031132209782086
+            },
+            {
+              "case_id": "S42-C11",
+              "node_id": "road_3",
+              "node_type": "road",
+              "urgency": 1.0,
+              "cascade": 6.1317861236513975e-55,
+              "service": 0.2670340548503953,
+              "equity_proxy": 0.0900478607756417,
+              "environmental_benefit": 0.7223593505964503,
+              "carbon_penalty": 0.4618772302513874,
+              "crew_type": "road",
+              "duration_hours": 3.0,
+              "pumps_required": 0,
+              "cost": 5096,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.4021740311633235
+            },
+            {
+              "case_id": "S42-C17",
+              "node_id": "water_1",
+              "node_type": "water",
+              "urgency": 0.2,
+              "cascade": 0.31758046402103873,
+              "service": 0.6907334291332841,
+              "equity_proxy": 0.1705929685368861,
+              "environmental_benefit": 0.9251201183767972,
+              "carbon_penalty": 0.581061139700395,
+              "crew_type": "water",
+              "duration_hours": 2.0,
+              "pumps_required": 0,
+              "cost": 7509,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.3869666846828973
+            },
+            {
+              "case_id": "S42-C21",
+              "node_id": "water_5",
+              "node_type": "water",
+              "urgency": 0.8,
+              "cascade": 0.00043496384187380994,
+              "service": 0.8264856189382428,
+              "equity_proxy": 0.1077409459558965,
+              "environmental_benefit": 0.916011845137608,
+              "carbon_penalty": 0.2302139908948808,
+              "crew_type": "water",
+              "duration_hours": 1.0,
+              "pumps_required": 0,
+              "cost": 3486,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.507436335675305
+            },
+            {
+              "case_id": "S42-C30",
+              "node_id": "pump_6",
+              "node_type": "pump",
+              "urgency": 1.0,
+              "cascade": 0.0008670013242227679,
+              "service": 0.6663985317451185,
+              "equity_proxy": 0.6339751116810851,
+              "environmental_benefit": 0.1058974037507533,
+              "carbon_penalty": 0.1403395970639126,
+              "crew_type": "water",
+              "duration_hours": 4.0,
+              "pumps_required": 0,
+              "cost": 3084,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.4874170040754484
+            },
+            {
+              "case_id": "S42-C31",
+              "node_id": "pump_7",
+              "node_type": "pump",
+              "urgency": 1.0,
+              "cascade": 0.03314689485172569,
+              "service": 0.9497674162001584,
+              "equity_proxy": 0.8043609156129707,
+              "environmental_benefit": 0.4673816015552915,
+              "carbon_penalty": 0.7847634492521874,
+              "crew_type": "water",
+              "duration_hours": 4.0,
+              "pumps_required": 1,
+              "cost": 3231,
+              "budget_assumption_currency": "INR (hypothetical)",
+              "scenario_seed": 42,
+              "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+              "utility": 0.5981060673230068
+            }
+          ],
+          "objective": 4.860787042478254,
+          "available": {
+            "budget": 52500,
+            "pumps": 8,
+            "crew_hours": {
+              "water": 36,
+              "drain": 30,
+              "road": 24
+            }
+          },
+          "used": {
+            "budget": 51603,
+            "pumps": 2,
+            "crew_hours": {
+              "water": 11.0,
+              "drain": 6.0,
+              "road": 5.0
+            }
+          },
+          "solver_seconds": 0.0014730000000000001,
+          "approval_required": true,
+          "dispatch_allowed": false,
+          "provenance": "synthetic scenario; user-provided constraints and assumptions"
+        },
+        "uncertainty": null,
+        "provenance": "documented fictional costs, resources and policy factors",
+        "validation_status": "scenario feasibility verified; no real resource inventory",
+        "geographic_scope": "synthetic intervention scenarios",
+        "units": {
+          "budget": "hypothetical INR",
+          "crew_hours": "hours",
+          "pumps": "count"
+        },
+        "horizon": "simultaneous planning window",
+        "research_only": true,
+        "operational_supported": false,
+        "allocation_eligible": false,
+        "dispatch_allowed": false,
+        "warnings": [
+          "Research inference only; independent validation and human review are required."
+        ],
+        "freshness": {
+          "age_hours": 0.0,
+          "clock": "verified timezone"
+        }
+      },
+      "review": {
+        "proposal_id": "SYNTHETIC-scarce_budget",
+        "decision": "pending",
+        "reviewer": null,
+        "synthetic_demonstration": true,
+        "approval_status": "not_approved",
+        "dispatch_allowed": false,
+        "outcome_verified": false
+      },
+      "demonstration_review_record": {
+        "proposal_id": "SYNTHETIC-scarce_budget",
+        "decision": "defer",
+        "reviewer": "fictional reviewer in explicitly synthetic walkthrough",
+        "synthetic_demonstration": true,
+        "approval_status": "not_approved",
+        "dispatch_allowed": false,
+        "outcome_verified": false
+      }
+    }
+  ],
+  "verification": {
+    "status": "abstained",
+    "reason": "Simulation outcomes cannot be promoted to real verified outcomes",
+    "completed_work_is_verified_success": false
+  },
+  "blocked_cross_scope_bridge": {
+    "status": "abstained",
+    "reason": "Delhi aggregate forecasts, L-TOWN sensors and synthetic dependency assets have no verified common mapping"
+  },
+  "audit_trace": [
+    {
+      "stage": "scenario_origin",
+      "source": "declared synthetic pump outage; not inferred from rainfall/water/outcome scores",
+      "graph_id": "synthetic-civic-42",
+      "graph_fingerprint": "0b508b5f61376876d041af90abec8b17845b884ce800aa1318843f3dc1c9e392"
+    },
+    {
+      "stage": "cascade",
+      "status": "supported_simulation",
+      "interpretation": "synthetic node evidence only"
+    },
+    {
+      "stage": "optimization",
+      "status": "research proposals",
+      "human_approval": "pending",
+      "dispatch_allowed": false
+    },
+    {
+      "stage": "outcome_verification",
+      "status": "abstained",
+      "reason": "Simulation outcomes cannot be promoted to real verified outcomes"
+    }
+  ],
+  "automatic_dispatch": false
+}

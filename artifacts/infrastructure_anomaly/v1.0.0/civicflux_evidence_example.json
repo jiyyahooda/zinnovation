@@ -1,0 +1,85 @@
+{
+  "contract_version": "civicflux.anomaly-evidence.v1",
+  "evidence_type": "unusual_measurement",
+  "entity": "aqi:Delhi",
+  "asset_id": null,
+  "requires_verified_asset_mapping": true,
+  "measurement_evidence": {
+    "component": "infrastructure_measurement_anomaly",
+    "version": "1.0.0",
+    "sensor": "aqi:Delhi",
+    "supported_sensor": true,
+    "observation_time": "2024-01-01 00:00:00",
+    "detection_time": "2026-10-25T00:00:00+00:00",
+    "horizon": "contemporaneous detection",
+    "anomaly_score": 0.5192228814781328,
+    "threshold": 0.551175517952252,
+    "alert": false,
+    "detector_type": "IsolationForest + independent quality rules",
+    "contributing_indicators": [
+      {
+        "feature": "robust_z",
+        "value": 2.6440771740810067,
+        "training_median": -0.004630757078853778,
+        "score_drop_on_median_replacement": 0.025804834027595702
+      },
+      {
+        "feature": "seasonal_residual",
+        "value": 33.18020013187358,
+        "training_median": -6.675494140903567,
+        "score_drop_on_median_replacement": 0.013057070186458741
+      },
+      {
+        "feature": "rate_change",
+        "value": 49.43353709688155,
+        "training_median": 0.0,
+        "score_drop_on_median_replacement": 0.011617909430112983
+      },
+      {
+        "feature": "value",
+        "value": 88.27790670984197,
+        "training_median": 55.18994035722141,
+        "score_drop_on_median_replacement": 0.010927536201107091
+      },
+      {
+        "feature": "rolling_mad",
+        "value": 8.914385840390544,
+        "training_median": 11.771996072963411,
+        "score_drop_on_median_replacement": 0.009748364786435926
+      }
+    ],
+    "input_freshness": {
+      "status": "stale",
+      "age_hours": 24677.5,
+      "hours_since_valid_on_source_clock": 0.0
+    },
+    "provenance": "publisher-described measurements; station lineage and real/synthetic status unverified",
+    "input_sources": [
+      "https://www.kaggle.com/datasets/aniket0712/delhi-ncr-hourly-air-quality-dataset-20192024"
+    ],
+    "entity": "Delhi",
+    "geographic_scope": "unmapped benchmark entity",
+    "units": "ug/m3 (working assumption; source unit metadata incomplete)",
+    "observation_timezone": "Asia/Kolkata",
+    "research_only": true,
+    "synthetic": null,
+    "validation_status": "historical benchmark + injected-fixture testing only",
+    "confirmed_failure": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Unusual measurements are not confirmed equipment failures.",
+      "Source timezone/reporting delay is a documented research assumption, not device-verified metadata.",
+      "Stale observation: not current operational evidence."
+    ],
+    "isolation_alert": false,
+    "quality_alert": false,
+    "violated_rules": [],
+    "score_semantics": "negative IsolationForest score_samples; larger is more unusual, not a probability"
+  },
+  "requires_corroboration": true,
+  "confirmed_failure": false,
+  "research_only": true,
+  "automatic_dispatch_allowed": false,
+  "approval_status": "not_requested",
+  "eligible_for_operational_risk_fusion": false
+}

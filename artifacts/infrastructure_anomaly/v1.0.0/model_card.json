@@ -1,0 +1,219 @@
+{
+  "component": "infrastructure_measurement_anomaly",
+  "version": "1.0.0",
+  "research_only": true,
+  "objective": "flag unusual measurements; never confirm asset failure",
+  "source_inventory": [
+    {
+      "source": "rainfall",
+      "rows": 204876,
+      "columns": 8,
+      "file": "rainfall/daily-rainfall-at-state-level.csv",
+      "start": "2009-01-01",
+      "end": "2024-07-31",
+      "sha256": "4891c75a9a0ccd2e7f75c9aafa3de110cf9a38602e0798f2a88e1895f4031611",
+      "units": "mm/day",
+      "provenance": "reported real state aggregate; upstream lineage not independently audited"
+    },
+    {
+      "source": "aqi",
+      "rows": 219125,
+      "columns": 18,
+      "file": "aqi/processed_aqi_data.csv",
+      "start": "2019-01-01 00:00:00",
+      "end": "2024-01-01 00:00:00",
+      "sha256": "52592826574621dc5a247c4c518b379ac08d8a35543e1c22c92a5d41fbf1f339",
+      "units": "ug/m3 (working assumption; source unit metadata incomplete)",
+      "provenance": "publisher-described measurements; station lineage and real/synthetic status unverified"
+    },
+    {
+      "source": "traffic",
+      "rows": 48120,
+      "columns": 4,
+      "file": "traffic/traffic.csv",
+      "start": "2015-11-01 00:00:00",
+      "end": "2017-06-30 23:00:00",
+      "sha256": "5d48fc91c8ca63a2d430140efb18750fe77828d058ec000e8644e819b20b1536",
+      "units": "vehicles/hour",
+      "provenance": "observational benchmark; city, coordinates and timezone not supplied"
+    }
+  ],
+  "supported_sensors": [
+    "aqi:Delhi",
+    "rainfall:Delhi",
+    "traffic:1",
+    "traffic:2",
+    "traffic:3"
+  ],
+  "untrained_sensors": [
+    "traffic:4"
+  ],
+  "sensor_specs": {
+    "rainfall:Delhi": {
+      "sensor": "rainfall:Delhi",
+      "family": "rainfall",
+      "entity": "Delhi",
+      "unit": "mm/day",
+      "cadence": "D",
+      "timezone": "Asia/Kolkata",
+      "provenance": "reported real state aggregate; upstream lineage not independently audited",
+      "source_url": "https://www.kaggle.com/datasets/wydoinn/daily-rainfall-data-india-2009-2024",
+      "window": 30,
+      "flat_limit": 5,
+      "scale_floor": 0.1,
+      "freshness_hours": 48.0
+    },
+    "aqi:Delhi": {
+      "sensor": "aqi:Delhi",
+      "family": "aqi",
+      "entity": "Delhi",
+      "unit": "ug/m3 (working assumption; source unit metadata incomplete)",
+      "cadence": "h",
+      "timezone": "Asia/Kolkata",
+      "provenance": "publisher-described measurements; station lineage and real/synthetic status unverified",
+      "source_url": "https://www.kaggle.com/datasets/aniket0712/delhi-ncr-hourly-air-quality-dataset-20192024",
+      "window": 24,
+      "flat_limit": 12,
+      "scale_floor": 1.0,
+      "freshness_hours": 2.0
+    },
+    "traffic:1": {
+      "sensor": "traffic:1",
+      "family": "traffic",
+      "entity": "1",
+      "unit": "vehicles/hour",
+      "cadence": "h",
+      "timezone": null,
+      "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+      "source_url": "https://www.kaggle.com/datasets/fedesoriano/traffic-prediction-dataset",
+      "window": 24,
+      "flat_limit": 12,
+      "scale_floor": 1.0,
+      "freshness_hours": 2.0
+    },
+    "traffic:2": {
+      "sensor": "traffic:2",
+      "family": "traffic",
+      "entity": "2",
+      "unit": "vehicles/hour",
+      "cadence": "h",
+      "timezone": null,
+      "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+      "source_url": "https://www.kaggle.com/datasets/fedesoriano/traffic-prediction-dataset",
+      "window": 24,
+      "flat_limit": 12,
+      "scale_floor": 1.0,
+      "freshness_hours": 2.0
+    },
+    "traffic:3": {
+      "sensor": "traffic:3",
+      "family": "traffic",
+      "entity": "3",
+      "unit": "vehicles/hour",
+      "cadence": "h",
+      "timezone": null,
+      "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+      "source_url": "https://www.kaggle.com/datasets/fedesoriano/traffic-prediction-dataset",
+      "window": 24,
+      "flat_limit": 12,
+      "scale_floor": 1.0,
+      "freshness_hours": 2.0
+    },
+    "traffic:4": {
+      "sensor": "traffic:4",
+      "family": "traffic",
+      "entity": "4",
+      "unit": "vehicles/hour",
+      "cadence": "h",
+      "timezone": null,
+      "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+      "source_url": "https://www.kaggle.com/datasets/fedesoriano/traffic-prediction-dataset",
+      "window": 24,
+      "flat_limit": 12,
+      "scale_floor": 1.0,
+      "freshness_hours": 2.0
+    }
+  },
+  "fit_summary": [
+    {
+      "sensor": "aqi:Delhi",
+      "fit_rows": 26271,
+      "train_last": "2021-12-31 14:00:00",
+      "rule_upper": 122.23398618405302,
+      "jump_threshold": 62.713948632922886,
+      "isolation_threshold": 0.551175517952252
+    },
+    {
+      "sensor": "rainfall:Delhi",
+      "fit_rows": 3384,
+      "train_last": "2018-05-07 00:00:00",
+      "rule_upper": 36.29955000000001,
+      "jump_threshold": 38.236350000000016,
+      "isolation_threshold": 0.6452436729854529
+    },
+    {
+      "sensor": "traffic:1",
+      "fit_rows": 8731,
+      "train_last": "2016-10-30 18:00:00",
+      "rule_upper": 79.0,
+      "jump_threshold": 20.0,
+      "isolation_threshold": 0.573869376874617
+    },
+    {
+      "sensor": "traffic:2",
+      "fit_rows": 8731,
+      "train_last": "2016-10-30 18:00:00",
+      "rule_upper": 22.0,
+      "jump_threshold": 8.0,
+      "isolation_threshold": 0.557178118728976
+    },
+    {
+      "sensor": "traffic:3",
+      "fit_rows": 8731,
+      "train_last": "2016-10-30 18:00:00",
+      "rule_upper": 56.0,
+      "jump_threshold": 26.0,
+      "isolation_threshold": 0.6137300019556795
+    }
+  ],
+  "config": {
+    "component_version": "1.0.0",
+    "n_estimators": 100,
+    "max_samples": 256,
+    "contamination": 0.02,
+    "seed": 42,
+    "robust_threshold": 6,
+    "strict_threshold_comparison": ">",
+    "rule_quantile": 0.995,
+    "selection": "predeclared research reference, no supervised winner",
+    "supported_sensors": [
+      "aqi:Delhi",
+      "rainfall:Delhi",
+      "traffic:1",
+      "traffic:2",
+      "traffic:3"
+    ],
+    "unknown_sensor_policy": "abstain",
+    "training_excludes_injected_fixtures": true
+  },
+  "labels": "No verified equipment-fault labels; injection support labels only",
+  "real_data_metrics": "alert rates, score distributions, temporal stability; no fault precision or accuracy",
+  "fixture_metrics": "point recovery, event detection, delay and matched clean alert burden",
+  "limitations": [
+    "No real water-level, pressure, flow or fault observations",
+    "No verified municipal asset mapping",
+    "AQI unit/measurement provenance unverified",
+    "Traffic timezone unknown",
+    "Adaptive baselines can absorb persistent shifts",
+    "2% contamination is an assumption, not fault prevalence",
+    "State rainfall is not a local drainage sensor"
+  ],
+  "integration_status": "pure evidence adapter; CivicFlux backend schema unavailable",
+  "dispatch_allowed": false,
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "joblib": "1.4.2"
+  }
+}

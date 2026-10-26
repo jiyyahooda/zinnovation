@@ -1,0 +1,1008 @@
+{
+  "rainfall": {
+    "contract_version": "civicflux.research.v1",
+    "component": "rainfall",
+    "model_version": "legacy-unversioned",
+    "status": "supported_research",
+    "prediction": [
+      {
+        "entity": "Delhi",
+        "time": "2021-02-27 00:00:00+05:30",
+        "target_time": "2021-02-28 00:00:00+05:30",
+        "prediction": 0.3234360962391534,
+        "source_missing": 0
+      }
+    ],
+    "uncertainty": {
+      "method": "calibration-period pooled absolute residual radius; no conditional coverage guarantee",
+      "level": 0.9,
+      "intervals": [
+        {
+          "entity": "Delhi",
+          "lower_90": 0.0,
+          "upper_90": 5.800203174431296
+        }
+      ]
+    },
+    "provenance": "reported real state aggregate; upstream lineage not independently audited",
+    "validation_status": "research; measurement lineage and reporting delays need validation",
+    "geographic_scope": "Delhi state aggregate",
+    "units": "mm/day",
+    "horizon": "next day",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Research inference only; independent validation and human review are required."
+    ],
+    "freshness": {
+      "age_hours": 0.0,
+      "clock": "verified timezone"
+    }
+  },
+  "aqi": {
+    "contract_version": "civicflux.research.v1",
+    "component": "aqi",
+    "model_version": "legacy-unversioned",
+    "status": "supported_research",
+    "prediction": [
+      {
+        "entity": "Delhi",
+        "time": "2023-01-02 04:00:00+05:30",
+        "target_time": "2023-01-02 05:00:00+05:30",
+        "prediction": 66.47396087185585,
+        "source_missing": 0
+      }
+    ],
+    "uncertainty": {
+      "method": "calibration-period pooled absolute residual radius; no conditional coverage guarantee",
+      "level": 0.9,
+      "intervals": [
+        {
+          "entity": "Delhi",
+          "lower_90": 39.69031695717594,
+          "upper_90": 93.25760478653577
+        }
+      ]
+    },
+    "provenance": "publisher-described measurements; station lineage and real/synthetic status unverified",
+    "validation_status": "research; measurement lineage and reporting delays need validation",
+    "geographic_scope": "Delhi aggregate (station lineage unverified)",
+    "units": "ug/m3 (working assumption; source unit metadata incomplete)",
+    "horizon": "next hour PM2.5",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Research inference only; independent validation and human review are required."
+    ],
+    "freshness": {
+      "age_hours": 0.0,
+      "clock": "verified timezone"
+    }
+  },
+  "traffic": {
+    "contract_version": "civicflux.research.v1",
+    "component": "traffic",
+    "model_version": "legacy-unversioned",
+    "status": "supported_research",
+    "prediction": [
+      {
+        "entity": "1",
+        "time": "2017-03-02 18:00:00",
+        "target_time": "2017-03-02 19:00:00",
+        "prediction": 75.59744262695312,
+        "source_missing": 0
+      }
+    ],
+    "uncertainty": {
+      "method": "calibration-period pooled absolute residual radius; no conditional coverage guarantee",
+      "level": 0.9,
+      "intervals": [
+        {
+          "entity": "1",
+          "lower_90": 70.0286636352539,
+          "upper_90": 81.16622161865234
+        }
+      ]
+    },
+    "provenance": "observational benchmark; city, coordinates and timezone not supplied",
+    "validation_status": "research; measurement lineage and reporting delays need validation",
+    "geographic_scope": "unlocated benchmark junctions",
+    "units": "vehicles/hour",
+    "horizon": "next hour vehicle count",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Research inference only; independent validation and human review are required."
+    ],
+    "freshness": {
+      "age_hours": 0.0,
+      "clock": "source clock only; timezone unknown"
+    }
+  },
+  "flood": {
+    "contract_version": "civicflux.research.v1",
+    "component": "flood",
+    "model_version": "legacy-unversioned",
+    "status": "supported_simulation",
+    "prediction": [
+      {
+        "simulated_flood_probability": 0.0,
+        "scenario_alert": false,
+        "synthetic": true
+      }
+    ],
+    "uncertainty": null,
+    "provenance": "see source-specific metadata/model card",
+    "validation_status": "research scenario surrogate; not validated real flood or infrastructure failure forecast",
+    "geographic_scope": "hypothetical catchments with state-rainfall reference",
+    "units": {
+      "rain_mm": "mm",
+      "duration_h": "hours",
+      "area_m2": "m2",
+      "drain_mm_h": "mm/hour",
+      "initial_storage_mm": "mm",
+      "fractions": "unitless"
+    },
+    "horizon": "24-hour simulated scenario",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Research inference only; independent validation and human review are required."
+    ],
+    "freshness": {
+      "age_hours": 0.0,
+      "clock": "verified timezone"
+    }
+  },
+  "infrastructure_anomaly": {
+    "contract_version": "civicflux.research.v1",
+    "component": "infrastructure_anomaly",
+    "model_version": "1.0.0",
+    "status": "supported_research",
+    "prediction": {
+      "component": "infrastructure_measurement_anomaly",
+      "version": "1.0.0",
+      "sensor": "rainfall:Delhi",
+      "supported_sensor": true,
+      "observation_time": "2024-03-20 00:00:00",
+      "detection_time": "2024-03-19T18:30:00+00:00",
+      "horizon": "contemporaneous detection",
+      "anomaly_score": 0.34284555967242564,
+      "threshold": 0.6452436729854529,
+      "alert": false,
+      "detector_type": "IsolationForest + independent quality rules",
+      "contributing_indicators": [
+        {
+          "feature": "baseline_deviation",
+          "value": -0.18830570345718312,
+          "training_median": -0.28576924746028504,
+          "score_drop_on_median_replacement": 0.005877392106874935
+        },
+        {
+          "feature": "rolling_max",
+          "value": 4.01,
+          "training_median": 6.2,
+          "score_drop_on_median_replacement": -0.004158182823297885
+        },
+        {
+          "feature": "previous_unusual_count",
+          "value": 4.0,
+          "training_median": 2.0,
+          "score_drop_on_median_replacement": 0.003704216051284903
+        },
+        {
+          "feature": "rolling_mean",
+          "value": 0.37899999999999995,
+          "training_median": 0.39183333333333387,
+          "score_drop_on_median_replacement": -0.0017263146741213209
+        },
+        {
+          "feature": "seasonal_residual",
+          "value": -0.46157894736842103,
+          "training_median": -0.26120224567099565,
+          "score_drop_on_median_replacement": -0.0008140538279552412
+        }
+      ],
+      "input_freshness": {
+        "status": "fresh",
+        "age_hours": 0.0,
+        "hours_since_valid_on_source_clock": 0.0
+      },
+      "provenance": "reported real state aggregate; upstream lineage not independently audited",
+      "input_sources": [
+        "https://www.kaggle.com/datasets/wydoinn/daily-rainfall-data-india-2009-2024"
+      ],
+      "entity": "Delhi",
+      "geographic_scope": "unmapped benchmark entity",
+      "units": "mm/day",
+      "observation_timezone": "Asia/Kolkata",
+      "research_only": true,
+      "synthetic": false,
+      "validation_status": "historical benchmark + injected-fixture testing only",
+      "confirmed_failure": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unusual measurements are not confirmed equipment failures.",
+        "Source timezone/reporting delay is a documented research assumption, not device-verified metadata."
+      ],
+      "isolation_alert": false,
+      "quality_alert": false,
+      "violated_rules": [],
+      "score_semantics": "negative IsolationForest score_samples; larger is more unusual, not a probability"
+    },
+    "uncertainty": null,
+    "provenance": "see source-specific metadata/model card",
+    "validation_status": "research evidence only",
+    "geographic_scope": "source-specific unmapped benchmark sensors",
+    "units": "per registered sensor",
+    "horizon": "contemporaneous unusual measurement",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Unusual measurements are not confirmed equipment failures.",
+      "Source timezone/reporting delay is a documented research assumption, not device-verified metadata.",
+      "Research inference only; independent validation and human review are required."
+    ],
+    "freshness": {
+      "age_hours": 0.0,
+      "clock": "verified timezone"
+    }
+  },
+  "water_network": {
+    "contract_version": "civicflux.research.v1",
+    "component": "water_network",
+    "model_version": "1.1.0",
+    "status": "supported_simulation",
+    "prediction": {
+      "benchmark_onset_score": 0.005342764673435302,
+      "research_alert": false,
+      "operational_fault_prediction": null
+    },
+    "uncertainty": null,
+    "provenance": "BattLeDIM CC BY 4.0 simulated SCADA",
+    "validation_status": "weak temporal benchmark; operational abstention",
+    "geographic_scope": "L-TOWN simulated network only",
+    "units": {
+      "pressure": "m",
+      "flow": "m3/h",
+      "level": "m"
+    },
+    "horizon": "onset during preceding 24 hours",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Benchmark distribution only; recent-onset detection is not leak localization or proof of a fault.",
+      "Source clock/receipt latency is unspecified; no operational freshness claim.",
+      "Research inference only; independent validation and human review are required.",
+      "Weak onset detection: explicitly abstain from operational fault predictions."
+    ],
+    "freshness": {
+      "age_hours": 0.0,
+      "clock": "source clock only; timezone unknown"
+    }
+  },
+  "cascade_risk": {
+    "contract_version": "civicflux.research.v1",
+    "component": "cascade_risk",
+    "model_version": "1.1.0",
+    "status": "supported_simulation",
+    "prediction": [
+      {
+        "node_id": "drainage_0",
+        "risk": 0.4942066045031467,
+        "review": true
+      },
+      {
+        "node_id": "drainage_1",
+        "risk": 0.009938991720073906,
+        "review": false
+      },
+      {
+        "node_id": "drainage_2",
+        "risk": 3.910424777871967e-55,
+        "review": false
+      },
+      {
+        "node_id": "drainage_3",
+        "risk": 0.009832658538223096,
+        "review": false
+      },
+      {
+        "node_id": "drainage_4",
+        "risk": 0.013107666250781143,
+        "review": false
+      },
+      {
+        "node_id": "drainage_5",
+        "risk": 5.456172848011433e-55,
+        "review": false
+      },
+      {
+        "node_id": "drainage_6",
+        "risk": 0.257625630119425,
+        "review": true
+      },
+      {
+        "node_id": "drainage_7",
+        "risk": 0.0002775373158523905,
+        "review": false
+      },
+      {
+        "node_id": "road_0",
+        "risk": 0.005643919618220845,
+        "review": false
+      },
+      {
+        "node_id": "road_1",
+        "risk": 0.003931192000124338,
+        "review": false
+      },
+      {
+        "node_id": "road_2",
+        "risk": 0.17950933284195,
+        "review": true
+      },
+      {
+        "node_id": "road_3",
+        "risk": 6.1317861236513975e-55,
+        "review": false
+      },
+      {
+        "node_id": "road_4",
+        "risk": 1.5058599425193065e-54,
+        "review": false
+      },
+      {
+        "node_id": "road_5",
+        "risk": 0.22530577919444617,
+        "review": true
+      },
+      {
+        "node_id": "road_6",
+        "risk": 0.09689194512698,
+        "review": false
+      },
+      {
+        "node_id": "road_7",
+        "risk": 0.0016037420590339665,
+        "review": false
+      },
+      {
+        "node_id": "water_0",
+        "risk": 0.0167822974902385,
+        "review": false
+      },
+      {
+        "node_id": "water_1",
+        "risk": 0.31758046402103873,
+        "review": true
+      },
+      {
+        "node_id": "water_2",
+        "risk": 0.015280712838450556,
+        "review": false
+      },
+      {
+        "node_id": "water_3",
+        "risk": 0.4176179034989912,
+        "review": true
+      },
+      {
+        "node_id": "water_4",
+        "risk": 0.011344356557186562,
+        "review": false
+      },
+      {
+        "node_id": "water_5",
+        "risk": 0.00043496384187380994,
+        "review": false
+      },
+      {
+        "node_id": "water_6",
+        "risk": 1.075085032408364e-54,
+        "review": false
+      },
+      {
+        "node_id": "water_7",
+        "risk": 0.021122116708132466,
+        "review": false
+      },
+      {
+        "node_id": "pump_1",
+        "risk": 0.05719905027210138,
+        "review": false
+      },
+      {
+        "node_id": "pump_2",
+        "risk": 0.03860643462747332,
+        "review": false
+      },
+      {
+        "node_id": "pump_3",
+        "risk": 0.02798511961703978,
+        "review": false
+      },
+      {
+        "node_id": "pump_4",
+        "risk": 0.0007859696873024096,
+        "review": false
+      },
+      {
+        "node_id": "pump_5",
+        "risk": 1.2694559216351916e-54,
+        "review": false
+      },
+      {
+        "node_id": "pump_6",
+        "risk": 0.0008670013242227679,
+        "review": false
+      },
+      {
+        "node_id": "pump_7",
+        "risk": 0.03314689485172569,
+        "review": false
+      },
+      {
+        "node_id": "facility_0",
+        "risk": 0.12677514338774576,
+        "review": false
+      },
+      {
+        "node_id": "facility_1",
+        "risk": 0.05628822965561194,
+        "review": false
+      },
+      {
+        "node_id": "facility_2",
+        "risk": 0.03886717105936475,
+        "review": false
+      },
+      {
+        "node_id": "facility_3",
+        "risk": 0.13763101970027164,
+        "review": false
+      },
+      {
+        "node_id": "facility_4",
+        "risk": 0.07540805920729764,
+        "review": false
+      },
+      {
+        "node_id": "facility_5",
+        "risk": 0.004832905688611819,
+        "review": false
+      },
+      {
+        "node_id": "facility_6",
+        "risk": 0.1541075985121775,
+        "review": true
+      },
+      {
+        "node_id": "facility_7",
+        "risk": 0.12579743390582604,
+        "review": false
+      }
+    ],
+    "uncertainty": null,
+    "provenance": "seeded independent-cascade simulator",
+    "validation_status": "unseen synthetic graph holdout; no municipal validity",
+    "geographic_scope": "synthetic civic dependency graphs",
+    "units": "unitless simulated risk",
+    "horizon": "next 60 minutes",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Simulation-trained risks are not real-world failure probabilities.",
+      "No verified municipal topology or incident labels.",
+      "Research inference only; independent validation and human review are required."
+    ],
+    "freshness": {
+      "age_hours": 0.0,
+      "clock": "verified timezone"
+    },
+    "graph_fingerprint": "0b508b5f61376876d041af90abec8b17845b884ce800aa1318843f3dc1c9e392"
+  },
+  "resource_optimization": {
+    "contract_version": "civicflux.research.v1",
+    "component": "resource_optimization",
+    "model_version": "1.1.0",
+    "status": "supported_simulation",
+    "prediction": {
+      "component": "resource_optimizer",
+      "version": "1.0.0",
+      "status": "OPTIMAL",
+      "selected": [
+        {
+          "case_id": "S42-C00",
+          "node_id": "drainage_0",
+          "node_type": "drainage",
+          "urgency": 0.2,
+          "cascade": 1.0,
+          "service": 0.8939484399335369,
+          "equity_proxy": 0.6973680290593639,
+          "environmental_benefit": 0.0941773478876495,
+          "carbon_penalty": 0.975622351636756,
+          "crew_type": "drain",
+          "duration_hours": 4.0,
+          "pumps_required": 0,
+          "cost": 12327,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.4987403769469216
+        },
+        {
+          "case_id": "S42-C02",
+          "node_id": "drainage_2",
+          "node_type": "drainage",
+          "urgency": 0.6,
+          "cascade": 0.3772923935079174,
+          "service": 0.2978629420781314,
+          "equity_proxy": 0.8276311719925821,
+          "environmental_benefit": 0.6316643991220648,
+          "carbon_penalty": 0.7580877400853738,
+          "crew_type": "drain",
+          "duration_hours": 1.0,
+          "pumps_required": 0,
+          "cost": 3882,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.4660210157801381
+        },
+        {
+          "case_id": "S42-C03",
+          "node_id": "drainage_3",
+          "node_type": "drainage",
+          "urgency": 1.0,
+          "cascade": 1.0,
+          "service": 0.8337876228053214,
+          "equity_proxy": 0.1946387078519675,
+          "environmental_benefit": 0.4667210037270342,
+          "carbon_penalty": 0.0438037657872287,
+          "crew_type": "drain",
+          "duration_hours": 3.0,
+          "pumps_required": 0,
+          "cost": 5005,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.7137712930085531
+        },
+        {
+          "case_id": "S42-C04",
+          "node_id": "drainage_4",
+          "node_type": "drainage",
+          "urgency": 1.0,
+          "cascade": 1.0,
+          "service": 0.4943690186036139,
+          "equity_proxy": 0.3704597060348689,
+          "environmental_benefit": 0.4695558112758079,
+          "carbon_penalty": 0.1894713590842857,
+          "crew_type": "drain",
+          "duration_hours": 3.0,
+          "pumps_required": 1,
+          "cost": 11924,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.66540256336311
+        },
+        {
+          "case_id": "S42-C05",
+          "node_id": "drainage_5",
+          "node_type": "drainage",
+          "urgency": 0.6,
+          "cascade": 0.9751625086016972,
+          "service": 0.7523604960118828,
+          "equity_proxy": 0.4371519188723307,
+          "environmental_benefit": 0.8326781960578374,
+          "carbon_penalty": 0.7002651020022491,
+          "crew_type": "drain",
+          "duration_hours": 1.0,
+          "pumps_required": 0,
+          "cost": 7060,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.6509658630621288
+        },
+        {
+          "case_id": "S42-C07",
+          "node_id": "drainage_7",
+          "node_type": "drainage",
+          "urgency": 0.8,
+          "cascade": 1.0,
+          "service": 0.7788740339697513,
+          "equity_proxy": 0.7807290310219679,
+          "environmental_benefit": 0.4589157755383399,
+          "carbon_penalty": 0.5687411959528937,
+          "crew_type": "drain",
+          "duration_hours": 1.0,
+          "pumps_required": 1,
+          "cost": 4817,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.7132844679803518
+        },
+        {
+          "case_id": "S42-C09",
+          "node_id": "road_1",
+          "node_type": "road",
+          "urgency": 0.4,
+          "cascade": 1.0,
+          "service": 0.5775380419242717,
+          "equity_proxy": 0.2145846728195292,
+          "environmental_benefit": 0.4085286437246361,
+          "carbon_penalty": 0.8534030732681661,
+          "crew_type": "road",
+          "duration_hours": 1.0,
+          "pumps_required": 1,
+          "cost": 6041,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.4663044522030709
+        },
+        {
+          "case_id": "S42-C10",
+          "node_id": "road_2",
+          "node_type": "road",
+          "urgency": 1.0,
+          "cascade": 1.0,
+          "service": 0.7464373860451713,
+          "equity_proxy": 0.5570321523412783,
+          "environmental_benefit": 0.7838982091064135,
+          "carbon_penalty": 0.6643135403273875,
+          "crew_type": "road",
+          "duration_hours": 2.0,
+          "pumps_required": 0,
+          "cost": 8433,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.7672113544098187
+        },
+        {
+          "case_id": "S42-C11",
+          "node_id": "road_3",
+          "node_type": "road",
+          "urgency": 1.0,
+          "cascade": 0.1834864599538519,
+          "service": 0.2670340548503953,
+          "equity_proxy": 0.0900478607756417,
+          "environmental_benefit": 0.7223593505964503,
+          "carbon_penalty": 0.4618772302513874,
+          "crew_type": "road",
+          "duration_hours": 3.0,
+          "pumps_required": 0,
+          "cost": 5096,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.4388713231540939
+        },
+        {
+          "case_id": "S42-C14",
+          "node_id": "road_6",
+          "node_type": "road",
+          "urgency": 0.4,
+          "cascade": 1.0,
+          "service": 0.4541811713838692,
+          "equity_proxy": 0.0963909621534993,
+          "environmental_benefit": 0.9026023965438416,
+          "carbon_penalty": 0.455776289833611,
+          "crew_type": "road",
+          "duration_hours": 3.0,
+          "pumps_required": 1,
+          "cost": 12381,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.5178964235896945
+        },
+        {
+          "case_id": "S42-C15",
+          "node_id": "road_7",
+          "node_type": "road",
+          "urgency": 0.4,
+          "cascade": 1.0,
+          "service": 0.3825795872044237,
+          "equity_proxy": 0.8566142840923755,
+          "environmental_benefit": 0.7585195298352101,
+          "carbon_penalty": 0.7194629559509368,
+          "crew_type": "road",
+          "duration_hours": 3.0,
+          "pumps_required": 0,
+          "cost": 8617,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.5828128417324757
+        },
+        {
+          "case_id": "S42-C17",
+          "node_id": "water_1",
+          "node_type": "water",
+          "urgency": 0.2,
+          "cascade": 1.0,
+          "service": 0.6907334291332841,
+          "equity_proxy": 0.1705929685368861,
+          "environmental_benefit": 0.9251201183767972,
+          "carbon_penalty": 0.581061139700395,
+          "crew_type": "water",
+          "duration_hours": 2.0,
+          "pumps_required": 0,
+          "cost": 7509,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.5234505918786896
+        },
+        {
+          "case_id": "S42-C18",
+          "node_id": "water_2",
+          "node_type": "water",
+          "urgency": 0.4,
+          "cascade": 1.0,
+          "service": 0.6117275777071751,
+          "equity_proxy": 0.7827352272502862,
+          "environmental_benefit": 0.0827299999224385,
+          "carbon_penalty": 0.4866583308381603,
+          "crew_type": "water",
+          "duration_hours": 1.0,
+          "pumps_required": 0,
+          "cost": 8735,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.5278323830754357
+        },
+        {
+          "case_id": "S42-C19",
+          "node_id": "water_3",
+          "node_type": "water",
+          "urgency": 1.0,
+          "cascade": 0.8019683896608222,
+          "service": 0.6051170507927154,
+          "equity_proxy": 0.2669756630918936,
+          "environmental_benefit": 0.3315689973425522,
+          "carbon_penalty": 0.5206724024715378,
+          "crew_type": "water",
+          "duration_hours": 4.0,
+          "pumps_required": 1,
+          "cost": 8705,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.5951651670322975
+        },
+        {
+          "case_id": "S42-C20",
+          "node_id": "water_4",
+          "node_type": "water",
+          "urgency": 0.4,
+          "cascade": 1.0,
+          "service": 0.3551868167489581,
+          "equity_proxy": 0.5540361435390494,
+          "environmental_benefit": 0.1085757411354435,
+          "carbon_penalty": 0.6722400930398117,
+          "crew_type": "water",
+          "duration_hours": 4.0,
+          "pumps_required": 1,
+          "cost": 6170,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.436817141398975
+        },
+        {
+          "case_id": "S42-C21",
+          "node_id": "water_5",
+          "node_type": "water",
+          "urgency": 0.8,
+          "cascade": 0.5309736904092982,
+          "service": 0.8264856189382428,
+          "equity_proxy": 0.1077409459558965,
+          "environmental_benefit": 0.916011845137608,
+          "carbon_penalty": 0.2302139908948808,
+          "crew_type": "water",
+          "duration_hours": 1.0,
+          "pumps_required": 0,
+          "cost": 3486,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.6135440809887899
+        },
+        {
+          "case_id": "S42-C26",
+          "node_id": "pump_2",
+          "node_type": "pump",
+          "urgency": 0.8,
+          "cascade": 1.0,
+          "service": 0.9059215306280984,
+          "equity_proxy": 0.1964346657145732,
+          "environmental_benefit": 0.3103236729000947,
+          "carbon_penalty": 0.7774048382411776,
+          "crew_type": "water",
+          "duration_hours": 1.0,
+          "pumps_required": 0,
+          "cost": 9490,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.6183278150057611
+        },
+        {
+          "case_id": "S42-C27",
+          "node_id": "pump_3",
+          "node_type": "pump",
+          "urgency": 0.6,
+          "cascade": 1.0,
+          "service": 0.2604522157811512,
+          "equity_proxy": 0.2296560299988552,
+          "environmental_benefit": 0.131822217786521,
+          "carbon_penalty": 0.6776586736128575,
+          "crew_type": "water",
+          "duration_hours": 4.0,
+          "pumps_required": 0,
+          "cost": 4583,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.4224292466433938
+        },
+        {
+          "case_id": "S42-C28",
+          "node_id": "pump_4",
+          "node_type": "pump",
+          "urgency": 1.0,
+          "cascade": 1.0,
+          "service": 0.3998317387450432,
+          "equity_proxy": 0.8041245261822627,
+          "environmental_benefit": 0.7154071296158017,
+          "carbon_penalty": 0.7389840039155418,
+          "crew_type": "water",
+          "duration_hours": 3.0,
+          "pumps_required": 1,
+          "cost": 8639,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.7209468959229413
+        },
+        {
+          "case_id": "S42-C30",
+          "node_id": "pump_6",
+          "node_type": "pump",
+          "urgency": 1.0,
+          "cascade": 1.0,
+          "service": 0.6663985317451185,
+          "equity_proxy": 0.6339751116810851,
+          "environmental_benefit": 0.1058974037507533,
+          "carbon_penalty": 0.1403395970639126,
+          "crew_type": "water",
+          "duration_hours": 4.0,
+          "pumps_required": 0,
+          "cost": 3084,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.6872436038106039
+        },
+        {
+          "case_id": "S42-C31",
+          "node_id": "pump_7",
+          "node_type": "pump",
+          "urgency": 1.0,
+          "cascade": 1.0,
+          "service": 0.9497674162001584,
+          "equity_proxy": 0.8043609156129707,
+          "environmental_benefit": 0.4673816015552915,
+          "carbon_penalty": 0.7847634492521874,
+          "crew_type": "water",
+          "duration_hours": 4.0,
+          "pumps_required": 1,
+          "cost": 3231,
+          "budget_assumption_currency": "INR (hypothetical)",
+          "scenario_seed": 42,
+          "resource_note": "Synthetic planning assumption; no measured crew or inventory data.",
+          "utility": 0.7914766883526616
+        }
+      ],
+      "objective": 12.418515589339906,
+      "available": {
+        "budget": 150000,
+        "pumps": 8,
+        "crew_hours": {
+          "water": 36,
+          "drain": 30,
+          "road": 24
+        }
+      },
+      "used": {
+        "budget": 149215,
+        "pumps": 8,
+        "crew_hours": {
+          "water": 28.0,
+          "drain": 13.0,
+          "road": 12.0
+        }
+      },
+      "solver_seconds": 0.016322,
+      "approval_required": true,
+      "dispatch_allowed": false,
+      "provenance": "synthetic scenario; user-provided constraints and assumptions"
+    },
+    "uncertainty": null,
+    "provenance": "documented fictional costs, resources and policy factors",
+    "validation_status": "scenario feasibility verified; no real resource inventory",
+    "geographic_scope": "synthetic intervention scenarios",
+    "units": {
+      "budget": "hypothetical INR",
+      "crew_hours": "hours",
+      "pumps": "count"
+    },
+    "horizon": "simultaneous planning window",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Research inference only; independent validation and human review are required."
+    ],
+    "freshness": {
+      "age_hours": 0.0,
+      "clock": "verified timezone"
+    }
+  },
+  "intervention_outcomes": {
+    "contract_version": "civicflux.research.v1",
+    "component": "intervention_outcomes",
+    "model_version": "1.1.0",
+    "status": "supported_simulation",
+    "prediction": {
+      "research_resolution_hours": 17.75858186108582,
+      "success_probability": null,
+      "success_estimation_status": "unsupported for decisions"
+    },
+    "uncertainty": null,
+    "provenance": "seeded, confounded outcome generator; no real verification records",
+    "validation_status": "chronological synthetic holdout; unsupported success prediction, duration research only",
+    "geographic_scope": "synthetic intervention records only",
+    "units": {
+      "cost": "hypothetical INR",
+      "duration": "hours"
+    },
+    "horizon": "completed synthetic outcome",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Synthetic records only; model does not estimate the causal benefit of an intervention.",
+      "Do not use as a real success probability or approval decision.",
+      "Research inference only; independent validation and human review are required."
+    ],
+    "freshness": {
+      "age_hours": 0.0,
+      "clock": "source clock only; timezone unknown"
+    }
+  }
+}

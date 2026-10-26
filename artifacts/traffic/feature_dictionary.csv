@@ -1,0 +1,8 @@
+family,definition
+current,Observation at t; available after reporting
+lag_k,Observed target k intervals before t
+mean_w / std_w,Trailing statistics through t; no future values
+coverage_w / source_missing,"Availability quality at origin, not future quality"
+calendar and cyclic,Known calendar of t+1
+positive_fraction,"Trailing fraction positive, not an incident count"
+entity,Exact state/city/junction identity

@@ -1,0 +1,4 @@
+component,model_MAE,baseline_MAE,baseline,fallback_count,units,paired_n,MAE_skill
+rainfall,2.6911457306516144,2.9368657919293395,persistence; training-mean fallback for missing current,15,mm/day,1098,0.08366744641616808
+aqi,12.79395877651594,18.079558834221615,persistence; training-mean fallback for missing current,0,ug/m3 (working assumption; source unit metadata incomplete),8732,0.292352269553221
+traffic,3.2491634733362216,3.805632582322357,persistence; training-mean fallback for missing current,0,vehicles/hour,11540,0.14622249966300072

@@ -1,0 +1,7 @@
+source,status,labels,decision
+Traffic counts,publisher-described benchmark observations,no verified faults,used independently
+Delhi PM2.5,processed record; measurement lineage unverified,no verified faults,used independently
+Delhi daily rainfall,reported state-level aggregate,no equipment labels,used independently
+Flood scenarios,real rain forcing + synthetic parameters/outcomes,synthetic flood classes,audit only
+Electronics burn-in,synthetic generator in unrelated SAGE project,synthetic electronics labels,excluded
+Municipal pressure/flow/depth,unavailable,unavailable,blocked pending genuine data

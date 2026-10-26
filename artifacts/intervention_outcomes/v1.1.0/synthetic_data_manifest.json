@@ -1,0 +1,21 @@
+{
+  "component": "intervention_outcome_research",
+  "version": "1.0.0",
+  "synthetic": true,
+  "seed": 42,
+  "n": 6000,
+  "period": [
+    "2019-01-01 00:00:00",
+    "2024-12-31 17:00:00"
+  ],
+  "completion_rate": 0.938,
+  "verification_rate": 0.5896666666666667,
+  "success_mechanism": "simulated logistic response to severity/intervention/resource choices; assignment is confounded",
+  "causal_claim": null,
+  "limitations": [
+    "No observed interventions",
+    "No real outcome verification",
+    "No counterfactual outcomes",
+    "Selection bias is built into simulation"
+  ]
+}

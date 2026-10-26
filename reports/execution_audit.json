@@ -1,0 +1,34 @@
+[
+  {
+    "notebook": "01_Rainfall_Research.ipynb",
+    "cells": 107,
+    "executed_code_cells": 46,
+    "figures": 22,
+    "sections": 13,
+    "errors": 0
+  },
+  {
+    "notebook": "02_AQI_Research.ipynb",
+    "cells": 105,
+    "executed_code_cells": 45,
+    "figures": 21,
+    "sections": 13,
+    "errors": 0
+  },
+  {
+    "notebook": "03_Traffic_Research.ipynb",
+    "cells": 107,
+    "executed_code_cells": 46,
+    "figures": 22,
+    "sections": 13,
+    "errors": 0
+  },
+  {
+    "notebook": "04_Flood_Research.ipynb",
+    "cells": 99,
+    "executed_code_cells": 42,
+    "figures": 19,
+    "sections": 13,
+    "errors": 0
+  }
+]

@@ -1,0 +1,264 @@
+{
+  "interface_sha256": "a7da766fa92c8387012519fc80847c935663ddbbcf474661690940741ba79d6c",
+  "artifact_sha256": "195a19a6135d469f7818b5dfea735c0877f998daec0aed13b2cdd09f126427a2",
+  "component": "intervention_outcomes",
+  "fresh_process": true,
+  "jupyter_imported": false,
+  "python": "/Users/jiyahooda/Documents/New project/civicflux_ml/.venv/bin/python",
+  "positive": {
+    "contract_version": "civicflux.research.v1",
+    "component": "intervention_outcomes",
+    "model_version": "1.1.0",
+    "status": "supported_simulation",
+    "prediction": {
+      "research_resolution_hours": 17.75858186108582,
+      "success_probability": null,
+      "success_estimation_status": "unsupported for decisions"
+    },
+    "uncertainty": null,
+    "provenance": "seeded, confounded outcome generator; no real verification records",
+    "validation_status": "chronological synthetic holdout; unsupported success prediction, duration research only",
+    "geographic_scope": "synthetic intervention records only",
+    "units": {
+      "cost": "hypothetical INR",
+      "duration": "hours"
+    },
+    "horizon": "completed synthetic outcome",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Synthetic records only; model does not estimate the causal benefit of an intervention.",
+      "Do not use as a real success probability or approval decision.",
+      "Research inference only; independent validation and human review are required."
+    ],
+    "freshness": {
+      "age_hours": 0.0,
+      "clock": "source clock only; timezone unknown"
+    }
+  },
+  "negative_cases": {
+    "wrong_units": {
+      "contract_version": "civicflux.research.v1",
+      "component": "intervention_outcomes",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded, confounded outcome generator; no real verification records",
+      "validation_status": "chronological synthetic holdout; unsupported success prediction, duration research only",
+      "geographic_scope": "synthetic intervention records only",
+      "units": {
+        "cost": "hypothetical INR",
+        "duration": "hours"
+      },
+      "horizon": "completed synthetic outcome",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unit contract mismatch"
+      ]
+    },
+    "wrong_scope": {
+      "contract_version": "civicflux.research.v1",
+      "component": "intervention_outcomes",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded, confounded outcome generator; no real verification records",
+      "validation_status": "chronological synthetic holdout; unsupported success prediction, duration research only",
+      "geographic_scope": "synthetic intervention records only",
+      "units": {
+        "cost": "hypothetical INR",
+        "duration": "hours"
+      },
+      "horizon": "completed synthetic outcome",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unsupported geographic/entity scope"
+      ]
+    },
+    "wrong_horizon": {
+      "contract_version": "civicflux.research.v1",
+      "component": "intervention_outcomes",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded, confounded outcome generator; no real verification records",
+      "validation_status": "chronological synthetic holdout; unsupported success prediction, duration research only",
+      "geographic_scope": "synthetic intervention records only",
+      "units": {
+        "cost": "hypothetical INR",
+        "duration": "hours"
+      },
+      "horizon": "completed synthetic outcome",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Horizon contract mismatch"
+      ]
+    },
+    "operational": {
+      "contract_version": "civicflux.research.v1",
+      "component": "intervention_outcomes",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded, confounded outcome generator; no real verification records",
+      "validation_status": "chronological synthetic holdout; unsupported success prediction, duration research only",
+      "geographic_scope": "synthetic intervention records only",
+      "units": {
+        "cost": "hypothetical INR",
+        "duration": "hours"
+      },
+      "horizon": "completed synthetic outcome",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Operational prediction/dispatch is unsupported"
+      ]
+    },
+    "stale": {
+      "contract_version": "civicflux.research.v1",
+      "component": "intervention_outcomes",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded, confounded outcome generator; no real verification records",
+      "validation_status": "chronological synthetic holdout; unsupported success prediction, duration research only",
+      "geographic_scope": "synthetic intervention records only",
+      "units": {
+        "cost": "hypothetical INR",
+        "duration": "hours"
+      },
+      "horizon": "completed synthetic outcome",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Stale inputs relative to explicit historical/simulation clock"
+      ]
+    },
+    "missing_payload": {
+      "contract_version": "civicflux.research.v1",
+      "component": "intervention_outcomes",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded, confounded outcome generator; no real verification records",
+      "validation_status": "chronological synthetic holdout; unsupported success prediction, duration research only",
+      "geographic_scope": "synthetic intervention records only",
+      "units": {
+        "cost": "hypothetical INR",
+        "duration": "hours"
+      },
+      "horizon": "completed synthetic outcome",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "'record'"
+      ],
+      "freshness": {
+        "age_hours": 0.0,
+        "clock": "source clock only; timezone unknown"
+      }
+    },
+    "false_provenance": {
+      "contract_version": "civicflux.research.v1",
+      "component": "intervention_outcomes",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded, confounded outcome generator; no real verification records",
+      "validation_status": "chronological synthetic holdout; unsupported success prediction, duration research only",
+      "geographic_scope": "synthetic intervention records only",
+      "units": {
+        "cost": "hypothetical INR",
+        "duration": "hours"
+      },
+      "horizon": "completed synthetic outcome",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Explicit synthetic provenance is required"
+      ]
+    },
+    "unknown_intervention": {
+      "contract_version": "civicflux.research.v1",
+      "component": "intervention_outcomes",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded, confounded outcome generator; no real verification records",
+      "validation_status": "chronological synthetic holdout; unsupported success prediction, duration research only",
+      "geographic_scope": "synthetic intervention records only",
+      "units": {
+        "cost": "hypothetical INR",
+        "duration": "hours"
+      },
+      "horizon": "completed synthetic outcome",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unknown intervention type"
+      ],
+      "freshness": {
+        "age_hours": 0.0,
+        "clock": "source clock only; timezone unknown"
+      }
+    },
+    "missing_planned_cost": {
+      "contract_version": "civicflux.research.v1",
+      "component": "intervention_outcomes",
+      "model_version": "1.1.0",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "seeded, confounded outcome generator; no real verification records",
+      "validation_status": "chronological synthetic holdout; unsupported success prediction, duration research only",
+      "geographic_scope": "synthetic intervention records only",
+      "units": {
+        "cost": "hypothetical INR",
+        "duration": "hours"
+      },
+      "horizon": "completed synthetic outcome",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "float() argument must be a string or a real number, not 'NoneType'"
+      ],
+      "freshness": {
+        "age_hours": 0.0,
+        "clock": "source clock only; timezone unknown"
+      }
+    }
+  },
+  "sensor_results": {},
+  "passed": true
+}

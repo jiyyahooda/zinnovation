@@ -1,0 +1,24 @@
+[
+  {
+    "stage": "scenario_origin",
+    "source": "declared synthetic pump outage; not inferred from rainfall/water/outcome scores",
+    "graph_id": "synthetic-civic-42",
+    "graph_fingerprint": "0b508b5f61376876d041af90abec8b17845b884ce800aa1318843f3dc1c9e392"
+  },
+  {
+    "stage": "cascade",
+    "status": "supported_simulation",
+    "interpretation": "synthetic node evidence only"
+  },
+  {
+    "stage": "optimization",
+    "status": "research proposals",
+    "human_approval": "pending",
+    "dispatch_allowed": false
+  },
+  {
+    "stage": "outcome_verification",
+    "status": "abstained",
+    "reason": "Simulation outcomes cannot be promoted to real verified outcomes"
+  }
+]

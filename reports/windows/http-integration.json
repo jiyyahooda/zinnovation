@@ -1,0 +1,67 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "bytes": 418
+  },
+  {
+    "path": "/api/health",
+    "status": 200,
+    "bytes": 63
+  },
+  {
+    "path": "/api/models",
+    "status": 200,
+    "bytes": 13284
+  },
+  {
+    "path": "/api/cities",
+    "status": 200,
+    "bytes": 695
+  },
+  {
+    "path": "/api/observations?city_id=delhi",
+    "status": 200,
+    "bytes": 402
+  },
+  {
+    "path": "/api/scenarios/graph",
+    "status": 200,
+    "bytes": 16350
+  },
+  {
+    "path": "/api/scenarios/defaults",
+    "status": 200,
+    "bytes": 366
+  },
+  {
+    "path": "/api/scenarios",
+    "status": 200,
+    "bytes": 44458
+  },
+  {
+    "path": "/api/feedback",
+    "status": 200,
+    "bytes": 33
+  },
+  {
+    "path": "/api/complaints",
+    "status": 200,
+    "bytes": 2
+  },
+  {
+    "path": "/api/predictions/rainfall/example",
+    "status": 200,
+    "bytes": 1112
+  },
+  {
+    "path": "/api/predictions/aqi/example",
+    "status": 200,
+    "bytes": 1216
+  },
+  {
+    "path": "/openapi.json",
+    "status": 200,
+    "bytes": 13841
+  }
+]

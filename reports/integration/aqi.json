@@ -1,0 +1,214 @@
+{
+  "interface_sha256": "a7da766fa92c8387012519fc80847c935663ddbbcf474661690940741ba79d6c",
+  "artifact_sha256": "84db2cfbb7ce5aa7205bd11c77b538f65dd3076de82748aa157b24ce41b2065b",
+  "component": "aqi",
+  "fresh_process": true,
+  "jupyter_imported": false,
+  "python": "/Users/jiyahooda/Documents/New project/civicflux_ml/.venv/bin/python",
+  "positive": {
+    "contract_version": "civicflux.research.v1",
+    "component": "aqi",
+    "model_version": "legacy-unversioned",
+    "status": "supported_research",
+    "prediction": [
+      {
+        "entity": "Delhi",
+        "time": "2023-01-02 04:00:00+05:30",
+        "target_time": "2023-01-02 05:00:00+05:30",
+        "prediction": 66.47396087185585,
+        "source_missing": 0
+      }
+    ],
+    "uncertainty": {
+      "method": "calibration-period pooled absolute residual radius; no conditional coverage guarantee",
+      "level": 0.9,
+      "intervals": [
+        {
+          "entity": "Delhi",
+          "lower_90": 39.69031695717594,
+          "upper_90": 93.25760478653577
+        }
+      ]
+    },
+    "provenance": "publisher-described measurements; station lineage and real/synthetic status unverified",
+    "validation_status": "research; measurement lineage and reporting delays need validation",
+    "geographic_scope": "Delhi aggregate (station lineage unverified)",
+    "units": "ug/m3 (working assumption; source unit metadata incomplete)",
+    "horizon": "next hour PM2.5",
+    "research_only": true,
+    "operational_supported": false,
+    "allocation_eligible": false,
+    "dispatch_allowed": false,
+    "warnings": [
+      "Research inference only; independent validation and human review are required."
+    ],
+    "freshness": {
+      "age_hours": 0.0,
+      "clock": "verified timezone"
+    }
+  },
+  "negative_cases": {
+    "wrong_units": {
+      "contract_version": "civicflux.research.v1",
+      "component": "aqi",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "publisher-described measurements; station lineage and real/synthetic status unverified",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "Delhi aggregate (station lineage unverified)",
+      "units": "ug/m3 (working assumption; source unit metadata incomplete)",
+      "horizon": "next hour PM2.5",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unit contract mismatch"
+      ]
+    },
+    "wrong_scope": {
+      "contract_version": "civicflux.research.v1",
+      "component": "aqi",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "publisher-described measurements; station lineage and real/synthetic status unverified",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "Delhi aggregate (station lineage unverified)",
+      "units": "ug/m3 (working assumption; source unit metadata incomplete)",
+      "horizon": "next hour PM2.5",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unsupported geographic/entity scope"
+      ]
+    },
+    "wrong_horizon": {
+      "contract_version": "civicflux.research.v1",
+      "component": "aqi",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "publisher-described measurements; station lineage and real/synthetic status unverified",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "Delhi aggregate (station lineage unverified)",
+      "units": "ug/m3 (working assumption; source unit metadata incomplete)",
+      "horizon": "next hour PM2.5",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Horizon contract mismatch"
+      ]
+    },
+    "operational": {
+      "contract_version": "civicflux.research.v1",
+      "component": "aqi",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "publisher-described measurements; station lineage and real/synthetic status unverified",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "Delhi aggregate (station lineage unverified)",
+      "units": "ug/m3 (working assumption; source unit metadata incomplete)",
+      "horizon": "next hour PM2.5",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Operational prediction/dispatch is unsupported"
+      ]
+    },
+    "stale": {
+      "contract_version": "civicflux.research.v1",
+      "component": "aqi",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "publisher-described measurements; station lineage and real/synthetic status unverified",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "Delhi aggregate (station lineage unverified)",
+      "units": "ug/m3 (working assumption; source unit metadata incomplete)",
+      "horizon": "next hour PM2.5",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Stale inputs relative to explicit historical/simulation clock"
+      ]
+    },
+    "missing_payload": {
+      "contract_version": "civicflux.research.v1",
+      "component": "aqi",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "publisher-described measurements; station lineage and real/synthetic status unverified",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "Delhi aggregate (station lineage unverified)",
+      "units": "ug/m3 (working assumption; source unit metadata incomplete)",
+      "horizon": "next hour PM2.5",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "'history'"
+      ]
+    },
+    "missing_current_reading": {
+      "contract_version": "civicflux.research.v1",
+      "component": "aqi",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "publisher-described measurements; station lineage and real/synthetic status unverified",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "Delhi aggregate (station lineage unverified)",
+      "units": "ug/m3 (working assumption; source unit metadata incomplete)",
+      "horizon": "next hour PM2.5",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Missing current reading or excessive gaps"
+      ]
+    },
+    "unknown_entity": {
+      "contract_version": "civicflux.research.v1",
+      "component": "aqi",
+      "model_version": "legacy-unversioned",
+      "status": "abstained",
+      "prediction": null,
+      "uncertainty": null,
+      "provenance": "publisher-described measurements; station lineage and real/synthetic status unverified",
+      "validation_status": "research; measurement lineage and reporting delays need validation",
+      "geographic_scope": "Delhi aggregate (station lineage unverified)",
+      "units": "ug/m3 (working assumption; source unit metadata incomplete)",
+      "horizon": "next hour PM2.5",
+      "research_only": true,
+      "operational_supported": false,
+      "allocation_eligible": false,
+      "dispatch_allowed": false,
+      "warnings": [
+        "Unsupported entity identity"
+      ]
+    }
+  },
+  "sensor_results": {},
+  "passed": true
+}

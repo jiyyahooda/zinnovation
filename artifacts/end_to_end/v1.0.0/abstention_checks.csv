@@ -1,0 +1,76 @@
+component,case,status,prediction_is_null,reason
+rainfall,wrong_units,abstained,True,Unit contract mismatch
+rainfall,wrong_scope,abstained,True,Unsupported geographic/entity scope
+rainfall,wrong_horizon,abstained,True,Horizon contract mismatch
+rainfall,operational,abstained,True,Operational prediction/dispatch is unsupported
+rainfall,stale,abstained,True,Stale inputs relative to explicit historical/simulation clock
+rainfall,missing_payload,abstained,True,'history'
+rainfall,missing_current_reading,abstained,True,Missing current reading or excessive gaps
+rainfall,unknown_entity,abstained,True,Unsupported entity identity
+aqi,wrong_units,abstained,True,Unit contract mismatch
+aqi,wrong_scope,abstained,True,Unsupported geographic/entity scope
+aqi,wrong_horizon,abstained,True,Horizon contract mismatch
+aqi,operational,abstained,True,Operational prediction/dispatch is unsupported
+aqi,stale,abstained,True,Stale inputs relative to explicit historical/simulation clock
+aqi,missing_payload,abstained,True,'history'
+aqi,missing_current_reading,abstained,True,Missing current reading or excessive gaps
+aqi,unknown_entity,abstained,True,Unsupported entity identity
+traffic,wrong_units,abstained,True,Unit contract mismatch
+traffic,wrong_scope,abstained,True,Unsupported geographic/entity scope
+traffic,wrong_horizon,abstained,True,Horizon contract mismatch
+traffic,operational,abstained,True,Operational prediction/dispatch is unsupported
+traffic,stale,abstained,True,Stale inputs relative to explicit historical/simulation clock
+traffic,missing_payload,abstained,True,'history'
+traffic,missing_current_reading,abstained,True,Missing current reading or excessive gaps
+traffic,unknown_entity,abstained,True,Unsupported entity identity
+flood,wrong_units,abstained,True,Unit contract mismatch
+flood,wrong_scope,abstained,True,Unsupported geographic/entity scope
+flood,wrong_horizon,abstained,True,Horizon contract mismatch
+flood,operational,abstained,True,Operational prediction/dispatch is unsupported
+flood,stale,abstained,True,Stale inputs relative to explicit historical/simulation clock
+flood,missing_payload,abstained,True,'scenarios'
+flood,false_provenance,abstained,True,Explicit synthetic provenance is required
+infrastructure_anomaly,wrong_units,abstained,True,Unit contract mismatch
+infrastructure_anomaly,wrong_scope,abstained,True,Unsupported geographic/entity scope
+infrastructure_anomaly,wrong_horizon,abstained,True,Horizon contract mismatch
+infrastructure_anomaly,operational,abstained,True,Operational prediction/dispatch is unsupported
+infrastructure_anomaly,stale,abstained,True,Stale inputs relative to explicit historical/simulation clock
+infrastructure_anomaly,missing_payload,abstained,True,'history'
+infrastructure_anomaly,unknown_sensor,abstained,True,Unknown sensor identity
+infrastructure_anomaly,sensor_unit_mismatch,abstained,True,Sensor-specific unit mismatch
+water_network,wrong_units,abstained,True,Unit contract mismatch
+water_network,wrong_scope,abstained,True,Unsupported geographic/entity scope
+water_network,wrong_horizon,abstained,True,Horizon contract mismatch
+water_network,operational,abstained,True,Operational prediction/dispatch is unsupported
+water_network,stale,abstained,True,Stale inputs relative to explicit historical/simulation clock
+water_network,missing_payload,abstained,True,'measurements'
+water_network,false_provenance,abstained,True,Explicit synthetic provenance is required
+water_network,missing_current_readings,abstained,True,More than 10% of current readings missing/invalid; abstained.
+water_network,unknown_network,abstained,True,Unsupported network or units; abstained.
+cascade_risk,wrong_units,abstained,True,Unit contract mismatch
+cascade_risk,wrong_scope,abstained,True,Unsupported geographic/entity scope
+cascade_risk,wrong_horizon,abstained,True,Horizon contract mismatch
+cascade_risk,operational,abstained,True,Operational prediction/dispatch is unsupported
+cascade_risk,stale,abstained,True,Stale inputs relative to explicit historical/simulation clock
+cascade_risk,missing_payload,abstained,True,'graph'
+cascade_risk,false_provenance,abstained,True,Explicit synthetic provenance is required
+cascade_risk,outside_load_support,abstained,True,"Load outside supported scenario range [.5,1.5]"
+cascade_risk,naive_snapshot_clock,abstained,True,Clock timezone mismatch
+resource_optimization,wrong_units,abstained,True,Unit contract mismatch
+resource_optimization,wrong_scope,abstained,True,Unsupported geographic/entity scope
+resource_optimization,wrong_horizon,abstained,True,Horizon contract mismatch
+resource_optimization,operational,abstained,True,Operational prediction/dispatch is unsupported
+resource_optimization,stale,abstained,True,Stale inputs relative to explicit historical/simulation clock
+resource_optimization,missing_payload,abstained,True,'cases'
+resource_optimization,false_provenance,abstained,True,Explicit synthetic provenance is required
+resource_optimization,unsupported_success_score,abstained,True,Unsupported success estimates cannot drive allocation
+resource_optimization,negative_capacity,abstained,True,Invalid capacity
+intervention_outcomes,wrong_units,abstained,True,Unit contract mismatch
+intervention_outcomes,wrong_scope,abstained,True,Unsupported geographic/entity scope
+intervention_outcomes,wrong_horizon,abstained,True,Horizon contract mismatch
+intervention_outcomes,operational,abstained,True,Operational prediction/dispatch is unsupported
+intervention_outcomes,stale,abstained,True,Stale inputs relative to explicit historical/simulation clock
+intervention_outcomes,missing_payload,abstained,True,'record'
+intervention_outcomes,false_provenance,abstained,True,Explicit synthetic provenance is required
+intervention_outcomes,unknown_intervention,abstained,True,Unknown intervention type
+intervention_outcomes,missing_planned_cost,abstained,True,"float() argument must be a string or a real number, not 'NoneType'"

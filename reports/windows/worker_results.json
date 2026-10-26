@@ -1,0 +1,50 @@
+[
+  {
+    "component": "aqi",
+    "exit_code": 0,
+    "stdout": "{\"component\": \"aqi\", \"status\": \"supported_research\", \"negative_cases\": 8, \"passed\": true}\n",
+    "stderr": ""
+  },
+  {
+    "component": "traffic",
+    "exit_code": 1,
+    "stdout": "{\"component\": \"traffic\", \"status\": \"abstained\", \"negative_cases\": 8, \"passed\": false}\n",
+    "stderr": ""
+  },
+  {
+    "component": "flood",
+    "exit_code": 1,
+    "stdout": "{\"component\": \"flood\", \"status\": \"abstained\", \"negative_cases\": 7, \"passed\": false}\n",
+    "stderr": ""
+  },
+  {
+    "component": "infrastructure_anomaly",
+    "exit_code": 0,
+    "stdout": "{\"component\": \"infrastructure_anomaly\", \"status\": \"supported_research\", \"negative_cases\": 8, \"passed\": true}\n",
+    "stderr": ""
+  },
+  {
+    "component": "water_network",
+    "exit_code": 0,
+    "stdout": "{\"component\": \"water_network\", \"status\": \"supported_simulation\", \"negative_cases\": 9, \"passed\": true}\n",
+    "stderr": ""
+  },
+  {
+    "component": "cascade_risk",
+    "exit_code": 0,
+    "stdout": "{\"component\": \"cascade_risk\", \"status\": \"supported_simulation\", \"negative_cases\": 9, \"passed\": true}\n",
+    "stderr": ""
+  },
+  {
+    "component": "resource_optimization",
+    "exit_code": 0,
+    "stdout": "{\"component\": \"resource_optimization\", \"status\": \"supported_simulation\", \"negative_cases\": 9, \"passed\": true}\n",
+    "stderr": ""
+  },
+  {
+    "component": "intervention_outcomes",
+    "exit_code": 0,
+    "stdout": "{\"component\": \"intervention_outcomes\", \"status\": \"supported_simulation\", \"negative_cases\": 9, \"passed\": true}\n",
+    "stderr": ""
+  }
+]

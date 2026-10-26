@@ -1,0 +1,208 @@
+{
+  "component": "cascade_risk",
+  "version": "1.1.0",
+  "horizon_minutes": 60,
+  "observation_time": "2026-10-25T00:00:00+00:00",
+  "graph_id": "synthetic-civic-100",
+  "graph_fingerprint": "89aff1766c496c0fba9e3514050502e40f875b8a51201ce911a013aee430d7e8",
+  "synthetic": true,
+  "research_only": true,
+  "provenance": "Independent-cascade simulation on hypothetical service dependency graphs",
+  "dispatch_allowed": false,
+  "warnings": [
+    "Simulation-trained risks are not real-world failure probabilities.",
+    "No verified municipal topology or incident labels."
+  ],
+  "nodes": [
+    {
+      "node_id": "drainage_0",
+      "risk": 8.50396504796576e-55,
+      "review": false
+    },
+    {
+      "node_id": "drainage_1",
+      "risk": 0.017445109008239215,
+      "review": false
+    },
+    {
+      "node_id": "drainage_2",
+      "risk": 0.5305351831121328,
+      "review": true
+    },
+    {
+      "node_id": "drainage_4",
+      "risk": 0.05790985017152349,
+      "review": false
+    },
+    {
+      "node_id": "drainage_5",
+      "risk": 0.06196276951988035,
+      "review": false
+    },
+    {
+      "node_id": "drainage_6",
+      "risk": 0.7084337626102081,
+      "review": true
+    },
+    {
+      "node_id": "drainage_7",
+      "risk": 0.037770307522431976,
+      "review": false
+    },
+    {
+      "node_id": "road_0",
+      "risk": 0.14536578388779778,
+      "review": false
+    },
+    {
+      "node_id": "road_1",
+      "risk": 9.086447862287529e-55,
+      "review": false
+    },
+    {
+      "node_id": "road_2",
+      "risk": 0.10083720624246578,
+      "review": false
+    },
+    {
+      "node_id": "road_3",
+      "risk": 0.14811439088458228,
+      "review": false
+    },
+    {
+      "node_id": "road_4",
+      "risk": 0.3757094131268845,
+      "review": true
+    },
+    {
+      "node_id": "road_5",
+      "risk": 0.4507936666916197,
+      "review": true
+    },
+    {
+      "node_id": "road_6",
+      "risk": 1.3672555849490075e-54,
+      "review": false
+    },
+    {
+      "node_id": "road_7",
+      "risk": 0.19953577650142426,
+      "review": true
+    },
+    {
+      "node_id": "water_0",
+      "risk": 0.03698059112318378,
+      "review": false
+    },
+    {
+      "node_id": "water_1",
+      "risk": 7.278493703300808e-55,
+      "review": false
+    },
+    {
+      "node_id": "water_2",
+      "risk": 1.084017022277961e-54,
+      "review": false
+    },
+    {
+      "node_id": "water_3",
+      "risk": 0.821746769156081,
+      "review": true
+    },
+    {
+      "node_id": "water_4",
+      "risk": 0.08562895150547195,
+      "review": false
+    },
+    {
+      "node_id": "water_5",
+      "risk": 0.036098220819765096,
+      "review": false
+    },
+    {
+      "node_id": "water_6",
+      "risk": 0.43191384944449557,
+      "review": true
+    },
+    {
+      "node_id": "water_7",
+      "risk": 0.027094020350205892,
+      "review": false
+    },
+    {
+      "node_id": "pump_1",
+      "risk": 0.22246427741327496,
+      "review": true
+    },
+    {
+      "node_id": "pump_2",
+      "risk": 0.031007558106015347,
+      "review": false
+    },
+    {
+      "node_id": "pump_3",
+      "risk": 0.1993001807601521,
+      "review": true
+    },
+    {
+      "node_id": "pump_4",
+      "risk": 0.22598300854438547,
+      "review": true
+    },
+    {
+      "node_id": "pump_5",
+      "risk": 0.05464494649192084,
+      "review": false
+    },
+    {
+      "node_id": "pump_6",
+      "risk": 0.04216350497171745,
+      "review": false
+    },
+    {
+      "node_id": "pump_7",
+      "risk": 0.18689195423083552,
+      "review": true
+    },
+    {
+      "node_id": "facility_0",
+      "risk": 0.2001092518526326,
+      "review": true
+    },
+    {
+      "node_id": "facility_1",
+      "risk": 0.05152580555737124,
+      "review": false
+    },
+    {
+      "node_id": "facility_2",
+      "risk": 0.03199410365869401,
+      "review": false
+    },
+    {
+      "node_id": "facility_3",
+      "risk": 0.12327433876255364,
+      "review": false
+    },
+    {
+      "node_id": "facility_4",
+      "risk": 0.14218563238916188,
+      "review": false
+    },
+    {
+      "node_id": "facility_5",
+      "risk": 0.0388949463626476,
+      "review": false
+    },
+    {
+      "node_id": "facility_6",
+      "risk": 0.22202000982019704,
+      "review": true
+    },
+    {
+      "node_id": "facility_7",
+      "risk": 0.10313422352854114,
+      "review": false
+    }
+  ]
+}

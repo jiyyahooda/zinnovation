@@ -1,0 +1,54 @@
+{
+  "component": "intervention_outcome_research",
+  "version": "1.0.0",
+  "source_type": "synthetic",
+  "selected_success_model": "Random Forest",
+  "selected_duration_model": "Ridge",
+  "features": [
+    "intervention_type",
+    "initial_severity",
+    "planned_crew_type",
+    "planned_crew_count",
+    "planned_pump_count",
+    "planned_cost",
+    "risk_score_at_assignment"
+  ],
+  "success_metrics": {
+    "average_precision": 0.6189174272836088,
+    "ROC_AUC": 0.5707869624061447,
+    "Brier": 0.2574041833672511,
+    "precision": 0.5453216374269005,
+    "recall": 1.0,
+    "F1": 0.7057710501419111,
+    "threshold": 0.05,
+    "test_n": 684,
+    "test_prevalence": 0.5453216374269005,
+    "synthetic": true
+  },
+  "duration_metric": "Ridge",
+  "synthetic_data_manifest": {
+    "component": "intervention_outcome_research",
+    "version": "1.0.0",
+    "synthetic": true,
+    "seed": 42,
+    "n": 6000,
+    "period": [
+      "2019-01-01 00:00:00",
+      "2024-12-31 17:00:00"
+    ],
+    "completion_rate": 0.938,
+    "verification_rate": 0.5896666666666667,
+    "success_mechanism": "simulated logistic response to severity/intervention/resource choices; assignment is confounded",
+    "causal_claim": null,
+    "limitations": [
+      "No observed interventions",
+      "No real outcome verification",
+      "No counterfactual outcomes",
+      "Selection bias is built into simulation"
+    ]
+  },
+  "causal_effect_estimate": null,
+  "auto_approve": false,
+  "dispatch_allowed": false,
+  "duration_log1p": true
+}

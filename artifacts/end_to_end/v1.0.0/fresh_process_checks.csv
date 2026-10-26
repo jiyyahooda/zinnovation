@@ -1,0 +1,10 @@
+component,return_code,stdout,stderr,passed,jupyter_imported,positive_status,negative_cases,registered_sensor_suites
+rainfall,0,"{""component"": ""rainfall"", ""status"": ""supported_research"", ""negative_cases"": 8, ""passed"": true}",,True,False,supported_research,8,0
+aqi,0,"{""component"": ""aqi"", ""status"": ""supported_research"", ""negative_cases"": 8, ""passed"": true}",,True,False,supported_research,8,0
+traffic,0,"{""component"": ""traffic"", ""status"": ""supported_research"", ""negative_cases"": 8, ""passed"": true}",,True,False,supported_research,8,0
+flood,0,"{""component"": ""flood"", ""status"": ""supported_simulation"", ""negative_cases"": 7, ""passed"": true}",,True,False,supported_simulation,7,0
+infrastructure_anomaly,0,"{""component"": ""infrastructure_anomaly"", ""status"": ""supported_research"", ""negative_cases"": 8, ""passed"": true}",,True,False,supported_research,8,5
+water_network,0,"{""component"": ""water_network"", ""status"": ""supported_simulation"", ""negative_cases"": 9, ""passed"": true}",,True,False,supported_simulation,9,0
+cascade_risk,0,"{""component"": ""cascade_risk"", ""status"": ""supported_simulation"", ""negative_cases"": 9, ""passed"": true}",,True,False,supported_simulation,9,0
+resource_optimization,0,"{""component"": ""resource_optimization"", ""status"": ""supported_simulation"", ""negative_cases"": 9, ""passed"": true}",,True,False,supported_simulation,9,0
+intervention_outcomes,0,"{""component"": ""intervention_outcomes"", ""status"": ""supported_simulation"", ""negative_cases"": 9, ""passed"": true}",,True,False,supported_simulation,9,0

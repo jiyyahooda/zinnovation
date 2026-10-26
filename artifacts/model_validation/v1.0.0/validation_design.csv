@@ -1,0 +1,8 @@
+component,design,limitation
+rainfall/aqi/traffic,"chronological, purged horizon",source latency and lineage unverified
+flood,forcing-date grouped chronological,uncalibrated synthetic hydrology
+anomaly,"historical fit, later observations and injection fixtures",no verified equipment-fault labels
+water,2018 train/validation; 2019 test,only two validation onsets; temporal shift
+cascade,event grouped; unseen graph seeds,same synthetic mechanism family
+optimizer,identical hard constraints across methods,synthetic costs and equity/environment assumptions
+outcomes,chronological assignment; validation-only duration choice,"synthetic noisy, confounded and completion-selected"

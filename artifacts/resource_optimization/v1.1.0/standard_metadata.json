@@ -1,0 +1,64 @@
+{
+  "contract_version": "civicflux.research.v1",
+  "component": "resource_optimization",
+  "artifact_version": "v1.1.0",
+  "component_kind": "OR-Tools CP-SAT + feasible greedy baselines",
+  "geographic_scope": "synthetic intervention scenarios",
+  "units": {
+    "budget": "hypothetical INR",
+    "crew_hours": "hours",
+    "pumps": "count"
+  },
+  "horizon": "one simultaneous allocation window",
+  "provenance": "documented fictional costs, resources and policy factors",
+  "supported_inputs": {
+    "cases": "finite factors in [0,1], integer costs/pump counts",
+    "resources": "nonnegative capacities"
+  },
+  "validation_status": "scenario feasibility verified; no real resource inventory",
+  "operational_supported": false,
+  "research_only": true,
+  "automatic_dispatch": false,
+  "artifacts": {
+    "approval_envelope_example.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/resource_optimization/v1.1.0/approval_envelope_example.json",
+      "sha256": "9b2a84dde57967db280e26dc3124e357939e3b6c7cb0bfcc41b68e470b359aad"
+    },
+    "feature_schema.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/resource_optimization/v1.1.0/feature_schema.json",
+      "sha256": "d26dbe3e2ba684d1ef72a5276e61de43d94bb0aaf97cffacd7902e6acbecedd3"
+    },
+    "method_comparison.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/resource_optimization/v1.1.0/method_comparison.csv",
+      "sha256": "4da89d6df46957c88139c7f0f032d8cf26a5ef026c7332da2161bf6bebf5f188"
+    },
+    "metrics.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/resource_optimization/v1.1.0/metrics.csv",
+      "sha256": "4da89d6df46957c88139c7f0f032d8cf26a5ef026c7332da2161bf6bebf5f188"
+    },
+    "optimization_results.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/resource_optimization/v1.1.0/optimization_results.json",
+      "sha256": "3226ab1ea1c00ab5b94603650a707b95ec7e7ad157d668e6ff15cacdf1325456"
+    },
+    "scenario_candidates.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/resource_optimization/v1.1.0/scenario_candidates.csv",
+      "sha256": "684fa3328f60d6ec4962417517da18dfe95c3b0145489b54d46b9a881eae2d4e"
+    },
+    "scenario_manifest.json": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/resource_optimization/v1.1.0/scenario_manifest.json",
+      "sha256": "6da4fec8946a6dd2c6a35f1fb76019695746d0684c871188e7e676c0894ce839"
+    },
+    "scenario_stress.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/resource_optimization/v1.1.0/scenario_stress.csv",
+      "sha256": "ba1197da2e2552b38854fe9543646594b86ad8e7859111abcd5fa9122859ad48"
+    },
+    "selected_explanations.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/resource_optimization/v1.1.0/selected_explanations.csv",
+      "sha256": "a94e782a67ef6eb224402ed2431fdcf2f7f283df13cf7a9ad33ca3f37777d4c6"
+    },
+    "weight_sensitivity.csv": {
+      "path": "/Users/jiyahooda/Documents/New project/civicflux_ml/artifacts/resource_optimization/v1.1.0/weight_sensitivity.csv",
+      "sha256": "88b6125c78095516a1b4d408b7bc681615eb2e2e477e1795f0dd9180b8e7bc9b"
+    }
+  }
+}

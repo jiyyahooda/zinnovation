@@ -1,0 +1,23 @@
+{
+  "contract_version": "civicflux.research.v1",
+  "component": "resource_optimization",
+  "artifact_version": "v1.1.0",
+  "component_kind": "OR-Tools CP-SAT + feasible greedy baselines",
+  "geographic_scope": "synthetic intervention scenarios",
+  "units": {
+    "budget": "hypothetical INR",
+    "crew_hours": "hours",
+    "pumps": "count"
+  },
+  "horizon": "one simultaneous allocation window",
+  "provenance": "documented fictional costs, resources and policy factors",
+  "supported_inputs": {
+    "cases": "finite factors in [0,1], integer costs/pump counts",
+    "resources": "nonnegative capacities"
+  },
+  "validation_status": "scenario feasibility verified; no real resource inventory",
+  "operational_supported": false,
+  "research_only": true,
+  "automatic_dispatch": false,
+  "version": "1.1.0"
+}

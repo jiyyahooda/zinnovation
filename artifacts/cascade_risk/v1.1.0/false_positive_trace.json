@@ -1,0 +1,59 @@
+{
+  "node_id": "facility_3",
+  "horizon_minutes": 60,
+  "paths": [
+    {
+      "initial_node": "drainage_3",
+      "path": [
+        "drainage_3",
+        "road_1",
+        "facility_3"
+      ],
+      "arrival_minutes_if_transmitted": 40,
+      "within_horizon": true,
+      "single_path_transmission_product": 0.16906507261223536,
+      "steps": [
+        {
+          "provider": "drainage_3",
+          "dependent": "road_1",
+          "edge_weight": 0.6841781849837739,
+          "delay_minutes": 20,
+          "target_resilience": 0.5826349936883872,
+          "conditional_transmission": 0.4268308654583141
+        },
+        {
+          "provider": "road_1",
+          "dependent": "facility_3",
+          "edge_weight": 0.36229655307958936,
+          "delay_minutes": 20,
+          "target_resilience": 0.2685859226904254,
+          "conditional_transmission": 0.39609383082148936
+        }
+      ]
+    },
+    {
+      "initial_node": "water_2",
+      "path": [
+        "water_2",
+        "facility_3"
+      ],
+      "arrival_minutes_if_transmitted": 10,
+      "within_horizon": true,
+      "single_path_transmission_product": 0.8324640173530273,
+      "steps": [
+        {
+          "provider": "water_2",
+          "dependent": "facility_3",
+          "edge_weight": 0.7614328236930131,
+          "delay_minutes": 10,
+          "target_resilience": 0.2685859226904254,
+          "conditional_transmission": 0.8324640173530273
+        }
+      ]
+    }
+  ],
+  "semantics": "Candidate dependency routes; not realized failures or total cascade probability",
+  "event_id": "105-75",
+  "classifier_score": 0.8751051976231613,
+  "observed_simulated_target": 0
+}
