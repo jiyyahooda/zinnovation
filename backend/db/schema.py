@@ -9,3 +9,6 @@ CREATE TABLE IF NOT EXISTS audit (
 );
 CREATE TABLE IF NOT EXISTS sessions (token_hash TEXT PRIMARY KEY, actor TEXT NOT NULL, expires REAL NOT NULL);
 '''
+SQL += '''
+CREATE TABLE IF NOT EXISTS officers (username TEXT PRIMARY KEY,password_hash TEXT NOT NULL,salt TEXT NOT NULL,department TEXT NOT NULL,created TEXT NOT NULL);
+'''

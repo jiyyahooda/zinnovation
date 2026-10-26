@@ -13,6 +13,9 @@ async def get_json(url,params):
     # Bounded retries; never include a URL containing credentials in public errors.
     for attempt in range(2):
         try:
+            if 'api.tomtom.com/' in url:
+                from .quota import reserve
+                if not reserve():raise ProviderError('Traffic request budget reached; cached data retained',3600)
             async with httpx.AsyncClient(timeout=15,headers={'User-Agent':'CivicFlux/2.1 research dashboard'}) as client:
                 response=await client.get(url,params=params)
             if response.status_code==429:
@@ -74,13 +77,18 @@ async def stations(c):
     grouped={}
     for r in data.get('records',[]):
         if r.get('city','').lower()!=c['name'].lower():continue
-        metric={'PM2.5':'pm25','PM10':'pm10'}.get(r.get('pollutant_id'))
+        metric={'PM2.5':'pm25','PM10':'pm10','NO2':'no2','SO2':'so2','CO':'co','OZONE':'o3','NH3':'nh3'}.get(r.get('pollutant_id'))
         if not metric or r.get('pollutant_avg') in (None,'NA',''):continue
         stamp=datetime.strptime(r['last_update'],'%d-%m-%Y %H:%M:%S').replace(tzinfo=ZoneInfo('Asia/Kolkata')).isoformat()
         ident=(r['station'],stamp); item=grouped.setdefault(ident,dict(r=r,readings={}))
-        item['readings'][metric]={'value':number(float(r['pollutant_avg']),0),'unit':'µg/m³'}
+        item['readings'][metric]={'value':number(float(r['pollutant_avg']),0),'unit':'mg/m³' if metric=='co' else 'µg/m³'}
     out=[point(c['id'],'CPCB / data.gov.in',f"{c['id']}-cpcb-{i}",float(v['r']['latitude']),float(v['r']['longitude']),stamp,v['readings'],'station_observation',layer='air',name=name,provenance='CPCB pollutant_avg from OGD; provider aggregation window applies; no Indian AQI inferred') for i,((name,stamp),v) in enumerate(grouped.items())]
     if not out:raise ProviderError('No valid station readings returned for selected city')
+    from .indian_aqi import unavailable
+    import hashlib
+    for p in out:
+        p['id']=c['id']+'-cpcb-'+hashlib.sha256(p['name'].encode()).hexdigest()[:12]
+        p['indian_aqi']=unavailable()
     return out
 
 async def traffic(c):
@@ -90,7 +98,13 @@ async def traffic(c):
     r=data['flowSegmentData'];line=[[number(p['longitude'],-180,180),number(p['latitude'],-90,90)] for p in r['coordinates']['coordinate']]
     if len(line)<2:raise ValueError('Missing road geometry')
     readings={'speed':{'value':number(r['currentSpeed'],0),'unit':'km/h'},'free_flow_speed':{'value':number(r['freeFlowSpeed'],0),'unit':'km/h'},'confidence':{'value':number(r['confidence'],0,1),'unit':'ratio'}}
+    for field,unit in [('currentTravelTime','s'),('freeFlowTravelTime','s')]:
+        if field in r:readings[field]={'value':number(r[field],0),'unit':unit}
     # This API supplies no measurement timestamp. Do not fabricate one.
     p=point(c['id'],'TomTom',c['id']+'-traffic',line[0][1],line[0][0],datetime.now(timezone.utc).isoformat(),readings,'provider_current_traffic',layer='traffic',name='Provider road segment near city centre',geometry={'type':'LineString','coordinates':line},provenance='Current flow response; provider measurement timestamp unavailable')
     p['observed_at']=None;p['measurement_time_available']=False
+    if 'roadClosure' in r and not isinstance(r['roadClosure'],bool):raise ValueError('Invalid road closure flag')
+    p['road_closure']=r.get('roadClosure')
+    p['congestion_ratio']=readings['speed']['value']/readings['free_flow_speed']['value'] if readings['free_flow_speed']['value'] else None
+    p['coverage_note']='One provider-returned road fragment near the configured query point; not city-wide speed coverage.'
     return [p]

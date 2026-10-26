@@ -11,15 +11,22 @@ from backend.optimizer import plan
 from backend.graph import scenario_graph
 from backend.db import repository as repo
 
-def execute(body,actor,persist=True):
-    clock=repo.now();flood=simulate(body.flood.model_dump(),clock,body.flood_engine)
+def execute(body,actor,persist=True,progress=None):
+    notify=progress or (lambda stage,state:None)
+    clock=repo.now();notify('Assessing drainage conditions','running')
+    flood=simulate(body.flood.model_dump(),clock,body.flood_engine)
+    notify('Assessing drainage conditions','complete');notify('Checking connected services','running')
     request=fixture('cascade_risk',PROJECT_ROOT)
     request.update(initial=body.initial,load=body.load,observation_time=clock,as_of=clock)
     graph,manifest=scenario_graph()
     from src.civicflux.graph import graph_config
     request['graph']=graph_config(graph)
-    if not body.initial or any(node not in graph for node in body.initial): raise HTTPException(422,'Initial asset must exist in the synthetic graph')
-    cascade=serve('cascade_risk',request,PROJECT_ROOT)
+    if any(node not in graph for node in body.initial): raise HTTPException(422,'Initial asset must exist in the synthetic graph')
+    if body.initial:cascade=serve('cascade_risk',request,PROJECT_ROOT)
+    else:
+        cascade={'status':'supported_simulation','component':'no_initial_outage_rule','prediction':[{'node_id':n,'risk':0.0,'review':False} for n in graph],
+                 'graph_fingerprint':graph_fingerprint(graph),'provenance':'Existing independent cascade assumptions: no spontaneous failures and no initial outages.',
+                 'warnings':['No initial outage assumed. These zeros are a scenario rule, not measured reliability.'],'dispatch_allowed':False}
     if manifest['graph_fingerprint']!=graph_fingerprint(graph): raise HTTPException(409,'Cascade and planning graph evidence are incompatible')
     if flood['status']!='supported_simulation' or cascade['status']!='supported_simulation':
         raise HTTPException(409,{'reason':'Scenario abstained; no plan created','flood':flood,'cascade':cascade})
@@ -36,8 +43,10 @@ def execute(body,actor,persist=True):
         if not compatible_graph_evidence(evidence,graph) or case['node_id'] not in risks: raise HTTPException(409,'Unmapped asset evidence')
         case['cascade']=risks[case['node_id']]
         case['cascade_evidence']='declared synthetic outage' if case['node_id'] in body.initial else 'same-graph research cascade score'
+    notify('Checking connected services','complete');notify('Preparing response options','running')
     try: allocation=plan(cases,body.resources.model_dump(),body.weights)
     except (ValueError,KeyError,TypeError) as error: raise HTTPException(422,str(error)) from error
+    notify('Preparing response options','complete')
     payload={'name':body.name,'city_id':body.city_id,'inputs':body.model_dump(),'synthetic':True,'flood':flood,'cascade':cascade,'allocation':allocation,
         'graph_id':graph.graph['graph_id'],'graph_fingerprint':graph_fingerprint(graph),
         'affected_assets':[r for r in cascade['prediction'] if r['node_id'] in body.initial or r.get('review')],
@@ -48,7 +57,9 @@ def execute(body,actor,persist=True):
             'Flood surrogate and cascade outage are parallel scenario evidence. Outages are explicitly chosen by the operator; no learned flood-to-asset mapping exists.',
             'Cascade scores enter planning only on the identical graph fingerprint. Delhi/L-TOWN/traffic evidence is never fused.',
             'Weights represent policy assumptions; no causal intervention benefit is estimated.',
-            'Research approval is disabled by the existing review contract. No intervention is dispatched.']}
+            'Internal planning approval is available through the municipal review workflow only. No intervention is dispatched.']}
+    from backend.services.municipal_service import response_options
+    payload['response_options']=response_options(payload)
     if persist:return repo.append('scenario',payload,actor,'scenario_executed')
     from uuid import uuid4
     return {**payload,'id':'preview-'+str(uuid4()),'created':clock,'preview':True}

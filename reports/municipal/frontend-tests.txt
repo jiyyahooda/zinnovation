@@ -1,0 +1,3 @@
+9 prediction-card contracts and 5 draft persistence/error checks passed
+Premium analytics and split-hero checks passed
+Municipal geography, report identity, AQI abstention and flood-output checks passed

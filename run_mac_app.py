@@ -7,7 +7,10 @@ from src.civicflux.runtime import research_environment
 
 def healthy(url):
     try:
-        with urllib.request.urlopen(url+'/api/health',timeout=1) as response:return json.load(response).get('status')=='ok'
+        with urllib.request.urlopen(url+'/api/health',timeout=1) as response:
+            if json.load(response).get('status')!='ok':return False
+        with urllib.request.urlopen(url+'/',timeout=1) as response:
+            return 'text/html' in response.headers.get('Content-Type','') and 'id="root"' in response.read().decode('utf-8')
     except (OSError,ValueError):return False
 
 
@@ -38,7 +41,8 @@ def main():
     process=subprocess.Popen([sys.executable,'-m','uvicorn','backend.main:app','--host','127.0.0.1','--port',str(port)],cwd=ROOT,env=env)
     state.write_text(json.dumps({'root':str(ROOT),'url':url,'pid':process.pid},indent=2))
     try:
-        for _ in range(150):
+        print('Starting CivicFlux from '+str(ROOT)+' (first startup may take up to 2 minutes)…',flush=True)
+        for _ in range(600):
             if process.poll() is not None:return process.returncode
             if healthy(url):break
             time.sleep(.2)

@@ -1,0 +1,2 @@
+Premium analytics and split-hero checks passed
+9 prediction-card contracts and 5 draft persistence/error checks passed

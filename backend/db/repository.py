@@ -33,7 +33,7 @@ def update_complaint(identifier, status, note, actor):
         if row is None: raise HTTPException(404,'Complaint not found')
         item=json.loads(row['body']); previous=item['status']
         transitions={'submitted':['under_review'], 'under_review':['in_progress','closed'], 'in_progress':['closed','under_review'], 'closed':['under_review']}
-        if status not in transitions[previous]: raise HTTPException(409,'Invalid complaint transition')
+        if status not in transitions.get(previous,[]): raise HTTPException(409,'Invalid complaint transition')
         item['status']=status;item['history'].append({'status':status,'note':note,'actor':actor,'time':now()})
         db.execute('UPDATE records SET body=? WHERE id=?',(json.dumps(item),identifier))
         db.execute('INSERT INTO audit(created,actor,event,entity,detail) VALUES (?,?,?,?,?)',(now(),actor,'complaint_review',identifier,note))

@@ -1,6 +1,6 @@
 import math
 from typing import Literal
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Request, HTTPException
 from pydantic import BaseModel,Field,ConfigDict,field_validator
 from backend.auth import admin
 from backend.db import repository as repo
@@ -56,6 +56,42 @@ def trace(node:str,initial:str='pump_0',load:float=1.1):
     graph,_=scenario_graph()
     try:return dependency_trace(graph,initial.split(','),node,load)
     except ValueError as error:raise HTTPException(422,str(error)) from error
+
+@router.post('/analyze')
+def analyze(body:Scenario,request:Request,save:bool=False):
+    import queue,threading,json
+    from fastapi.responses import StreamingResponse
+    from backend.services.city_service import city
+    city(body.city_id);actor=admin(request) if save else 'public-preview'
+    events=queue.Queue()
+    def work():
+        try:
+            result=execute(body,actor,persist=save,progress=lambda stage,state:events.put({'event':'progress','stage':stage,'state':state}))
+            events.put({'event':'result','result':result})
+        except Exception as error:
+            reason=error.detail if isinstance(error,HTTPException) and isinstance(error.detail,str) else 'The assessment could not complete. Check inputs and model availability.'
+            events.put({'event':'error','message':reason})
+    def stream():
+        worker=threading.Thread(target=work,daemon=True);worker.start()
+        while True:
+            event=events.get();yield json.dumps(event,allow_nan=False)+'\n'
+            if event['event'] in ('result','error'):break
+    return StreamingResponse(stream(),media_type='application/x-ndjson',headers={'Cache-Control':'no-store','X-Accel-Buffering':'no'})
+class DrainageComparison(BaseModel):
+    before:Flood
+    after:Flood
+@router.post('/counterfactual')
+def counterfactual(body:DrainageComparison):
+    from backend.simulation import simulate
+    for key in ['rain_mm','duration_h','area_m2','runoff_coefficient','ponding_fraction','initial_storage_mm']:
+        if getattr(body.before,key)!=getattr(body.after,key):
+            from fastapi import HTTPException
+            raise HTTPException(422,'Keep rainfall, catchment and duration fixed when comparing drainage assumptions.')
+    a=simulate(body.before.model_dump(),repo.now(),'mass_balance')['prediction'][0]['depth_m']
+    b=simulate(body.after.model_dump(),repo.now(),'mass_balance')['prediction'][0]['depth_m']
+    return {'before_depth_m':a,'after_depth_m':b,'difference_m':b-a,'kind':'what_if_assessment',
+            'causal_intervention_effect':False,'explanation':'Same catchment and rainfall; only declared drainage capacity/blockage changes. No pump-to-drainage effectiveness mapping is asserted.'}
+
 @router.get('/{identifier}')
 def detail(identifier:str): return repo.get('scenario',identifier)
 @router.post('')

@@ -1,0 +1,10 @@
+import type {Workspace,Scenario,Complaint,Feedback} from '../../types/api';
+export function workspaceAnalytics(workspace:Workspace,scenario:Scenario|null,complaints:Complaint[],scenarios:Scenario[],feedback:Feedback,now=new Date()){
+ const localReports=complaints.filter(c=>c.city_id===workspace.city_id);const ids=new Set(scenarios.map(s=>s.id));const reviews=feedback.reviews.filter(r=>ids.has(r.scenario_id));
+ const engagement=Array.from({length:7},(_,i)=>{const day=new Date(now);day.setDate(day.getDate()-6+i);day.setHours(0,0,0,0);const end=+day+86400000;const count=(rows:{created:string}[])=>rows.filter(r=>{const t=Date.parse(r.created);return t>=+day&&t<end}).length;return {day:day.toLocaleDateString('en-IN',{weekday:'short'}),reports:count(localReports),scenarios:count(scenarios),reviews:count(reviews)}});
+ const allocation=scenario?.allocation.comparisons['CP-SAT'];const available=scenario?.inputs.resources??workspace.resources;const selected=allocation?.selected??[];const used=allocation?.used;const bySkill=Object.entries(available.crew_hours).map(([skill,hours])=>({name:skill,used:used?.crew_hours[skill]??0,available:hours}));
+ const cascades=Array.isArray(scenario?.cascade.prediction)?scenario.cascade.prediction:[];const groups=new Map<string,number[]>();for(const row of cascades){const score=Number(row.risk);if(!Number.isFinite(score)||score<0||score>1)continue;const name=String(row.node_id).split('_')[0];groups.set(name,[...(groups.get(name)??[]),score])}
+ const exposure=[...groups].map(([name,values])=>({name,average:100*values.reduce((a,b)=>a+b,0)/values.length,peak:100*Math.max(...values),nodes:values.length}));
+ const comparisons=Object.entries(scenario?.allocation.comparisons??{}).map(([name,r])=>({name:name==='CP-SAT'?'OR-Tools':name.replaceAll('_',' '),utility:r.objective,incidents:r.selected.length}));
+ return {localReports,engagement,reviews,bySkill,selected,exposure,comparisons,budget:available.budget,budgetUsed:used?.budget??0,pumps:available.pumps,pumpsUsed:used?.pumps??0,connected:workspace.feeds.filter(f=>f.status==='fresh').length,feedTotal:workspace.feeds.length};
+}

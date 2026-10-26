@@ -28,6 +28,8 @@ class Complaint(BaseModel):
     category:Literal['waterlogging','road','drainage','water','air_quality','traffic','infrastructure','other']
     location:str=Field(min_length=3,max_length=200)
     description:str=Field(min_length=8,max_length=2000)
+    severity:Literal['unassessed','low','medium','high']='unassessed'
+    evidence_ref:str|None=Field(default=None,min_length=3,max_length=500)
     latitude:float|None=Field(default=None,ge=-90,le=90,allow_inf_nan=False)
     longitude:float|None=Field(default=None,ge=-180,le=180,allow_inf_nan=False)
     @model_validator(mode='after')
@@ -52,7 +54,7 @@ def complain(body:Complaint):
     if body.latitude is not None and (abs(body.latitude-c['center'][0])>.5 or abs(body.longitude-c['center'][1])>.5):
         from fastapi import HTTPException
         raise HTTPException(422,'Coordinates outside selected city reporting area (±0.5 degrees)')
-    return repo.append('complaint',{**body.model_dump(),'status':'submitted','history':[],'provenance':'Unverified civilian submission; stored locally, not sent to government'})
+    return repo.append('complaint',{**body.model_dump(),'status':'submitted','history':[],'claim_type':'citizen_report','dispatch_allowed':False,'verification':None,'provenance':'Unverified civilian submission; stored locally, not sent to government'})
 @router.post('/complaints/{identifier}')
 def update(identifier:str,body:ComplaintReview,actor:str=Depends(admin)): return repo.update_complaint(identifier,body.status,body.note,actor)
 @router.get('/audit')

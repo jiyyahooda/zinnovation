@@ -245,3 +245,6 @@ frontend/.env
 frontend/.env.*
 !frontend/.env.example
 PACKAGE-MANIFEST.json
+
+# Local disposable UI-test process metadata
+reports/municipal/ui-test-server.json

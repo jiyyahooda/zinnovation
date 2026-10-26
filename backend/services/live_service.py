@@ -24,7 +24,7 @@ async def refresh(identifier,provider):
             if not points:raise ValueError('Empty readings')
             payload=json.dumps(points,allow_nan=False);stamp=now().isoformat()
             with connection() as db:
-                db.execute('INSERT OR REPLACE INTO live_feeds VALUES (?,?,?,?,?,?,?)',(identifier,provider,payload,stamp,clock.isoformat(),(clock+timedelta(minutes=10)).isoformat(),None))
+                db.execute('INSERT OR REPLACE INTO live_feeds VALUES (?,?,?,?,?,?,?)',(identifier,provider,payload,stamp,clock.isoformat(),(clock+timedelta(minutes=30 if provider=='traffic' else 60 if provider=='stations' else 10)).isoformat(),None))
                 db.execute('INSERT INTO live_history VALUES (?,?,?,?)',(identifier,provider,stamp,payload))
                 db.execute('DELETE FROM live_history WHERE retrieved_at<?',((clock-timedelta(days=7)).isoformat(),))
         except Exception as e:

@@ -1,0 +1,66 @@
+ M backend/api/feedback.py
+ M backend/api/scenarios.py
+ M backend/auth.py
+ M backend/db/repository.py
+ M backend/db/schema.py
+ M backend/integrations/live.py
+ M backend/main.py
+ M backend/services/live_service.py
+ M backend/services/scenario_service.py
+ M backend/services/workspace_service.py
+ M frontend/index.html
+ M frontend/package.json
+ M frontend/pnpm-lock.yaml
+ M frontend/src/App.tsx
+ M frontend/src/components/CascadeGraph.tsx
+ M frontend/src/components/CityMap.tsx
+ M frontend/src/main.tsx
+ M frontend/src/pages/CityWorkspace.tsx
+ M frontend/src/types/api.ts
+ M run_mac_app.py
+?? MUNICIPAL_COMMAND_CENTRE.md
+?? PREMIUM_UI.md
+?? backend/api/municipal.py
+?? backend/integrations/indian_aqi.py
+?? backend/integrations/quota.py
+?? backend/services/municipal_service.py
+?? frontend/.env.example
+?? frontend/src/components/premium/DashboardAnalytics.tsx
+?? frontend/src/components/premium/FluxMark.tsx
+?? frontend/src/components/premium/GoogleMapCanvas.tsx
+?? frontend/src/components/premium/LibreMapCanvas.tsx
+?? frontend/src/components/premium/SplitHero.tsx
+?? frontend/src/components/premium/analytics.ts
+?? frontend/src/components/premium/mapTypes.ts
+?? frontend/src/hooks/useReducedMotion.ts
+?? frontend/src/municipal.css
+?? frontend/src/municipal/ActionPlans.tsx
+?? frontend/src/municipal/Incidents.tsx
+?? frontend/src/municipal/MapWorkbench.tsx
+?? frontend/src/municipal/Overview.tsx
+?? frontend/src/municipal/PlanOptions.tsx
+?? frontend/src/municipal/Settings.tsx
+?? frontend/src/municipal/domain.ts
+?? frontend/src/premium.css
+?? frontend/test-municipal.cjs
+?? frontend/test-premium.cjs
+?? reports/municipal/build.txt
+?? reports/municipal/changed_files.txt
+?? reports/municipal/city-map-dark-desktop.jpg
+?? reports/municipal/frontend-tests.txt
+?? reports/municipal/heavy-rainfall-desktop.jpg
+?? reports/municipal/overview-light-desktop.jpg
+?? reports/municipal/preservation_after.json
+?? reports/municipal/preservation_before.json
+?? reports/municipal/tests.txt
+?? reports/municipal/ui-test-server.json
+?? reports/municipal/verified-report-test.jpg
+?? reports/premium_ui/analytics-dark.jpg
+?? reports/premium_ui/browser_checks.md
+?? reports/premium_ui/build.txt
+?? reports/premium_ui/desktop-dark.jpg
+?? reports/premium_ui/desktop-light.jpg
+?? reports/premium_ui/frontend_tests.txt
+?? reports/premium_ui/mobile-dark.jpg
+?? reports/premium_ui/python_tests.txt
+?? tests/test_municipal.py

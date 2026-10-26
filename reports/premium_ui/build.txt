@@ -1,0 +1,25 @@
+vite v6.4.5 building for production...
+transforming...
+✓ 2207 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                  0.76 kB │ gzip:   0.46 kB
+dist/assets/maplibre-gl-worker-BrB25tGK.mjs    518.81 kB
+dist/assets/index-Bh66Qdtd.css                  66.48 kB │ gzip:  14.27 kB
+dist/assets/LibreMapCanvas-AgMWWGR8.css         71.53 kB │ gzip:  10.18 kB
+dist/assets/ModelValidation-DnJ_XnQ5.js          1.68 kB │ gzip:   0.67 kB
+dist/assets/PredictionCard-DsX3iQeY.js           2.08 kB │ gzip:   1.02 kB
+dist/assets/Predictions-Cobza-QU.js              4.73 kB │ gzip:   1.98 kB
+dist/assets/Planning-ps03b_-u.js                 5.67 kB │ gzip:   2.13 kB
+dist/assets/Cascade-BEDiGQPe.js                  6.13 kB │ gzip:   2.61 kB
+dist/assets/Operations-DybeEJVB.js               7.39 kB │ gzip:   2.43 kB
+dist/assets/CityMap-R3J5seXU.js                  8.23 kB │ gzip:   3.04 kB
+dist/assets/GoogleMapCanvas-CU5ZfHmq.js         28.46 kB │ gzip:  10.81 kB
+dist/assets/index-DivZeHOG.js                  714.66 kB │ gzip: 210.57 kB
+dist/assets/LibreMapCanvas-CbWGudvz.js       1,065.39 kB │ gzip: 292.67 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.56s
